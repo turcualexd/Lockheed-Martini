@@ -19,13 +19,14 @@ mu_f = 0.75e-3;     % Pas
 mu_ox = 0.196e-3;   % Pas
 
 % Dati assunti
-OF_i = 2.42;        % -
-OF_final = 2.42;    % -
+
+OF_i = 2.4;        % -
+% OF_final = 2.5;    % -
 eps = 300;          % -
 eps_c = 15;         % -
 A_max = 0.25*pi;    % m^2
-C_d = 0.7;          % - % cambio questo
-alpha = 0.15;       % - qui cambio il valore
+C_d = 0.7;          % - cambio questo
+alpha = 0.05;       % - qui cambio il valore
 d_inj_f = 1e-3;     % m
 d_feed = 5e-3;      % m
 f_f = 0.025;        % -
@@ -95,8 +96,11 @@ rho_N = 1/v_N_f_i;
 v_He_ox_i = R*T_He_ox_i/(M_m_He*p_ox_i);
 rho_He = 1/v_He_ox_i;
 
-V_N_f_i = 0.1*V_tot;
-V_He_ox_i = OF_final * V_N_f_i;
+V_N_f_i = 0.16*V_tot
+V_He_ox_i = OF_i * V_N_f_i
+V_tot
+V_press_i = V_N_f_i + V_He_ox_i
+perce_press = (V_N_f_i + V_He_ox_i)/V_tot
 
 % Iterazione
 tvet = 0 : dt : t_max;
@@ -139,9 +143,9 @@ while valido
     V_ox = V_ox + dV_ox;
 
     if (V_f + V_ox + V_He_ox_i + V_N_f_i) > V_tank_tot
-        valido = 1; % QUI DEVE ESSERCI 0
+        valido = 0; % QUI DEVE ESSERCI 0
         disp("Termine per volume occupato massimo raggiunto")
-        % continue
+        continue
     end
     
     p_c_it = p_c(cont);
@@ -235,7 +239,7 @@ while valido
     u_feed_f(cont + 1) = u_feed_f_new;
     u_feed_ox(cont + 1) = u_feed_ox_new;
 
-    cont = cont + 1;
+    cont = cont + 1
 end
 
 %% figure
@@ -268,6 +272,14 @@ grid minor
 plot(u_feed_ox, 'b')
 title("Velocità feed")
 legend("u_{feed,f}", "u_{feed,ox}")
+
+figure
+plot(V_N_f, 'r')
+hold on
+grid minor
+plot(V_He_ox, 'b')
+title("Volumi pressurizzant")
+legend("Volume N_2", "Volume He")
 
 figure
 plot(I_sp)
