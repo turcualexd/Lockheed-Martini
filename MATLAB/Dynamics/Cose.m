@@ -302,8 +302,8 @@ mu_f = 0.75e-3;     % Pas
 mu_ox = 0.196e-3;   % Pas
 
 % Dati assunti
-OF_i = 3;        % -
-eps = 300;          % -
+OF_i  = 2;        % -
+eps   = 300;          % -
 eps_c = 10;         % -
 A_max = 0.25*pi;    % m^2
 C_d = 0.7;          % -
@@ -363,11 +363,11 @@ u_feed_f_i = m_f_i/(rho_f*A_feed);
 u_feed_ox_i = m_ox_i/(rho_ox*A_feed);
 
 
-K_f = @(f_f) 1 + f_f*L_feed_f/d_feed + (A_feed/(A_inj_f_tot*C_d))^2;
-K_ox = @(f_ox) 1 + f_ox*L_feed_ox/d_feed + (A_feed/(A_inj_ox_tot*C_d))^2;
+K_f =  1 + f_f*L_feed_f/d_feed + (A_feed/(A_inj_f_tot*C_d))^2;
+K_ox =  1 + f_ox*L_feed_ox/d_feed + (A_feed/(A_inj_ox_tot*C_d))^2;
 
-dp_f = 0.5*rho_f*u_feed_f_i^2*K_f(f_f);
-dp_ox = 0.5*rho_ox*u_feed_ox_i^2*K_ox(f_ox);
+dp_f = 0.5*rho_f*u_feed_f_i^2*K_f;
+dp_ox = 0.5*rho_ox*u_feed_ox_i^2*K_ox;
 
 p_f_i = p_c_i + dp_f;
 p_ox_i = p_c_i + dp_ox;
@@ -422,14 +422,14 @@ while valido
     end
     
     p_c_it = p_c(cont);
-    u_feed_f_it = sqrt(2*(p_f_new - p_c_it)/(rho_f*K_f(f_f)));
-    u_feed_ox_it = sqrt(2*(p_ox_new - p_c_it)/(rho_ox*K_ox(f_ox)));
+    u_feed_f_it = sqrt(2*(p_f_new - p_c_it)/(rho_f*K_f));
+    u_feed_ox_it = sqrt(2*(p_ox_new - p_c_it)/(rho_ox*K_ox));
     
     m_f_it = rho_f*A_feed*u_feed_f_it;
     m_ox_it = rho_ox*A_feed*u_feed_ox_it;
     OF_it = m_ox_it/m_f_it;
     
-    output = CEA('problem','rkt','nfz',2,'o/f',OF_it,'sup',eps,'case','Cazzo','p,bar',p_c_it/1e5,'reactants','fuel','RP-1(L)','C',1,'H',1.9423,'wt%',100,'oxid','O2(L)','O',2,'wt%',100,'output','massf','transport','trace',1e-10,'end');
+    output = cea(CEA('problem','rkt','nfz',2,'o/f',OF_it,'sup',eps,'case','Cazzo','p,bar',p_c_it/1e5,'reactants','fuel','RP-1(L)','C',1,'H',1.9423,'wt%',100,'oxid','O2(L)','O',2,'wt%',100,'output','massf','transport','trace',1e-10,'end'));
     c_star_cea = output.froz.cstar(1);
     c_star_it = A_t*p_c_it/(m_f_it + m_ox_it);
     
