@@ -1,4 +1,3 @@
-%% C_star variabile
 clear, clc, close all
 
 % Dati iniziali noti
@@ -19,7 +18,7 @@ mu_f = 0.75e-3;     % Pas
 mu_ox = 0.196e-3;   % Pas
 
 % Dati assunti
-OF_i = 2.42;        % -
+OF_i = 2.56;        % -
 OF_m = 2.56;        % -
 eps = 300;          % -
 eps_c = 10;         % -
@@ -33,8 +32,8 @@ k_ox = 5/3;         % -
 k_f = 7/5;          % -
 T_f_i = 300;        % K
 T_ox_i = 90;        % K
-B_f = 2.6;          % -
-B_ox = 2.6;         % -
+B_f = 2.7859;          % -
+B_ox = 2.7891;         % -
 
 
 % Dimensionamento a ritroso
@@ -236,7 +235,7 @@ while valido
     T_c(cont + 1) = T_c_new;
     p_c(cont + 1) = p_c_new;
     c_t(cont + 1) = c_t_new;
-    c_star(cont + 1) = c_star_new;
+    c_star(cont + 1) = c_star_cea;
     T(cont + 1) = T_new;
     I_sp(cont + 1) = I_sp_new;
     u_feed_f(cont + 1) = u_feed_f_new;
@@ -312,7 +311,7 @@ title("Temperature combustibili")
 legend("Fuel", "Ossidante")
 
 figure
-plot(tvet, T_c)
+plot(tvet, c_star)
 title("Temperatura combustione")
 grid minor
 
