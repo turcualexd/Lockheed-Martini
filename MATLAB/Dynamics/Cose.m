@@ -596,7 +596,7 @@ mu_f = 0.75e-3;     % Pas
 mu_ox = 0.196e-3;   % Pas
 
 % Dati assunti
-OF_i = 2.42;        % -
+OF_i = 2.56;        % -
 OF_m = 2.56;        % -
 eps = 300;          % -
 eps_c = 10;         % -
@@ -610,14 +610,14 @@ k_ox = 5/3;         % -
 k_f = 7/5;          % -
 T_f_i = 300;        % K
 T_ox_i = 90;        % K
-B_f = 2.6;          % -
-B_ox = 2.6;         % -
+B_f = 2.7859;       % -
+B_ox = 2.7891;      % -
 
 
 % Dimensionamento a ritroso
 T_i = T_i_n/lambda;
 V_tot = pi*d^2*h/4;
-output = cea(CEA('problem','rkt','nfz',2,'o/f',OF_i,'sup',eps,'case','Porco Dio','p,bar',p_c_i/1e5,'reactants','fuel','RP-1(L)','C',1,'H',1.9423,'wt%',100,'oxid','O2(L)','O',2,'wt%',100,'output','massf','transport','trace',1e-10,'end'));
+output = cea(CEA('problem','rkt','nfz',2,'o/f',OF_i,'sup',2,'case','Porco Dio','p,bar',p_c_i/1e5,'reactants','fuel','RP-1(L)','C',1,'H',1.9423,'wt%',100,'T(K)',T_f_i,'oxid','O2(L)','O',2,'wt%',100,'T(K)',T_ox_i,'output','massf','transport','trace',1e-10,'end'));
 c_star = output.froz.cstar(end);
 c_t_i = output.froz.cf(end);
 T_c_i = output.froz.temperature(1);
@@ -690,7 +690,6 @@ V_p_f = [V_p_f_i nan(1, length(tvet) - 1)];
 V_p_ox = [V_p_ox_i nan(1, length(tvet) - 1)];
 p_f = [p_f_i nan(1, length(tvet) - 1)];
 p_ox = [p_ox_i nan(1, length(tvet) - 1)];
-p_c = [p_c_i nan(1, length(tvet) - 1)];
 OF = [OF_i nan(1, length(tvet) - 1)];
 T_c = [T_c_i nan(1, length(tvet) - 1)];
 gamma = [gamma_i nan(1, length(tvet) - 1)];
@@ -746,7 +745,7 @@ while valido
     m_ox_new = rho_ox*A_feed_ox*u_feed_ox_new;
     OF_new = m_ox_new/m_f_new;
     
-    output = cea(CEA('problem','rkt','nfz',2,'o/f',OF_new,'sup',eps,'case','Porco Dio','p,bar',p_c_new/1e5,'reactants','fuel','RP-1(L)','C',1,'H',1.9423,'wt%',100,'oxid','O2(L)','O',2,'wt%',100,'output','massf','transport','trace',1e-10,'end'));
+    output = cea(CEA('problem','rkt','nfz',2,'o/f',OF_new,'sup',eps,'case','Porco Dio','p,bar',p_c_new/1e5,'reactants','fuel','RP-1(L)','C',1,'H',1.9423,'wt%',100,'T(K)',T_f_new,'oxid','O2(L)','O',2,'wt%',100,'T(K)',T_ox_new,'output','massf','transport','trace',1e-10,'end'));
     c_t_new = output.froz.cf(end);
     T_c_new = output.froz.temperature(1);
     I_sp_new = output.froz.isp(end);
@@ -774,57 +773,81 @@ while valido
     cont = cont + 1
 end
 
+% Rimuovi NaN
+V_p_f = V_p_f(~isnan(V_p_f));
+V_p_ox = V_p_ox(~isnan(V_p_ox));
+p_f = p_f(~isnan(V_p_ox));
+p_ox = p_ox(~isnan(V_p_ox));
+m_f = m_f(~isnan(V_p_ox));
+m_ox = m_ox(~isnan(V_p_ox));
+OF = OF(~isnan(V_p_ox));
+T_c = T_c(~isnan(V_p_ox));
+p_c = p_c(~isnan(V_p_ox));
+c_t = c_t(~isnan(V_p_ox));
+T = T(~isnan(V_p_ox));
+I_sp = I_sp(~isnan(V_p_ox));
+u_feed_f = u_feed_f(~isnan(V_p_ox));
+u_feed_ox = u_feed_ox(~isnan(V_p_ox));
+T_f = T_f(~isnan(V_p_ox));
+T_ox = T_ox(~isnan(V_p_ox));
+gamma = gamma(~isnan(V_p_ox));
+tvet = tvet(1:length(gamma));
+
 figure
-plot(OF)
+plot(tvet, OF)
 grid minor
 title("OF")
 
 figure
-plot(p_f, 'r')
+plot(tvet, p_f, 'r')
 grid minor
 hold on
-plot(p_ox, 'b')
-plot(p_c, 'm')
+plot(tvet, p_ox, 'b')
+plot(tvet, p_c, 'g')
 title("Pressioni")
 legend("p_f", "p_{ox}", "p_c")
 
 figure
-plot(m_f, 'r')
+plot(tvet, m_f, 'r')
 hold on
 grid minor
-plot(m_ox, 'b')
+plot(tvet, m_ox, 'b')
 title("Portate")
 legend("m_f", "m_{ox}")
 
 figure
-plot(u_feed_f, 'r')
+plot(tvet, u_feed_f, 'r')
 hold on
 grid minor
-plot(u_feed_ox, 'b')
+plot(tvet, u_feed_ox, 'b')
 title("Velocità feed")
 legend("u_{feed,f}", "u_{feed,ox}")
 
 figure
-plot(I_sp)
+plot(tvet, I_sp)
 grid minor
 title("Impulso specifico")
 
 figure
-plot(T_f, 'r')
+plot(tvet, T_f, 'r')
 hold on
 grid minor
-plot(T_ox, 'b')
-title("Temperature")
+plot(tvet, T_ox, 'b')
+title("Temperature combustibili")
 legend("Fuel", "Ossidante")
 
 figure
-plot(gamma)
-title("gamma comb")
+plot(tvet, T_c)
+title("Temperatura combustione")
 grid minor
 
-T = T(~isnan(T));
-I_tot = sum(T)*dt;
-(V_f + V_ox + V_N_f_i + V_He_ox_i)/V_tank_tot*100
+err_f = M_f - V_f*rho_f
+err_ox = M_ox - V_ox*rho_ox
+err_OF = OF_m - median(OF)
+dp_c_end = p_c(end) - p_c_min
+
+I_tot = sum(T)*dt
+% (V_f + V_ox + V_N_f_i + V_He_ox_i)/V_tank_tot*100
 
 
 %% C_star variabile
@@ -1077,56 +1100,78 @@ while valido
     cont = cont + 1
 end
 
-% figure
-plot(OF)
+% Rimuovi NaN
+V_p_f = V_p_f(~isnan(V_p_f));
+V_p_ox = V_p_ox(~isnan(V_p_ox));
+p_f = p_f(~isnan(V_p_ox));
+p_ox = p_ox(~isnan(V_p_ox));
+m_f = m_f(~isnan(V_p_ox));
+m_ox = m_ox(~isnan(V_p_ox));
+OF = OF(~isnan(V_p_ox));
+T_c = T_c(~isnan(V_p_ox));
+p_c = p_c(~isnan(V_p_ox));
+c_t = c_t(~isnan(V_p_ox));
+T = T(~isnan(V_p_ox));
+I_sp = I_sp(~isnan(V_p_ox));
+u_feed_f = u_feed_f(~isnan(V_p_ox));
+u_feed_ox = u_feed_ox(~isnan(V_p_ox));
+T_f = T_f(~isnan(V_p_ox));
+T_ox = T_ox(~isnan(V_p_ox));
+gamma = gamma(~isnan(V_p_ox));
+tvet = tvet(1:length(gamma));
+
+figure
+plot(tvet, OF)
 grid minor
 title("OF")
 
 figure
-plot(p_f, 'r')
+plot(tvet, p_f, 'r')
 grid minor
 hold on
-plot(p_ox, 'b')
-plot(p_c, 'm')
+plot(tvet, p_ox, 'b')
+plot(tvet, p_c, 'g')
 title("Pressioni")
 legend("p_f", "p_{ox}", "p_c")
 
 figure
-plot(m_f, 'r')
+plot(tvet, m_f, 'r')
 hold on
 grid minor
-plot(m_ox, 'b')
+plot(tvet, m_ox, 'b')
 title("Portate")
 legend("m_f", "m_{ox}")
 
 figure
-plot(u_feed_f, 'r')
+plot(tvet, u_feed_f, 'r')
 hold on
 grid minor
-plot(u_feed_ox, 'b')
+plot(tvet, u_feed_ox, 'b')
 title("Velocità feed")
 legend("u_{feed,f}", "u_{feed,ox}")
 
 figure
-plot(I_sp)
+plot(tvet, I_sp)
 grid minor
 title("Impulso specifico")
 
 figure
-plot(T_f, 'r')
+plot(tvet, T_f, 'r')
 hold on
 grid minor
-plot(T_ox, 'b')
-title("Temperature")
+plot(tvet, T_ox, 'b')
+title("Temperature combustibili")
 legend("Fuel", "Ossidante")
 
 figure
-plot(T_c)
+plot(tvet, T_c)
 title("Temperatura combustione")
 grid minor
 
+err_f = M_f - V_f*rho_f
+err_ox = M_ox - V_ox*rho_ox
+err_OF = OF_m - median(OF)
+p_c_end = p_c(end)
 
-% T = T(~isnan(T));
-% I_tot = sum(T)*dt
-
-%(V_f + V_ox + V_N_f_i + V_He_ox_i)/V_tank_tot*100
+I_tot = sum(T)*dt
+% (V_f + V_ox + V_N_f_i + V_He_ox_i)/V_tank_tot*100
