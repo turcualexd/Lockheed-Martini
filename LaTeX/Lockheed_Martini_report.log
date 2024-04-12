@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.5.16)  12 APR 2024 12:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.5.16)  12 APR 2024 19:34
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -851,7 +851,7 @@ Package biblatex Info: ... file 'Lockheed_Martini_report.bbl' found.
 Package biblatex Info: Reference section=0 on input line 6.
 Package biblatex Info: Reference segment=0 on input line 6.
  (Config/title_page_chapter.tex
-<Config//Poli_logo.pdf, id=19, 527.9725pt x 415.5525pt>
+<Config//Poli_logo.pdf, id=59, 527.9725pt x 415.5525pt>
 File: Config//Poli_logo.pdf Graphic file (type pdf)
 <use Config//Poli_logo.pdf>
 Package pdftex.def Info: Config//Poli_logo.pdf  used on input line 6.
@@ -884,11 +884,18 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 34.
  [1
 
-{C:/Users/turcu/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc} <./Config//Poli_logo.pdf>]) (Lockheed_Martini_report.toc)
+{C:/Users/turcu/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc} <./Config//Poli_logo.pdf>]) (Lockheed_Martini_report.toc
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 5.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 5.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 5.
+)
 \tf@toc=\write5
 \openout5 = `Lockheed_Martini_report.toc'.
 
- [1] (Config/Body.tex (Sections/00_notation.tex) [2] (Sections/01_introduction.tex))
+ [1] (Config/Body.tex (Sections/00_notation.tex) [2] (Sections/01_introduction.tex) (Sections/02_modeling.tex) (Sections/03_results.tex) (Sections/04_nozzle_losses.tex) (Sections/05_additive.tex) (Sections/06_cooling.tex))
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
@@ -904,23 +911,23 @@ See the caption package documentation for explanation.
 
 [2] (Lockheed_Martini_report.aux)
 Package rerunfilecheck Info: File `Lockheed_Martini_report.out' has not changed.
-(rerunfilecheck)             Checksum: 554493820DA373454FE3B6F2640BBAA2;375.
+(rerunfilecheck)             Checksum: 7F127FF4F69F230EE8A110F068599711;2085.
 Package logreq Info: Writing requests to 'Lockheed_Martini_report.run.xml'.
 \openout1 = `Lockheed_Martini_report.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 22347 strings out of 476361
- 396934 string characters out of 5788046
+ 22422 strings out of 476361
+ 398831 string characters out of 5788046
  1857993 words of memory out of 5000000
- 42417 multiletter control sequences out of 15000+600000
- 559810 words of font info for 92 fonts, out of 8000000 for 9000
+ 42466 multiletter control sequences out of 15000+600000
+ 562613 words of font info for 94 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 87i,14n,98p,1527b,1847s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 87i,14n,98p,1527b,1877s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\turcu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1095.pk><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Lockheed_Martini_report.pdf (5 pages, 93965 bytes).
+Output written on Lockheed_Martini_report.pdf (5 pages, 105252 bytes).
 PDF statistics:
- 104 PDF objects out of 1000 (max. 8388607)
- 11 named destinations out of 1000 (max. 500000)
- 38 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 156 PDF objects out of 1000 (max. 8388607)
+ 21 named destinations out of 1000 (max. 500000)
+ 118 words of extra memory for PDF output out of 10000 (max. 10000000)
 
