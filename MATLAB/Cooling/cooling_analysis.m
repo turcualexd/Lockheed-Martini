@@ -10,19 +10,19 @@ eps_vec = (yy.^2 ./ (0.25*D_t^2))';
 f = @(x) (1./x).*( (1 + x.^2 .*(gamma-1)/2)./ (1 + (gamma-1)./2) ).^((gamma+1)./(2*(gamma-1))) - eps_vec;
 T_rapp_vec = linspace(0,1,5);
 %sigma_vec = zeros(5,n);
-OF = 2.24;          
+OF = 2.24;
 p_c = 50e5;
 
 eps_prec = 1;
 gamma_vec = [];
 mach_vec = [];
 Pr_CEA_vec = [];
-
+%%
 for i = 1:n
     eps = eps_vec(i);
-    output = cea(CEA('problem','rkt','nfz',2,'o/f',OF,'sup',eps,'case', ...
-    'DRY1','p,bar',p_c/1e5,'reactants','fuel','RP-1(L)','C',1,'H',1.9423, ...
-    'wt%',100,'oxid','O2(L)','O',2,'wt%',100,'output','massf','transport','trace',1e-10,'end'));
+    output = cea(CEA('problem','rkt','nfz',2,'o/f',OF,'sup',eps,'case', 'DRY1', ...
+        'p,bar',p_c/1e5,'reactants','fuel','RP-1(L)','C',1,'H',1.9423, 'wt%',100, ...
+        'oxid','O2(L)','O',2,'wt%',100,'output','massf','transport','trace',1e-10,'end'));
     if i ~= 1
         gamma_vec  = [gamma_vec; output.froz.gamma(3:end)];
         Pr_CEA_vec = [Pr_CEA_vec; output.froz.prandtl.froz(3:end)];
@@ -46,7 +46,7 @@ sigma = @(T_rapp,M,gamma) 1./ ( (0.5*T_rapp.*(1 + M.^2 .* (gamma-1)/2) + 1/2).^(
 r = Pr_CEA_vec.^1/3;
 T_aw = T_c*( (1 + (mach_vec.^2).*r.*(gamma_vec - 1)./2) ./ (1 + (mach_vec.^2).*(gamma_vec - 1)./2));
 plot(eps_vec, T_aw(2:end))
-T_wg_est = 1500; %estimated in order to see if the fuel is 
+T_wg_est = 1500; %estimated in order to see if the fuel is
 % enough to absorb the power at reasonable termperature
 D_t = 1.45e-2;
 c_star_design = c_star;
@@ -72,16 +72,16 @@ plot(eps_vec, q_dot_vec./1e3, "LineWidth",1.5);
 xlabel("epsilon"); ylabel("heat flux [kW]");
 
 
- TURCU = 0;
- billy = 2*pi*q_dot_vec.*yy;
- for i = 1:length(xx) - 1
-     TURCU = TURCU + (billy(i+1) + billy(i))*(xx(i+1) - xx(i))*0.5;
- end
- m_dot_fuel = 0.085; %kg/s;
- c  = 1880;
- DT_fuel = TURCU / (c*m_dot_fuel)
+TURCU = 0;
+billy = 2*pi*q_dot_vec.*yy;
+for i = 1:length(xx) - 1
+    TURCU = TURCU + (billy(i+1) + billy(i))*(xx(i+1) - xx(i))*0.5;
+end
+m_dot_fuel = 0.085; %kg/s;
+c  = 1880;
+DT_fuel = TURCU / (c*m_dot_fuel)
 
- fprintf("TURCUUUUUU");
+fprintf("TURCUUUUUU");
 
 
 

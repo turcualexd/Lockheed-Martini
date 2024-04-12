@@ -14,10 +14,10 @@ mu_f = 0.75e-3;     % Pas
 mu_ox = 0.196e-3;   % Pas
 
 % Dati assunti
-OF_vet = linspace(2, 3, 2);        % -
+OF_vet = 2.94:0.02:3.12;    % -
 eps = 300;          % -
 eps_c = 10;         % -
-C_d = 0.8;          % -
+C_d = 0.82;         % -
 alpha = 0.2;        % -
 d_feed_f = 5e-3;    % m
 d_feed_ox = 7e-3;   % m
@@ -25,7 +25,7 @@ dt = 1;             % s
 lambda = 0.9986;    % -
 k_ox = 5/3;         % -
 k_f = 7/5;          % -
-B_vet = linspace(2, 2.5, 2);          % -
+B_vet = linspace(2.4, 3, 31);          % -
 
 % Dimensionamento a ritroso
 T_i = T_i_n/lambda;
