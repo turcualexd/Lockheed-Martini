@@ -72,16 +72,14 @@ plot(eps_vec, q_dot_vec./1e3, "LineWidth",1.5);
 xlabel("epsilon"); ylabel("heat flux [kW]");
 
 
- TURCU = 0;
+ Q = 0;
  billy = 2*pi*q_dot_vec.*yy;
  for i = 1:length(xx) - 1
-     TURCU = TURCU + (billy(i+1) + billy(i))*(xx(i+1) - xx(i))*0.5;
+     Q = Q + (billy(i+1) + billy(i))*(xx(i+1) - xx(i))*0.5;
  end
  m_dot_fuel = 0.085; %kg/s;
  c  = 1880;
- DT_fuel = TURCU / (c*m_dot_fuel)
-
- fprintf("TURCUUUUUU");
+ DT_fuel = Q / (c*m_dot_fuel)
 
 
 
