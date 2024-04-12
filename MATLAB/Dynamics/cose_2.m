@@ -20,13 +20,14 @@ mu_ox = 0.196e-3;   % Pas
 
 % Dati assunti
 
-OF_i = 2.4;        % -
+OF_i = 3.1; % OF_i = 2.4;        % -
 % OF_final = 2.5;    % -
 eps = 300;          % -
 eps_c = 15;         % -
 A_max = 0.25*pi;    % m^2
 C_d = 0.7;          % - cambio questo
-alpha = 0.05;       % - qui cambio il valore
+alpha_f = 0.215;     % - qui cambio il valore
+alpha_ox = 0.0675;    % - qui cambio il valore, con 0.05 arrivo a 2920
 d_inj_f = 1e-3;     % m
 d_feed = 5e-3;      % m
 f_f = 0.025;        % -
@@ -70,9 +71,10 @@ end
 V_tank_tot = pi*d^2*h_tank/4;
 m_f_i = m_p_i/(1 + OF_i);
 m_ox_i = m_p_i*OF_i/(1 + OF_i);
-dp_inj = alpha*p_c_i;
-A_inj_f_tot = m_f_i/(C_d*sqrt(2*dp_inj*rho_f));
-A_inj_ox_tot = m_ox_i/(C_d*sqrt(2*dp_inj*rho_ox));
+dp_inj_f = alpha_f*p_c_i;
+dp_inj_ox = alpha_ox*p_c_i;
+A_inj_f_tot = m_f_i/(C_d*sqrt(2*dp_inj_f*rho_f));
+A_inj_ox_tot = m_ox_i/(C_d*sqrt(2*dp_inj_ox*rho_ox));
 
 L = h - L_c;
 L_feed_f = 2*L/3;   % Assunto
@@ -96,15 +98,17 @@ rho_N = 1/v_N_f_i;
 v_He_ox_i = R*T_He_ox_i/(M_m_He*p_ox_i);
 rho_He = 1/v_He_ox_i;
 
-V_N_f_i = 0.16*V_tot
+V_N_f_i = 0.112 * V_tot % V_N_f_i = 0.15*V_tot
 V_He_ox_i = OF_i * V_N_f_i
-V_tot
+V_tank_tot
 V_press_i = V_N_f_i + V_He_ox_i
-perce_press = (V_N_f_i + V_He_ox_i)/V_tot
+perce_press = (V_N_f_i + V_He_ox_i)/V_tank_tot
 
 % Iterazione
 tvet = 0 : dt : t_max;
 m_f = [m_f_i nan(1, length(tvet) - 1)];
+dp_ox = [dp_ox nan(1, length(tvet) - 1)];
+dp_f = [dp_f nan(1, length(tvet) - 1)];
 m_ox = [m_ox_i nan(1, length(tvet) - 1)];
 u_feed_f = [u_feed_f_i nan(1, length(tvet) - 1)];
 u_feed_ox = [u_feed_ox_i nan(1, length(tvet) - 1)];
@@ -145,6 +149,7 @@ while valido
     if (V_f + V_ox + V_He_ox_i + V_N_f_i) > V_tank_tot
         valido = 0; % QUI DEVE ESSERCI 0
         disp("Termine per volume occupato massimo raggiunto")
+        cont
         continue
     end
     
@@ -189,6 +194,9 @@ while valido
 
         u_feed_f_new = sqrt(2*(p_f_new - p_c_new)/(rho_f*K_f));
         u_feed_ox_new = sqrt(2*(p_ox_new - p_c_new)/(rho_ox*K_ox));
+
+        dp_f_new = 0.5*rho_f*u_feed_f_new^2 * K_f;
+        dp_ox_new = 0.5*rho_ox*u_feed_ox_new^2 * K_ox;
         
         m_f_new = rho_f*A_feed*u_feed_f_new*correzione;
         m_ox_new = rho_ox*A_feed*u_feed_ox_new;
@@ -229,6 +237,8 @@ while valido
     p_ox(cont + 1) = p_ox_new;
     m_f(cont + 1) = m_f_new;
     m_ox(cont + 1) = m_ox_new;
+    dp_f(cont + 1) = dp_f_new;
+    dp_ox(cont + 1) = dp_ox_new;
     OF(cont + 1) = OF_new;
     T_c(cont + 1) = T_c_new;
     p_c(cont + 1) = p_c_new;
@@ -239,7 +249,7 @@ while valido
     u_feed_f(cont + 1) = u_feed_f_new;
     u_feed_ox(cont + 1) = u_feed_ox_new;
 
-    cont = cont + 1
+    cont = cont + 1;
 end
 
 %% figure
@@ -255,6 +265,14 @@ plot(p_ox, 'b')
 plot(p_c, 'm')
 title("Pressioni")
 legend("p_f", "p_{ox}", "p_c")
+
+figure
+plot(dp_f, 'r')
+grid minor
+hold on
+plot(dp_ox, 'b')
+title("$\Delta P$ feeding lines", 'interpreter','latex')
+legend('$\Delta p_{f}$', '$\Delta p_{ox}$', 'interpreter','latex')
 
 figure
 plot(m_f, 'r')
@@ -293,3 +311,8 @@ title("Temperatura camera [K]");
 
 T = T(~isnan(T));
 I_tot = sum(T)*dt;
+
+%%
+% cont = 2345, OF_i = 3, V_N_f_i = 0.125 * 0.8*V_tot, alpha = 0.15;
+%cont = 2703, V_N_f_i = 0.115 * V_tot
+% 2761, 3.1, 0.115 * V_tot, 0.15, 0.05
