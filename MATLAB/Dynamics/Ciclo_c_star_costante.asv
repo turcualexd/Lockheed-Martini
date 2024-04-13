@@ -14,7 +14,7 @@ mu_f = 0.75e-3;     % Pas
 mu_ox = 0.196e-3;   % Pas
 
 % Dati assunti
-OF_vet = 2.14:0.02:2.3;        % -
+OF_vet = linspace(2, 3, 2);        % -
 eps = 300;          % -
 eps_c = 10;         % -
 C_d = 0.82;          % -
