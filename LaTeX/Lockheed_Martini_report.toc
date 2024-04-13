@@ -11,5 +11,5 @@
 \contentsline {section}{\numberline {3}Results analysis}{1}{section.3}%
 \contentsline {section}{\numberline {4}Nozzle losses}{1}{section.4}%
 \contentsline {section}{\numberline {5}Additive manufacturing influences}{1}{section.5}%
-\contentsline {section}{\numberline {6}Cooling analysis}{1}{section.6}%
-\contentsline {section}{Bibliography}{2}{section*.4}%
+\contentsline {section}{\numberline {6}Cooling analysis}{2}{section.6}%
+\contentsline {section}{Bibliography}{3}{section*.4}%
