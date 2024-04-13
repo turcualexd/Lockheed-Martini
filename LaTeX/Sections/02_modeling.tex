@@ -1,5 +1,18 @@
-\section{Modeling of propulsion system}
+\section{Modeling of propulsion system: DRY-1}
 \label{sec:modeling}
+In the following section the whole system (DRY-1) will be modeled according to the requirements and reasonable preliminary assumptions, later refined in \autoref{subsec:dynamics}. 
+Different kind of requirements were imposed, related to operability environment, engine performance, size constraints, chemistry, architecture and manufacturing techniques. Regardless of the design refinement of the engine, the system shall provide:
+\begin{itemize}
+    \item \textbf{Environment}: vacuum for the whole operation.
+    \item \textbf{Thrust}: initial magnitude of 1 kN, no lower boundary.
+    \item \textbf{Chamber Pressure}: initial value of 50 bar, always above 20 bar throughout the whole mission.
+    \item \textbf{Allocated Space}: tanks, combustion chamber and convergent nozzle occupancy is exactly 80\% of the volume occupied by a cylinder of 1 meter diameter and 2 meter length. No bounds on the extension of the divergent.
+    \item \textbf{Propellants}: semi-cryogenic couple of LOX and RP-1.
+    \item \textbf{Architecture}: blow-down type.
+    \item \textbf{Manufacturing}: all the system is produced in AM, no restriction on material nor techniques. 
+\end{itemize} 
+
+As an initial approach 
 
 Initial considerations (req + hyp / assumptions + constraints + criteria)
 

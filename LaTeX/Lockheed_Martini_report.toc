@@ -5,11 +5,11 @@
 \contentsline {subsection}{\numberline {1.1}Blow-down heritage}{1}{subsection.1.1}%
 \contentsline {subsection}{\numberline {1.2}Additive manufacturing state of art}{1}{subsection.1.2}%
 \contentsline {subsection}{\numberline {1.3}Analysis of losses}{1}{subsection.1.3}%
-\contentsline {section}{\numberline {2}Modeling of propulsion system}{1}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Tanks sizing}{1}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}System dynamics}{1}{subsection.2.2}%
-\contentsline {section}{\numberline {3}Results analysis}{1}{section.3}%
-\contentsline {section}{\numberline {4}Nozzle losses}{1}{section.4}%
-\contentsline {section}{\numberline {5}Additive manufacturing influences}{1}{section.5}%
+\contentsline {section}{\numberline {2}Modeling of propulsion system: DRY-1}{1}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Tanks sizing}{2}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}System dynamics}{2}{subsection.2.2}%
+\contentsline {section}{\numberline {3}Results analysis}{2}{section.3}%
+\contentsline {section}{\numberline {4}Nozzle losses}{2}{section.4}%
+\contentsline {section}{\numberline {5}Additive manufacturing influences}{2}{section.5}%
 \contentsline {section}{\numberline {6}Cooling analysis}{2}{section.6}%
 \contentsline {section}{Bibliography}{3}{section*.4}%
