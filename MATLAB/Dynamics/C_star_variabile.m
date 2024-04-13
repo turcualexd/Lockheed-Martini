@@ -100,19 +100,19 @@ A_inj_f_tot = m_f_i/(C_d*sqrt(2*dp_inj*rho_f));
 A_inj_ox_tot = m_ox_i/(C_d*sqrt(2*dp_inj*rho_ox));
 
 A_inj_f = pi*d_inj_f^2/4;
-N_inj_f = A_f_tot/A_inj_f;
+N_inj_f = A_inj_f_tot/A_inj_f;
 N_inj_f = floor(N_inj_f);
 
 N_inj_ox = 2*N_inj_f;
 
-A_inj_f = A_f_tot/N_inj_f;
-A_inj_ox = A_ox_tot/N_inj_ox;
+A_inj_f = A_inj_f_tot/N_inj_f;
+A_inj_ox = A_inj_ox_tot/N_inj_ox;
 
 d_inj_f = 2*sqrt(A_inj_f/pi);
 d_inj_ox = 2*sqrt(A_inj_ox/pi);
 
-v_inj_f = m_f_i/(rho_f*A_f_tot);
-v_inj_ox = m_ox_i/(rho_ox*A_ox_tot);
+v_inj_f = m_f_i/(rho_f*A_inj_f_tot);
+v_inj_ox = m_ox_i/(rho_ox*A_inj_ox_tot);
 
 % Feeding lines
 A_feed_f = pi*d_feed_f^2/4;
@@ -163,8 +163,8 @@ I_sp = [I_sp_i nan(1, length(tvet) - 1)];
 T_f = [T_f_i nan(1, length(tvet) - 1)];
 T_ox = [T_ox_i nan(1, length(tvet) - 1)];
 
-V_f = 0;
-V_ox = 0;
+V_f = V_f_i;
+V_ox = V_ox_i;
 cont = 1;
 j = 1; % p_c_it inferiore di bisezione
 toll = 0.1;
@@ -173,6 +173,9 @@ while true
     
     dV_f = m_f(cont)*dt/rho_f;
     dV_ox = m_ox(cont)*dt/rho_ox;
+
+    V_f = V_f - dV_f;
+    V_ox = V_ox - dV_ox;
 
     V_p_f_new = V_p_f(cont) + dV_f;
     V_p_ox_new = V_p_ox(cont) + dV_ox;
@@ -183,9 +186,8 @@ while true
     p_f_new = p_f(cont)*(V_p_f(cont)/V_p_f_new)^k_f;
     p_ox_new = p_ox(cont)*(V_p_ox(cont)/V_p_ox_new)^k_ox;
 
-    V_f = V_f + dV_f;
-    V_ox = V_ox + dV_ox;
-    if V_f > V_f_i || V_ox > V_ox_i
+    
+    if V_f < 0 || V_ox < 0
         disp("Termine per volume occupato massimo raggiunto")
         break
     end
