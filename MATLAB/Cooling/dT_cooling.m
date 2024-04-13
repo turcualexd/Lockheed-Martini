@@ -1,11 +1,11 @@
-function dT = dT_cooling(of, eps_vec, p_c, D_t, axial_distance, c_star, m_dot_fuel,c_RP1)
+function dT = dT_cooling(of, p_c, D_t, axial_distance, radius_vec, c_star, m_dot_fuel,c_RP1)
 
 gamma_vec = [];
 mach_vec = [];
 Pr_CEA_vec = [];
 sigma = @(T_rapp,M,gamma) 1./ ( (0.5*T_rapp.*(1 + M.^2 .* (gamma-1)/2) + 1/2).^(0.68) .* (1 + M.^2 .* (gamma - 1)/2 ).^0.12 );
-n = length(eps_vec);
-radius = sqrt(eps_vec) *  D_t/2;
+n = length(radius_vec);
+eps_vec = (radius_vec.^2 ./ (0.25*D_t^2));
 
 
 for i = 1:n
@@ -43,12 +43,11 @@ end
 
 %calculate heat power along nozzle
 Q = 0;
-Q_L = 2*pi*q_dot_vec.*radius;
+Q_L = 2*pi*q_dot_vec.*radius_vec;
 for i = 1:length(axial_distance) - 1
     Q = Q + (Q_L(i+1) + Q_L(i))*(axial_distance(i+1) - axial_distance(i))*0.5;
 end
 
 dT = Q / (c_RP1*m_dot_fuel);
-Q_L
 end
 
