@@ -39,7 +39,7 @@ B_ox = 2.7891;      % -
 % Dimensionamento a ritroso
 T_i = T_i_n/lambda;
 V_tot = pi*d^2*h/4;
-output = cea(CEA('problem','rkt','nfz',2,'o/f',OF_i,'sup',eps,'case','Porco Dio','p,bar',p_c_i/1e5,'reactants','fuel','RP-1(L)','C',1,'H',1.9423,'wt%',100,'oxid','O2(L)','O',2,'wt%',100,'output','massf','transport','trace',1e-10,'end'));
+output = cea(CEA('problem','rkt','nfz',2,'o/f',OF_i,'sup',eps,'case','DRY1','p,bar',p_c_i/1e5,'reactants','fuel','RP-1(L)','C',1,'H',1.9423,'wt%',100,'oxid','O2(L)','O',2,'wt%',100,'output','massf','transport','trace',1e-10,'end'));
 c_star = output.froz.cstar(end);
 c_t_i = output.froz.cf(end);
 T_c_i = output.froz.temperature(1);
@@ -164,7 +164,7 @@ while valido
     m_ox_new = rho_ox*A_feed_ox*u_feed_ox_new;
     OF_new = m_ox_new/m_f_new;
     
-    output = cea(CEA('problem','rkt','nfz',2,'o/f',OF_new,'sup',eps,'case','Porco Dio','p,bar',p_c_new/1e5,'reactants','fuel','RP-1(L)','C',1,'H',1.9423,'wt%',100,'oxid','O2(L)','O',2,'wt%',100,'output','massf','transport','trace',1e-10,'end'));
+    output = cea(CEA('problem','rkt','nfz',2,'o/f',OF_new,'sup',eps,'case','DRY1','p,bar',p_c_new/1e5,'reactants','fuel','RP-1(L)','C',1,'H',1.9423,'wt%',100,'oxid','O2(L)','O',2,'wt%',100,'output','massf','transport','trace',1e-10,'end'));
     c_t_new = output.froz.cf(end);
     T_c_new = output.froz.temperature(1);
     I_sp_new = output.froz.isp(end);
