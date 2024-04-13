@@ -1,0 +1,23 @@
+\setcounter{section}{0}
+\phantomsection
+\section*{Notation}
+\addcontentsline{toc}{section}{Notation}
+\label{sec:notation1}
+
+\begin{multicols}{2}
+    \renewcommand{\arraystretch}{1.2}
+	\raggedcolumns
+	\setbox\ltmcbox\vbox{
+	\makeatletter\col@number\@ne
+	\begin{xltabular}{\linewidth}{c>{\raggedright\arraybackslash}X}
+		\textbf{LRE} & Liquid Rocket Engine \\
+		\textbf{LOX} & Liquid Oxygen \\
+		\textbf{RP-1} & RP-1 fuel\\
+		\textbf{AM} & Additive Manufacturing \\
+		\textbf{O/F} & Oxidizer to Fuel ratio
+	\end{xltabular}
+	\unskip
+	\unpenalty
+	\unpenalty}
+	\unvbox\ltmcbox
+\end{multicols}

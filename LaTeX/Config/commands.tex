@@ -1,0 +1,62 @@
+% Centred figure command
+\newcommand{\cfig}[3]{
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=#2\linewidth]{Images/#1}
+    \caption{#3}
+	\label{fig:#1}
+\end{figure}
+}
+
+% Figure on right side
+\newcommand{\rfig}[3]{
+\begin{wrapfigure}{r}{#2\linewidth}
+	\centering
+	\includegraphics[width=\linewidth]{Images/#1}
+	\caption{#3}
+	\label{fig:#1}
+	\vspace*{-13pt}
+\end{wrapfigure}
+}
+
+% Two figures side by side
+\newcommand{\twofig}[5]{
+\begin{figure}[H]
+	\begin{minipage}{0.48\linewidth}
+		\centering
+		\includegraphics[width=#5\linewidth]{Images/#1}
+		\caption{#2}
+		\label{fig:#1}
+	\end{minipage}\hfill
+	\begin{minipage}{0.48\linewidth}
+		\centering
+		\includegraphics[width=#5\linewidth]{Images/#3}
+		\caption{#4}
+		\label{fig:#3}
+	\end{minipage}
+\end{figure}
+}
+
+% Create first page
+\newcommand{\firstpage}{
+	\import{Config/}{title_page_chapter}
+}
+
+% Create bibliography page
+\newcommand{\bibliopage}{
+	\phantomsection
+	\printbibliography[heading=bibintoc,title=Bibliography]
+}
+
+% Poli logo image
+\newcommand{\polilogo}{
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\linewidth]{Poli_logo}
+\end{figure}
+}
+
+% Insert mail with link
+\newcommand{\mail}[1]{
+	\href{mailto:#1@mail.polimi.it}{#1@mail.polimi.it}
+}
