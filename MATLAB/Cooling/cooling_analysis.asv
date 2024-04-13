@@ -15,6 +15,9 @@ p_c = 50e5;
 %T_rapp_vec = linspace(0,1,5);
 %sigma_vec = zeros(5,n);
 
+
+
+eps_prec = 1;
 gamma_vec = [];
 mach_vec = [];
 Pr_CEA_vec = [];
@@ -50,9 +53,14 @@ plot(eps_vec, T_aw(2:end))
 T_wg_est = 1500; %estimated in order to see if the fuel is
 % enough to absorb the power at reasonable termperature
 c_star_design = c_star;
+sigma_throat = sigma(T_wg_est/T_c,1,gamma_vec(2));
+h_g = h_g_BARTZ(mu,c_p,Pr_CEA_vec(1), D_t,p_c,c_star_design, 0.382*D_t/2, sigma_throat,0.25*pi*D_t^2);
+
+q_dot = h_g * (T_aw(1) - T_wg_est); %[W/m^2]
 
 T_wg_vec = (T_wg_est/T_aw(1)) * T_aw;
 sigma_vec = sigma(T_wg_vec./T_c, mach_vec, gamma_vec);
+
 
 for k = 1:length(eps_vec)
     A = eps_vec * (pi*0.25*D_t^2);
@@ -76,7 +84,7 @@ m_dot_fuel = 0.085; %kg/s;
 c  = 1880;
 DT_fuel = TURCU / (c*m_dot_fuel)
 
+fprintf("TURCUUUUUU");
 
-%%
-dT = dT_cooling(OF, eps_vec, p_c, D_t, xx, c_star, m_dot_fuel,c);
+
 
