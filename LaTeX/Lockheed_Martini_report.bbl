@@ -19,27 +19,62 @@
 
 \refsection{0}
   \datalist[entry]{none/global//global/global}
-    \entry{2006_overview}{misc}{}
+    \entry{materials_and_desing}{article}{}
       \name{author}{1}{}{%
-        {{hash=6b4abdd86ffba2654cb9815f5e0be02a}{%
-           family={Grammier},
-           familyi={G\bibinitperiod},
-           given={Richard},
-           giveni={R\bibinitperiod}}}%
+        {{hash=fe80204ccfd4192da5a4998f9d27cef6}{%
+           family={al},
+           familyi={a\bibinitperiod},
+           given={Filippo\bibnamedelima Berto},
+           giveni={F\bibinitperiod\bibinitdelim B\bibinitperiod},
+           prefix={et},
+           prefixi={e\bibinitperiod}}}%
       }
-      \strng{namehash}{6b4abdd86ffba2654cb9815f5e0be02a}
-      \strng{fullhash}{6b4abdd86ffba2654cb9815f5e0be02a}
-      \strng{bibnamehash}{6b4abdd86ffba2654cb9815f5e0be02a}
-      \strng{authorbibnamehash}{6b4abdd86ffba2654cb9815f5e0be02a}
-      \strng{authornamehash}{6b4abdd86ffba2654cb9815f5e0be02a}
-      \strng{authorfullhash}{6b4abdd86ffba2654cb9815f5e0be02a}
+      \strng{namehash}{fe80204ccfd4192da5a4998f9d27cef6}
+      \strng{fullhash}{fe80204ccfd4192da5a4998f9d27cef6}
+      \strng{bibnamehash}{fe80204ccfd4192da5a4998f9d27cef6}
+      \strng{authorbibnamehash}{fe80204ccfd4192da5a4998f9d27cef6}
+      \strng{authornamehash}{fe80204ccfd4192da5a4998f9d27cef6}
+      \strng{authorfullhash}{fe80204ccfd4192da5a4998f9d27cef6}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Paper}
+      \field{title}{Metal additive manufacturing in aerospace: a review}
+      \field{year}{2021}
+    \endentry
+    \entry{Inconel_vs_steel}{misc}{}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Site: \url{https://markforged.com/resources/blog/inconel-vs-stainless-steel}}
+      \field{title}{Inconel vs Stainless Steel}
+    \endentry
+    \entry{tesi_dottorato}{thesis}{}
+      \name{author}{1}{}{%
+        {{hash=08999c826f1e0656ce4264e4a7b7f97e}{%
+           family={Dahmen},
+           familyi={D\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {DTU}%
+      }
+      \strng{namehash}{08999c826f1e0656ce4264e4a7b7f97e}
+      \strng{fullhash}{08999c826f1e0656ce4264e4a7b7f97e}
+      \strng{bibnamehash}{08999c826f1e0656ce4264e4a7b7f97e}
+      \strng{authorbibnamehash}{08999c826f1e0656ce4264e4a7b7f97e}
+      \strng{authornamehash}{08999c826f1e0656ce4264e4a7b7f97e}
+      \strng{authorfullhash}{08999c826f1e0656ce4264e4a7b7f97e}
       \field{sortinit}{3}
       \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{howpublished}{Site: \url{https://www.jpl.nasa.gov/missions/juno}}
-      \field{title}{Overview of the Juno Mission to Jupiter}
-      \field{year}{2006}
+      \field{month}{5}
+      \field{title}{Applications of Machine Learning in Process Monitoring and Controls of L-PBF Additive Manufacturing: A Review}
+      \field{type}{mathesis}
+      \field{year}{2021}
     \endentry
   \enddatalist
 \endrefsection
