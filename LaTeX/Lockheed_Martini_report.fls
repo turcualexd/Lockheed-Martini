@@ -1072,13 +1072,6 @@ INPUT Sections/02_modeling.tex
 INPUT ./Sections/02_modeling.tex
 INPUT ./Sections/02_modeling.tex
 INPUT Sections/02_modeling.tex
-INPUT ./Sections/03_results.tex
-INPUT ./Sections/03_results.tex
-INPUT ./Sections/03_results.tex
-INPUT Sections/03_results.tex
-INPUT ./Sections/03_results.tex
-INPUT ./Sections/03_results.tex
-INPUT Sections/03_results.tex
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/vf/adobe/times/ptmb8t.vf
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/adobe/times/ptmb8r.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/vf/adobe/times/ptmr8t.vf
@@ -1088,6 +1081,13 @@ INPUT /usr/local/texlive/2023/texmf-dist/fonts/vf/adobe/times/zptmcm7m.vf
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/adobe/times/psyro.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmmi10.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/adobe/times/ptmri8r.tfm
+INPUT ./Sections/03_results.tex
+INPUT ./Sections/03_results.tex
+INPUT ./Sections/03_results.tex
+INPUT Sections/03_results.tex
+INPUT ./Sections/03_results.tex
+INPUT ./Sections/03_results.tex
+INPUT Sections/03_results.tex
 INPUT ./Sections/04_nozzle_losses.tex
 INPUT ./Sections/04_nozzle_losses.tex
 INPUT ./Sections/04_nozzle_losses.tex

@@ -127,6 +127,48 @@
       \field{type}{mathesis}
       \field{year}{2021}
     \endentry
+    \entry{Sutton}{article}{}
+      \name{author}{1}{}{%
+        {{hash=1ef6106126c3c9123b46da100c94fb5d}{%
+           family={G.P.Sutton},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{1ef6106126c3c9123b46da100c94fb5d}
+      \strng{fullhash}{1ef6106126c3c9123b46da100c94fb5d}
+      \strng{bibnamehash}{1ef6106126c3c9123b46da100c94fb5d}
+      \strng{authorbibnamehash}{1ef6106126c3c9123b46da100c94fb5d}
+      \strng{authornamehash}{1ef6106126c3c9123b46da100c94fb5d}
+      \strng{authorfullhash}{1ef6106126c3c9123b46da100c94fb5d}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Book}
+      \field{title}{Rocket Propulsion Element}
+      \field{year}{2017}
+    \endentry
+    \entry{slides_maggi}{article}{}
+      \name{author}{1}{}{%
+        {{hash=32cb1161fc23ba47413d59d551fa81d3}{%
+           family={Maggi},
+           familyi={M\bibinitperiod},
+           given={Filippo},
+           giveni={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{32cb1161fc23ba47413d59d551fa81d3}
+      \strng{fullhash}{32cb1161fc23ba47413d59d551fa81d3}
+      \strng{bibnamehash}{32cb1161fc23ba47413d59d551fa81d3}
+      \strng{authorbibnamehash}{32cb1161fc23ba47413d59d551fa81d3}
+      \strng{authornamehash}{32cb1161fc23ba47413d59d551fa81d3}
+      \strng{authorfullhash}{32cb1161fc23ba47413d59d551fa81d3}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Slides}
+      \field{title}{Space Propulsion course slides}
+      \field{year}{2024}
+    \endentry
   \enddatalist
 \endrefsection
 \endinput
