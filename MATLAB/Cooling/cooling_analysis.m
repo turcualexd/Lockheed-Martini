@@ -4,10 +4,12 @@ n = 300;
 D_t = 1.45e-2;
 
 %interpolazione
-[x_vec, ~, ~, ~, ~, x3, y3] = rao_nozzle(D_t/2, 300, 100);
-xx = linspace(x3(1),x3(end),n);
+[~, ~, ~, ~, ~, x3, y3] = rao_nozzle(D_t/2, 300, 100);
+x3 = x3';
+y3 = y3';
+xx = linspace(x3(1),x3(end),n)';
 yy = interp1(x3,y3,xx);
-eps_vec = (yy.^2 ./ (0.25*D_t^2))';
+eps_vec = (yy.^2 ./ (0.25*D_t^2));
 OF = 2.24;
 p_c = 50e5;
 
@@ -79,4 +81,3 @@ DT_fuel = TURCU / (c*m_dot_fuel)
 
 %%
 dT = dT_cooling(OF, eps_vec, p_c, D_t, xx, c_star, m_dot_fuel,c);
-
