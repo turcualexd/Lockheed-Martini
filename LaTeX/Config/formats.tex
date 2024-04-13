@@ -1,0 +1,84 @@
+% Page boundaries
+\raggedbottom
+\geometry{
+  top 		= 2cm,
+  left 		= 2cm,
+  right		= 2cm,
+  bottom 	= 2cm
+}
+
+% Define color
+\definecolor{bluePoli}{cmyk}{0.4,0.1,0,0.4}
+
+% General formats
+\setlist{nosep,itemsep=3pt,topsep=3pt,leftmargin=1.5em}
+\setlength\parindent{0pt}
+\tolerance=1
+\emergencystretch=\maxdimen
+\hyphenpenalty=10000
+\hbadness=10000
+\vfuzz=30pt
+
+% Links format
+\hypersetup{
+	colorlinks=true,
+	linkcolor=bluePoli,
+	anchorcolor=black,
+	citecolor=bluePoli,
+	filecolor=black,
+	menucolor=black,
+	runcolor=black,
+	urlcolor=black,
+}
+
+% Cite command Wikipedia style
+\DeclareCiteCommand{\supercite}[\mkbibsuperscript]
+{\iffieldundef{prenote}
+	{}
+	{\BibliographyWarning{Ignoring prenote argument}}%
+\iffieldundef{postnote}
+	{}
+	{\BibliographyWarning{Ignoring postnote argument}}}
+{\usebibmacro{citeindex}%
+\bibopenbracket\usebibmacro{cite}\bibclosebracket}
+{\supercitedelim}
+{}
+\let\cite\supercite
+
+% Change TOC color
+\let\oldtoc\tableofcontents
+\renewcommand{\tableofcontents}{
+	\phantomsection
+	{\hypersetup{linkcolor=black}
+	\oldtoc}
+}
+
+% Change caption setup
+\captionsetup[figure]{labelfont={color=bluePoli}}
+\captionsetup[table]{labelfont={color=bluePoli}}
+
+% Chapter format
+% \titleformat{\chapter}
+% {\color{bluePoli}\normalfont\Huge\bfseries}
+% {}{0em}{}
+% \titlespacing*{\chapter}
+% {0pt}{2ex}{3ex}
+
+% Section format
+\titleformat{\section}
+{\color{bluePoli}\normalfont\Large\bfseries}
+{\color{bluePoli}\thesection}{1em}{}
+\titlespacing*{\section}
+{0pt}{2ex}{1ex}
+
+% Subsection format
+\titleformat{\subsection}
+{\color{bluePoli}\normalfont\large\bfseries}
+{\color{bluePoli}\thesubsection}{1em}{}
+\titlespacing*{\subsection}
+{0pt}{2ex}{1ex}
+
+% Commands for notation table
+\newsavebox\ltmcbox
+\renewcommand\tabularxcolumn[1]{m{#1}}
+\setlength{\columnsep}{2pt}
