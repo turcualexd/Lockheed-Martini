@@ -14,47 +14,59 @@ mu_f = 0.75e-3;     % Pas
 mu_ox = 0.196e-3;   % Pas
 
 % Dati assunti
-OF_vet = linspace(2, 3, 2);        % -
+OF_vet = 2.4 : 0.01 : 2.5;
 eps = 300;          % -
 eps_c = 10;         % -
-C_d = 0.8;          % -
+C_d = 0.82;         % -
 alpha = 0.2;        % -
 d_feed_f = 5e-3;    % m
 d_feed_ox = 7e-3;   % m
 dt = 1;             % s
-lambda = 0.9986;    % -
-k_ox = 5/3;         % -
+lambda = 1;         % -
+k_ox = 7/5;         % -
 k_f = 7/5;          % -
-B_vet = linspace(2, 2.5, 2);          % -
+B_vet = 2.79;       % -
+alpha_con = 30;     % deg
 
 % Dimensionamento a ritroso
 T_i = T_i_n/lambda;
+
 V_tot = pi*d^2*h/4;
 
 w = waitbar(0, 'CEAM goes brrrrrr... (0%)');
 contatore = 1;
 I_tot = nan(length(OF_vet), length(B_vet));
+
 for i = 1 : length(OF_vet)
     for j = 1 : length(B_vet)
+        
         OF_i = OF_vet(i);
         OF_m = OF_i;
+        
         B_f = B_vet(j);
         B_ox = B_f;
         
         output = cea(CEA('problem','rkt','nfz',2,'o/f',OF_i,'sup',eps,'case','Porco Dio','p,bar',p_c_i/1e5,'reactants','fuel','RP-1(L)','C',1,'H',1.9423,'wt%',100,'oxid','O2(L)','O',2,'wt%',100,'output','massf','transport','trace',1e-10,'end'));
+        
         c_star = output.froz.cstar(end);
         c_t_i = output.froz.cf(end);
         m_p_i = T_i/(c_t_i*c_star);
+        
         A_t = m_p_i/(output.froz.sonvel(2)*output.froz.density(2));
         A_c = eps_c*A_t;
-        d_c = 2*sqrt(A_c/pi);
-        L_c = L_star/eps_c;
-        V_int_c = pi*(d^2 - d_c^2)*L_c/4;
         
-        if V_int_c/V_tot > 0.2
-            h_t = h - L_c;
+        d_t = 2*sqrt(A_t/pi);
+        d_c = 2*sqrt(A_c/pi);
+        
+        L_con = (d_c - d_t)/(2*tand(alpha_con));
+        
+        L_c = L_star/eps_c;
+        V_loss = 0.25*pi*((L_c + L_con)*d^2 - L_c*d_c^2 - L_con*(d_c^2 + d_c*d_t + d_t^2)/3);
+        
+        if V_loss/V_tot > 0.2
+            h_t = h - L_c - L_con;
         else
-            h_t = h - L_c - 4*(0.2*V_tot - V_int_c)/(pi*d^2);
+            h_t = h - L_c - L_con - 4*(0.2*V_tot - V_loss)/(pi*d^2);
         end
         
         V_tank_tot = pi*d^2*h_t/4;
@@ -125,7 +137,6 @@ for i = 1 : length(OF_vet)
         
             V_p_f_new = V_p_f(cont) + dV_f;
             V_p_ox_new = V_p_ox(cont) + dV_ox;
-        
         
             p_f_new = p_f(cont)*(V_p_f(cont)/V_p_f_new)^k_f;
             p_ox_new = p_ox(cont)*(V_p_ox(cont)/V_p_ox_new)^k_ox;
