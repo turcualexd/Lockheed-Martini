@@ -1,17 +1,17 @@
 [0] Config.pm:307> INFO - This is Biber 2.19
 [0] Config.pm:310> INFO - Logfile is 'Lockheed_Martini_report.blg'
-[159] biber-darwin:340> INFO - === Sat Apr 13, 2024, 19:12:29
-[192] Biber.pm:419> INFO - Reading 'Lockheed_Martini_report.bcf'
-[383] Biber.pm:979> INFO - Found 3 citekeys in bib section 0
-[410] Biber.pm:4419> INFO - Processing section 0
-[428] Biber.pm:4610> INFO - Looking for bibtex file 'bibliography.bib' for section 0
-[431] bibtex.pm:1713> INFO - LaTeX decoding ...
-[439] bibtex.pm:1519> INFO - Found BibTeX data source 'bibliography.bib'
-[519] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[519] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[519] Biber.pm:4239> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
-[520] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
-[523] bbl.pm:660> INFO - Writing 'Lockheed_Martini_report.bbl' with encoding 'UTF-8'
-[530] bbl.pm:763> INFO - Output to Lockheed_Martini_report.bbl
-[530] Biber.pm:131> WARN - legacy month field 'may' in entry 'tesi_dottorato' is not an integer - this will probably not sort properly.
-[530] Biber.pm:133> INFO - WARNINGS: 1
+[128] biber-darwin:340> INFO - === Sat Apr 13, 2024, 22:18:36
+[167] Biber.pm:419> INFO - Reading 'Lockheed_Martini_report.bcf'
+[341] Biber.pm:979> INFO - Found 5 citekeys in bib section 0
+[368] Biber.pm:4419> INFO - Processing section 0
+[387] Biber.pm:4610> INFO - Looking for bibtex file 'bibliography.bib' for section 0
+[390] bibtex.pm:1713> INFO - LaTeX decoding ...
+[402] bibtex.pm:1519> INFO - Found BibTeX data source 'bibliography.bib'
+[471] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[472] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[472] Biber.pm:4239> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
+[472] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
+[476] bbl.pm:660> INFO - Writing 'Lockheed_Martini_report.bbl' with encoding 'UTF-8'
+[480] bbl.pm:763> INFO - Output to Lockheed_Martini_report.bbl
+[482] Biber.pm:131> WARN - legacy month field 'may' in entry 'tesi_dottorato' is not an integer - this will probably not sort properly.
+[482] Biber.pm:133> INFO - WARNINGS: 1
