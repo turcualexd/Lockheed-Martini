@@ -55,14 +55,13 @@ d_t = 2*sqrt(A_t/pi);
 d_c = 2*sqrt(A_c/pi);
 
 %interpolazione
-[~, ~, ~, ~, ~, x3, y3] = rao_nozzle(D_t/2, 300, 100);
+[~, ~, ~, ~, ~, x3, y3] = rao_nozzle(d_t/2, 300, 100);
 x3 = x3';
 y3 = y3';
+n = 300;
 axial_distance = linspace(x3(1),x3(end),n)';
 radius_vec = interp1(x3,y3,axial_distance);
 c_RP1 = 1880;
-
-dT = dT_cooling(OF_i, p_c_i, d_t, axial_distance, radius_vec, c_star, m_f_i,c_RP1);
 
 L_con = (d_c - d_t)/(2*tand(alpha_con));
 
@@ -212,7 +211,7 @@ while true
     T_f(cont + 1) = T_f_new;
     T_ox(cont + 1) = T_ox_new;
     gamma(cont + 1) = gamma_new;
-    dT(cont + 1)
+    dT(cont + 1) = dT_new;
 
     cont = cont + 1
 end
@@ -235,6 +234,7 @@ u_feed_ox = u_feed_ox(~isnan(V_p_ox));
 T_f = T_f(~isnan(V_p_ox));
 T_ox = T_ox(~isnan(V_p_ox));
 gamma = gamma(~isnan(V_p_ox));
+dT = dT(~isnan(V_p_ox));
 tvet = tvet(1:length(gamma));
 
 figure
@@ -284,6 +284,11 @@ figure
 plot(tvet, T_c)
 title("Temperatura combustione")
 grid minor
+
+figure
+plot(tvet, dT)
+grid minor
+title('dT coolant')
 
 dp_c_end = p_c_new - p_c_min;
 I_tot = sum(T)*dt;

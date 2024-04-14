@@ -84,4 +84,8 @@ DT_fuel = TURCU / (c*m_dot_fuel);
 r_cc = (sqrt(eps_c)*D_t)/2;
 l_con = (r_cc - D_t/2)/tan(pi/6);
 dT = dT_cooling(OF, p_c, D_t, xx, yy, l_con, c_star, m_dot_fuel,c);
+%notare  che questa condizione è all'equilibrio considerando però le
+%condizioni iniziali. ricordarsi che il coefficiente h cala con la
+%pressione in camera, quindi il flusso di calore diminuisce con il tempo
+
 

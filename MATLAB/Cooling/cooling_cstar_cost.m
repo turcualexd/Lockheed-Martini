@@ -40,7 +40,7 @@ V_tot = pi*d^2*h/4;
 output = cea(CEA('problem','rkt','nfz',2,'o/f',OF_i,'sup',eps,'case','Porco Dio','p,bar',p_c_i/1e5,'reactants','fuel','RP-1(L)','C',1,'H',1.9423,'wt%',100,'oxid','O2(L)','O',2,'wt%',100,'output','massf','transport','trace',1e-10,'end'));
 
 c_star = output.froz.cstar(end);
-c_t_i = output.froz.cf(end);
+c_t_i = output.froz.cf_vac(end);
 T_c_i = output.froz.temperature(1);
 gamma_i = output.froz.gamma(1);
 I_sp_i = output.froz.isp(end);
@@ -62,8 +62,8 @@ n = 300;
 axial_distance = linspace(x3(1),x3(end),n)';
 radius_vec = interp1(x3,y3,axial_distance);
 c_RP1 = 1880;
-
 L_con = (d_c - d_t)/(2*tand(alpha_con));
+
 
 L_c = L_star/eps_c;
 V_loss = 0.25*pi*((L_c + L_con)*d^2 - L_c*d_c^2 - L_con*(d_c^2 + d_c*d_t + d_t^2)/3);
@@ -121,8 +121,8 @@ dp_ox = 0.5*rho_ox*u_feed_ox_i^2*K_ox;
 p_f_i = p_c_i + dp_f;
 p_ox_i = p_c_i + dp_ox;
 
-dT_i = dT_cooling(OF_i, p_c_i, d_t, axial_distance, radius_vec, c_star, m_f_i,c_RP1);
-
+[dT_i, q_flow_i] = dT_cooling(OF_i, p_c_i, d_t, axial_distance, radius_vec, L_con, c_star, m_f_i,c_RP1);
+q_flow_temp =  q_flow_i;
 % Iterazione
 tvet = 0 : dt : t_max;
 m_f = [m_f_i nan(1, length(tvet) - 1)];
@@ -187,12 +187,13 @@ while true
     
     output = cea(CEA('problem','rkt','nfz',2,'o/f',OF_new,'sup',eps,'case','Porco Dio','p,bar',p_c_new/1e5,'reactants','fuel','RP-1(L)','C',1,'H',1.9423,'wt%',100,'oxid','O2(L)','O',2,'wt%',100,'output','massf','transport','trace',1e-10,'end'));
     
-    c_t_new = output.froz.cf(end);
+    c_t_new = output.froz.cf_vac(end);
     T_c_new = output.froz.temperature(1);
     I_sp_new = output.froz.isp(end);
     gamma_new = output.froz.gamma(1);
     T_new = lambda*(m_f_new + m_ox_new)*c_t_new*c_star;
-    dT_new = dT_cooling(OF_new, p_c_new, d_t, axial_distance, radius_vec, c_star, m_f_new,c_RP1);
+    [dT_new,q_flow_i] = dT_cooling(OF_new, p_c_new, d_t, axial_distance, radius_vec, L_con, c_star, m_f_new,c_RP1);
+    q_flow_temp = [q_flow_temp, q_flow_i];
 
     V_p_f(cont + 1) = V_p_f_new;
     V_p_ox(cont + 1) = V_p_ox_new;
