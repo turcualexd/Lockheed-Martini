@@ -23,7 +23,7 @@ V_tot = pi*d^2*h/4; % m^3
 % 80% of V_tot usable
 
 % Assumptions
-OF_i = 2.33;        % -
+OF_i = 2.35;        % -
 eps = 300;          % -
 eps_c = 10;         % -
 C_d = 0.82;         % -
@@ -31,7 +31,7 @@ L_star = 1.143;     % m
 alpha = 0.2;        % -
 d_feed_f = 5e-3;    % m
 d_feed_ox = 7e-3;   % m
-dt = 1;             % s 
+dt = 120;             % s 
 lambda = 1;         % -
 k_ox = 5/3;         % -
 k_f = 7/5;          % -
@@ -392,25 +392,31 @@ T_f_avg = mean(T_f_mat);
 T_ox_avg = mean(T_ox_mat);
 
 %%
+tvet=tvet-dt;
+grayColor = [.6 .6 .6];
 figure
 hold on
 grid minor
-plot(tvet,OF_avg, 'LineWidth',2, 'Color','r')
+xlim([0 3500])
+plot(tvet(2:end),OF_avg(2:end), 'LineWidth',2, 'Color','r')
 for q = 1:n_simulations
-    plot(tvet, OF_mat(q, :), 'Color','k');
+    plot(tvet(2:end), OF_mat(q, (2:end)),'-','LineWidth',0.5, 'Color',grayColor);
 end
+plot(tvet(2:end),OF_avg(2:end), 'LineWidth',4, 'Color','r')
 title("O/F Ratio")
 xlabel("t [s]")
 ylabel("O/F [-]")
 legend('avg', 'sim')
-%%
+
 figure
 hold on
 grid minor
-plot(tvet,p_ox_avg, 'LineWidth',2, 'Color','r')
+xlim([0 3500])
+plot(tvet(2:end),p_ox_avg(2:end), 'LineWidth',2, 'Color','r')
 for q = 1:n_simulations
-    plot(tvet, p_ox_mat(q, :), 'Color','k');
+    plot(tvet(2:end), p_ox_mat(q, (2:end)),'-','LineWidth',0.5, 'Color',grayColor);
 end
+plot(tvet(2:end),p_ox_avg(2:end), 'LineWidth',4, 'Color','r')
 title("Oxidizer pressure")
 xlabel("t [s]")
 ylabel("p_{ox} [Pa]")
@@ -419,10 +425,12 @@ legend('avg', 'sim')
 figure
 hold on
 grid minor
-plot(tvet,p_f_avg, 'LineWidth',2, 'Color','r')
+xlim([0 3500])
+plot(tvet(2:end),p_f_avg(2:end), 'LineWidth',2, 'Color','r')
 for q = 1:n_simulations
-    plot(tvet, p_f_mat(q, :), 'Color','k');
+    plot(tvet(2:end), p_f_mat(q, (2:end)),'-','LineWidth',0.5, 'Color',grayColor);
 end
+plot(tvet(2:end),p_f_avg(2:end), 'LineWidth',4, 'Color','r')
 title("Fuel pressure")
 xlabel("t [s]")
 ylabel("p_{f} [Pa]")
@@ -431,10 +439,12 @@ legend('avg', 'sim')
 figure
 hold on
 grid minor
-plot(tvet,p_c_avg, 'LineWidth',2, 'Color','r')
+xlim([0 3500])
+plot(tvet(2:end),p_c_avg(2:end), 'LineWidth',2, 'Color','r')
 for q = 1:n_simulations
-    plot(tvet, p_c_mat(q, :), 'Color','k');
+    plot(tvet(2:end), p_c_mat(q, (2:end)),'-','LineWidth',0.5, 'Color',grayColor);
 end
+plot(tvet(2:end),p_c_avg(2:end), 'LineWidth',4, 'Color','r')
 title("Chamber pressure")
 xlabel("t [s]")
 ylabel("p_{c} [Pa]")
@@ -443,10 +453,12 @@ legend('avg', 'sim')
 figure
 hold on
 grid minor
-plot(tvet,m_ox_avg, 'LineWidth',2, 'Color','r')
+xlim([0 3500])
+plot(tvet(2:end),m_ox_avg(2:end), 'LineWidth',2, 'Color','r')
 for q = 1:n_simulations
-    plot(tvet, m_ox_mat(q, :), 'Color','k');
+    plot(tvet(2:end), m_ox_mat(q, (2:end)),'-','LineWidth',0.5, 'Color',grayColor);
 end
+plot(tvet(2:end),m_ox_avg(2:end), 'LineWidth',4, 'Color','r')
 title("Oxidizer mass flow rate")
 xlabel("t [s]")
 ylabel("m_{ox} [kg/s]")
@@ -455,10 +467,12 @@ legend('avg', 'sim')
 figure
 hold on
 grid minor
-plot(tvet,m_f_avg, 'LineWidth',2, 'Color','r')
+xlim([0 3500])
+plot(tvet(2:end),m_f_avg(2:end), 'LineWidth',2, 'Color','r')
 for q = 1:n_simulations
-    plot(tvet, m_f_mat(q, :), 'Color','k');
+    plot(tvet(2:end), m_f_mat(q, (2:end)),'-','LineWidth',0.5, 'Color',grayColor);
 end
+plot(tvet(2:end),m_f_avg(2:end), 'LineWidth',4, 'Color','r')
 title("Fuel mass flow rate")
 xlabel("t [s]")
 ylabel("m_{f} [kg/s]")
@@ -467,10 +481,12 @@ legend('avg', 'sim')
 figure
 hold on
 grid minor
-plot(tvet,u_feed_ox_avg, 'LineWidth',2, 'Color','r')
+xlim([0 3500])
+plot(tvet(2:end),u_feed_ox_avg(2:end), 'LineWidth',2, 'Color','r')
 for q = 1:n_simulations
-    plot(tvet, u_feed_ox_mat(q, :), 'Color','k');
+    plot(tvet(2:end), u_feed_ox_mat(q, (2:end)),'-','LineWidth',0.5, 'Color',grayColor);
 end
+plot(tvet(2:end),u_feed_ox_avg(2:end), 'LineWidth',4, 'Color','r')
 title("Oxidizer feed velocity")
 xlabel("t [s]")
 ylabel("u_{feed,ox} [m/s]")
@@ -479,10 +495,12 @@ legend('avg', 'sim')
 figure
 hold on
 grid minor
-plot(tvet,u_feed_f_avg, 'LineWidth',2, 'Color','r')
+xlim([0 3500])
+plot(tvet(2:end),u_feed_f_avg(2:end), 'LineWidth',2, 'Color','r')
 for q = 1:n_simulations
-    plot(tvet, u_feed_f_mat(q, :), 'Color','k');
+    plot(tvet(2:end), u_feed_f_mat(q, (2:end)),'-','LineWidth',0.5, 'Color',grayColor);
 end
+plot(tvet(2:end),u_feed_f_avg(2:end), 'LineWidth',4, 'Color','r')
 title("Fuel feed velocity")
 xlabel("t [s]")
 ylabel("u_{feed,f} [m/s]")
@@ -491,10 +509,12 @@ legend('avg', 'sim')
 figure
 hold on
 grid minor
+xlim([0 3500])
 plot(tvet,I_sp_avg, 'LineWidth',2, 'Color','r')
 for q = 1:n_simulations
-    plot(tvet, I_sp_mat(q, :), 'Color','k');
+    plot(tvet(2:end), I_sp_mat(q, (2:end)), '-','LineWidth',0.5, 'Color',grayColor);
 end
+plot(tvet,I_sp_avg, 'LineWidth',4, 'Color','r')
 title("Specific Impulse")
 xlabel("t [s]")
 ylabel("I_{sp} [s]")
@@ -503,10 +523,12 @@ legend('avg', 'sim')
 figure
 hold on
 grid minor
-plot(tvet,T_ox_avg, 'LineWidth',2, 'Color','r')
+xlim([0 3500])
+plot(tvet(2:end),T_ox_avg(2:end), 'LineWidth',2, 'Color','r')
 for q = 1:n_simulations
-    plot(tvet, T_ox_mat(q, :), 'Color','k');
+    plot(tvet(2:end), T_ox_mat(q, (2:end)), '-','LineWidth',0.5, 'Color',grayColor);
 end
+plot(tvet(2:end),T_ox_avg(2:end), 'LineWidth',4, 'Color','r')
 title("Oxidizer temperature")
 xlabel("t [s]")
 ylabel("T_{oxidizer} [K]")
@@ -515,28 +537,31 @@ legend('avg', 'sim')
 figure
 hold on
 grid minor
-plot(tvet,T_f_avg, 'LineWidth',2, 'Color','r')
+xlim([0 3500])
+plot(tvet(2:end),T_f_avg(2:end), 'LineWidth',2, 'Color','r')
 for q = 1:n_simulations
-    plot(tvet, T_f_mat(q, :), 'Color','k');
+    plot(tvet(2:end), T_f_mat(q, (2:end)), '-','LineWidth',0.5, 'Color',grayColor);
 end
+plot(tvet(2:end),T_f_avg(2:end), 'LineWidth',4, 'Color','r')
 title("Fuel temperature")
 xlabel("t [s]")
 ylabel("T_{fuel} [K]")
 legend('avg', 'sim')
 
-
 figure
 hold on
 grid minor
-plot(tvet,T_c_avg, 'LineWidth',2, 'Color','r')
+xlim([0 3500])
+plot(tvet(2:end),T_c_avg(2:end), 'LineWidth',2, 'Color','r')
 for q = 1:n_simulations
-    plot(tvet, T_c_mat(q, :), 'Color','k');
+    plot(tvet(2:end), T_c_mat(q, 2:end), '-','LineWidth',0.5, 'Color',grayColor);
 end
+plot(tvet(2:end),T_c_avg(2:end), 'LineWidth',4, 'Color','r')
 title("Combustion Chamber temperature")
 xlabel("t [s]")
 ylabel("T_{cc} [K]")
 legend('avg', 'sim')
-
+%%
 
 
 dp_c_end = p_c_new - p_c_min;
