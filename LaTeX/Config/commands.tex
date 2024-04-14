@@ -2,18 +2,18 @@
 \newcommand{\cfig}[3]{
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=#2\linewidth]{Images/#1}
-    \caption{#3}
+	\includegraphics[width=#3\linewidth]{Images/#1}
+    \caption{#2}
 	\label{fig:#1}
 \end{figure}
 }
 
 % Figure on right side
 \newcommand{\rfig}[3]{
-\begin{wrapfigure}{r}{#2\linewidth}
+\begin{wrapfigure}{r}{#3\linewidth}
 	\centering
 	\includegraphics[width=\linewidth]{Images/#1}
-	\caption{#3}
+	\caption{#2}
 	\label{fig:#1}
 	\vspace*{-13pt}
 \end{wrapfigure}
@@ -60,3 +60,20 @@
 \newcommand{\mail}[1]{
 	\href{mailto:#1@mail.polimi.it}{#1@mail.polimi.it}
 }
+
+% T for thrust
+\newcommand{\T}{\varmathbb{T}}
+
+% R for universal gas constant
+\newcommand{\R}{\mathcal{R}}
+
+% M for molar mass
+\newcommand{\M}{\varmathbb{M}}
+
+% Bookmark for missing reference
+\makeatletter
+\newcommand{\mref}{%
+	\@latex@warning{Missing reference}
+	\textcolor{red}{\textbf{REFERENCE}}
+}
+\makeatother

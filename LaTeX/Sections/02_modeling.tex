@@ -1,13 +1,86 @@
 \section{Modeling of propulsion system}
 \label{sec:modeling}
 
-Initial considerations (req + hyp / assumptions + constraints + criteria)
+Introduction
 
-Flowchart
+\cfig{flowchart}{Flowchart of the simulation model}{1}
 
-\subsection{Tanks sizing}
-\label{subsec:tanks}
+\subsection{Input data}
+\label{subsec:input_data}
 
+\subsection{Nominal sizing}
+\label{subsec:nominal_sizing}
+
+\pagebreak
 \subsection{System dynamics}
 \label{subsec:dynamics}
 
+From the nominal sizing of the engine, it is necessary to simulate the real dynamics of the system in order to:
+
+\begin{itemize}
+    \item retrieve the performance of the designed system in time;
+    \item check the compliance of the system with the constraints;
+    \item test other designs through iteration to select the best one based on the simulated data of interest.
+\end{itemize}
+
+For this reasons, a numerical method was implemented. An high level explanation for the functioning of the algorithm can be appreciated in \autoref{fig:flowchart_dynamics}.
+
+\cfig{flowchart_dynamics}{Flowchart of dynamics of the model}{0.38}
+
+The first step of the time cycle is to update the state of the two tanks based on the previous iteration. Assuming a constant propellants flow rate during the time step $\Delta t$, the volume of the remaining liquid is decreased by a quantity $\Delta V ^ {(i+1)}$. Accordingly, the volume of the pressurizer will increase by the same amount.
+\begin{gather}
+    \Delta V ^ {(i+1)} = \frac{\dot{m}_p^{(i)} \Delta t}{\rho_p} \\
+    V_p ^ {(i+1)} = V_p ^ {(i)} - \Delta V ^ {(i+1)} \\
+    V_{pr} ^ {(i+1)} = V_{pr} ^ {(i)} + \Delta V ^ {(i+1)}
+\end{gather}
+
+From the change of volume, the new pressure and temperature of the pressurizer gas are computed assuming an adiabatic expansion in the tank:
+\begin{align}
+    p_{pr} ^ {(i+1)} &= p_{pr} ^ {(i)} \left( \frac{V_{pr} ^ {(i)}}{V_{pr} ^ {(i+1)}} \right) ^ {\gamma_{pr}} \\
+    T_{pr} ^ {(i+1)} &= T_{pr} ^ {(i)} \left( \frac{V_{pr} ^ {(i)}}{V_{pr} ^ {(i+1)}} \right) ^ {\gamma_{pr} - 1}
+\end{align}
+
+A check must be performed on the remaining volume of propellants in the tanks at current iteration: if the volume of fuel is negative it means that the combustion is over so the simulation stops (the same for oxidizer).
+
+If there is some more propellant to use, the iteration goes on with the calculation of the new chamber pressure. This step is complex because it introduces another cycle of iterations inside each time step.
+The mass flow rate of the propellants depends on the pressure cascade in the feeding lines, hence on the chamber pressure. These two variables are bounded and both unknown, but there's only one configuration that can match the boundary condition imposed by the critical condition in the throat, so the problem is well-posed.
+
+From literature, the $c^*$ of the chamber has the following expression:
+\begin{equation}
+    c^* = \frac{p_c \, A_t}{\dot{m}_{fu} + \dot{m}_{ox}}
+    \label{eq:c_star_comp}
+\end{equation}
+
+It correlates the chamber pressure with the propellants flow rate in the throat. Moreover, it only depends on the thermodynamics of the combustion process in the chamber, which changes over time due to the architecture of blow-down system. By imposing the critical conditions in the throat, it can be rewritten as:
+\begin{equation}
+    c^* = \sqrt{\frac{\R}{\M} \frac{T_c}{\gamma} \left( \frac{\gamma + 1}{2} \right)} ^{^{^ {\frac{\gamma + 1}{\gamma - 1}} }}
+    \label{eq:c_star_cea}
+\end{equation}
+
+The system is coherent only if the two expressions give the same result. A system of equations could be created and numerically solved to match both the pressure cascade and $c^*$.
+
+A reasonable initial guess for chamber pressure $p_c ^ {(i+1)(1)}$ is taken as the pressure at previous time step $p_c ^ {(i)}$. The next steps $p_c ^ {(i+1)(j)}$ will converge progressively towards the real current pressure $p_c ^ {(i+1)}$ (for increasing $j$).
+
+From $p_c ^ {(i+1)(j)}$ the $c^{*(i+1)(j)}$ is computed from the pressure cascade as described in \autoref{eq:c_star_comp}:
+\begin{gather}
+    u_{fd,p} ^ {(i+1)(j)} = \sqrt{\frac{2 \left( p_{pr} ^ {(i+1)} - p_c ^ {(i+1)(j)} \right)}{\rho_p K_p}}
+    \\[3pt]
+    m_p ^ {(i+1)(j)} = \rho_p \, A_{fd,p} \, u_{fd,p} ^ {(i+1)(j)}
+    \\[3pt]
+    O/F ^ {(i+1)(j)} = \frac{m_{ox} ^ {(i+1)(j)}}{m_{fu} ^ {(i+1)(j)}}
+    \\[3pt]
+    c^{*(i+1)(j)} = \frac{A_t \, p_c ^ {(i+1)(j)}}{\dot{m}_{fu} ^ {(i+1)(j)} + \dot{m}_{ox} ^ {(i+1)(j)}}
+\end{gather}
+
+\autoref{eq:c_star_cea} is solved directly using CEAM software, which takes as input $p_c ^ {(i+1)(j)}$ and $O/F ^ {(i+1)(j)}$ to return $c_{cea}^{*(j)}$.
+
+The two computed $c^*$ are then compared: if their difference satisfies a certain tolerance, then the cycle stops and returns the new values for the current time step. Else, the inner cycle continues the refinement by guessing a new $p_c ^ {(i+1)(j+1)}$ from $p_c ^ {(i+1)(j)}$.
+
+Finally, a check on the new combustion pressure $p_c ^ {(i+1)}$ is performed in order to stay above the minimum design pressure $p_{c,min}$, as mentioned in \mref. Similarly to the previous check, if the pressure drops below the limit the simulation stops and returns the results, else it continues with the next time step.
+
+\vspace*{3mm}
+
+The same general algorithm is used to refine the initial assumptions of $O/F$ and $B$, which influence the nominal design of the whole engine (as described in \autoref{subsec:nominal_sizing}).
+In this case, the initial $c^*$ value from design is assumed constant to reduce the computational burden, since the algorithm is applied over a wide range of combinations of $O/F$ and $B$. This assumption is reasonable because the $O/F$ (and as consequence the thermodynamics of the combustion) hardly varies during the whole burn, as can be noticed in \mref.
+
+\pagebreak
