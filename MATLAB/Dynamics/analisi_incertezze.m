@@ -111,14 +111,40 @@ A_inj_ox = A_inj_ox_tot/N_inj_ox;
 d_inj_f = 2*sqrt(A_inj_f/pi);
 d_inj_ox = 2*sqrt(A_inj_ox/pi);
 
+% Feeding lines
+A_feed_f = pi*d_feed_f^2/4;
+A_feed_ox = pi*d_feed_ox^2/4;
+
+L_feed_f = h - L_c - h_t_f;
+L_feed_ox = h - L_c - h_t;
+
+u_feed_f_i = m_f_i/(rho_f*A_feed_f);
+u_feed_ox_i = m_ox_i/(rho_ox*A_feed_ox);
+
+Re_f = rho_f*u_feed_f_i*d_feed_f/mu_f;
+Re_ox = rho_ox*u_feed_ox_i*d_feed_ox/mu_ox;
+
+f_f = moody(Re_f);
+f_ox = moody(Re_ox);
+
+% Pressure losses cascade
+K_f =  1 + f_f*L_feed_f/d_feed_f + (A_feed_f/(A_inj_f_tot*C_d))^2;
+K_ox = 1 + f_ox*L_feed_ox/d_feed_ox + (A_feed_ox/(A_inj_ox_tot*C_d))^2;
+
+dp_f = 0.5*rho_f*u_feed_f_i^2*K_f;
+dp_ox = 0.5*rho_ox*u_feed_ox_i^2*K_ox;
+
+p_f_i = p_c_i + dp_f;
+p_ox_i = p_c_i + dp_ox;
+
 %qua incertezze
 coeff = 48.5/1903.3;
 
 sigma_f = coeff * d_inj_f;
 sigma_ox = coeff * d_inj_ox;
 
-n_simulations = 50; %da aumentare dopo
-%%
+n_simulations = 5; %da aumentare dopo
+
 tvet = 0 : dt : t_max;
 m_f_mat = [nan(n_simulations, length(tvet))];
 m_ox_mat = [nan(n_simulations, length(tvet))];
@@ -141,6 +167,7 @@ T_ox_mat = [nan(n_simulations, length(tvet))];
 
 w = waitbar(0, 'CEAM goes brrrrrr... (0%)');
 contatore = 1;
+toll = 0.1;
 
 for q = 1 : n_simulations
     d_inj_f_vec = nan(N_inj_f,1);
@@ -149,8 +176,6 @@ for q = 1 : n_simulations
     A_inj_ox_vec = nan(N_inj_ox,1);
 
     % ANDRA CICLATO PER DIVERSE ITERAZIONI PER AVERE PIU POSSIBILITA DI VARIAZIONI
-    % E ANDRA CICLATO PER DIVERSI CD
-
 
     for i = 1 : N_inj_f
         d_inj_f_vec(i) = normrnd(d_inj_f, sigma_f);
@@ -161,55 +186,78 @@ for q = 1 : n_simulations
         A_inj_ox_vec(i) = pi*(d_inj_ox_vec(i))^2/4;
     end
 
-
     % sovrascrivo area totale che diventa diversa
     A_inj_f_tot = sum(A_inj_f_vec);
     A_inj_ox_tot = sum(A_inj_ox_vec);
 
-    % sovrascrivo con nuove portate di f e ox
-
-    m_f_i = A_inj_f_tot * (C_d*sqrt(2*dp_inj*rho_f));
-    m_ox_i = A_inj_ox_tot * (C_d*sqrt(2*dp_inj*rho_ox));
-
-    OF_i = m_ox_i/m_f_i;
-
-    m_p_i = m_f_i + m_ox_i;
-
-
-
-    %%
-
-    v_inj_f = m_f_i/(rho_f*A_inj_f_tot);
-    v_inj_ox = m_ox_i/(rho_ox*A_inj_ox_tot);
-
-    % Feeding lines
-    A_feed_f = pi*d_feed_f^2/4;
-    A_feed_ox = pi*d_feed_ox^2/4;
-
-    L_feed_f = h - L_c - h_t_f;
-    L_feed_ox = h - L_c - h_t;
-
-    u_feed_f_i = m_f_i/(rho_f*A_feed_f);
-    u_feed_ox_i = m_ox_i/(rho_ox*A_feed_ox);
-
-    Re_f = rho_f*u_feed_f_i*d_feed_f/mu_f;
-    Re_ox = rho_ox*u_feed_ox_i*d_feed_ox/mu_ox;
-
-    f_f = moody(Re_f);
-    f_ox = moody(Re_ox);
-
-    % Pressure losses cascade
     K_f =  1 + f_f*L_feed_f/d_feed_f + (A_feed_f/(A_inj_f_tot*C_d))^2;
     K_ox = 1 + f_ox*L_feed_ox/d_feed_ox + (A_feed_ox/(A_inj_ox_tot*C_d))^2;
+    
+    c_star_i = 1;
+    c_star_cea = 0;
+    j = 1;
+    p_c_ciclo = 60e5;
 
-    dp_f = 0.5*rho_f*u_feed_f_i^2*K_f;
-    dp_ox = 0.5*rho_ox*u_feed_ox_i^2*K_ox;
+    while c_star_i > c_star_cea
 
-    p_f_i = p_c_i + dp_f;
-    p_ox_i = p_c_i + dp_ox;
+        j = j - 0.01;
+        p_c_i = j*p_c_ciclo;
+
+        u_feed_f_i = sqrt(2*(p_f_i - p_c_i)/(rho_f*K_f));
+        u_feed_ox_i = sqrt(2*(p_ox_i - p_c_i)/(rho_ox*K_ox));
+
+        m_f_i = rho_f*A_feed_f*u_feed_f_i;
+        m_ox_i = rho_ox*A_feed_ox*u_feed_ox_i;
+        OF_i = m_ox_i/m_f_i;
+
+        output = cea(CEA('problem','rkt','nfz',2,'o/f',OF_i,'sup',eps,'case','Porco Dio','p,bar',p_c_i/1e5,'reactants','fuel','RP-1(L)','C',1,'H',1.9423,'wt%',100,'oxid','O2(L)','O',2,'wt%',100,'output','massf','transport','trace',1e-10,'end'));
+        c_star_cea = output.froz.cstar(1);
+        c_star_i = A_t*p_c_i/(m_f_i + m_ox_i);
+
+    end
+
+    p_c_up = (j + 0.01)*p_c_ciclo;
+    p_c_dw = j*p_c_ciclo;
+    j = 1;
+
+    while true
+
+        p_c_i = (p_c_up + p_c_dw)/2;
+
+        u_feed_f_i = sqrt(2*(p_f_i - p_c_i)/(rho_f*K_f));
+        u_feed_ox_i = sqrt(2*(p_ox_i - p_c_i)/(rho_ox*K_ox));
+
+        m_f_i = rho_f*A_feed_f*u_feed_f_i;
+        m_ox_i = rho_ox*A_feed_ox*u_feed_ox_i;
+        OF_i = m_ox_i/m_f_i;
+
+        output = cea(CEA('problem','rkt','nfz',2,'o/f',OF_i,'sup',eps,'case','Porco Dio','p,bar',p_c_i/1e5,'reactants','fuel','RP-1(L)','C',1,'H',1.9423,'wt%',100,'oxid','O2(L)','O',2,'wt%',100,'output','massf','transport','trace',1e-10,'end'));
+
+        c_star_cea = output.froz.cstar(1);
+        c_t_i = output.froz.cf_vac(end);
+        T_c_i = output.froz.temperature(1);
+        gamma_i = output.froz.gamma(1);
+        c_star_i = A_t*p_c_i/(m_f_i + m_ox_i);
+        T_i = lambda*(m_f_i + m_ox_i)*c_t_i*c_star_i;
+        I_sp_i = output.froz.isp_vac(end);
+        err = abs(c_star_cea - c_star_i);
+
+        if abs(err) < toll
+            break
+        elseif  c_star_i < c_star_cea
+            p_c_dw = p_c_i;
+        else
+            p_c_up = p_c_i;
+        end
+    end
+
+    if p_c_i < p_c_min
+        disp("Terminato per pressione in camera troppo bassa")
+        break
+    end
 
 
-    %% Dynamics
+    % Dynamics
     m_f = [m_f_i nan(1, length(tvet) - 1)];
     m_ox = [m_ox_i nan(1, length(tvet) - 1)];
     u_feed_f = [u_feed_f_i nan(1, length(tvet) - 1)];
@@ -233,7 +281,6 @@ for q = 1 : n_simulations
     V_ox = 0;
     cont = 1;
     j = 1; % p_c_it inferiore di bisezione
-    toll = 0.1;
 
     while true
 
@@ -414,9 +461,9 @@ grid minor
 xlim([0 3500])
 plot(tvet(2:end),p_ox_avg(2:end), 'LineWidth',2, 'Color','r')
 for q = 1:n_simulations
-    plot(tvet(2:end), p_ox_mat(q, (2:end)),'-','LineWidth',0.5, 'Color',grayColor);
+    plot(tvet(1:end), p_ox_mat(q, (1:end)),'-','LineWidth',0.5, 'Color',grayColor);
 end
-plot(tvet(2:end),p_ox_avg(2:end), 'LineWidth',4, 'Color','r')
+plot(tvet(1:end),p_ox_avg(1:end), 'LineWidth',4, 'Color','r')
 title("Oxidizer pressure")
 xlabel("t [s]")
 ylabel("p_{ox} [Pa]")
@@ -426,11 +473,11 @@ figure
 hold on
 grid minor
 xlim([0 3500])
-plot(tvet(2:end),p_f_avg(2:end), 'LineWidth',2, 'Color','r')
+plot(tvet(1:end),p_f_avg(1:end), 'LineWidth',2, 'Color','r')
 for q = 1:n_simulations
-    plot(tvet(2:end), p_f_mat(q, (2:end)),'-','LineWidth',0.5, 'Color',grayColor);
+    plot(tvet(1:end), p_f_mat(q, (1:end)),'-','LineWidth',0.5, 'Color',grayColor);
 end
-plot(tvet(2:end),p_f_avg(2:end), 'LineWidth',4, 'Color','r')
+plot(tvet(1:end),p_f_avg(1:end), 'LineWidth',4, 'Color','r')
 title("Fuel pressure")
 xlabel("t [s]")
 ylabel("p_{f} [Pa]")
@@ -440,11 +487,11 @@ figure
 hold on
 grid minor
 xlim([0 3500])
-plot(tvet(2:end),p_c_avg(2:end), 'LineWidth',2, 'Color','r')
+plot(tvet(1:end),p_c_avg(1:end), 'LineWidth',2, 'Color','r')
 for q = 1:n_simulations
-    plot(tvet(2:end), p_c_mat(q, (2:end)),'-','LineWidth',0.5, 'Color',grayColor);
+    plot(tvet(1:end), p_c_mat(q, (1:end)),'-','LineWidth',0.5, 'Color',grayColor);
 end
-plot(tvet(2:end),p_c_avg(2:end), 'LineWidth',4, 'Color','r')
+plot(tvet(1:end),p_c_avg(1:end), 'LineWidth',4, 'Color','r')
 title("Chamber pressure")
 xlabel("t [s]")
 ylabel("p_{c} [Pa]")
@@ -454,11 +501,11 @@ figure
 hold on
 grid minor
 xlim([0 3500])
-plot(tvet(2:end),m_ox_avg(2:end), 'LineWidth',2, 'Color','r')
+plot(tvet(1:end),m_ox_avg(1:end), 'LineWidth',2, 'Color','r')
 for q = 1:n_simulations
-    plot(tvet(2:end), m_ox_mat(q, (2:end)),'-','LineWidth',0.5, 'Color',grayColor);
+    plot(tvet(1:end), m_ox_mat(q, (1:end)),'-','LineWidth',0.5, 'Color',grayColor);
 end
-plot(tvet(2:end),m_ox_avg(2:end), 'LineWidth',4, 'Color','r')
+plot(tvet(1:end),m_ox_avg(1:end), 'LineWidth',4, 'Color','r')
 title("Oxidizer mass flow rate")
 xlabel("t [s]")
 ylabel("m_{ox} [kg/s]")
@@ -468,11 +515,11 @@ figure
 hold on
 grid minor
 xlim([0 3500])
-plot(tvet(2:end),m_f_avg(2:end), 'LineWidth',2, 'Color','r')
+plot(tvet(1:end),m_f_avg(1:end), 'LineWidth',2, 'Color','r')
 for q = 1:n_simulations
-    plot(tvet(2:end), m_f_mat(q, (2:end)),'-','LineWidth',0.5, 'Color',grayColor);
+    plot(tvet(1:end), m_f_mat(q, (1:end)),'-','LineWidth',0.5, 'Color',grayColor);
 end
-plot(tvet(2:end),m_f_avg(2:end), 'LineWidth',4, 'Color','r')
+plot(tvet(1:end),m_f_avg(1:end), 'LineWidth',4, 'Color','r')
 title("Fuel mass flow rate")
 xlabel("t [s]")
 ylabel("m_{f} [kg/s]")
@@ -482,11 +529,11 @@ figure
 hold on
 grid minor
 xlim([0 3500])
-plot(tvet(2:end),u_feed_ox_avg(2:end), 'LineWidth',2, 'Color','r')
+plot(tvet(1:end),u_feed_ox_avg(1:end), 'LineWidth',2, 'Color','r')
 for q = 1:n_simulations
-    plot(tvet(2:end), u_feed_ox_mat(q, (2:end)),'-','LineWidth',0.5, 'Color',grayColor);
+    plot(tvet(1:end), u_feed_ox_mat(q, (1:end)),'-','LineWidth',0.5, 'Color',grayColor);
 end
-plot(tvet(2:end),u_feed_ox_avg(2:end), 'LineWidth',4, 'Color','r')
+plot(tvet(1:end),u_feed_ox_avg(1:end), 'LineWidth',4, 'Color','r')
 title("Oxidizer feed velocity")
 xlabel("t [s]")
 ylabel("u_{feed,ox} [m/s]")
@@ -496,11 +543,11 @@ figure
 hold on
 grid minor
 xlim([0 3500])
-plot(tvet(2:end),u_feed_f_avg(2:end), 'LineWidth',2, 'Color','r')
+plot(tvet(1:end),u_feed_f_avg(1:end), 'LineWidth',2, 'Color','r')
 for q = 1:n_simulations
-    plot(tvet(2:end), u_feed_f_mat(q, (2:end)),'-','LineWidth',0.5, 'Color',grayColor);
+    plot(tvet(1:end), u_feed_f_mat(q, (1:end)),'-','LineWidth',0.5, 'Color',grayColor);
 end
-plot(tvet(2:end),u_feed_f_avg(2:end), 'LineWidth',4, 'Color','r')
+plot(tvet(1:end),u_feed_f_avg(1:end), 'LineWidth',4, 'Color','r')
 title("Fuel feed velocity")
 xlabel("t [s]")
 ylabel("u_{feed,f} [m/s]")
@@ -512,7 +559,7 @@ grid minor
 xlim([0 3500])
 plot(tvet,I_sp_avg, 'LineWidth',2, 'Color','r')
 for q = 1:n_simulations
-    plot(tvet(2:end), I_sp_mat(q, (2:end)), '-','LineWidth',0.5, 'Color',grayColor);
+    plot(tvet(1:end), I_sp_mat(q, (1:end)), '-','LineWidth',0.5, 'Color',grayColor);
 end
 plot(tvet,I_sp_avg, 'LineWidth',4, 'Color','r')
 title("Specific Impulse")
@@ -524,11 +571,11 @@ figure
 hold on
 grid minor
 xlim([0 3500])
-plot(tvet(2:end),T_ox_avg(2:end), 'LineWidth',2, 'Color','r')
+plot(tvet(1:end),T_ox_avg(1:end), 'LineWidth',2, 'Color','r')
 for q = 1:n_simulations
-    plot(tvet(2:end), T_ox_mat(q, (2:end)), '-','LineWidth',0.5, 'Color',grayColor);
+    plot(tvet(1:end), T_ox_mat(q, (1:end)), '-','LineWidth',0.5, 'Color',grayColor);
 end
-plot(tvet(2:end),T_ox_avg(2:end), 'LineWidth',4, 'Color','r')
+plot(tvet(1:end),T_ox_avg(1:end), 'LineWidth',4, 'Color','r')
 title("Oxidizer temperature")
 xlabel("t [s]")
 ylabel("T_{oxidizer} [K]")
@@ -538,11 +585,11 @@ figure
 hold on
 grid minor
 xlim([0 3500])
-plot(tvet(2:end),T_f_avg(2:end), 'LineWidth',2, 'Color','r')
+plot(tvet(1:end),T_f_avg(1:end), 'LineWidth',2, 'Color','r')
 for q = 1:n_simulations
-    plot(tvet(2:end), T_f_mat(q, (2:end)), '-','LineWidth',0.5, 'Color',grayColor);
+    plot(tvet(1:end), T_f_mat(q, (1:end)), '-','LineWidth',0.5, 'Color',grayColor);
 end
-plot(tvet(2:end),T_f_avg(2:end), 'LineWidth',4, 'Color','r')
+plot(tvet(1:end),T_f_avg(1:end), 'LineWidth',4, 'Color','r')
 title("Fuel temperature")
 xlabel("t [s]")
 ylabel("T_{fuel} [K]")
@@ -552,11 +599,11 @@ figure
 hold on
 grid minor
 xlim([0 3500])
-plot(tvet(2:end),T_c_avg(2:end), 'LineWidth',2, 'Color','r')
+plot(tvet(1:end),T_c_avg(1:end), 'LineWidth',2, 'Color','r')
 for q = 1:n_simulations
-    plot(tvet(2:end), T_c_mat(q, 2:end), '-','LineWidth',0.5, 'Color',grayColor);
+    plot(tvet(1:end), T_c_mat(q, 1:end), '-','LineWidth',0.5, 'Color',grayColor);
 end
-plot(tvet(2:end),T_c_avg(2:end), 'LineWidth',4, 'Color','r')
+plot(tvet(1:end),T_c_avg(1:end), 'LineWidth',4, 'Color','r')
 title("Combustion Chamber temperature")
 xlabel("t [s]")
 ylabel("T_{cc} [K]")
