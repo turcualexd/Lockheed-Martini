@@ -72,8 +72,22 @@
 
 % Bookmark for missing reference
 \makeatletter
-\newcommand{\mref}{%
+\newcommand{\mref}{
 	\@latex@warning{Missing reference}
 	\textcolor{red}{\textbf{REFERENCE}}
+}
+\makeatother
+
+% O/F mean normal
+\makeatletter
+\newcommand{\OFmed}{
+	\m@th\overline{\mbox{$O/F$\rule{0pt}{-3mm}}}
+}
+\makeatother
+
+% O/F mean bold
+\makeatletter
+\newcommand{\OFmedbold}{
+	\m@th\overline{\mbox{$\boldsymbol{O/F}$\rule{0pt}{-3mm}}}
 }
 \makeatother

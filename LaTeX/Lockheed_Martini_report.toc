@@ -11,8 +11,8 @@
 \contentsline {subsection}{\numberline {2.1}Input data}{1}{subsection.2.1}%
 \contentsline {subsection}{\numberline {2.2}Nominal sizing}{1}{subsection.2.2}%
 \contentsline {subsection}{\numberline {2.3}System dynamics}{2}{subsection.2.3}%
-\contentsline {section}{\numberline {3}Results analysis}{4}{section.3}%
-\contentsline {section}{\numberline {4}Nozzle losses}{4}{section.4}%
-\contentsline {section}{\numberline {5}Additive manufacturing influences}{4}{section.5}%
-\contentsline {section}{\numberline {6}Cooling analysis}{4}{section.6}%
-\contentsline {section}{Bibliography}{5}{section*.8}%
+\contentsline {section}{\numberline {3}Results analysis}{5}{section.3}%
+\contentsline {section}{\numberline {4}Nozzle losses}{5}{section.4}%
+\contentsline {section}{\numberline {5}Additive manufacturing influences}{5}{section.5}%
+\contentsline {section}{\numberline {6}Cooling analysis}{5}{section.6}%
+\contentsline {section}{Bibliography}{6}{section*.8}%

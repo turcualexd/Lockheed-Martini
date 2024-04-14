@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.3.31) (preloaded format=pdflatex 2024.4.13)  14 APR 2024 20:37
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.3.31) (preloaded format=pdflatex 2024.4.13)  14 APR 2024 23:30
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1034,7 +1034,7 @@ LaTeX Warning: Missing reference on input line 79.
 
 LaTeX Warning: Missing reference on input line 84.
 
-) [3] (Sections/03_results.tex) (Sections/04_nozzle_losses.tex) (Sections/05_additive.tex) (Sections/06_cooling.tex)) [4]
+) [3] [4] (Sections/03_results.tex) (Sections/04_nozzle_losses.tex) (Sections/05_additive.tex) (Sections/06_cooling.tex)) [5]
 LaTeX Font Info:    Trying to load font information for T1+txtt on input line 18.
  (C:\Users\ricky\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\t1txtt.fd
 File: t1txtt.fd 2000/12/15 v3.1
@@ -1043,7 +1043,7 @@ File: t1txtt.fd 2000/12/15 v3.1
 Package caption Warning: Unused \captionsetup[table] on input line 58.
 See the caption package documentation for explanation.
 
-[5] (Lockheed_Martini_report.aux)
+[6] (Lockheed_Martini_report.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-03-14>
@@ -1055,17 +1055,17 @@ Package logreq Info: Writing requests to 'Lockheed_Martini_report.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 23671 strings out of 474424
- 409781 string characters out of 5741739
- 1979496 words of memory out of 5000000
- 45576 multiletter control sequences out of 15000+600000
+ 23674 strings out of 474424
+ 409801 string characters out of 5741739
+ 1975496 words of memory out of 5000000
+ 45578 multiletter control sequences out of 15000+600000
  636938 words of font info for 182 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 87i,15n,102p,1527b,1901s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 87i,17n,102p,1527b,1901s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/ricky/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/rtcxr.pfb><C:/Users/ricky/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/rtxb.pfb><C:/Users/ricky/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/rtxbmi.pfb><C:/Users/ricky/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/rtxmi.pfb><C:/Users/ricky/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/rtxr.pfb><C:/Users/ricky/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/t1xtt.pfb><C:/Users/ricky/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/txbmia.pfb><C:/Users/ricky/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/txbsy.pfb><C:/Users/ricky/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/txex.pfb><C:/Users/ricky/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/txmia.pfb><C:/Users/ricky/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/txsy.pfb><C:/Users/ricky/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/ricky/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/ricky/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/ricky/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Lockheed_Martini_report.pdf (9 pages, 638780 bytes).
+Output written on Lockheed_Martini_report.pdf (10 pages, 639647 bytes).
 PDF statistics:
- 1194 PDF objects out of 1200 (max. 8388607)
- 41 named destinations out of 1000 (max. 500000)
+ 1198 PDF objects out of 1200 (max. 8388607)
+ 42 named destinations out of 1000 (max. 500000)
  152 words of extra memory for PDF output out of 10000 (max. 10000000)
 
