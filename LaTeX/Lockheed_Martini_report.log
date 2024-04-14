@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.12.16)  13 APR 2024 22:36
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.12.16)  14 APR 2024 14:32
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -855,7 +855,7 @@ Package biblatex Info: ... file 'Lockheed_Martini_report.bbl' found.
 Package biblatex Info: Reference section=0 on input line 6.
 Package biblatex Info: Reference segment=0 on input line 6.
  (Config/title_page_chapter.tex
-<Config//Poli_logo.pdf, id=59, 527.9725pt x 415.5525pt>
+<Config//Poli_logo.pdf, id=63, 527.9725pt x 415.5525pt>
 File: Config//Poli_logo.pdf Graphic file (type pdf)
 <use Config//Poli_logo.pdf>
 Package pdftex.def Info: Config//Poli_logo.pdf  used on input line 6.
@@ -900,38 +900,43 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
 \openout5 = `Lockheed_Martini_report.toc'.
 
  [1] (Config/Body.tex (Sections/00_notation.tex) [2] (Sections/01_introduction.tex) (Sections/02_modeling.tex
-LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 6.
- (C:\Miktex\tex/latex/psnfss\ts1ptm.fd
-File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
-)
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.12     \item \textbf
-                      {Manufacturing}: all the system is produced in AM, no ... [1]) (Sections/03_results.tex) (Sections/04_nozzle_losses.tex) (Sections/05_additive.tex) (Sections/06_cooling.tex)) [2]
-
-Package caption Warning: Unused \captionsetup[table] on input line 58.
-See the caption package documentation for explanation.
-
-[3] (Lockheed_Martini_report.aux)
+l.5 T
+     he workflow for the sizing of DRY-1 is introduced by \autoref{fig:flowc... [1]
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 7.
+ (C:\Miktex\tex/latex/psnfss\ts1ptm.fd
+File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
+)
+<Images/flowchart.pdf, id=116, 489.32813pt x 391.4625pt>
+File: Images/flowchart.pdf Graphic file (type pdf)
+<use Images/flowchart.pdf>
+Package pdftex.def Info: Images/flowchart.pdf  used on input line 12.
+(pdftex.def)             Requested size: 483.69687pt x 386.96368pt.
+ [2 <./Images/flowchart.pdf>]) (Sections/03_results.tex) (Sections/04_nozzle_losses.tex) (Sections/05_additive.tex) (Sections/06_cooling.tex)) [3]
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 18.
+ (C:\Miktex\tex/latex/base\t1cmtt.fd
+File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+) [4] (Lockheed_Martini_report.aux)
 Package rerunfilecheck Info: File `Lockheed_Martini_report.out' has not changed.
-(rerunfilecheck)             Checksum: E6B7077BCF1A55193732529067510560;2123.
+(rerunfilecheck)             Checksum: 2455C99516791EE25081E3499A4A3235;2244.
 Package logreq Info: Writing requests to 'Lockheed_Martini_report.run.xml'.
 \openout1 = `Lockheed_Martini_report.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 22274 strings out of 475385
- 385992 string characters out of 2793321
- 1178057 words of memory out of 3000000
- 43287 multiletter control sequences out of 15000+600000
- 516737 words of font info for 88 fonts, out of 8000000 for 9000
+ 22349 strings out of 475385
+ 387631 string characters out of 2793321
+ 1176432 words of memory out of 3000000
+ 43333 multiletter control sequences out of 15000+600000
+ 523995 words of font info for 102 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,10n,97p,2497b,1871s stack positions out of 10000i,1000n,20000p,200000b,80000s
-{C:/Miktex/fonts/enc/dvips/base/8r.enc}<C:/Miktex/fonts/type1/urw/times/utmb8a.pfb><C:/Miktex/fonts/type1/urw/times/utmr8a.pfb>
-Output written on Lockheed_Martini_report.pdf (6 pages, 98705 bytes).
+ 84i,16n,97p,2490b,1871s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ <C:\Users\danie\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1095.pk>{C:/Miktex/fonts/enc/dvips/base/8r.enc}<C:/Miktex/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Miktex/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Miktex/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Miktex/fonts/type1/urw/symbol/usyr.pfb><C:/Miktex/fonts/type1/urw/times/utmb8a.pfb><C:/Miktex/fonts/type1/urw/times/utmr8a.pfb><C:/Miktex/fonts/type1/urw/times/utmri8a.pfb>
+Output written on Lockheed_Martini_report.pdf (7 pages, 260715 bytes).
 PDF statistics:
- 132 PDF objects out of 1000 (max. 8388607)
- 23 named destinations out of 1000 (max. 500000)
- 118 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 416 PDF objects out of 1000 (max. 8388607)
+ 31 named destinations out of 1000 (max. 500000)
+ 131 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -65,6 +65,71 @@
       \field{title}{Design and Development of a Large Bipropellant Slowdown Propulsion System}
       \field{year}{1995}
     \endentry
+    \entry{sutton}{article}{}
+      \name{author}{1}{}{%
+        {{hash=1ef6106126c3c9123b46da100c94fb5d}{%
+           family={G.P.Sutton},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{1ef6106126c3c9123b46da100c94fb5d}
+      \strng{fullhash}{1ef6106126c3c9123b46da100c94fb5d}
+      \strng{bibnamehash}{1ef6106126c3c9123b46da100c94fb5d}
+      \strng{authorbibnamehash}{1ef6106126c3c9123b46da100c94fb5d}
+      \strng{authornamehash}{1ef6106126c3c9123b46da100c94fb5d}
+      \strng{authorfullhash}{1ef6106126c3c9123b46da100c94fb5d}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Book}
+      \field{title}{Rocket Propulsion Elements}
+      \field{year}{2017}
+    \endentry
+    \entry{ariane_datasheet}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=44b347b68d10b88a89b392a68fe0b12b}{%
+           family={Group},
+           familyi={G\bibinitperiod},
+           given={Ariane},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{44b347b68d10b88a89b392a68fe0b12b}
+      \strng{fullhash}{44b347b68d10b88a89b392a68fe0b12b}
+      \strng{bibnamehash}{44b347b68d10b88a89b392a68fe0b12b}
+      \strng{authorbibnamehash}{44b347b68d10b88a89b392a68fe0b12b}
+      \strng{authornamehash}{44b347b68d10b88a89b392a68fe0b12b}
+      \strng{authorfullhash}{44b347b68d10b88a89b392a68fe0b12b}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Site: \url{https://www.space-propulsion.com/}}
+      \field{title}{Chemical bipropellant thruster family}
+      \field{year}{2021}
+    \endentry
+    \entry{huzel_huang}{article}{}
+      \name{author}{2}{}{%
+        {{hash=c6a9bacfe5622034d6a7e996466086d9}{%
+           family={Huzel},
+           familyi={H\bibinitperiod}}}%
+        {{hash=eee36400f167169ba3d89eec278e632e}{%
+           family={Huang},
+           familyi={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{3d005528c93bd3e5e7389e86816a1c72}
+      \strng{fullhash}{3d005528c93bd3e5e7389e86816a1c72}
+      \strng{bibnamehash}{3d005528c93bd3e5e7389e86816a1c72}
+      \strng{authorbibnamehash}{3d005528c93bd3e5e7389e86816a1c72}
+      \strng{authornamehash}{3d005528c93bd3e5e7389e86816a1c72}
+      \strng{authorfullhash}{3d005528c93bd3e5e7389e86816a1c72}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Book}
+      \field{title}{Modern Engineering for design of Liquid-Propellant Rocket Engines}
+      \field{year}{1992}
+    \endentry
   \enddatalist
 \endrefsection
 \endinput
