@@ -1,5 +1,5 @@
 % $ biblatex auxiliary file $
-% $ biblatex bbl format version 3.2 $
+% $ biblatex bbl format version 3.3 $
 % Do not modify the above lines!
 %
 % This is an auxiliary file used by the 'biblatex' package.
@@ -18,8 +18,8 @@
 
 
 \refsection{0}
-  \datalist[entry]{none/global//global/global}
-    \entry{valve_criticalities}{article}{}
+  \datalist[entry]{none/global//global/global/global}
+    \entry{valve_criticalities}{article}{}{}
       \name{author}{1}{}{%
         {{hash=ef0a007fec4d93a363dd94ad565262cd}{%
            family={Al},
@@ -31,10 +31,12 @@
       }
       \strng{namehash}{ef0a007fec4d93a363dd94ad565262cd}
       \strng{fullhash}{ef0a007fec4d93a363dd94ad565262cd}
+      \strng{fullhashraw}{ef0a007fec4d93a363dd94ad565262cd}
       \strng{bibnamehash}{ef0a007fec4d93a363dd94ad565262cd}
       \strng{authorbibnamehash}{ef0a007fec4d93a363dd94ad565262cd}
       \strng{authornamehash}{ef0a007fec4d93a363dd94ad565262cd}
       \strng{authorfullhash}{ef0a007fec4d93a363dd94ad565262cd}
+      \strng{authorfullhashraw}{ef0a007fec4d93a363dd94ad565262cd}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
@@ -43,7 +45,7 @@
       \field{title}{Propellant Tank Pressurisation with Helium Filled Hollow Glass Microspheres}
       \field{year}{2015}
     \endentry
-    \entry{repressurization}{article}{}
+    \entry{repressurization}{article}{}{}
       \name{author}{1}{}{%
         {{hash=3af45147a0a007194392da2318c3822d}{%
            family={Hearn},
@@ -53,10 +55,12 @@
       }
       \strng{namehash}{3af45147a0a007194392da2318c3822d}
       \strng{fullhash}{3af45147a0a007194392da2318c3822d}
+      \strng{fullhashraw}{3af45147a0a007194392da2318c3822d}
       \strng{bibnamehash}{3af45147a0a007194392da2318c3822d}
       \strng{authorbibnamehash}{3af45147a0a007194392da2318c3822d}
       \strng{authornamehash}{3af45147a0a007194392da2318c3822d}
       \strng{authorfullhash}{3af45147a0a007194392da2318c3822d}
+      \strng{authorfullhashraw}{3af45147a0a007194392da2318c3822d}
       \field{sortinit}{2}
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
