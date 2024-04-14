@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2024.3.9)  14 APR 2024 15:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2024.3.9)  14 APR 2024 19:32
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -747,7 +747,11 @@ Package csquotes Info: Redefining alias 'default' -> 'english'.
 LaTeX Font Info:    Trying to load font information for T1+ptm on input line 6.
  (/Users/Chiara/Library/Application Support/MiKTeX/texmfs/install/tex/latex/psnfss/t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
-) (Lockheed_Martini_report.aux)
+) (Lockheed_Martini_report.aux
+
+LaTeX Warning: Label `eq:totalarea' multiply defined.
+
+)
 \openout1 = `Lockheed_Martini_report.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 6.
@@ -896,44 +900,43 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
 \openout5 = `Lockheed_Martini_report.toc'.
 
  [1] (Config/Body.tex (Sections/00_notation.tex) [2] (Sections/01_introduction.tex) (Sections/02_modeling.tex) (Sections/03_results.tex) (Sections/04_nozzle_losses.tex) (Sections/05_additive.tex
-<Images/cd tabella.png, id=101, 356.33125pt x 395.4775pt>
-File: Images/cd tabella.png Graphic file (type png)
-<use Images/cd tabella.png>
-Package pdftex.def Info: Images/cd tabella.png  used on input line 4.
-(pdftex.def)             Requested size: 145.11053pt x 161.04854pt.
+<Images/cdcoeff.jpg, id=101, 825.0825pt x 792.9625pt>
+File: Images/cdcoeff.jpg Graphic file (type jpg)
+<use Images/cdcoeff.jpg>
+Package pdftex.def Info: Images/cdcoeff.jpg  used on input line 5.
+(pdftex.def)             Requested size: 193.47578pt x 185.93481pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.6 F
-     ollowing the AM technology choice in \autoref{subsec:additive_intro}, a... [1]) (Sections/06_cooling.tex)) [2 <./Images/cd tabella.png>]
-
-Package caption Warning: Unused \captionsetup[table] on input line 58.
-See the caption package documentation for explanation.
-
-[3] (Lockheed_Martini_report.aux)
+l.9 A
+     dditive manufacturing allows to create complex shapes at a lower cost, ... [1]) (Sections/06_cooling.tex)) [2 <./Images/cdcoeff.jpg>] [3] (Lockheed_Martini_report.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
+
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package rerunfilecheck Info: File `Lockheed_Martini_report.out' has not changed.
-(rerunfilecheck)             Checksum: FE6D0E09141E92C986F561FA97623381;2085.
+(rerunfilecheck)             Checksum: 97FD570B39D566621B12547DC443D93C;2085.
 Package logreq Info: Writing requests to 'Lockheed_Martini_report.run.xml'.
 \openout1 = `Lockheed_Martini_report.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 22261 strings out of 474436
- 395272 string characters out of 5739103
+ 22287 strings out of 474436
+ 395563 string characters out of 5739103
  1939187 words of memory out of 5000000
- 44231 multiletter control sequences out of 15000+600000
- 608961 words of font info for 101 fonts, out of 8000000 for 9000
+ 44242 multiletter control sequences out of 15000+600000
+ 612985 words of font info for 112 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  87i,10n,102p,2484b,1879s stack positions out of 10000i,1000n,20000p,200000b,200000s
-{/Library/Application Support/MiKTeX/texmfs/install/fonts/enc/dvips/base/8r.enc}</Library/Application Support/MiKTeX/texmfs/install/fonts/type1/urw/times/utmb8a.pfb></Library/Application Support/MiKTeX/texmfs/install/fonts/type1/urw/times/utmr8a.pfb></Library/Application Support/MiKTeX/texmfs/install/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Lockheed_Martini_report.pdf (6 pages, 194482 bytes).
+{/Library/Application Support/MiKTeX/texmfs/install/fonts/enc/dvips/base/8r.enc}</Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmex10.pfb></Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi10.pfb></Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmr10.pfb></Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy10.pfb></Library/Application Support/MiKTeX/texmfs/install/fonts/type1/urw/symbol/usyr.pfb></Library/Application Support/MiKTeX/texmfs/install/fonts/type1/urw/symbol/usyr.pfb></Library/Application Support/MiKTeX/texmfs/install/fonts/type1/urw/times/utmb8a.pfb></Library/Application Support/MiKTeX/texmfs/install/fonts/type1/urw/times/utmr8a.pfb></Library/Application Support/MiKTeX/texmfs/install/fonts/type1/urw/times/utmri8a.pfb>
+Output written on Lockheed_Martini_report.pdf (6 pages, 323121 bytes).
 PDF statistics:
- 142 PDF objects out of 1000 (max. 8388607)
- 24 named destinations out of 1000 (max. 500000)
+ 178 PDF objects out of 1000 (max. 8388607)
+ 27 named destinations out of 1000 (max. 500000)
  123 words of extra memory for PDF output out of 10000 (max. 10000000)
 

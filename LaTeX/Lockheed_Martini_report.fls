@@ -535,12 +535,12 @@ INPUT Sections/05_additive.tex
 INPUT ./Sections/05_additive.tex
 INPUT ./Sections/05_additive.tex
 INPUT Sections/05_additive.tex
-INPUT ./Images/cd tabella.png
-INPUT Images/cd tabella.png
-INPUT ./Images/cd tabella.png
-INPUT ./Images/cd tabella.png
-INPUT ./Images/cd tabella.png
-INPUT ./Images/cd tabella.png
+INPUT ./Images/cdcoeff.jpg
+INPUT Images/cdcoeff.jpg
+INPUT ./Images/cdcoeff.jpg
+INPUT ./Images/cdcoeff.jpg
+INPUT ./Images/cdcoeff.jpg
+INPUT ./Images/cdcoeff.jpg
 INPUT /Library/Application Support/MiKTeX/texmfs/install/fonts/vf/adobe/times/ptmb8t.vf
 INPUT /Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/adobe/times/ptmb8r.tfm
 INPUT /Library/Application Support/MiKTeX/texmfs/install/fonts/vf/adobe/times/ptmr8t.vf
@@ -559,12 +559,40 @@ INPUT /Library/Application Support/MiKTeX/texmfs/install/fonts/vf/adobe/times/zp
 INPUT /Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/adobe/times/psyro.tfm
 INPUT /Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/cm/cmmi10.tfm
 INPUT /Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/adobe/times/ptmri8r.tfm
+INPUT /Library/Application Support/MiKTeX/texmfs/install/fonts/vf/adobe/times/zptmcm7t.vf
+INPUT /Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/adobe/symbol/psyr.tfm
+INPUT /Library/Application Support/MiKTeX/texmfs/install/fonts/vf/adobe/times/zptmcm7m.vf
+INPUT /Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/adobe/times/psyro.tfm
+INPUT /Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/cm/cmmi10.tfm
+INPUT /Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/adobe/times/ptmri8r.tfm
+INPUT /Library/Application Support/MiKTeX/texmfs/install/fonts/vf/adobe/times/zptmcm7v.vf
+INPUT /Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/cm/cmex10.tfm
+INPUT /Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/cm/cmex10.tfm
+INPUT /Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/adobe/symbol/psyr.tfm
+INPUT /Library/Application Support/MiKTeX/texmfs/install/fonts/vf/adobe/times/zptmcm7t.vf
+INPUT /Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/adobe/symbol/psyr.tfm
+INPUT /Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/cm/cmr10.tfm
+INPUT /Library/Application Support/MiKTeX/texmfs/install/fonts/vf/adobe/times/zptmcm7y.vf
+INPUT /Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/cm/cmsy10.tfm
+INPUT /Users/Chiara/Library/Application Support/MiKTeX/texmfs/data/fonts/tfm/public/rsfs/rsfs10.tfm
 INPUT Lockheed_Martini_report.aux
 INPUT ./Lockheed_Martini_report.out
 INPUT ./Lockheed_Martini_report.out
 INPUT Lockheed_Martini_report.run.xml
 OUTPUT Lockheed_Martini_report.run.xml
 INPUT /Library/Application Support/MiKTeX/texmfs/install/fonts/enc/dvips/base/8r.enc
+INPUT /Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmex10.pfb
+INPUT /Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmex10.pfb
+INPUT /Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi10.pfb
+INPUT /Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi10.pfb
+INPUT /Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmr10.pfb
+INPUT /Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmr10.pfb
+INPUT /Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy10.pfb
+INPUT /Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy10.pfb
+INPUT /Library/Application Support/MiKTeX/texmfs/install/fonts/type1/urw/symbol/usyr.pfb
+INPUT /Library/Application Support/MiKTeX/texmfs/install/fonts/type1/urw/symbol/usyr.pfb
+INPUT /Library/Application Support/MiKTeX/texmfs/install/fonts/type1/urw/symbol/usyr.pfb
+INPUT /Library/Application Support/MiKTeX/texmfs/install/fonts/type1/urw/symbol/usyr.pfb
 INPUT /Library/Application Support/MiKTeX/texmfs/install/fonts/type1/urw/times/utmb8a.pfb
 INPUT /Library/Application Support/MiKTeX/texmfs/install/fonts/type1/urw/times/utmb8a.pfb
 INPUT /Library/Application Support/MiKTeX/texmfs/install/fonts/type1/urw/times/utmr8a.pfb
