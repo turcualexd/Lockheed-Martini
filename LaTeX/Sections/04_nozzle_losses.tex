@@ -1,0 +1,22 @@
+\section{Nozzle losses}
+\label{sec:nozzle_losses}
+
+In order to calculate and evaluate the nozzle losses, modifications and further calculations were made to the model presented earlier. In particular, the boundary layer required further calculation. First of all, the CEAM program was used to find some initial parameters of the propellant flow, such as the density, the dynamic viscosity, the temperature and the adiabatic dilatation coefficient, all taken at the nozzle throat. After this step, the calculation can begin, starting from the calculation of the velocity of the propellant flow (the velocity can be found by using the speed of sound) and the Reynolds number in the throat.
+
+
+[aggiungere equazione della volocita del suono e reynold].    
+
+
+Finally, the modified Reynolds number can be calculated using the throat radius and curvature. The datas were taken from the nozzle modeling part.  
+
+
+[aggiungere formula raynold modificato].  
+
+
+With all these data it is possible to calculate the discharge coefficient [qui si può aggiungere reference alle slide di maggi], so that the real mass flow at the throat can be calculated, also taking into account the ideal mass flow found in the previous section of the report.   
+
+
+[aggiungere formula Cd e mre].   
+
+
+This procedure is also repeated in the various iterations of the modelling code. Furthermore, from the first iteration of the code, an erosion rate will be considered to evaluate the losses caused by the nozzle erosion. An analysis of the literature has been done to find a suitable erosion rate. Due to the small dimension of the propulsion system and the lack of experiments in this field carried out on similar engines have led to these rates being considered unacceptable. Therefore, an approximation was made that allowed to have an approximately increase of 2\% of the initial throat radius in our computation time. It is important to note that this is a very large approximation because no consideration about the propellant properties and throat material were made [qua si può aggiungere la citazione alle slide the maggi]. Normally the erosion rate is calculated by performing experimental measurements of the propulsion system and so every possible factor can be considered. 
