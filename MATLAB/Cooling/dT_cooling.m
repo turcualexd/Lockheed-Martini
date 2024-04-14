@@ -41,6 +41,8 @@ for k = 1:length(eps_vec)
     q_dot_vec = h_g.*(T_aw(2:end) - T_wg_vec(2:end));
 end
 
+%plot heat flux as a function of time
+
 %calculate heat power along nozzle
 Q = 0;
 Q_L = 2*pi*q_dot_vec.*radius_vec;
