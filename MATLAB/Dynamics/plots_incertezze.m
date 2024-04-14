@@ -5,6 +5,7 @@ load("mat_inc.mat");
 dt   = 1;
 t_max = 4e3;
 tvet = 0 : dt : t_max;
+n_simulations = size(c_star_mat,1);
 %% calcolo vettori media
 
 m_f_avg = mean(m_f_mat);
@@ -42,6 +43,7 @@ title("O/F Ratio")
 xlabel("t [s]")
 ylabel("O/F [-]")
 legend('avg', 'sim')
+
 
 figure
 hold on
