@@ -49,7 +49,7 @@ for i = 1 : length(OF_vet)
         output = cea(CEA('problem','rkt','nfz',2,'o/f',OF_i,'sup',eps,'case','Porco Dio','p,bar',p_c_i/1e5,'reactants','fuel','RP-1(L)','C',1,'H',1.9423,'wt%',100,'oxid','O2(L)','O',2,'wt%',100,'output','massf','transport','trace',1e-10,'end'));
         
         c_star = output.froz.cstar(end);
-        c_t_i = output.froz.cf(end);
+        c_t_i = output.froz.cf_vac(end);
         m_p_i = T_i/(c_t_i*c_star);
         
         A_t = m_p_i/(output.froz.sonvel(2)*output.froz.density(2));
@@ -163,7 +163,7 @@ for i = 1 : length(OF_vet)
             OF_new = m_ox_new/m_f_new;
             
             output = cea(CEA('problem','rkt','nfz',2,'o/f',OF_new,'sup',eps,'case','Porco Dio','p,bar',p_c_new/1e5,'reactants','fuel','RP-1(L)','C',1,'H',1.9423,'wt%',100,'oxid','O2(L)','O',2,'wt%',100,'output','massf','transport','trace',1e-10,'end'));
-            c_t_new = output.froz.cf(end);
+            c_t_new = output.froz.cf_vac(end);
             T_new = lambda*(m_f_new + m_ox_new)*c_t_new*c_star;
         
             V_p_f(cont + 1) = V_p_f_new;
