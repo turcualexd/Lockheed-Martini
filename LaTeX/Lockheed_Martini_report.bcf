@@ -2373,7 +2373,6 @@
   </bcf:bibdata>
   <bcf:section number="0">
     <bcf:citekey order="3" intorder="1">2006_overview</bcf:citekey>
-    <bcf:citekey order="6" intorder="1">2006_overview</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">
