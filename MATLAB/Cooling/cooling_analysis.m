@@ -9,6 +9,7 @@ x3 = x3';
 y3 = y3';
 xx = linspace(x3(1),x3(end),n)';
 yy = interp1(x3,y3,xx);
+eps_c = 10;
 eps_vec = (yy.^2 ./ (0.25*D_t^2));
 OF = 2.24;
 p_c = 50e5;
@@ -21,6 +22,7 @@ gamma_vec = [];
 mach_vec = [];
 Pr_CEA_vec = [];
 %%
+
 for i = 1:n
     eps = eps_vec(i);
     output = cea(CEA('problem','rkt','nfz',2,'o/f',OF,'sup',eps,'case', 'DRY1', ...
@@ -76,8 +78,10 @@ for i = 1:length(xx) - 1
 end
 m_dot_fuel = 0.085; %kg/s;
 c  = 1880;
-DT_fuel = TURCU / (c*m_dot_fuel)
+DT_fuel = TURCU / (c*m_dot_fuel);
 
 %%
+r_cc = (sqrt(eps_c)*D_t)/2;
+l_con = (r_cc - D_t/2)/tan(pi/6);
+dT = dT_cooling(OF, p_c, D_t, xx, yy, l_con, c_star, m_dot_fuel,c);
 
-dT = dT_cooling(OF, p_c, D_t, xx, yy, c_star, m_dot_fuel,c)
