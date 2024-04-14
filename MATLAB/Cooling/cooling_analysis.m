@@ -78,6 +78,6 @@ m_dot_fuel = 0.085; %kg/s;
 c  = 1880;
 DT_fuel = TURCU / (c*m_dot_fuel)
 
-
 %%
-dT = dT_cooling(OF, eps_vec, p_c, D_t, xx, c_star, m_dot_fuel,c);
+
+dT = dT_cooling(OF, p_c, D_t, xx, yy, c_star, m_dot_fuel,c)
