@@ -1,5 +1,7 @@
 clear, clc, close all
 
+
+% questo ha i VAC corretti
 %% Input data
 
 % Initial data
@@ -31,7 +33,7 @@ L_star = 1.143;     % m
 alpha = 0.2;        % -
 d_feed_f = 5e-3;    % m
 d_feed_ox = 7e-3;   % m
-dt = 10;             % s %cambiato da Marcello
+dt = 120;             % s 
 lambda = 1;         % -
 k_ox = 5/3;         % -
 k_f = 7/5;          % -
@@ -49,10 +51,10 @@ T_i = T_i_n/lambda;
 % CEA sizing of nozzle and CC
 output = cea(CEA('problem','rkt','nfz',2,'o/f',OF_i,'sup',eps,'case','Porco Dio','p,bar',p_c_i/1e5,'reactants','fuel','RP-1(L)','C',1,'H',1.9423,'wt%',100,'oxid','O2(L)','O',2,'wt%',100,'output','massf','transport','trace',1e-10,'end'));
 c_star_i = output.froz.cstar(end);
-c_t_i = output.froz.cf(end);
+c_t_i = output.froz.cf_vac(end);
 T_c_i = output.froz.temperature(1);
 gamma_i = output.froz.gamma(1);
-I_sp_i = output.froz.isp(end);
+I_sp_i = output.froz.isp_vac(end);
 m_p_i = T_i/(c_t_i*c_star_i);
 
 A_t = m_p_i/(output.froz.sonvel(2)*output.froz.density(2));
@@ -68,7 +70,7 @@ L_con = (d_c - d_t)/(2*tand(alpha_con));
 L_c = L_star/eps_c;
 
 % Tanks sizing
-V_loss = 0.25*pi*((L_c + L_con)*d^2 - L_c*d_c^2 - L_con*(d_c^2 + d_c*d_t + d_t^2)/3);
+V_loss = 0.25*pi*((L_c + L_con)*d^2 - L_c*d_c^2 - L_con(d_c^2 + d_c*d_t + d_t^2)/3);
 
 if V_loss/V_tot > 0.2
     h_t = h - L_c - L_con;
@@ -105,8 +107,6 @@ N_inj_f = floor(N_inj_f);
 
 N_inj_ox = 2*N_inj_f;
 
-
-
 A_inj_f = A_inj_f_tot/N_inj_f;
 A_inj_ox = A_inj_ox_tot/N_inj_ox;
 
@@ -115,9 +115,12 @@ d_inj_ox = 2*sqrt(A_inj_ox/pi);
 
 %qua incertezze
 coeff = 96.7/1903.3;
+
 sigma_f = coeff * d_inj_f;
 sigma_ox = coeff * d_inj_ox;
-n_simulations = 2; %da aumentare dopo
+
+n_simulations = 15; %da aumentare dopo
+
 tvet = 0 : dt : t_max;
 m_f_mat = [nan(n_simulations, length(tvet))];
 m_ox_mat = [nan(n_simulations, length(tvet))];
@@ -137,6 +140,9 @@ T_mat = [nan(n_simulations, length(tvet))];
 I_sp_mat = [nan(n_simulations, length(tvet))];
 T_f_mat = [nan(n_simulations, length(tvet))];
 T_ox_mat = [nan(n_simulations, length(tvet))];
+
+w = waitbar(0, 'CEAM goes brrrrrr... (0%)');
+contatore = 1;
 
 for q = 1 : n_simulations
     d_inj_f_vec = nan(N_inj_f,1);
@@ -301,12 +307,12 @@ for q = 1 : n_simulations
             output = cea(CEA('problem','rkt','nfz',2,'o/f',OF_new,'sup',eps,'case','Porco Dio','p,bar',p_c_new/1e5,'reactants','fuel','RP-1(L)','C',1,'H',1.9423,'wt%',100,'oxid','O2(L)','O',2,'wt%',100,'output','massf','transport','trace',1e-10,'end'));
 
             c_star_cea = output.froz.cstar(1);
-            c_t_new = output.froz.cf(end);
+            c_t_new = output.froz.cf_vac(end);
             T_c_new = output.froz.temperature(1);
             gamma_new = output.froz.gamma(1);
             c_star_new = A_t*p_c_new/(m_f_new + m_ox_new);
             T_new = lambda*(m_f_new + m_ox_new)*c_t_new*c_star_new;
-            I_sp_new = output.froz.isp(end);
+            I_sp_new = output.froz.isp_vac(end);
             err = abs(c_star_cea - c_star_new);
 
             if abs(err) < toll
@@ -362,7 +368,11 @@ for q = 1 : n_simulations
     I_sp_mat(q, :) = I_sp;
     T_f_mat(q, :) = T_f;
     T_ox_mat(q, :) = T_ox;
+
+    waitbar(contatore/n_simulations, w, sprintf('CEAM goes brrrrrr... (%.2f%%)', 100*contatore/n_simulations));
+    contatore = contatore + 1;
 end
+close(w)
 
 m_f_avg = mean(m_f_mat);
 m_ox_avg = mean(m_ox_mat);
