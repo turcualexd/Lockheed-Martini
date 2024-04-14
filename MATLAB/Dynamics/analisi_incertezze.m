@@ -1,7 +1,5 @@
 clear, clc, close all
 
-
-% questo ha i VAC corretti
 %% Input data
 
 % Initial data
@@ -33,7 +31,7 @@ L_star = 1.143;     % m
 alpha = 0.2;        % -
 d_feed_f = 5e-3;    % m
 d_feed_ox = 7e-3;   % m
-dt = 120;             % s 
+dt = 1;             % s 
 lambda = 1;         % -
 k_ox = 5/3;         % -
 k_f = 7/5;          % -
@@ -70,7 +68,7 @@ L_con = (d_c - d_t)/(2*tand(alpha_con));
 L_c = L_star/eps_c;
 
 % Tanks sizing
-V_loss = 0.25*pi*((L_c + L_con)*d^2 - L_c*d_c^2 - L_con(d_c^2 + d_c*d_t + d_t^2)/3);
+V_loss = 0.25*pi*((L_c + L_con)*d^2 - L_c*d_c^2 - L_con*(d_c^2 + d_c*d_t + d_t^2)/3);
 
 if V_loss/V_tot > 0.2
     h_t = h - L_c - L_con;
