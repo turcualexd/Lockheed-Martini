@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2024.3.9)  14 APR 2024 15:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2024.3.9)  14 APR 2024 15:21
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -895,12 +895,18 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
 \tf@toc=\write5
 \openout5 = `Lockheed_Martini_report.toc'.
 
- [1] (Config/Body.tex (Sections/00_notation.tex) [2] (Sections/01_introduction.tex) (Sections/02_modeling.tex) (Sections/03_results.tex) (Sections/04_nozzle_losses.tex) (Sections/05_additive.tex) (Sections/06_cooling.tex
+ [1] (Config/Body.tex (Sections/00_notation.tex) [2] (Sections/01_introduction.tex) (Sections/02_modeling.tex) (Sections/03_results.tex) (Sections/04_nozzle_losses.tex) (Sections/05_additive.tex
+<Images/cd tabella.png, id=101, 356.33125pt x 395.4775pt>
+File: Images/cd tabella.png Graphic file (type png)
+<use Images/cd tabella.png>
+Package pdftex.def Info: Images/cd tabella.png  used on input line 4.
+(pdftex.def)             Requested size: 145.11053pt x 161.04854pt.
+
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1 \section{Cooling analysis}
-                               [1])) [2]
+l.6 F
+     ollowing the AM technology choice in \autoref{subsec:additive_intro}, a... [1]) (Sections/06_cooling.tex)) [2 <./Images/cd tabella.png>]
 
 Package caption Warning: Unused \captionsetup[table] on input line 58.
 See the caption package documentation for explanation.
@@ -911,23 +917,23 @@ LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
 Package rerunfilecheck Info: File `Lockheed_Martini_report.out' has not changed.
-(rerunfilecheck)             Checksum: 7F127FF4F69F230EE8A110F068599711;2085.
+(rerunfilecheck)             Checksum: FE6D0E09141E92C986F561FA97623381;2085.
 Package logreq Info: Writing requests to 'Lockheed_Martini_report.run.xml'.
 \openout1 = `Lockheed_Martini_report.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 22237 strings out of 474436
- 394750 string characters out of 5739103
- 1938187 words of memory out of 5000000
- 44213 multiletter control sequences out of 15000+600000
+ 22261 strings out of 474436
+ 395272 string characters out of 5739103
+ 1939187 words of memory out of 5000000
+ 44231 multiletter control sequences out of 15000+600000
  608961 words of font info for 101 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  87i,10n,102p,2484b,1879s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/Library/Application Support/MiKTeX/texmfs/install/fonts/enc/dvips/base/8r.enc}</Library/Application Support/MiKTeX/texmfs/install/fonts/type1/urw/times/utmb8a.pfb></Library/Application Support/MiKTeX/texmfs/install/fonts/type1/urw/times/utmr8a.pfb></Library/Application Support/MiKTeX/texmfs/install/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Lockheed_Martini_report.pdf (6 pages, 102688 bytes).
+Output written on Lockheed_Martini_report.pdf (6 pages, 194482 bytes).
 PDF statistics:
- 138 PDF objects out of 1000 (max. 8388607)
- 23 named destinations out of 1000 (max. 500000)
- 118 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 142 PDF objects out of 1000 (max. 8388607)
+ 24 named destinations out of 1000 (max. 500000)
+ 123 words of extra memory for PDF output out of 10000 (max. 10000000)
 

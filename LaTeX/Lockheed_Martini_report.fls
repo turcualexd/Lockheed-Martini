@@ -535,16 +535,22 @@ INPUT Sections/05_additive.tex
 INPUT ./Sections/05_additive.tex
 INPUT ./Sections/05_additive.tex
 INPUT Sections/05_additive.tex
-INPUT ./Sections/06_cooling.tex
-INPUT ./Sections/06_cooling.tex
-INPUT Sections/06_cooling.tex
-INPUT ./Sections/06_cooling.tex
-INPUT ./Sections/06_cooling.tex
-INPUT Sections/06_cooling.tex
+INPUT ./Images/cd tabella.png
+INPUT Images/cd tabella.png
+INPUT ./Images/cd tabella.png
+INPUT ./Images/cd tabella.png
+INPUT ./Images/cd tabella.png
+INPUT ./Images/cd tabella.png
 INPUT /Library/Application Support/MiKTeX/texmfs/install/fonts/vf/adobe/times/ptmb8t.vf
 INPUT /Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/adobe/times/ptmb8r.tfm
 INPUT /Library/Application Support/MiKTeX/texmfs/install/fonts/vf/adobe/times/ptmr8t.vf
 INPUT /Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/adobe/times/ptmr8r.tfm
+INPUT ./Sections/06_cooling.tex
+INPUT ./Sections/06_cooling.tex
+INPUT Sections/06_cooling.tex
+INPUT ./Sections/06_cooling.tex
+INPUT ./Sections/06_cooling.tex
+INPUT Sections/06_cooling.tex
 INPUT /Library/Application Support/MiKTeX/texmfs/install/fonts/vf/adobe/times/zptmcm7m.vf
 INPUT /Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/adobe/times/psyro.tfm
 INPUT /Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/cm/cmmi10.tfm
