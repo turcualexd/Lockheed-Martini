@@ -2,7 +2,7 @@ clear; close all; clc;
 %% carico file
 load("mat_inc.mat");
 %% creo tvet
-dt   = 1;
+dt   = 10;
 t_max = 4e3;
 tvet = 0 : dt : t_max;
 n_simulations = size(c_star_mat,1);
@@ -53,7 +53,7 @@ plot(tvet(2:end),p_ox_avg(2:end), 'LineWidth',2, 'Color','r')
 for q = 1:n_simulations
     plot(tvet(2:end), p_ox_mat(q, (2:end)),'-','LineWidth',0.5, 'Color',grayColor);
 end
-plot(tvet(2:end),p_ox_avg(2:end), 'LineWidth',4, 'Color','r')
+plot(tvet(2:end),p_ox_avg(2:end), 'LineWidth',1, 'Color','r')
 title("Oxidizer pressure")
 xlabel("t [s]")
 ylabel("p_{ox} [Pa]")
@@ -195,6 +195,20 @@ for q = 1:n_simulations
 end
 plot(tvet(2:end),T_c_avg(2:end), 'LineWidth',4, 'Color','r')
 title("Combustion Chamber temperature")
+xlabel("t [s]")
+ylabel("T_{cc} [K]")
+legend('avg', 'sim')
+%%
+figure
+hold on
+grid minor
+xlim([0 3500])
+plot(tvet(2:end),T_avg(2:end), 'LineWidth',2, 'Color','r')
+for q = 1:n_simulations
+    plot(tvet(2:end), T_mat(q, 2:end), '-','LineWidth',0.5, 'Color',grayColor);
+end
+plot(tvet(2:end),T_avg(2:end), 'LineWidth',1, 'Color','r')
+title("Thrust")
 xlabel("t [s]")
 ylabel("T_{cc} [K]")
 legend('avg', 'sim')

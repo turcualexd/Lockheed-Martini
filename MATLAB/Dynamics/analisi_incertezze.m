@@ -31,7 +31,7 @@ L_star = 1.143;     % m
 alpha = 0.2;        % -
 d_feed_f = 5e-3;    % m
 d_feed_ox = 7e-3;   % m
-dt = 120;             % s 
+dt = 10;             % s 
 lambda = 1;         % -
 k_ox = 5/3;         % -
 k_f = 7/5;          % -
@@ -112,13 +112,13 @@ d_inj_f = 2*sqrt(A_inj_f/pi);
 d_inj_ox = 2*sqrt(A_inj_ox/pi);
 
 %qua incertezze
-coeff = 96.7/1903.3;
+coeff = 48.5/1903.3;
 
 sigma_f = coeff * d_inj_f;
 sigma_ox = coeff * d_inj_ox;
 
-n_simulations = 15; %da aumentare dopo
-
+n_simulations = 50; %da aumentare dopo
+%%
 tvet = 0 : dt : t_max;
 m_f_mat = [nan(n_simulations, length(tvet))];
 m_ox_mat = [nan(n_simulations, length(tvet))];
