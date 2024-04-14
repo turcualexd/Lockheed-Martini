@@ -8,9 +8,9 @@
 \contentsline {section}{\numberline {2}Modeling of propulsion system: DRY-1}{1}{section.2}%
 \contentsline {subsection}{\numberline {2.1}Input data}{2}{subsection.2.1}%
 \contentsline {subsection}{\numberline {2.2}Nominal sizing}{3}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.3}System dynamics}{3}{subsection.2.3}%
-\contentsline {section}{\numberline {3}Results analysis}{3}{section.3}%
-\contentsline {section}{\numberline {4}Nozzle losses}{3}{section.4}%
-\contentsline {section}{\numberline {5}Additive manufacturing influences}{3}{section.5}%
-\contentsline {section}{\numberline {6}Cooling analysis}{3}{section.6}%
-\contentsline {section}{Bibliography}{4}{section*.7}%
+\contentsline {subsection}{\numberline {2.3}System dynamics}{5}{subsection.2.3}%
+\contentsline {section}{\numberline {3}Results analysis}{5}{section.3}%
+\contentsline {section}{\numberline {4}Nozzle losses}{5}{section.4}%
+\contentsline {section}{\numberline {5}Additive manufacturing influences}{5}{section.5}%
+\contentsline {section}{\numberline {6}Cooling analysis}{5}{section.6}%
+\contentsline {section}{Bibliography}{6}{section*.9}%

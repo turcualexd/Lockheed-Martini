@@ -16,8 +16,8 @@ The workflow for the sizing of DRY-1 is introduced by \autoref{fig:flowchart} an
 The input data defined different kind of requirements, related to operability environment, engine performance, size constraints, chemistry, architecture and manufacturing techniques. Regardless of the development of the engine design, the system shall respect the following pinpoints:
 \begin{itemize}
     \item \textbf{Environment}: vacuum for the whole operation.
-    \item \textbf{Thrust}: initial magnitude of 1 kN, no lower boundary.
-    \item \textbf{Chamber Pressure}: initial value of 50 bar, always above 20 bar throughout the whole mission.
+    \item \textbf{Thrust} $\mathcal{T}$: initial magnitude of 1 kN, no lower boundary.
+    \item \textbf{Chamber Pressure}  $P_c$: initial value of 50 bar, always above 20 bar throughout the whole mission.
     \item \textbf{Allocated Space}: tanks, combustion chamber and convergent nozzle occupancy is exactly 80\% of the volume occupied by a cylinder of 1 meter diameter and 2 meter length. No bounds on the extension of the divergent.
     \item \textbf{Propellants}: semi-cryogenic couple of LOX and RP-1.
     \item \textbf{Architecture}: blow-down type.
@@ -33,7 +33,8 @@ Various hypothesis were necessary to develop the system, this values are reporte
     \centering
     \begin{tabular}{|c|c|c|c|}
         \hline
-        $\boldsymbol{O/F} \; [-]$ & $\boldsymbol{\epsilon} \; [-]$ & $\boldsymbol{\epsilon_{con}} \; [-]$ & $\boldsymbol{L^*}$ \; [m] \\
+        $\boldsymbol{O/F} \; [-]$ & $\boldsymbol{\epsilon} \; [-]$ & $\boldsymbol{\epsilon_{con}} \; [-]$ & $\boldsymbol{L^*} \; [m]$ \\
+        \hline
         \hline
         2.42 & 300 & 10 & 1.143 \\
         \hline
@@ -50,11 +51,12 @@ After defining the main input data, the workflow is carried out as shown in \aut
 \begin{table}[H]
     \renewcommand{\arraystretch}{1.2}
     \centering
-    \begin{tabular}{|c|c|c|}
+    \begin{tabular}{|c|c|c|c|}
         \hline
-        $\boldsymbol{c^*} \; [m/s]$ & $\boldsymbol{c_T} \; [-]$ & $\boldsymbol{T_c} \; [K]$ \\
+        $\boldsymbol{c^*} \; [m/s]$ & $\boldsymbol{c_T} \; [-]$ & $\boldsymbol{T_c} \; [K]$ & $\boldsymbol{\gamma_c} \; [-]$ \\
         \hline
-        1851 & 1.935 & 3709  \\
+        \hline
+        1851 & 1.935 & 3708 & 1.1405 \\
         \hline
     \end{tabular}
     \caption{First run on CEAM}
@@ -62,12 +64,109 @@ After defining the main input data, the workflow is carried out as shown in \aut
 \end{table}
 
 %equazioni per mass flow rate e aree motore + risultati solo motore
+From this results, the propellant mass flow rate and the throat area can be calculated:
+\begin{equation}
+    \dot{m}_p = \frac{\mathcal{T}}{c_T c^*} 
+    \qquad 
+    A_t = \frac{\dot{m}_p c^*}{P_c}
+\end{equation}
+
+From the geometry assumption of \autoref{table:hp}, the nozzle exit area and the combustion chamber geometry can be retrieved:
+\begin{gather}
+    A_e = \epsilon A_t
+    \\
+    A_c = \epsilon_{con} A_t \qquad L_c = \frac{L^*}{\epsilon_{con}}
+\end{gather}
+Nozzle geometry model will be delved in \autoref{sec:nozzle_losses}. The results for the previous calculation are the following:
+
+\begin{table}[H]
+    \renewcommand{\arraystretch}{1.2}
+    \centering
+    \begin{tabular}{|c|c|c|c|c|}
+        \hline
+        $\boldsymbol{\dot{m}_p} \; [kg/s]$ & $\boldsymbol{d_t} \; [cm]$ & $\boldsymbol{d_e} \; [cm]$  & $\boldsymbol{d_{c}} \; [cm]$ & $\boldsymbol{L_c} \; [cm]$ \\
+        \hline
+        \hline
+        0.279 & 1.15 & 19.86 & 3.63 & 11.43 \\
+        \hline
+    \end{tabular}
+    \caption{Preliminary DRY-1 geometry}
+    \label{table:preliminary_dry}
+\end{table}
+
+%SE RIUSCIAMO REFERENCE SU MACH NUMBER IN CAMERA + EVENTUALE COMMENTO SU VALORE BASSO
+A check on the compliance of the chamber mach number is done ($M_c <$ 0.3):
+\begin{equation}    
+    \frac{1}{\epsilon_{con}} = M_c \left[ \frac{1 + \frac{\gamma - 1}{2}}{1 + \frac{\gamma - 1}{2} M_c^2} \right]^{\frac{\gamma + 1}{2(\gamma - 1)}}
+    \qquad \xrightarrow{\textit{fsolve}} \qquad M_c = 0.059
+\end{equation}
 
 %equazioni tank --> risultati per tank 
+From the geometry of the motor and the allocated space constraints, the total height of the tanks can be calculated. The volume around the thrust chamber (combustion chamber + convergent) can be assessed:
+\begin{equation}
+    V_{tc} = \frac{\pi}{4} \left[L_c d_c^2  + \frac{L_{con}}{3} \left(d_c^2 + d_t^2 + d_c d_t\right)\right]
+    \label{eq:v_tc}
+\end{equation}
+
+Also, the volume of the cylinder that covers the length of the thrust chamber and with the total diameter of 1 meter ($d_{tot}$) can be computed. From there, the empty volume around the thrust chamber can be computed as a difference:
+\begin{equation}
+    V_{lost} =  V_{tc} - \frac{\pi}{4} \left(L_{c} + L_{con}\right) d_{tot}
+\end{equation}
+This value must be 20\% of the total cylinder volume, as cited in \autoref{subsec:input}. As the computed value was lower, additional volume had to be removed from the tanks in order to meet the requirement. The height dedicated to the tanks is calculated as follow:
+\begin{equation}
+    h_{tk} =  h - \left[L_{c} + L_{con} + \frac{4}{\pi d_{tot}^2}\left( 0.2 V_{tot} - V_{lost}\right) \right]
+\end{equation}
+The total volume allocated to the tanks is hence fully defined. 
+In order to calculate the masses of pressurizer and propellants, some assumption have to be made:
+\begin{itemize}
+    \item \textbf{Adiabatic expansion of the pressurizing gas}.
+    \item \textbf{Blow-down ratios can be tuned}.
+    \item \textbf{Mean value of the oxidizer to fuel ratio}.
+\end{itemize}
+
+A system of equations can be set up:
+%---------------------------------------
+% -----------!!!!!SISTEMA!!!!-----------
+%---------------------------------------
+
+In order to solve (autoref), the pressurizer and the initial temperature of the propellants have to be set. Different pressurizing gas are available, mainly nitrogen or helium are the most common choices. The main differences for the two are the storage temperature, the molar mass and the specific heat ratio. The latter parameter influences the adiabatic discharge, higher values implies faster pressure discharge. The molar mass affects the amount of gas to be embarked at a given pressure. The storage temperature is a matter of compatibility with the propellant. Nitrogen gas was chosen to pressurize RP-1 since no cryogenic conditions were present also it guarantees lower discharge, with the downside of increasing the mass of the system. On the other side, LOX required a cryogenic compatibility that can be ensured by helium. Even though an efficient insulating bladder is employed, the design choice was dictated by a more conservative approach.
+The employment of nitrogen also with LOX was discarded since storage temperature and pressure are not compatible with its properties. (reference NIST)
+\begin{table}[H]
+    \renewcommand{\arraystretch}{1.2}
+    \centering
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+        $\boldsymbol{T_{pr,fu}} \; [K]$ & $\boldsymbol{T_{pr,ox}} \; [K]$ & $\boldsymbol{\gamma_{N_2}} \; [-]$  & $\boldsymbol{\gamma_{He}} \; [-]$ \\
+        \hline
+        \hline
+        300 & 90 & 1.40 & 1.67 \\
+        \hline
+    \end{tabular}
+    \caption{Initial values for pressurizer gases and specific heat ratio values}
+    \label{table:press_value}
+\end{table}
+
+The masses and volumes of oxidizer, fuel and pressurizing gases are computed. 
+
+%-----------------------------------------------------------
+%-----------------tabella RISULTATI QUI --------------------
+%-----------------------------------------------------------
 
 %equazioni feeding --> risultati feeding
+Finally, the feeding lines can be modelled. Considering figure (...), the length of the pipes can be retrieved as a difference:
 
+\begin{gather}
+    L_{fd,fu} = h - L_c - h_{tk,fu} \\
+    L_{fd,ox} = h - L_c - h_{tk}
+\end{gather}
 
+To completely determine the DRY-1 geometry, the injection plate must be modeled. The pressure drop across the injector $\Delta P_{inj}$ have to be assumed as a percentage of the initial chamber pressure. Acceptable range of this fraction goes from 5\% to 30\%. A value of 20\% is chosen for both oxidizer and fuel lines. The fuel and oxidizer injector area can be computed assuming reasonable values for the discharge coefficient $C_d$. A reasonable assumption has been made according to the superficial roughness quality of AM. 
+
+\begin{gather}
+    \dot{m}_{fu} = \frac{1}{1 + O/F}\dot{m}_p \qquad \dot{m}_{ox} = \frac{O/F}{1 + O/F}\dot{m}_p
+    \\
+    A_{inj,tot} = \frac{\dot{m}_p}{C_d \sqrt{2\Delta P_{inj} \rho_p}} 
+\end{gather}
 
 \subsection{System dynamics}
 \label{subsec:dynamics}

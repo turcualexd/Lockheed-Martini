@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.12.16)  14 APR 2024 14:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.12.16)  14 APR 2024 19:12
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -914,29 +914,29 @@ File: Images/flowchart.pdf Graphic file (type pdf)
 <use Images/flowchart.pdf>
 Package pdftex.def Info: Images/flowchart.pdf  used on input line 12.
 (pdftex.def)             Requested size: 483.69687pt x 386.96368pt.
- [2 <./Images/flowchart.pdf>]) (Sections/03_results.tex) (Sections/04_nozzle_losses.tex) (Sections/05_additive.tex) (Sections/06_cooling.tex)) [3]
+ [2 <./Images/flowchart.pdf>] [3] [4]) (Sections/03_results.tex) (Sections/04_nozzle_losses.tex) (Sections/05_additive.tex) (Sections/06_cooling.tex)) [5]
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 18.
  (C:\Miktex\tex/latex/base\t1cmtt.fd
 File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
-) [4] (Lockheed_Martini_report.aux)
+) [6] (Lockheed_Martini_report.aux)
 Package rerunfilecheck Info: File `Lockheed_Martini_report.out' has not changed.
-(rerunfilecheck)             Checksum: 2455C99516791EE25081E3499A4A3235;2244.
+(rerunfilecheck)             Checksum: 5890CFEC93E6EB27B6A40AACE61A369D;2244.
 Package logreq Info: Writing requests to 'Lockheed_Martini_report.run.xml'.
 \openout1 = `Lockheed_Martini_report.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 22349 strings out of 475385
- 387631 string characters out of 2793321
- 1176432 words of memory out of 3000000
- 43333 multiletter control sequences out of 15000+600000
- 523995 words of font info for 102 fonts, out of 8000000 for 9000
+ 22382 strings out of 475385
+ 387962 string characters out of 2793321
+ 1183625 words of memory out of 3000000
+ 43339 multiletter control sequences out of 15000+600000
+ 534135 words of font info for 117 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,16n,97p,2490b,1871s stack positions out of 10000i,1000n,20000p,200000b,80000s
- <C:\Users\danie\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1095.pk>{C:/Miktex/fonts/enc/dvips/base/8r.enc}<C:/Miktex/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Miktex/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Miktex/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Miktex/fonts/type1/urw/symbol/usyr.pfb><C:/Miktex/fonts/type1/urw/times/utmb8a.pfb><C:/Miktex/fonts/type1/urw/times/utmr8a.pfb><C:/Miktex/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Lockheed_Martini_report.pdf (7 pages, 260715 bytes).
+ <C:\Users\danie\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1095.pk>{C:/Miktex/fonts/enc/dvips/base/8r.enc}<C:/Miktex/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Miktex/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Miktex/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Miktex/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Miktex/fonts/type1/public/rsfs/rsfs10.pfb><C:/Miktex/fonts/type1/urw/symbol/usyr.pfb><C:/Miktex/fonts/type1/urw/symbol/usyr.pfb><C:/Miktex/fonts/type1/urw/times/utmb8a.pfb><C:/Miktex/fonts/type1/urw/times/utmr8a.pfb><C:/Miktex/fonts/type1/urw/times/utmri8a.pfb>
+Output written on Lockheed_Martini_report.pdf (9 pages, 290268 bytes).
 PDF statistics:
- 416 PDF objects out of 1000 (max. 8388607)
- 31 named destinations out of 1000 (max. 500000)
+ 459 PDF objects out of 1000 (max. 8388607)
+ 46 named destinations out of 1000 (max. 500000)
  131 words of extra memory for PDF output out of 10000 (max. 10000000)
 
