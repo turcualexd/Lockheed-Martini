@@ -60,3 +60,20 @@
 \newcommand{\mail}[1]{
 	\href{mailto:#1@mail.polimi.it}{#1@mail.polimi.it}
 }
+
+% T for thrust
+\newcommand{\T}{\varmathbb{T}}
+
+% R for universal gas constant
+\newcommand{\R}{\mathcal{R}}
+
+% M for molar mass
+\newcommand{\M}{\varmathbb{M}}
+
+% Bookmark for missing reference
+\makeatletter
+\newcommand{\mref}{%
+	\@latex@warning{Missing reference}
+	\textcolor{red}{\textbf{REFERENCE}}
+}
+\makeatother
