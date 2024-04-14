@@ -379,8 +379,14 @@ INPUT /Library/Application Support/MiKTeX/texmfs/install/tex/latex/00miktex/epst
 INPUT /Library/Application Support/MiKTeX/texmfs/install/tex/latex/00miktex/epstopdf-sys.cfg
 INPUT /Users/Chiara/Library/Application Support/MiKTeX/texmfs/install/tex/latex/caption/ltcaption.sty
 INPUT /Users/Chiara/Library/Application Support/MiKTeX/texmfs/install/tex/latex/caption/ltcaption.sty
-OUTPUT Lockheed_Martini_report.out
+INPUT ./Lockheed_Martini_report.out
+INPUT ./Lockheed_Martini_report.out
+INPUT Lockheed_Martini_report.out
+INPUT Lockheed_Martini_report.out
 OUTPUT Lockheed_Martini_report.pdf
+INPUT ./Lockheed_Martini_report.out
+INPUT ./Lockheed_Martini_report.out
+OUTPUT Lockheed_Martini_report.out
 INPUT /Library/Application Support/MiKTeX/texmfs/install/tex/latex/biblatex/lbx/english.lbx
 INPUT /Library/Application Support/MiKTeX/texmfs/install/tex/latex/biblatex/lbx/english.lbx
 INPUT /Library/Application Support/MiKTeX/texmfs/install/tex/latex/biblatex/lbx/english.lbx
@@ -456,7 +462,31 @@ INPUT /Library/Application Support/MiKTeX/texmfs/install/fonts/vf/adobe/times/pt
 INPUT /Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/adobe/times/ptmr8r.tfm
 INPUT /Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/adobe/times/ptmr8t.tfm
 INPUT /Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/adobe/times/ptmb8t.tfm
+INPUT ./Lockheed_Martini_report.toc
+INPUT ./Lockheed_Martini_report.toc
+INPUT Lockheed_Martini_report.toc
+INPUT /Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/adobe/times/ptmb8t.tfm
+INPUT /Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/adobe/times/zptmcm7t.tfm
+INPUT /Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/adobe/times/zptmcm7t.tfm
+INPUT /Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/adobe/times/zptmcm7t.tfm
+INPUT /Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/adobe/times/zptmcm7m.tfm
+INPUT /Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/adobe/times/zptmcm7m.tfm
+INPUT /Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/adobe/times/zptmcm7m.tfm
+INPUT /Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/adobe/times/zptmcm7y.tfm
+INPUT /Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/adobe/times/zptmcm7y.tfm
+INPUT /Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/adobe/times/zptmcm7y.tfm
+INPUT /Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/adobe/times/zptmcm7v.tfm
+INPUT /Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/adobe/times/zptmcm7v.tfm
+INPUT /Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/adobe/times/zptmcm7v.tfm
+INPUT /Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/adobe/times/ptmb7t.tfm
+INPUT /Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/adobe/times/ptmb7t.tfm
+INPUT /Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/adobe/times/ptmb7t.tfm
+INPUT /Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/adobe/times/ptmri7t.tfm
+INPUT /Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/adobe/times/ptmri7t.tfm
+INPUT /Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/adobe/times/ptmri7t.tfm
 OUTPUT Lockheed_Martini_report.toc
+INPUT /Library/Application Support/MiKTeX/texmfs/install/fonts/vf/adobe/times/ptmb8t.vf
+INPUT /Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/adobe/times/ptmb8r.tfm
 INPUT /Library/Application Support/MiKTeX/texmfs/install/fonts/vf/adobe/times/ptmb8t.vf
 INPUT /Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/adobe/times/ptmb8r.tfm
 INPUT /Library/Application Support/MiKTeX/texmfs/install/fonts/vf/adobe/times/ptmr8t.vf
@@ -473,27 +503,6 @@ INPUT Sections/00_notation.tex
 INPUT ./Sections/00_notation.tex
 INPUT ./Sections/00_notation.tex
 INPUT Sections/00_notation.tex
-INPUT /Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/adobe/times/zptmcm7t.tfm
-INPUT /Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/adobe/times/zptmcm7t.tfm
-INPUT /Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/adobe/times/zptmcm7t.tfm
-INPUT /Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/adobe/times/zptmcm7m.tfm
-INPUT /Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/adobe/times/zptmcm7m.tfm
-INPUT /Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/adobe/times/zptmcm7m.tfm
-INPUT /Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/adobe/times/zptmcm7y.tfm
-INPUT /Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/adobe/times/zptmcm7y.tfm
-INPUT /Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/adobe/times/zptmcm7y.tfm
-INPUT /Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/adobe/times/zptmcm7v.tfm
-INPUT /Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/adobe/times/zptmcm7v.tfm
-INPUT /Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/adobe/times/zptmcm7v.tfm
-INPUT /Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/adobe/times/ptmb7t.tfm
-INPUT /Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/adobe/times/ptmb7t.tfm
-INPUT /Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/adobe/times/ptmb7t.tfm
-INPUT /Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/adobe/times/ptmri7t.tfm
-INPUT /Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/adobe/times/ptmri7t.tfm
-INPUT /Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/adobe/times/ptmri7t.tfm
-INPUT /Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/adobe/times/ptmb8t.tfm
-INPUT /Library/Application Support/MiKTeX/texmfs/install/fonts/vf/adobe/times/ptmb8t.vf
-INPUT /Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/adobe/times/ptmb8r.tfm
 INPUT ./Sections/01_introduction.tex
 INPUT ./Sections/01_introduction.tex
 INPUT Sections/01_introduction.tex
@@ -536,12 +545,6 @@ INPUT /Library/Application Support/MiKTeX/texmfs/install/fonts/vf/adobe/times/pt
 INPUT /Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/adobe/times/ptmb8r.tfm
 INPUT /Library/Application Support/MiKTeX/texmfs/install/fonts/vf/adobe/times/ptmr8t.vf
 INPUT /Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/adobe/times/ptmr8r.tfm
-INPUT ./Sections/06_cooling.tex
-INPUT ./Sections/06_cooling.tex
-INPUT Sections/06_cooling.tex
-INPUT ./Sections/06_cooling.tex
-INPUT ./Sections/06_cooling.tex
-INPUT Sections/06_cooling.tex
 INPUT /Library/Application Support/MiKTeX/texmfs/install/fonts/vf/adobe/times/zptmcm7m.vf
 INPUT /Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/adobe/times/psyro.tfm
 INPUT /Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/cm/cmmi10.tfm
@@ -566,9 +569,16 @@ INPUT /Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/cm/cmr
 INPUT /Library/Application Support/MiKTeX/texmfs/install/fonts/vf/adobe/times/zptmcm7y.vf
 INPUT /Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/cm/cmsy10.tfm
 INPUT /Users/Chiara/Library/Application Support/MiKTeX/texmfs/data/fonts/tfm/public/rsfs/rsfs10.tfm
+INPUT ./Sections/06_cooling.tex
+INPUT ./Sections/06_cooling.tex
+INPUT Sections/06_cooling.tex
+INPUT ./Sections/06_cooling.tex
+INPUT ./Sections/06_cooling.tex
+INPUT Sections/06_cooling.tex
 INPUT Lockheed_Martini_report.aux
 INPUT ./Lockheed_Martini_report.out
 INPUT ./Lockheed_Martini_report.out
+INPUT Lockheed_Martini_report.run.xml
 OUTPUT Lockheed_Martini_report.run.xml
 INPUT /Library/Application Support/MiKTeX/texmfs/install/fonts/enc/dvips/base/8r.enc
 INPUT /Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmex10.pfb

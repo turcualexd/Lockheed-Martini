@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2024.3.9)  14 APR 2024 23:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2024.3.9)  15 APR 2024 01:49
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -831,6 +831,7 @@ Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
 Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
 Package hyperref Info: Link coloring ON on input line 6.
+ (Lockheed_Martini_report.out) (Lockheed_Martini_report.out)
 \@outlinefile=\write4
 \openout4 = `Lockheed_Martini_report.out'.
 
@@ -850,7 +851,7 @@ Package biblatex Info: ... file 'Lockheed_Martini_report.bbl' found.
 Package biblatex Info: Reference section=0 on input line 6.
 Package biblatex Info: Reference segment=0 on input line 6.
  (Config/title_page_chapter.tex
-<Config/Poli_logo.pdf, id=3, 527.9725pt x 415.5525pt>
+<Config/Poli_logo.pdf, id=59, 527.9725pt x 415.5525pt>
 File: Config/Poli_logo.pdf Graphic file (type pdf)
 <use Config/Poli_logo.pdf>
 Package pdftex.def Info: Config/Poli_logo.pdf  used on input line 6.
@@ -883,13 +884,19 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 34.
  [1
 
-{/Users/Chiara/Library/Application Support/MiKTeX/texmfs/data/fonts/map/pdftex/pdftex.map} <./Config/Poli_logo.pdf>])
-No file Lockheed_Martini_report.toc.
+{/Users/Chiara/Library/Application Support/MiKTeX/texmfs/data/fonts/map/pdftex/pdftex.map} <./Config/Poli_logo.pdf>]) (Lockheed_Martini_report.toc
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 5.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 5.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 5.
+)
 \tf@toc=\write5
 \openout5 = `Lockheed_Martini_report.toc'.
 
-[1] (Config/Body.tex (Sections/00_notation.tex) [2] (Sections/01_introduction.tex) (Sections/02_modeling.tex) (Sections/03_results.tex) (Sections/04_nozzle_losses.tex) (Sections/05_additive.tex
-<Images/cdcoeff.jpg, id=33, 825.0825pt x 792.9625pt>
+ [1] (Config/Body.tex (Sections/00_notation.tex) [2] (Sections/01_introduction.tex) (Sections/02_modeling.tex) (Sections/03_results.tex) (Sections/04_nozzle_losses.tex) (Sections/05_additive.tex
+<Images/cdcoeff.jpg, id=101, 825.0825pt x 792.9625pt>
 File: Images/cdcoeff.jpg Graphic file (type jpg)
 <use Images/cdcoeff.jpg>
 Package pdftex.def Info: Images/cdcoeff.jpg  used on input line 5.
@@ -899,110 +906,29 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has b
 <to be read again> 
                    \relax 
 l.9 A
-     dditive manufacturing allows to create complex shapes at a lower cost, ... [1]
-
-LaTeX Warning: Reference `subsec:additive_intro' on page 2 undefined on input line 9.
-
-
-LaTeX Warning: Reference `fig:cdcoeff' on page 2 undefined on input line 9.
-
-
-LaTeX Warning: Reference `sec:modeling' on page 2 undefined on input line 9.
-
-
-LaTeX Warning: Reference `table:deviazioni' on page 2 undefined on input line 11.
-
-
-LaTeX Warning: Reference `table:deviazioni' on page 2 undefined on input line 35.
-
-
-LaTeX Warning: Reference `sec:modeling' on page 2 undefined on input line 50.
-
-
-LaTeX Warning: File `i/immagini_unc/thrust_unc.svg' not found on input line 57.
-
-
-Sections/05_additive.tex:57: LaTeX Error: Unknown graphics extension: .svg.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.57 ...cs[scale=1]{i/immagini_unc/thrust_unc.svg}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: File `i/immagini_unc/Isp_unc.svg' not found on input line 67.
-
-
-Sections/05_additive.tex:67: LaTeX Error: Unknown graphics extension: .svg.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.67 ...th=\textwidth]{i/immagini_unc/Isp_unc.svg}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-Sections/05_additive.tex:76: LaTeX Error: File `i/immagini_unc/thrust_unc' not found.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.76 ...dth=\textwidth]{i/immagini_unc/thrust_unc}
-                                                  
-I could not locate the file with any of these extensions:
-.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-) (Sections/06_cooling.tex)) [2 <./Images/cdcoeff.jpg>] [3] (Lockheed_Martini_report.aux)
+     dditive manufacturing allows to create complex shapes at a lower cost, ... [1] [2 <./Images/cdcoeff.jpg>]) (Sections/06_cooling.tex)) [3] [4] (Lockheed_Martini_report.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `Lockheed_Martini_report.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `Lockheed_Martini_report.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  FAB1BE512472AAA55DC475E5C4E5648D;2085.
-
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                Lockheed_Martini_report
-(biblatex)                and rerun LaTeX afterwards.
-
+Package rerunfilecheck Info: File `Lockheed_Martini_report.out' has not changed.
+(rerunfilecheck)             Checksum: 97FD570B39D566621B12547DC443D93C;2085.
 Package logreq Info: Writing requests to 'Lockheed_Martini_report.run.xml'.
 \openout1 = `Lockheed_Martini_report.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 22383 strings out of 474436
- 398815 string characters out of 5739103
+ 22297 strings out of 474436
+ 395880 string characters out of 5739103
  1939187 words of memory out of 5000000
- 44322 multiletter control sequences out of 15000+600000
+ 44249 multiletter control sequences out of 15000+600000
  612985 words of font info for 112 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 87i,10n,102p,2484b,1803s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 87i,10n,102p,2484b,1879s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/Library/Application Support/MiKTeX/texmfs/install/fonts/enc/dvips/base/8r.enc}</Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmex10.pfb></Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi10.pfb></Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmr10.pfb></Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy10.pfb></Library/Application Support/MiKTeX/texmfs/install/fonts/type1/urw/symbol/usyr.pfb></Library/Application Support/MiKTeX/texmfs/install/fonts/type1/urw/symbol/usyr.pfb></Library/Application Support/MiKTeX/texmfs/install/fonts/type1/urw/times/utmb8a.pfb></Library/Application Support/MiKTeX/texmfs/install/fonts/type1/urw/times/utmr8a.pfb></Library/Application Support/MiKTeX/texmfs/install/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Lockheed_Martini_report.pdf (6 pages, 315958 bytes).
+Output written on Lockheed_Martini_report.pdf (7 pages, 325876 bytes).
 PDF statistics:
- 120 PDF objects out of 1000 (max. 8388607)
+ 188 PDF objects out of 1000 (max. 8388607)
  30 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 123 words of extra memory for PDF output out of 10000 (max. 10000000)
 

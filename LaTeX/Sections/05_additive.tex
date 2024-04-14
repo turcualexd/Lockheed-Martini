@@ -44,42 +44,36 @@ Following the diameters' analysis, the total area of both the propellants' injec
 
 \begin{equation}
     \dot m_{inj,tot,p} = A_{inj,tot,p} * C_d*\sqrt{2*\Delta p_{inj}*\rho_p}
-    \label{eq:totalarea}
+    \label{eq:massflow}
 \end{equation}
 
 These modified values then enter the computation explained in \autoref{sec:modeling}, making the uncertainty to propagate affecting the engine's performance. The whole process is repeated 50 times in order to have a more accurate statistical analysis, allowing to study both each simulation and the average of them as shown in the following graphs.
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
 
-\begin{figure}[ht]
-
-
-    \begin{minipage}[b]{0.3\linewidth}
-    \centering
-    \includegraphics[scale=1]{i/immagini_unc/thrust_unc.svg}
-    \caption{default}
-    \label{fig:thrust_unc}
-    \end{minipage}
-    
-    \hspace{0.3cm}
-    
-    
-    \begin{minipage}[b]{0.4\linewidth}
-    \centering
-    \includegraphics[width=\textwidth]{i/immagini_unc/Isp_unc.svg}
-    \caption{default}
-    \label{fig:Isp_unc}
-    \end{minipage}
-    
-    \hspace{0.3cm}
-    
-    \begin{minipage}[b]{0.4\linewidth}
-    \centering
-    \includegraphics[width=\textwidth]{i/immagini_unc/thrust_unc}
-    \caption{default}
-    \label{fig:fiof_unc}
-    \end{minipage}
-    \end{figure}
+METTERE I GRAFICI!!!!!!!!\\
 
 
+The mass flow rate, immediately dependent on the injectors' cross sectional area, is slightly affected by the variation of their diameter, very small compared to the nominal one. However, the explained fluctuations can combine generating more observable effects, as seen in ///GRAFICO O/F///, describing the progress of the O/F in time for each simulation. The high deviation from the nominal value is due to its definition as a fraction, greatly affected by the combined variations of its terms. O/F is a crucial parameter in the design of a propulsion system, from which many other variables depend. The temperature of the combustion chamber is one of them, being obtained from the NASA-CEAm software, which, among others, takes as input the O/F ratio and the combustion chamber pressure, related to the tank pressure through the injector's diameters and hence varying due to the analyzed imperfections. Strictly in relation with the mass flow rate and the oxidizer to fuel ratio and connected to many other parameters, also thrust and specific impulse are influenced.
+
+Another characteristic worth to mention is the convergence of all parameters to their mean value. 
+
+% OK variazione portate minuscola perche differenza minima, sarà l'OF che essendo un rapporto varia tanto a influenzare il resto
+
+% OK Of varia perche le portate sono direttamente influenzate dall'area 
+
+% OK The combustion chamber temperature is strictly related to the O/F ratio  (input ) e dalla pc che deriva dalla pressione dei tank
+
+%i valori di tutti i grafici convergono allo stesso valore perchè dipenono da qunatita di pressurizzante blow down ratio rimane costante in ogni simulazione e questo fa si che 
+
+
+%blowdown impone pressioni e masse imponendo il press
 
 
 
