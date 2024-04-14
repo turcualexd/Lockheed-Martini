@@ -178,9 +178,13 @@ for q = 1:n_simulations
     plot(tvet(2:end), T_ox_mat(q, (2:end)), '-','LineWidth',0.5, 'Color',grayColor);
 end
 plot(tvet(2:end),T_ox_avg(2:end), 'LineWidth',4, 'Color','r')
-title("Oxidizer temperature", "Interpreter", "latex", "FontSize", fs_t)
+% title("Oxidizer temperature")
+% xlabel("t [s]")
+% ylabel("T_{oxidizer} [K]")
+% legend('avg', 'sim')
+title("Specific Impulse", "Interpreter", "latex", "FontSize", fs_t)
 xlabel("time [s]", "Interpreter", "latex", "FontSize", fs_ax)
-ylabel("$T_{ox} [K]$", "Interpreter", "latex", "FontSize", fs_ax)
+ylabel("$I_{sp} [s]$", "Interpreter", "latex", "FontSize", fs_ax)
 legend("Average Value", "Simulations", "Interpreter", "latex", "FontSize", fs_leg)
 %%
 figure
@@ -192,11 +196,11 @@ for q = 1:n_simulations
     plot(tvet(2:end), T_f_mat(q, (2:end)), '-','LineWidth',0.5, 'Color',grayColor);
 end
 plot(tvet(2:end),T_f_avg(2:end), 'LineWidth',4, 'Color','r')
-title("Fuel temperature", "Interpreter", "latex", "FontSize", fs_t)
-xlabel("time [s]", "Interpreter", "latex", "FontSize", fs_ax)
-ylabel("$T_{f} [K]$", "Interpreter", "latex", "FontSize", fs_ax)
-legend("Average Value", "Simulations", "Interpreter", "latex", "FontSize", fs_leg)
-%%
+title("Fuel temperature")
+xlabel("t [s]")
+ylabel("T_{fuel} [K]")
+legend('avg', 'sim')
+
 figure
 hold on
 grid minor
@@ -206,10 +210,10 @@ for q = 1:n_simulations
     plot(tvet(2:end), T_c_mat(q, 2:end), '-','LineWidth',0.5, 'Color',grayColor);
 end
 plot(tvet(2:end),T_c_avg(2:end), 'LineWidth',4, 'Color','r')
-title("Combustion Chamber temperature", "Interpreter", "latex", "FontSize", fs_t)
-xlabel("time [s]", "Interpreter", "latex", "FontSize", fs_ax)
-ylabel("$T_{c} [K]$", "Interpreter", "latex", "FontSize", fs_ax)
-legend("Average Value", "Simulations", "Interpreter", "latex", "FontSize", fs_leg)
+title("Combustion Chamber temperature")
+xlabel("t [s]")
+ylabel("T_{cc} [K]")
+legend('avg', 'sim')
 %%
 figure
 hold on
@@ -220,7 +224,7 @@ for q = 1:n_simulations
     plot(tvet(2:end), T_mat(q, 2:end), '-','LineWidth',0.5, 'Color',grayColor);
 end
 plot(tvet(2:end),T_avg(2:end), 'LineWidth',1, 'Color','r')
-title("Thrust", "Interpreter", "latex", "FontSize", fs_t)
-xlabel("time $[s]$", "Interpreter", "latex", "FontSize", fs_ax)
-ylabel("$\mathcal{T} \; [N]$", "Interpreter", "latex", "FontSize", fs_ax)
-legend("Average Value", "Simulations", "Interpreter", "latex", "FontSize", fs_leg)
+title("Thrust")
+xlabel("t [s]")
+ylabel("T_{cc} [K]")
+legend('avg', 'sim')
