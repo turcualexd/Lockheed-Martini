@@ -1,15 +1,15 @@
 [0] Config.pm:307> INFO - This is Biber 2.19
 [0] Config.pm:310> INFO - Logfile is 'Lockheed_Martini_report.blg'
-[91] biber-darwin:340> INFO - === Sat Apr 13, 2024, 21:51:40
+[91] biber-darwin:340> INFO - === Sun Apr 14, 2024, 15:07:15
 [108] Biber.pm:419> INFO - Reading 'Lockheed_Martini_report.bcf'
-[204] Biber.pm:979> INFO - Found 2 citekeys in bib section 0
-[216] Biber.pm:4419> INFO - Processing section 0
-[226] Biber.pm:4610> INFO - Looking for bibtex file 'bibliography.bib' for section 0
-[226] bibtex.pm:1713> INFO - LaTeX decoding ...
-[230] bibtex.pm:1519> INFO - Found BibTeX data source 'bibliography.bib'
-[265] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[265] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[265] Biber.pm:4239> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
-[265] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
-[267] bbl.pm:660> INFO - Writing 'Lockheed_Martini_report.bbl' with encoding 'UTF-8'
-[269] bbl.pm:763> INFO - Output to Lockheed_Martini_report.bbl
+[196] Biber.pm:979> INFO - Found 2 citekeys in bib section 0
+[209] Biber.pm:4419> INFO - Processing section 0
+[220] Biber.pm:4610> INFO - Looking for bibtex file 'bibliography.bib' for section 0
+[221] bibtex.pm:1713> INFO - LaTeX decoding ...
+[225] bibtex.pm:1519> INFO - Found BibTeX data source 'bibliography.bib'
+[260] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[260] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[260] Biber.pm:4239> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
+[260] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
+[262] bbl.pm:660> INFO - Writing 'Lockheed_Martini_report.bbl' with encoding 'UTF-8'
+[263] bbl.pm:763> INFO - Output to Lockheed_Martini_report.bbl
