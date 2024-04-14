@@ -24,7 +24,7 @@ C_d = 0.82;         % -
 alpha = 0.2;        % -
 d_feed_f = 5e-3;    % m
 d_feed_ox = 7e-3;   % m
-dt = 1;             % s
+dt = 60;             % s
 lambda = 1;         % -
 k_ox = 5/3;         % -
 k_f = 7/5;          % -
@@ -53,6 +53,15 @@ A_c = eps_c*A_t;
 d_e = 2*sqrt(A_e/pi);
 d_t = 2*sqrt(A_t/pi);
 d_c = 2*sqrt(A_c/pi);
+
+%interpolazione
+[~, ~, ~, ~, ~, x3, y3] = rao_nozzle(d_t/2, 300, 100);
+x3 = x3';
+y3 = y3';
+n = 300;
+axial_distance = linspace(x3(1),x3(end),n)';
+radius_vec = interp1(x3,y3,axial_distance);
+c_RP1 = 1880;
 
 L_con = (d_c - d_t)/(2*tand(alpha_con));
 
@@ -112,6 +121,8 @@ dp_ox = 0.5*rho_ox*u_feed_ox_i^2*K_ox;
 p_f_i = p_c_i + dp_f;
 p_ox_i = p_c_i + dp_ox;
 
+dT_i = dT_cooling(OF_i, p_c_i, d_t, axial_distance, radius_vec, c_star, m_f_i,c_RP1);
+
 % Iterazione
 tvet = 0 : dt : t_max;
 m_f = [m_f_i nan(1, length(tvet) - 1)];
@@ -131,6 +142,7 @@ T = [T_i*lambda nan(1, length(tvet) - 1)];
 I_sp = [I_sp_i nan(1, length(tvet) - 1)];
 T_f = [T_f_i nan(1, length(tvet) - 1)];
 T_ox = [T_ox_i nan(1, length(tvet) - 1)];
+dT = [dT_i nan(1, length(tvet) - 1)];
 
 V_f = 0;
 V_ox = 0;
@@ -180,6 +192,7 @@ while true
     I_sp_new = output.froz.isp(end);
     gamma_new = output.froz.gamma(1);
     T_new = lambda*(m_f_new + m_ox_new)*c_t_new*c_star;
+    dT_new = dT_cooling(OF_new, p_c_new, d_t, axial_distance, radius_vec, c_star, m_f_new,c_RP1);
 
     V_p_f(cont + 1) = V_p_f_new;
     V_p_ox(cont + 1) = V_p_ox_new;
@@ -198,6 +211,7 @@ while true
     T_f(cont + 1) = T_f_new;
     T_ox(cont + 1) = T_ox_new;
     gamma(cont + 1) = gamma_new;
+    dT(cont + 1) = dT_new;
 
     cont = cont + 1
 end
@@ -220,6 +234,7 @@ u_feed_ox = u_feed_ox(~isnan(V_p_ox));
 T_f = T_f(~isnan(V_p_ox));
 T_ox = T_ox(~isnan(V_p_ox));
 gamma = gamma(~isnan(V_p_ox));
+dT = dT(~isnan(V_p_ox));
 tvet = tvet(1:length(gamma));
 
 figure
@@ -269,6 +284,11 @@ figure
 plot(tvet, T_c)
 title("Temperatura combustione")
 grid minor
+
+figure
+plot(tvet, dT)
+grid minor
+title('dT coolant')
 
 dp_c_end = p_c_new - p_c_min;
 I_tot = sum(T)*dt;

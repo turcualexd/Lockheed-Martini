@@ -17,7 +17,7 @@ mu_f = 0.75e-3;     % Pas
 mu_ox = 0.196e-3;   % Pas
 
 % Dati assunti
-OF_i = 2.33;        % -
+OF_i = 2.42;        % -
 eps = 300;          % -
 eps_c = 10;         % -
 C_d = 0.82;         % -
@@ -30,7 +30,7 @@ k_ox = 5/3;         % -
 k_f = 7/5;          % -
 T_f_i = 300;        % K
 T_ox_i = 90;        % K
-B = 2.78;           % -
+B = 2.5;           % -
 alpha_con = 30;     % deg
 
 % Dimensionamento a ritroso
