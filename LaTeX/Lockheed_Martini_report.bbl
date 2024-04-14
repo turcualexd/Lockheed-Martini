@@ -1,5 +1,5 @@
 % $ biblatex auxiliary file $
-% $ biblatex bbl format version 3.2 $
+% $ biblatex bbl format version 3.3 $
 % Do not modify the above lines!
 %
 % This is an auxiliary file used by the 'biblatex' package.
@@ -18,8 +18,8 @@
 
 
 \refsection{0}
-  \datalist[entry]{none/global//global/global}
-    \entry{2006_overview}{misc}{}
+  \datalist[entry]{none/global//global/global/global}
+    \entry{2006_overview}{misc}{}{}
       \name{author}{1}{}{%
         {{hash=6b4abdd86ffba2654cb9815f5e0be02a}{%
            family={Grammier},
@@ -29,10 +29,12 @@
       }
       \strng{namehash}{6b4abdd86ffba2654cb9815f5e0be02a}
       \strng{fullhash}{6b4abdd86ffba2654cb9815f5e0be02a}
+      \strng{fullhashraw}{6b4abdd86ffba2654cb9815f5e0be02a}
       \strng{bibnamehash}{6b4abdd86ffba2654cb9815f5e0be02a}
       \strng{authorbibnamehash}{6b4abdd86ffba2654cb9815f5e0be02a}
       \strng{authornamehash}{6b4abdd86ffba2654cb9815f5e0be02a}
       \strng{authorfullhash}{6b4abdd86ffba2654cb9815f5e0be02a}
+      \strng{authorfullhashraw}{6b4abdd86ffba2654cb9815f5e0be02a}
       \field{sortinit}{3}
       \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
