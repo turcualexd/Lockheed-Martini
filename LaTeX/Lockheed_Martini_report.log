@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2024.3.9)  13 APR 2024 21:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2024.3.9)  14 APR 2024 14:53
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -895,12 +895,12 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
 \tf@toc=\write5
 \openout5 = `Lockheed_Martini_report.toc'.
 
- [1] (Config/Body.tex (Sections/00_notation.tex) [2] (Sections/01_introduction.tex) (Sections/02_modeling.tex) (Sections/03_results.tex) (Sections/04_nozzle_losses.tex) (Sections/05_additive.tex) (Sections/06_cooling.tex))
+ [1] (Config/Body.tex (Sections/00_notation.tex) [2] (Sections/01_introduction.tex) (Sections/02_modeling.tex) (Sections/03_results.tex) (Sections/04_nozzle_losses.tex) (Sections/05_additive.tex) (Sections/06_cooling.tex
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.17 
-      [1] [2]
+l.1 \section{Cooling analysis}
+                               [1])) [2]
 
 Package caption Warning: Unused \captionsetup[table] on input line 58.
 See the caption package documentation for explanation.
@@ -925,7 +925,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  87i,10n,102p,2484b,1879s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/Library/Application Support/MiKTeX/texmfs/install/fonts/enc/dvips/base/8r.enc}</Library/Application Support/MiKTeX/texmfs/install/fonts/type1/urw/times/utmb8a.pfb></Library/Application Support/MiKTeX/texmfs/install/fonts/type1/urw/times/utmr8a.pfb>
-Output written on Lockheed_Martini_report.pdf (6 pages, 96340 bytes).
+Output written on Lockheed_Martini_report.pdf (6 pages, 96343 bytes).
 PDF statistics:
  131 PDF objects out of 1000 (max. 8388607)
  23 named destinations out of 1000 (max. 500000)
