@@ -31,7 +31,7 @@ L_star = 1.143;     % m
 alpha = 0.2;        % -
 d_feed_f = 5e-3;    % m
 d_feed_ox = 7e-3;   % m
-dt = 120;             % s %cambiato da Marcello
+dt = 10;             % s %cambiato da Marcello
 lambda = 1;         % -
 k_ox = 5/3;         % -
 k_f = 7/5;          % -
@@ -465,34 +465,71 @@ for q = 1:n_simulations
 end
 title("Oxidizer feed velocity")
 xlabel("t [s]")
+ylabel("u_{feed,ox} [m/s]")
+legend('avg', 'sim')
+
+figure
+hold on
+grid minor
+plot(tvet,u_feed_f_avg, 'LineWidth',2, 'Color','r')
+for q = 1:n_simulations
+    plot(tvet, u_feed_f_mat(q, :), 'Color','k');
+end
+title("Fuel feed velocity")
+xlabel("t [s]")
 ylabel("u_{feed,f} [m/s]")
 legend('avg', 'sim')
 
 figure
-plot(tvet, u_feed_f, 'r')
 hold on
 grid minor
-plot(tvet, u_feed_ox, 'b')
-title("Velocità feed")
-legend("u_{feed,f}", "u_{feed,ox}")
+plot(tvet,I_sp_avg, 'LineWidth',2, 'Color','r')
+for q = 1:n_simulations
+    plot(tvet, I_sp_mat(q, :), 'Color','k');
+end
+title("Specific Impulse")
+xlabel("t [s]")
+ylabel("I_{sp} [s]")
+legend('avg', 'sim')
 
 figure
-plot(tvet, I_sp)
-grid minor
-title("Impulso specifico")
-
-figure
-plot(tvet, T_f, 'r')
 hold on
 grid minor
-plot(tvet, T_ox, 'b')
-title("Temperature combustibili")
-legend("Fuel", "Ossidante")
+plot(tvet,T_ox_avg, 'LineWidth',2, 'Color','r')
+for q = 1:n_simulations
+    plot(tvet, T_ox_mat(q, :), 'Color','k');
+end
+title("Oxidizer temperature")
+xlabel("t [s]")
+ylabel("T_{oxidizer} [K]")
+legend('avg', 'sim')
 
 figure
-plot(tvet, T_c)
-title("Temperatura combustione")
+hold on
 grid minor
+plot(tvet,T_f_avg, 'LineWidth',2, 'Color','r')
+for q = 1:n_simulations
+    plot(tvet, T_f_mat(q, :), 'Color','k');
+end
+title("Fuel temperature")
+xlabel("t [s]")
+ylabel("T_{fuel} [K]")
+legend('avg', 'sim')
+
+
+figure
+hold on
+grid minor
+plot(tvet,T_c_avg, 'LineWidth',2, 'Color','r')
+for q = 1:n_simulations
+    plot(tvet, T_c_mat(q, :), 'Color','k');
+end
+title("Combustion Chamber temperature")
+xlabel("t [s]")
+ylabel("T_{cc} [K]")
+legend('avg', 'sim')
+
+
 
 dp_c_end = p_c_new - p_c_min;
 I_tot = sum(T)*dt;
