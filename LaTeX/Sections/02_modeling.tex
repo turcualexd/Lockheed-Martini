@@ -43,13 +43,12 @@ Various hypothesis were necessary to develop the system, this values are reporte
     \caption{Hypothesis from literature and previous design}
     \label{table:hp}
 \end{table}
-
 The choices of $L^*$  and $O/F$ were only dictated by the propellant couple \cite{sutton}, while $\varepsilon$ was chosen as the characteristic of the engine refers to an in-space application \cite{ariane_datasheet}. Regarding the value of $\varepsilon_{con}$ a mean value between $5$ and $15$ was taken. Smaller values entails longer combustion chamber and small cross sectional area, with large pressure drops. Larger values refers to bigger chamber cross sectional area, with limited length for the combustion. From the literature the suggestion for the choice of this value is to refer to previous successful engines design, considering the same application \cite{huzel_huang}. Therefore, a $400$ N bi-propellant apogee motor was taken as reference and revealed a value of $\varepsilon_{con} \approx 10$ \cite{ariane_datasheet}.
 
 \subsection{Nominal sizing}
 \label{subsec:nominal_sizing}
 
-After defining the main input data, the workflow is carried out as shown in \autoref{fig:flowchart}. All the combustion simulations were performed with Nasa-CEA software, implemented in Matlab (CEAM). In particular the "rocket problem" was considered, Bray model was applied for the expansion (frozen point at the throat), infinite combustion chamber ($M_c = 0$), initial injecting temperatures of the propellant equal to the storage temperatures. The chamber pressure was set as $p_c = 50$ bar and the mixture ratio as $O/F = 2.42$. Latter refinement of this last value will be performed. The output values used from the simulation are represented (vacuum value is considered for the $c_T$):
+After defining the main input data, the workflow is carried out as shown in \autoref{fig:flowchart}. All the combustion simulations were performed with Nasa-CEA software, implemented in Matlab (CEAM). In particular the "rocket problem" was considered, Bray model was applied for the expansion (frozen point at the throat), infinite combustion chamber ($M_c = 0$), initial injecting temperatures of the propellant equal to the storage temperatures. The chamber pressure was set as $p_c = 50$ bar and the mixture ratio as $O/F = 2.42$. Latter refinement of this last value will be performed. The output values used from the simulation are represented in table \autoref{table:out_CEA_1}(vacuum value is considered for the $c_T$):
 \begin{table}[H]
     \renewcommand{\arraystretch}{1.2}
     \centering
@@ -80,8 +79,6 @@ From the geometry assumption of \autoref{table:hp}, the nozzle exit area and the
     A_c = \varepsilon_{con} A_t \qquad L_c = \frac{L^*}{\varepsilon_{con}}
 \end{gather}
 
-Nozzle geometry model will be delved in \autoref{sec:nozzle_losses}. The results for the previous calculation are the following:
-
 \begin{table}[H]
     \renewcommand{\arraystretch}{1.2}
     \centering
@@ -97,7 +94,30 @@ Nozzle geometry model will be delved in \autoref{sec:nozzle_losses}. The results
     \label{table:preliminary_dry}
 \end{table}
 
-\cfig{DRY-1}{Tanks configuration}{0.35}
+The nozzle geometry was modelled with a conical convergent and a Rao parabolic divergent. For the convergent a realistic cone angle of $\alpha_{con} = 30$\textdegree $\,$ was chosen from which its length can be computed.
+\begin{equation}
+    L_{con} = \frac{D_c - D_t}{2 \tan(\alpha_{con})}
+\end{equation} 
+
+Since no constraint was imposed on the divergent length a 100\% bell percentage was selected in order to minimize 2D losses as described in \autoref{sec:nozzle_losses}. From it, together with the area ratio, the parabolic nozzle can be defined. The nozzle's main characteristics are reported in \autoref{table:convergent_values}
+\begin{table}[H]
+    \renewcommand{\arraystretch}{1.2}
+    \centering
+    \begin{tabular}{|c|c|c|}
+        \hline
+        $\boldsymbol{L_{con} \; [\textbf{cm}]}$ & $\boldsymbol{L_{div} \; [\textbf{cm}]}$ & $\boldsymbol{\theta_e \; [\textbf{deg}]}$ \\
+        \hline
+        \hline
+        2.15 & 34.91 & 4.329 \\
+        \hline
+    \end{tabular}
+    \caption{Nozzle main characteristics}
+    \label{table:convergent_values}
+\end{table}
+
+A simplified geometrical model of the whole system is shown in \autoref{fig:DRY-1}
+
+\cfig{DRY-1}{System configuration}{0.35}
 
 
 %SE RIUSCIAMO REFERENCE SU MACH NUMBER IN CAMERA + EVENTUALE COMMENTO SU VALORE BASSO
@@ -172,7 +192,7 @@ On the other side, LOX required a cryogenic compatibility that can be ensured by
     \centering
     \begin{tabular}{|c|c|c|c|c|}
         \hline
-        $\boldsymbol{\OFmed \; [\textbf{-}]}$ & $\boldsymbol{B_{pr,ox} \; [\textbf{-}]}$ & $\boldsymbol{B_{pr,fu} \; [\textbf{-}]}$  & $\boldsymbol{V_{tot} \; [\textbf{m}^3]}$ \\
+        $\OFmedbold \; \boldsymbol{[\textbf{-}]}$ & $\boldsymbol{B_{pr,ox} \; [\textbf{-}]}$ & $\boldsymbol{B_{pr,fu} \; [\textbf{-}]}$  & $\boldsymbol{V_{tot} \; [\textbf{m}^3]}$ \\
         \hline
         \hline
         2.42 & 2.5 & 2.5 & 1.27 \\
