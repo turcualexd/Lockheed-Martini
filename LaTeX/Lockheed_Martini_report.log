@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.5.16)  14 APR 2024 23:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.5.16)  15 APR 2024 02:09
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -947,7 +947,7 @@ Package biblatex Info: ... file 'Lockheed_Martini_report.bbl' found.
 Package biblatex Info: Reference section=0 on input line 6.
 Package biblatex Info: Reference segment=0 on input line 6.
  (Config/title_page_chapter.tex
-<Config//Poli_logo.pdf, id=63, 527.9725pt x 415.5525pt>
+<Config//Poli_logo.pdf, id=75, 527.9725pt x 415.5525pt>
 File: Config//Poli_logo.pdf Graphic file (type pdf)
 <use Config//Poli_logo.pdf>
 Package pdftex.def Info: Config//Poli_logo.pdf  used on input line 6.
@@ -994,74 +994,76 @@ LaTeX Font Info:    Font shape `T1/txr/b/n' in size <14.4> not available
 LaTeX Font Info:    Font shape `T1/txr/b/n' in size <10.95> not available
 (Font)              Font shape `T1/txr/bx/n' tried instead on input line 2.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 5.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 4.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 5.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 4.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 5.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 4.
 )
 \tf@toc=\write5
 \openout5 = `Lockheed_Martini_report.toc'.
 
- [1] (Config/Body.tex (Sections/00_notation.tex) [2] (Sections/01_introduction.tex
+ [1] (Config/Body.tex (Sections/00_notation.tex
 LaTeX Font Info:    Font shape `T1/txr/b/n' in size <12> not available
-(Font)              Font shape `T1/txr/bx/n' tried instead on input line 4.
-) (Sections/02_modeling.tex
-<Images/flowchart.pdf, id=112, 489.32813pt x 391.4625pt>
-File: Images/flowchart.pdf Graphic file (type pdf)
-<use Images/flowchart.pdf>
-Package pdftex.def Info: Images/flowchart.pdf  used on input line 6.
-(pdftex.def)             Requested size: 483.69687pt x 386.96368pt.
+(Font)              Font shape `T1/txr/bx/n' tried instead on input line 9.
+ [2]) [3] (Sections/01_introduction.tex
 
+LaTeX Warning: Missing reference on input line 15.
+
+) (Sections/02_modeling.tex
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.15 \subsection
-                {System dynamics} [1 <./Images/flowchart.pdf>]
-LaTeX Font Info:    Trying to load font information for TS1+txr on input line 21.
+l.2 \section
+            {Modelling of propulsion system: DRY-1} [1]
+LaTeX Font Info:    Trying to load font information for TS1+txr on input line 7.
  (C:\Users\turcu\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\ts1txr.fd
 File: ts1txr.fd 2000/12/15 v3.1
 )
-<Images/flowchart_dynamics.pdf, id=333, 286.06876pt x 572.1375pt>
+<Images/flowchart.pdf, id=140, 489.32813pt x 391.4625pt>
+File: Images/flowchart.pdf Graphic file (type pdf)
+<use Images/flowchart.pdf>
+Package pdftex.def Info: Images/flowchart.pdf  used on input line 12.
+(pdftex.def)             Requested size: 483.69687pt x 386.96368pt.
+ [2 <./Images/flowchart.pdf>] [3] [4]
+
+LaTeX Warning: Missing reference on input line 204.
+
+<Images/flowchart_dynamics.pdf, id=401, 286.06876pt x 572.1375pt>
 File: Images/flowchart_dynamics.pdf Graphic file (type pdf)
 <use Images/flowchart_dynamics.pdf>
-Package pdftex.def Info: Images/flowchart_dynamics.pdf  used on input line 28.
-(pdftex.def)             Requested size: 183.80716pt x 367.61594pt.
- [2 <./Images/flowchart_dynamics.pdf>]
+Package pdftex.def Info: Images/flowchart_dynamics.pdf  used on input line 237.
+(pdftex.def)             Requested size: 241.84843pt x 483.70013pt.
+[5] [6 <./Images/flowchart_dynamics.pdf>]
 
-LaTeX Warning: Missing reference on input line 79.
+LaTeX Warning: Missing reference on input line 288.
 
 
-LaTeX Warning: Missing reference on input line 84.
+LaTeX Warning: Missing reference on input line 293.
 
-) [3] (Sections/03_results.tex) (Sections/04_nozzle_losses.tex) (Sections/05_additive.tex) (Sections/06_cooling.tex)) [4]
+) (Sections/03_results.tex [7]) (Sections/04_nozzle_losses.tex) (Sections/05_additive.tex) (Sections/06_cooling.tex)) [8]
 LaTeX Font Info:    Trying to load font information for T1+txtt on input line 18.
  (C:\Users\turcu\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\t1txtt.fd
 File: t1txtt.fd 2000/12/15 v3.1
-)
-
-Package caption Warning: Unused \captionsetup[table] on input line 58.
-See the caption package documentation for explanation.
-
-[5] (Lockheed_Martini_report.aux)
+) [9] (Lockheed_Martini_report.aux)
 Package rerunfilecheck Info: File `Lockheed_Martini_report.out' has not changed.
-(rerunfilecheck)             Checksum: 6CCD40A64220DE4802A74CC0BB3578C8;2206.
+(rerunfilecheck)             Checksum: 7863C382B7CD3F47A4680A887380B665;2560.
 Package logreq Info: Writing requests to 'Lockheed_Martini_report.run.xml'.
 \openout1 = `Lockheed_Martini_report.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 23772 strings out of 476361
- 414457 string characters out of 5788046
- 1868993 words of memory out of 5000000
- 43736 multiletter control sequences out of 15000+600000
- 588164 words of font info for 175 fonts, out of 8000000 for 9000
+ 23860 strings out of 476361
+ 416085 string characters out of 5788046
+ 1900993 words of memory out of 5000000
+ 43783 multiletter control sequences out of 15000+600000
+ 605411 words of font info for 189 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 87i,17n,98p,1527b,1887s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/rtcxr.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/rtxbmi.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/rtxmi.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/rtxr.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/t1xtt.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/txex.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/txmia.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/txsy.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Lockheed_Martini_report.pdf (8 pages, 626048 bytes).
+ 87i,18n,98p,1527b,1887s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/rtcxr.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/rtxb.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/rtxbmi.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/rtxmi.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/rtxr.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/rtxsc.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/t1xtt.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/txbmia.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/txbsy.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/txex.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/txmia.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/txsy.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
+Output written on Lockheed_Martini_report.pdf (13 pages, 692344 bytes).
 PDF statistics:
- 1171 PDF objects out of 1200 (max. 8388607)
- 38 named destinations out of 1000 (max. 500000)
- 136 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1270 PDF objects out of 1440 (max. 8388607)
+ 70 named destinations out of 1000 (max. 500000)
+ 160 words of extra memory for PDF output out of 10000 (max. 10000000)
 

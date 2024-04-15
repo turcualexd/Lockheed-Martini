@@ -1,6 +1,6 @@
 clear, clc, close all
 
-%% Input data
+% Input data
 
 % Initial data
 rho_f = 807;        % kg/m^3
@@ -42,17 +42,17 @@ alpha_con = 30;     % deg
 d_inj_f = 1e-3;     % m
 
 
-%% Nominal sizing
+% Nominal sizing
 
 T_i = T_i_n/lambda;
 
 % CEA sizing of nozzle and CC
 output = cea(CEA('problem','rkt','nfz',2,'o/f',OF_i,'sup',eps,'case','Porco Dio','p,bar',p_c_i/1e5,'reactants','fuel','RP-1(L)','C',1,'H',1.9423,'wt%',100,'oxid','O2(L)','O',2,'wt%',100,'output','massf','transport','trace',1e-10,'end'));
 c_star_i = output.froz.cstar(end);
-c_t_i = output.froz.cf(end);
+c_t_i = output.froz.cf_vac(end);
 T_c_i = output.froz.temperature(1);
 gamma_i = output.froz.gamma(1);
-I_sp_i = output.froz.isp(end);
+I_sp_i = output.froz.isp_vac(end);
 m_p_i = T_i/(c_t_i*c_star_i);
 
 A_t = m_p_i/(output.froz.sonvel(2)*output.froz.density(2));
@@ -141,7 +141,7 @@ p_f_i = p_c_i + dp_f;
 p_ox_i = p_c_i + dp_ox;
 
 
-%% Dynamics
+% Dynamics
 
 tvet = 0 : dt : t_max;
 m_f = [m_f_i nan(1, length(tvet) - 1)];
@@ -163,8 +163,8 @@ I_sp = [I_sp_i nan(1, length(tvet) - 1)];
 T_f = [T_f_i nan(1, length(tvet) - 1)];
 T_ox = [T_ox_i nan(1, length(tvet) - 1)];
 
-V_f = V_f_i;
-V_ox = V_ox_i;
+V_f = 0;
+V_ox = 0;
 cont = 1;
 j = 1; % p_c_it inferiore di bisezione
 toll = 0.1;
@@ -173,9 +173,6 @@ while true
     
     dV_f = m_f(cont)*dt/rho_f;
     dV_ox = m_ox(cont)*dt/rho_ox;
-
-    V_f = V_f - dV_f;
-    V_ox = V_ox - dV_ox;
 
     V_p_f_new = V_p_f(cont) + dV_f;
     V_p_ox_new = V_p_ox(cont) + dV_ox;
@@ -186,8 +183,9 @@ while true
     p_f_new = p_f(cont)*(V_p_f(cont)/V_p_f_new)^k_f;
     p_ox_new = p_ox(cont)*(V_p_ox(cont)/V_p_ox_new)^k_ox;
 
-    
-    if V_f < 0 || V_ox < 0
+    V_f = V_f + dV_f;
+    V_ox = V_ox + dV_ox;
+    if V_f > V_f_i || V_ox > V_ox_i
         disp("Termine per volume occupato massimo raggiunto")
         break
     end
@@ -241,12 +239,12 @@ while true
         output = cea(CEA('problem','rkt','nfz',2,'o/f',OF_new,'sup',eps,'case','Porco Dio','p,bar',p_c_new/1e5,'reactants','fuel','RP-1(L)','C',1,'H',1.9423,'wt%',100,'oxid','O2(L)','O',2,'wt%',100,'output','massf','transport','trace',1e-10,'end'));
         
         c_star_cea = output.froz.cstar(1);
-        c_t_new = output.froz.cf(end);
+        c_t_new = output.froz.cf_vac(end);
         T_c_new = output.froz.temperature(1);
         gamma_new = output.froz.gamma(1);
         c_star_new = A_t*p_c_new/(m_f_new + m_ox_new);
         T_new = lambda*(m_f_new + m_ox_new)*c_t_new*c_star_new;
-        I_sp_new = output.froz.isp(end);
+        I_sp_new = output.froz.isp_vac(end);
         err = abs(c_star_cea - c_star_new);
         
         if abs(err) < toll
@@ -307,7 +305,7 @@ gamma = gamma(~isnan(V_p_ox));
 tvet = tvet(1:length(gamma));
 
 
-%% Interpretation of data
+% Interpretation of data
 
 figure
 plot(tvet, OF)
