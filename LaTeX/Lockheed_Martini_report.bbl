@@ -130,6 +130,19 @@
       \field{title}{Modern Engineering for design of Liquid-Propellant Rocket Engines}
       \field{year}{1992}
     \endentry
+    \entry{nist}{online}{}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labeltitlesource}{title}
+      \field{addendum}{(accessed: 14.04.2024)}
+      \field{title}{NIST Chemistry WebBook}
+      \verb{urlraw}
+      \verb https://webbook.nist.gov/cgi/fluid.cgi?T=85&PLow=4&PHigh=5.5&PInc=0.1&Digits=5&ID=C7727379&Action=Load&Type=IsoTherm&TUnit=K&PUnit=bar&DUnit=mol%2Fl&HUnit=kJ%2Fkg&WUnit=m%2Fs&VisUnit=Pa*s&STUnit=N%2Fm&RefState=DEF
+      \endverb
+      \verb{url}
+      \verb https://webbook.nist.gov/cgi/fluid.cgi?T=85&PLow=4&PHigh=5.5&PInc=0.1&Digits=5&ID=C7727379&Action=Load&Type=IsoTherm&TUnit=K&PUnit=bar&DUnit=mol%2Fl&HUnit=kJ%2Fkg&WUnit=m%2Fs&VisUnit=Pa*s&STUnit=N%2Fm&RefState=DEF
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput
