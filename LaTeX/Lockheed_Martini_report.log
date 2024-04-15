@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.11.26)  15 APR 2024 18:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.11.26)  15 APR 2024 19:29
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -943,7 +943,7 @@ Package biblatex Info: ... file 'Lockheed_Martini_report.bbl' found.
 Package biblatex Info: Reference section=0 on input line 6.
 Package biblatex Info: Reference segment=0 on input line 6.
  (./Config/title_page_chapter.tex
-<Config//Poli_logo.pdf, id=92, 527.9725pt x 415.5525pt>
+<Config//Poli_logo.pdf, id=80, 527.9725pt x 415.5525pt>
 File: Config//Poli_logo.pdf Graphic file (type pdf)
 <use Config//Poli_logo.pdf>
 Package pdftex.def Info: Config//Poli_logo.pdf  used on input line 6.
@@ -1023,32 +1023,36 @@ LaTeX Warning: Missing reference on input line 23.
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.29     \begin{gather}
-                        [1] [2]) (./Sections/05_additive.tex) (./Sections/06_cooling.tex)) [3]
+l.26     \end{equation}
+                        [1]
+
+LaTeX Warning: Missing reference on input line 46.
+
+) (./Sections/05_additive.tex) (./Sections/06_cooling.tex)) [2]
 
 Package caption Warning: Unused \captionsetup[table] on input line 58.
 See the caption package documentation for explanation.
 
-[4] (./Lockheed_Martini_report.aux)
+[3] (./Lockheed_Martini_report.aux)
 Package rerunfilecheck Info: File `Lockheed_Martini_report.out' has not changed.
-(rerunfilecheck)             Checksum: EBE6144EABFAB74B30E23EB5AB9C5FF7;3402.
+(rerunfilecheck)             Checksum: 0A6AE8F13FA3AFBD267354064BFBC5EF;2766.
 Package logreq Info: Writing requests to 'Lockheed_Martini_report.run.xml'.
 \openout1 = `Lockheed_Martini_report.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 23580 strings out of 476025
- 405736 string characters out of 5790016
+ 23570 strings out of 476025
+ 405548 string characters out of 5790016
  1899388 words of memory out of 5000000
- 43601 multiletter control sequences out of 15000+600000
+ 43595 multiletter control sequences out of 15000+600000
  587505 words of font info for 173 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  87i,17n,96p,1546b,1887s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2023/texmf-dist/fonts/type1/public/txfonts/rtcxr.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/txfonts/rtxb.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/txfonts/rtxbmi.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/txfonts/txbmia.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/txfonts/txbsy.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/txfonts/txex.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/txfonts/txsy.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Lockheed_Martini_report.pdf (8 pages, 141854 bytes).
+Output written on Lockheed_Martini_report.pdf (7 pages, 139139 bytes).
 PDF statistics:
- 255 PDF objects out of 1000 (max. 8388607)
- 215 compressed objects within 3 object streams
- 41 named destinations out of 1000 (max. 500000)
- 182 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 235 PDF objects out of 1000 (max. 8388607)
+ 197 compressed objects within 2 object streams
+ 37 named destinations out of 1000 (max. 500000)
+ 158 words of extra memory for PDF output out of 10000 (max. 10000000)
 

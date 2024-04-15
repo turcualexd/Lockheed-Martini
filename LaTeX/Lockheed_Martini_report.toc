@@ -15,9 +15,6 @@
 \contentsline {section}{\numberline {4}Nozzle losses}{1}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Losses calculations}{1}{subsection.4.1}%
 \contentsline {subsection}{\numberline {4.2}Effects on the nominal design}{2}{subsection.4.2}%
-\contentsline {subsubsection}{\numberline {4.2.1}Only boundary layer losses}{2}{subsubsection.4.2.1}%
-\contentsline {subsubsection}{\numberline {4.2.2}Nozzle losses only throat erosion}{2}{subsubsection.4.2.2}%
-\contentsline {subsubsection}{\numberline {4.2.3}Complete nozzle losses}{3}{subsubsection.4.2.3}%
-\contentsline {section}{\numberline {5}Additive manufacturing influences}{3}{section.5}%
-\contentsline {section}{\numberline {6}Cooling analysis}{3}{section.6}%
-\contentsline {section}{Bibliography}{4}{section*.7}%
+\contentsline {section}{\numberline {5}Additive manufacturing influences}{2}{section.5}%
+\contentsline {section}{\numberline {6}Cooling analysis}{2}{section.6}%
+\contentsline {section}{Bibliography}{3}{section*.7}%
