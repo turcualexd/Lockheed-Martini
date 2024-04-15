@@ -143,7 +143,7 @@ coeff = 48.5/1903.3;
 sigma_f = coeff * d_inj_f;
 sigma_ox = coeff * d_inj_ox;
 
-n_simulations = 5; %da aumentare dopo
+n_simulations = 50; %da aumentare dopo
 
 tvet = 0 : dt : t_max;
 m_f_mat = [nan(n_simulations, length(tvet))];

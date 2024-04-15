@@ -1,11 +1,10 @@
 clear; close all; clc;
 %carico file
 load("mat_inc.mat");
- creo tvet
-dt   = 10;
-t_max = 4e3;
-tvet = 0 : dt : t_max;
 n_simulations = size(c_star_mat,1);
+m_p_mat = m_f_mat+m_ox_mat;
+g0=9.81;
+T_mat= I_sp_mat.*m_p_mat*g0;
 
 %calcolo vettori media
 
@@ -29,21 +28,22 @@ T_f_avg = mean(T_f_mat);
 T_ox_avg = mean(T_ox_mat);
 
  
-tvet=tvet-dt;
 grayColor = [.6 .6 .6];
-fs_t = 12;      % Titolo
-fs_ax = 14;     % Assi
-fs_leg = 12;    % Legenda
+fs_t = 15;      % Titolo
+fs_ax = 15;     % Assi
+fs_leg = 14;    % Legenda
+lw_avg = 1.5;
+lw_gr = 0.5;
 %%
 figure
 hold on
 grid minor
-xlim([0 3500])
-plot(tvet(2:end),OF_avg(2:end), 'LineWidth',2, 'Color','r')
+
+plot(tvet,OF_avg, 'LineWidth',lw_avg, 'Color','r')
 for q = 1:n_simulations
-    plot(tvet(2:end), OF_mat(q, (2:end)),'-','LineWidth',0.5, 'Color',grayColor);
+    plot(tvet, OF_mat(q, :),'-','LineWidth',lw_gr, 'Color',grayColor);
 end
-plot(tvet(2:end),OF_avg(2:end), 'LineWidth',4, 'Color','r')
+plot(tvet,OF_avg, 'LineWidth',lw_avg, 'Color','r')
 title("O/F ratio", "Interpreter", "latex", "FontSize", fs_t)
 xlabel("time [s]", "Interpreter", "latex", "FontSize", fs_ax)
 ylabel("O/F  [-]", "Interpreter", "latex", "FontSize", fs_ax)
@@ -53,12 +53,12 @@ legend("Average Value", "Simulations", "Interpreter", "latex", "FontSize", fs_le
 figure
 hold on
 grid minor
-xlim([0 3500])
-plot(tvet(2:end),p_ox_avg(2:end), 'LineWidth',2, 'Color','r')
+
+plot(tvet(2:end),p_ox_avg(2:end), 'LineWidth',lw_avg, 'Color','r')
 for q = 1:n_simulations
-    plot(tvet(2:end), p_ox_mat(q, (2:end)),'-','LineWidth',0.5, 'Color',grayColor);
+    plot(tvet(2:end), p_ox_mat(q, (2:end)),'-','LineWidth',lw_gr, 'Color',grayColor);
 end
-plot(tvet(2:end),p_ox_avg(2:end), 'LineWidth',1, 'Color','r')
+plot(tvet(2:end),p_ox_avg(2:end), 'LineWidth',lw_avg, 'Color','r')
 title("Oxidizer Tank Pressure", "Interpreter", "latex", "FontSize", fs_t)
 xlabel("time [s]", "Interpreter", "latex", "FontSize", fs_ax)
 ylabel("$P_{ox} \; [Pa]$", "Interpreter", "latex", "FontSize", fs_ax)
@@ -69,19 +69,19 @@ hold on
 grid minor
 indexofinterest= (tvet>50) & (tvet<80);
 for q = 1:n_simulations
-    plot(tvet(indexofinterest), p_ox_mat(q,indexofinterest), '-','LineWidth',0.5, 'Color',grayColor);
+    plot(tvet(indexofinterest), p_ox_mat(q,indexofinterest), '-','LineWidth',lw_gr, 'Color',grayColor);
 end
-plot(tvet(indexofinterest),p_ox_avg(indexofinterest), 'LineWidth',4, 'Color','r')
+plot(tvet(indexofinterest),p_ox_avg(indexofinterest), 'LineWidth',lw_avg, 'Color','r')
 %%
 figure
 hold on
 grid minor
-xlim([0 3500])
-plot(tvet(2:end),p_f_avg(2:end), 'LineWidth',2, 'Color','r')
+
+plot(tvet(2:end),p_f_avg(2:end), 'LineWidth',lw_avg, 'Color','r')
 for q = 1:n_simulations
-    plot(tvet(2:end), p_f_mat(q, (2:end)),'-','LineWidth',0.5, 'Color',grayColor);
+    plot(tvet(2:end), p_f_mat(q, (2:end)),'-','LineWidth',lw_gr, 'Color',grayColor);
 end
-plot(tvet(2:end),p_f_avg(2:end), 'LineWidth',4, 'Color','r')
+plot(tvet(2:end),p_f_avg(2:end), 'LineWidth',lw_avg, 'Color','r')
 % title("Fuel pressure")
 % xlabel("t [s]")
 % ylabel("p_{f} [Pa]")
@@ -96,19 +96,19 @@ hold on
 grid minor
 indexofinterest= (tvet>50) & (tvet<80);
 for q = 1:n_simulations
-    plot(tvet(indexofinterest), p_f_mat(q,indexofinterest), '-','LineWidth',0.5, 'Color',grayColor);
+    plot(tvet(indexofinterest), p_f_mat(q,indexofinterest), '-','LineWidth',lw_gr, 'Color',grayColor);
 end
-plot(tvet(indexofinterest),p_f_avg(indexofinterest), 'LineWidth',4, 'Color','r')
+plot(tvet(indexofinterest),p_f_avg(indexofinterest), 'LineWidth',lw_avg, 'Color','r')
 %%
 figure
 hold on
 grid minor
-xlim([0 3500])
-plot(tvet(2:end),p_c_avg(2:end), 'LineWidth',2, 'Color','r')
+
+plot(tvet(2:end),p_c_avg(2:end), 'LineWidth',lw_avg, 'Color','r')
 for q = 1:n_simulations
-    plot(tvet(2:end), p_c_mat(q, (2:end)),'-','LineWidth',0.5, 'Color',grayColor);
+    plot(tvet(2:end), p_c_mat(q, (2:end)),'-','LineWidth',lw_gr, 'Color',grayColor);
 end
-plot(tvet(2:end),p_c_avg(2:end), 'LineWidth',4, 'Color','r')
+plot(tvet(2:end),p_c_avg(2:end), 'LineWidth',lw_avg, 'Color','r')
 title("Chamber Pressure", "Interpreter", "latex", "FontSize", fs_t)
 xlabel("time [s]", "Interpreter", "latex", "FontSize", fs_ax)
 ylabel("$P_{c} \; [Pa]$", "Interpreter", "latex", "FontSize", fs_ax)
@@ -119,20 +119,20 @@ hold on
 grid minor
 indexofinterest= (tvet>50) & (tvet<100);
 for q = 1:n_simulations
-    plot(tvet(indexofinterest), p_c_mat(q,indexofinterest), '-','LineWidth',0.5, 'Color',grayColor);
+    plot(tvet(indexofinterest), p_c_mat(q,indexofinterest), '-','LineWidth',lw_gr, 'Color',grayColor);
 end
-plot(tvet(indexofinterest),p_c_avg(indexofinterest), 'LineWidth',4, 'Color','r')
+plot(tvet(indexofinterest),p_c_avg(indexofinterest), 'LineWidth',lw_avg, 'Color','r')
 %%
 
 figure
 hold on
 grid minor
-xlim([0 3500])
+
 plot(tvet(2:end),m_ox_avg(2:end), 'LineWidth',2, 'Color','r')
 for q = 1:n_simulations
-    plot(tvet(2:end), m_ox_mat(q, (2:end)),'-','LineWidth',0.5, 'Color',grayColor);
+    plot(tvet(2:end), m_ox_mat(q, (2:end)),'-','LineWidth',lw_gr, 'Color',grayColor);
 end
-plot(tvet(2:end),m_ox_avg(2:end), 'LineWidth',4, 'Color','r')
+plot(tvet(2:end),m_ox_avg(2:end), 'LineWidth',lw_avg, 'Color','r')
 title("Oxidizer mass flow rate", "Interpreter", "latex", "FontSize", fs_t)
 xlabel("time [s]", "Interpreter", "latex", "FontSize", fs_ax)
 ylabel("$\dot{m}_{ox} \; [kg/s]$", "Interpreter", "latex", "FontSize", fs_ax)
@@ -143,19 +143,19 @@ hold on
 grid minor
 indexofinterest= (tvet>50) & (tvet<100);
 for q = 1:n_simulations
-    plot(tvet(indexofinterest), m_ox_mat(q,indexofinterest), '-','LineWidth',0.5, 'Color',grayColor);
+    plot(tvet(indexofinterest), m_ox_mat(q,indexofinterest), '-','LineWidth',lw_gr, 'Color',grayColor);
 end
-plot(tvet(indexofinterest),m_ox_avg(indexofinterest), 'LineWidth',4, 'Color','r')
+plot(tvet(indexofinterest),m_ox_avg(indexofinterest), 'LineWidth',lw_avg, 'Color','r')
 %%
 figure
 hold on
 grid minor
-xlim([0 3500])
-plot(tvet(2:end),m_f_avg(2:end), 'LineWidth',2, 'Color','r')
+
+plot(tvet(2:end),m_f_avg(2:end), 'LineWidth',lw_avg, 'Color','r')
 for q = 1:n_simulations
-    plot(tvet(2:end), m_f_mat(q, (2:end)),'-','LineWidth',0.5, 'Color',grayColor);
+    plot(tvet(2:end), m_f_mat(q, (2:end)),'-','LineWidth',lw_gr, 'Color',grayColor);
 end
-plot(tvet(2:end),m_f_avg(2:end), 'LineWidth',4, 'Color','r')
+plot(tvet(2:end),m_f_avg(2:end), 'LineWidth',lw_avg, 'Color','r')
 title("Fuel mass flow rate", "Interpreter", "latex", "FontSize", fs_t)
 xlabel("time [s]", "Interpreter", "latex", "FontSize", fs_ax)
 ylabel("$\dot{m}_{f} \; [kg/s]$", "Interpreter", "latex", "FontSize", fs_ax)
@@ -166,109 +166,109 @@ hold on
 grid minor
 indexofinterest= (tvet>50) & (tvet<100);
 for q = 1:n_simulations
-    plot(tvet(indexofinterest), m_f_mat(q,indexofinterest), '-','LineWidth',0.5, 'Color',grayColor);
+    plot(tvet(indexofinterest), m_f_mat(q,indexofinterest), '-','LineWidth',lw_gr, 'Color',grayColor);
 end
-plot(tvet(indexofinterest),m_f_avg(indexofinterest), 'LineWidth',4, 'Color','r')
+plot(tvet(indexofinterest),m_f_avg(indexofinterest), 'LineWidth',lw_avg, 'Color','r')
 %%
 figure
 hold on
 grid minor
-xlim([0 3500])
-plot(tvet(2:end),u_feed_ox_avg(2:end), 'LineWidth',2, 'Color','r')
+
+plot(tvet(2:end),u_feed_ox_avg(2:end), 'LineWidth',lw_avg, 'Color','r')
 for q = 1:n_simulations
-    plot(tvet(2:end), u_feed_ox_mat(q, (2:end)),'-','LineWidth',0.5, 'Color',grayColor);
+    plot(tvet(2:end), u_feed_ox_mat(q, (2:end)),'-','LineWidth',lw_gr, 'Color',grayColor);
 end
-plot(tvet(2:end),u_feed_ox_avg(2:end), 'LineWidth',4, 'Color','r')
+plot(tvet(2:end),u_feed_ox_avg(2:end), 'LineWidth',lw_avg, 'Color','r')
 title("Oxidizer feed velocity", "Interpreter", "latex", "FontSize", fs_t)
 xlabel("time [s]", "Interpreter", "latex", "FontSize", fs_ax)
-ylabel("$u_{feed,ox} [m/s]$", "Interpreter", "latex", "FontSize", fs_ax)
+ylabel("$u_{feed,ox} \; [m/s]$", "Interpreter", "latex", "FontSize", fs_ax)
 legend("Average Value", "Simulations", "Interpreter", "latex", "FontSize", fs_leg)
 %%
 figure
 hold on
 grid minor
-xlim([0 3500])
-plot(tvet(2:end),u_feed_f_avg(2:end), 'LineWidth',2, 'Color','r')
+
+plot(tvet(2:end),u_feed_f_avg(2:end), 'LineWidth',lw_avg, 'Color','r')
 for q = 1:n_simulations
-    plot(tvet(2:end), u_feed_f_mat(q, (2:end)),'-','LineWidth',0.5, 'Color',grayColor);
+    plot(tvet(2:end), u_feed_f_mat(q, (2:end)),'-','LineWidth',lw_gr, 'Color',grayColor);
 end
- plot(tvet(2:end),u_feed_f_avg(2:end), 'LineWidth',4, 'Color','r')
+ plot(tvet(2:end),u_feed_f_avg(2:end), 'LineWidth',lw_avg, 'Color','r')
 % title("Fuel feed velocity")
 % xlabel("t [s]")
 % ylabel("u_{feed,f} [m/s]")
 % legend('avg', 'sim')
 title("Fuel feed velocity", "Interpreter", "latex", "FontSize", fs_t)
 xlabel("time [s]", "Interpreter", "latex", "FontSize", fs_ax)
-ylabel("$u_{feed,f} [m/s]$", "Interpreter", "latex", "FontSize", fs_ax)
+ylabel("$u_{feed,f} \; [m/s]$", "Interpreter", "latex", "FontSize", fs_ax)
 legend("Average Value", "Simulations", "Interpreter", "latex", "FontSize", fs_leg)
 %%
 figure
 hold on
 grid minor
-xlim([0 3500])
-plot(tvet,I_sp_avg, 'LineWidth',2, 'Color','r')
+
+plot(tvet,I_sp_avg, 'LineWidth',lw_avg, 'Color','r')
 for q = 1:n_simulations
-    plot(tvet(2:end), I_sp_mat(q, (2:end)), '-','LineWidth',0.5, 'Color',grayColor);
+    plot(tvet(2:end), I_sp_mat(q, (2:end)), '-','LineWidth',lw_gr, 'Color',grayColor);
 end
-plot(tvet,I_sp_avg, 'LineWidth',4, 'Color','r')
+plot(tvet,I_sp_avg, 'LineWidth',lw_avg, 'Color','r')
 title("Specific Impulse", "Interpreter", "latex", "FontSize", fs_t)
 xlabel("time [s]", "Interpreter", "latex", "FontSize", fs_ax)
-ylabel("$I_{sp} [s]$", "Interpreter", "latex", "FontSize", fs_ax)
+ylabel("$I_{sp} \; [s]$", "Interpreter", "latex", "FontSize", fs_ax)
 legend("Average Value", "Simulations", "Interpreter", "latex", "FontSize", fs_leg)
 %%
 figure
 hold on
 grid minor
-xlim([0 3500])
-plot(tvet(2:end),T_ox_avg(2:end), 'LineWidth',2, 'Color','r')
+
+plot(tvet(2:end),T_ox_avg(2:end), 'LineWidth',lw_avg, 'Color','r')
 for q = 1:n_simulations
-    plot(tvet(2:end), T_ox_mat(q, (2:end)), '-','LineWidth',0.5, 'Color',grayColor);
+    plot(tvet(2:end), T_ox_mat(q, (2:end)), '-','LineWidth',lw_gr, 'Color',grayColor);
 end
-plot(tvet(2:end),T_ox_avg(2:end), 'LineWidth',4, 'Color','r')
+plot(tvet(2:end),T_ox_avg(2:end), 'LineWidth',lw_avg, 'Color','r')
 title("Oxidizer temperature", "Interpreter", "latex", "FontSize", fs_t)
 xlabel("time [s]", "Interpreter", "latex", "FontSize", fs_ax)
-ylabel("$T_{ox} [K]$", "Interpreter", "latex", "FontSize", fs_ax)
+ylabel("$T_{ox} \; [K]$", "Interpreter", "latex", "FontSize", fs_ax)
 legend("Average Value", "Simulations", "Interpreter", "latex", "FontSize", fs_leg)
 %%
 figure
 hold on
 grid minor
-xlim([0 3500])
-plot(tvet(2:end),T_f_avg(2:end), 'LineWidth',2, 'Color','r')
+
+plot(tvet(2:end),T_f_avg(2:end), 'LineWidth',lw_avg, 'Color','r')
 for q = 1:n_simulations
-    plot(tvet(2:end), T_f_mat(q, (2:end)), '-','LineWidth',0.5, 'Color',grayColor);
+    plot(tvet(2:end), T_f_mat(q, (2:end)), '-','LineWidth',lw_gr, 'Color',grayColor);
 end
-plot(tvet(2:end),T_f_avg(2:end), 'LineWidth',4, 'Color','r')
+plot(tvet(2:end),T_f_avg(2:end), 'LineWidth',lw_avg, 'Color','r')
 title("Fuel temperature", "Interpreter", "latex", "FontSize", fs_t)
 xlabel("time [s]", "Interpreter", "latex", "FontSize", fs_ax)
-ylabel("$T_{f} [K]$", "Interpreter", "latex", "FontSize", fs_ax)
+ylabel("$T_{f} \; [K]$", "Interpreter", "latex", "FontSize", fs_ax)
 legend("Average Value", "Simulations", "Interpreter", "latex", "FontSize", fs_leg)
 %%
 figure
 hold on
 grid minor
-xlim([0 3500])
-plot(tvet(2:end),T_c_avg(2:end), 'LineWidth',2, 'Color','r')
+
+plot(tvet(2:end),T_c_avg(2:end), 'LineWidth',lw_avg, 'Color','r')
 for q = 1:n_simulations
-    plot(tvet(2:end), T_c_mat(q, 2:end), '-','LineWidth',0.5, 'Color',grayColor);
+    plot(tvet(2:end), T_c_mat(q, 2:end), '-','LineWidth',lw_gr, 'Color',grayColor);
 end
-plot(tvet(2:end),T_c_avg(2:end), 'LineWidth',4, 'Color','r')
+plot(tvet(2:end),T_c_avg(2:end), 'LineWidth',lw_avg, 'Color','r')
 title("Combustion Chamber temperature", "Interpreter", "latex", "FontSize", fs_t)
 xlabel("time [s]", "Interpreter", "latex", "FontSize", fs_ax)
-ylabel("$T_{c} [K]$", "Interpreter", "latex", "FontSize", fs_ax)
+ylabel("$T_{c} \; [K]$", "Interpreter", "latex", "FontSize", fs_ax)
 legend("Average Value", "Simulations", "Interpreter", "latex", "FontSize", fs_leg)
 %%
 figure
 hold on
 grid minor
-xlim([0 3500])
-plot(tvet(2:end),T_avg(2:end), 'LineWidth',2, 'Color','r')
+
+plot(tvet(2:end),T_avg(2:end), 'LineWidth',lw_avg, 'Color','r')
 for q = 1:n_simulations
-    plot(tvet(2:end), T_mat(q, 2:end), '-','LineWidth',0.5, 'Color',grayColor);
+    plot(tvet(2:end), T_mat(q, 2:end), '-','LineWidth',lw_gr, 'Color',grayColor);
 end
-plot(tvet(2:end),T_avg(2:end), 'LineWidth',2, 'Color','r')
+plot(tvet(2:end),T_avg(2:end), 'LineWidth',lw_avg, 'Color','r')
 title("Thrust", "Interpreter", "latex", "FontSize", fs_t)
-xlabel("time $[s]$", "Interpreter", "latex", "FontSize", fs_ax)
+xlabel("time  $[s]$", "Interpreter", "latex", "FontSize", fs_ax)
 ylabel("$\mathcal{T} \; [N]$", "Interpreter", "latex", "FontSize", fs_ax)
 legend("Average Value", "Simulations", "Interpreter", "latex", "FontSize", fs_leg)
 axes('position',[.25 .65 .25 .25])
@@ -277,7 +277,7 @@ hold on
 grid minor
 indexofinterest= (tvet>50) & (tvet<100);
 for q = 1:n_simulations
-    plot(tvet(indexofinterest), T_mat(q,indexofinterest), '-','LineWidth',0.5, 'Color',grayColor);
+    plot(tvet(indexofinterest), T_mat(q,indexofinterest), '-','LineWidth',lw_gr, 'Color',grayColor);
 end
-plot(tvet(indexofinterest),T_avg(indexofinterest), 'LineWidth',4, 'Color','r')
+plot(tvet(indexofinterest),T_avg(indexofinterest), 'LineWidth',lw_avg, 'Color','r')
 %%
