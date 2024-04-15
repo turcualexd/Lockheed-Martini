@@ -1,10 +1,22 @@
 \section{Introduction and literature overview}
 \label{sec:introduction}
+In this work a preliminary design of a 1 kN semi-cryogenic LRE (LOX/RP-1) equipped with a blow-down feeding system is discussed. In particular, a first literature analysis was done in order to review previous studies regarding this particular architecture. Recent developments in additive manufacture (AM) techniques were analyzed to obtain some knowledge regarding processes and precision of this new frontier. Moreover, due the reduced size of this system, some criticalities regarding boundary layer and erosion losses were researched.
+The second part of the paper aim at designing the engine with some imposed initial conditions and some assumptions. The whole dimensioning of the system, including the tanks and feeding lines, is carried on including the dynamics of the system. The final sizing will accomplish the maximization of the total impulse, with the initial and final constraints. 
+An off-design analysis is then performed to quantify the performances with nozzle losses and AM uncertainties. Finally, a feasibility analysis of  nozzle fuel cooling is discussed. 
 
 \subsection{Blow-down heritage}
 \label{subsec:blowdown_intro}
+The blow-down architecture is the simplest feeding technique for LRE since it does not require additional pressurizing gas tanks with failure-prone pressure regulator valves nor complex turbomachinery. The scheme includes only two liquid propellant tanks filled with helium or nitrogen, eventually separated by a membrane.
+The major downsides of this simplicity is relative to the non-stationarity of the tank pressures that induce chamber pressure drop, decrease of propellant mass flow rate  and as a consequence O/F ratio variation. This chain of events degrades performances overtime and must be carefully evaluated since combustion efficiency relies upon viable domains of injection pressure and correct mass flow ratio.
+The interest on blow-down is although justified with respect to well-known pressure regulated feed system since this last can also manifest some criticalities in terms of long-term reliability. In particular, propulsion systems play crucial roles for mission success, such as long interplanetary trips, and they must ensure failure-free lifetime.
+This is a major concern when focusing on pressure regulated feeding lines in which a pressure regulator valve is present. This kind of elements can be quite complex and hence add a weakness for the whole system \cite{valve_criticalities}.
+Considering these facts, a blow-down type architecture could be of interest since it decrease system complexity. Moreover, different feasibility analysis for blow-down units are present in the literature in which also an external re-pressurization tank is considered \cite{repressurization}.
+This is an upgrade that allows to recover performance of the feeding pressure and hence combustion properties. Although the valve complexity is removed since a pyro valve can be used to discharge the gas with a single shot application, the eventual re-pressurization can be a crucial point as the sudden change in pressure could induce unwanted instabilities.
+Other configurations could foresee the use of a Venturi valve to maintain constant mass flow rate by cavitating the liquid and choking the flow on the feeding line. However, neither extra tank nor Venturi valves will be considered in this work in order to meet the requirements presented in \mref.
 
-\subsection{Additive manufacturing state of art}
+The whole evaluation of the dynamics of the examined propulsion system was not based upon previous works, instead a self-made model was developed.
+\
+subsection{Additive manufacturing state of art}
 \label{subsec:additive_intro}
 
 \subsection{Analysis of losses}
