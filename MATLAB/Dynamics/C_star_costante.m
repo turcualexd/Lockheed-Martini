@@ -17,7 +17,7 @@ mu_f = 0.75e-3;     % Pas
 mu_ox = 0.196e-3;   % Pas
 
 % Dati assunti
-OF_i = 2.42;        % -
+OF_i = 2.33;        % -
 eps = 300;          % -
 eps_c = 10;         % -
 C_d = 0.82;         % -
@@ -30,7 +30,7 @@ k_ox = 5/3;         % -
 k_f = 7/5;          % -
 T_f_i = 300;        % K
 T_ox_i = 90;        % K
-B = 2.5;           % -
+B = 2.78;           % -
 alpha_con = 30;     % deg
 
 % Dimensionamento a ritroso
@@ -40,10 +40,10 @@ V_tot = pi*d^2*h/4;
 output = cea(CEA('problem','rkt','nfz',2,'o/f',OF_i,'sup',eps,'case','Porco Dio','p,bar',p_c_i/1e5,'reactants','fuel','RP-1(L)','C',1,'H',1.9423,'wt%',100,'oxid','O2(L)','O',2,'wt%',100,'output','massf','transport','trace',1e-10,'end'));
 
 c_star = output.froz.cstar(end);
-c_t_i = output.froz.cf(end);
+c_t_i = output.froz.cf_vac(end);
 T_c_i = output.froz.temperature(1);
 gamma_i = output.froz.gamma(1);
-I_sp_i = output.froz.isp(end);
+I_sp_i = output.froz.isp_vac(end);
 m_p_i = T_i/(c_t_i*c_star);
 
 A_t = m_p_i/(output.froz.sonvel(2)*output.froz.density(2));
@@ -175,9 +175,9 @@ while true
     
     output = cea(CEA('problem','rkt','nfz',2,'o/f',OF_new,'sup',eps,'case','Porco Dio','p,bar',p_c_new/1e5,'reactants','fuel','RP-1(L)','C',1,'H',1.9423,'wt%',100,'oxid','O2(L)','O',2,'wt%',100,'output','massf','transport','trace',1e-10,'end'));
     
-    c_t_new = output.froz.cf(end);
+    c_t_new = output.froz.cf_vac(end);
     T_c_new = output.froz.temperature(1);
-    I_sp_new = output.froz.isp(end);
+    I_sp_new = output.froz.isp_vac(end);
     gamma_new = output.froz.gamma(1);
     T_new = lambda*(m_f_new + m_ox_new)*c_t_new*c_star;
 

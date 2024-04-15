@@ -1,24 +1,25 @@
-\section{Modeling of propulsion system: DRY-1}
-\label{sec:modeling}
-
 \pagebreak
+\section{Modelling of propulsion system: DRY-1}
+\label{sec:modelling}
+
 The workflow for the sizing of DRY-1 is introduced by \autoref{fig:flowchart} and it is divided into three stages:
 \begin{itemize}
     \item \textbf{Input data}:  the problem is set up. 
     \item \textbf{Nominal sizing}: the system is sized according to initial conditions and general assumptions.
-    \item \textbf{Dynamics}: an iterative process is set up to model the blow-down dynamics and finalize the sizing.
+    \item \textbf{System dynamics}: an iterative process is set up to model the blow-down dynamics and finalize the sizing.
 \end{itemize}
 
-\cfig{flowchart}{Flowchart of the sizing}{1}
+\cfig{flowchart}{Flowchart of the simulation model}{1}
 
 \subsection{Input data}
-\label{subsec:input}
+\label{subsec:input_data}
+
 The input data defined different kind of requirements, related to operability environment, engine performance, size constraints, chemistry, architecture and manufacturing techniques. Regardless of the development of the engine design, the system shall respect the following pinpoints:
 \begin{itemize}
     \item \textbf{Environment}: vacuum for the whole operation.
-    \item \textbf{Thrust} $\mathcal{T}$: initial magnitude of 1 kN, no lower boundary.
-    \item \textbf{Chamber Pressure}  $P_c$: initial value of 50 bar, always above 20 bar throughout the whole mission.
-    \item \textbf{Allocated Space}: tanks, combustion chamber and convergent nozzle occupancy is exactly 80\% of the volume occupied by a cylinder of 1 meter diameter and 2 meter length. No bounds on the extension of the divergent.
+    \item \textbf{Thrust} $\boldsymbol{\T}$: initial magnitude of $1$ kN, no lower boundary.
+    \item \textbf{Chamber pressure} $\boldsymbol{p_c}$: initial value of $50$ bar, always above $20$ bar throughout the whole mission.
+    \item \textbf{Allocated space}: tanks, combustion chamber and convergent nozzle occupancy is exactly $80$\% of the volume occupied by a cylinder of $1$ meter diameter and $2$ meter length. No bounds on the extension of the divergent.
     \item \textbf{Propellants}: semi-cryogenic couple of LOX and RP-1.
     \item \textbf{Architecture}: blow-down type.
     \item \textbf{Manufacturing}: all the system is produced in AM, no restriction on material nor techniques. 
@@ -33,7 +34,7 @@ Various hypothesis were necessary to develop the system, this values are reporte
     \centering
     \begin{tabular}{|c|c|c|c|}
         \hline
-        $\boldsymbol{O/F} \; [-]$ & $\boldsymbol{\epsilon} \; [-]$ & $\boldsymbol{\epsilon_{con}} \; [-]$ & $\boldsymbol{L^*} \; [m]$ \\
+        $\boldsymbol{O/F \; [\textbf{-}]}$ & $\boldsymbol{\varepsilon \; [\textbf{-}]}$ & $\boldsymbol{\varepsilon_{con} \; [\textbf{-}]}$ & $\boldsymbol{L^* \; [\textbf{m}]}$ \\
         \hline
         \hline
         2.42 & 300 & 10 & 1.143 \\
@@ -43,17 +44,18 @@ Various hypothesis were necessary to develop the system, this values are reporte
     \label{table:hp}
 \end{table}
 
-The choices of $\boldsymbol{L^*}$  and $\boldsymbol{O/F}$ were only dictated by the propellant couple \cite{sutton}, while $\boldsymbol{\epsilon}$ was chosen as the characteristic of the engine refers to an in-space application \cite{ariane_datasheet}. Regarding the value of $\boldsymbol{\epsilon_{con}}$ a mean value between 5 and 15 was taken. Smaller values entails longer combustion chamber and small cross sectional area, with large pressure drops. Larger values refers to bigger chamber cross sectional area, with limited length for the combustion. From the literature the suggestion for the choice of this value is to refer to previous successful engines design, considering the same application \cite{huzel_huang}. Therefore, a 400N Bi-Propellant apogee motor was taken as reference and revealed a value of $\boldsymbol{\epsilon_{con}} \approx$ 10 \cite{ariane_datasheet}.
+The choices of $L^*$  and $O/F$ were only dictated by the propellant couple \cite{sutton}, while $\varepsilon$ was chosen as the characteristic of the engine refers to an in-space application \cite{ariane_datasheet}. Regarding the value of $\varepsilon_{con}$ a mean value between $5$ and $15$ was taken. Smaller values entails longer combustion chamber and small cross sectional area, with large pressure drops. Larger values refers to bigger chamber cross sectional area, with limited length for the combustion. From the literature the suggestion for the choice of this value is to refer to previous successful engines design, considering the same application \cite{huzel_huang}. Therefore, a $400$ N bi-propellant apogee motor was taken as reference and revealed a value of $\varepsilon_{con} \approx 10$ \cite{ariane_datasheet}.
 
 \subsection{Nominal sizing}
-\label{subsec:nominal}
-After defining the main input data, the workflow is carried out as shown in \autoref{fig:flowchart}. All the combustion simulations were performed with Nasa-CEA software, implemented in Matlab (CEAM). In particular the "rocket problem" was considered, imposing frozen equilibrium, infinite combustion chamber ($\boldsymbol{M_c}$ = 0), initial injecting temperatures of the propellant equal to the storage temperatures. The chamber pressure was set as $\boldsymbol{P_c}$ = 50 bar and the mixture ratio as $O/F$ = 2.42. Latter refinement of this last value will be performed. The output values used from the simulation are represented (vacuum value is considered for the $\boldsymbol{c_T}$):
+\label{subsec:nominal_sizing}
+
+After defining the main input data, the workflow is carried out as shown in \autoref{fig:flowchart}. All the combustion simulations were performed with Nasa-CEA software, implemented in Matlab (CEAM). In particular the "rocket problem" was considered, imposing frozen equilibrium, infinite combustion chamber ($M_c = 0$), initial injecting temperatures of the propellant equal to the storage temperatures. The chamber pressure was set as $p_c = 50$ bar and the mixture ratio as $O/F = 2.42$. Latter refinement of this last value will be performed. The output values used from the simulation are represented (vacuum value is considered for the $c_T$):
 \begin{table}[H]
     \renewcommand{\arraystretch}{1.2}
     \centering
     \begin{tabular}{|c|c|c|c|}
         \hline
-        $\boldsymbol{c^*} \; [m/s]$ & $\boldsymbol{c_T} \; [-]$ & $\boldsymbol{T_c} \; [K]$ & $\boldsymbol{\gamma_c} \; [-]$ \\
+        $\boldsymbol{c^* \; [\textbf{m/s}]}$ & $\boldsymbol{c_T \; [\textbf{-}]}$ & $\boldsymbol{T_c \; [\textbf{K}]}$ & $\boldsymbol{\gamma_c \; [\textbf{-}]}$ \\
         \hline
         \hline
         1851 & 1.935 & 3708 & 1.1405 \\
@@ -66,16 +68,16 @@ After defining the main input data, the workflow is carried out as shown in \aut
 %equazioni per mass flow rate e aree motore + risultati solo motore
 From this results, the propellant mass flow rate and the throat area can be calculated:
 \begin{equation}
-    \dot{m}_p = \frac{\mathcal{T}}{c_T c^*} 
+    \dot{m}_p = \frac{\T}{c_T c^*} 
     \qquad 
     A_t = \frac{\dot{m}_p c^*}{P_c}
 \end{equation}
 
 From the geometry assumption of \autoref{table:hp}, the nozzle exit area and the combustion chamber geometry can be retrieved:
 \begin{gather}
-    A_e = \epsilon A_t
+    A_e = \varepsilon A_t
     \\
-    A_c = \epsilon_{con} A_t \qquad L_c = \frac{L^*}{\epsilon_{con}}
+    A_c = \varepsilon_{con} A_t \qquad L_c = \frac{L^*}{\varepsilon_{con}}
 \end{gather}
 Nozzle geometry model will be delved in \autoref{sec:nozzle_losses}. The results for the previous calculation are the following:
 
@@ -84,7 +86,7 @@ Nozzle geometry model will be delved in \autoref{sec:nozzle_losses}. The results
     \centering
     \begin{tabular}{|c|c|c|c|c|}
         \hline
-        $\boldsymbol{\dot{m}_p} \; [kg/s]$ & $\boldsymbol{D_t} \; [cm]$ & $\boldsymbol{D_e} \; [cm]$  & $\boldsymbol{D_{c}} \; [cm]$ & $\boldsymbol{L_c} \; [cm]$ \\
+        $\boldsymbol{\dot{m}_p \; [\textbf{kg/s}]}$ & $\boldsymbol{D_t \; [\textbf{cm}]}$ & $\boldsymbol{D_e \; [\textbf{cm}]}$  & $\boldsymbol{D_{c} \; [\textbf{cm}]}$ & $\boldsymbol{L_c \; [\textbf{cm}]}$ \\
         \hline
         \hline
         0.279 & 1.15 & 19.86 & 3.63 & 11.43 \\
@@ -95,9 +97,9 @@ Nozzle geometry model will be delved in \autoref{sec:nozzle_losses}. The results
 \end{table}
 
 %SE RIUSCIAMO REFERENCE SU MACH NUMBER IN CAMERA + EVENTUALE COMMENTO SU VALORE BASSO
-A check on the compliance of the chamber mach number is done ($M_c <$ 0.3):
+A check on the compliance of the chamber Mach number is done ($M_c < 0.3$):
 \begin{equation}    
-    \frac{1}{\epsilon_{con}} = M_c \left[ \frac{1 + \frac{\gamma_c - 1}{2}}{1 + \frac{\gamma_c - 1}{2} M_c^2} \right]^{\frac{\gamma_c + 1}{2(\gamma_c - 1)}}
+    \frac{1}{\varepsilon_{con}} = M_c \left[ \frac{1 + \frac{\gamma_c - 1}{2}}{1 + \frac{\gamma_c - 1}{2} M_c^2} \right]^{\frac{\gamma_c + 1}{2(\gamma_c - 1)}}
     \qquad \xrightarrow{\textit{fsolve}} \qquad M_c = 0.059
 \end{equation}
 
@@ -108,28 +110,27 @@ From the geometry of the motor and the allocated space constraints, the total he
     \label{eq:v_tc}
 \end{equation}
 
-Also, the volume of the cylinder that covers the length of the thrust chamber and with the total diameter of 1 meter ($d_{tot}$) can be computed. From there, the empty volume around the thrust chamber can be computed as a difference:
+Also, the volume of the cylinder that covers the length of the thrust chamber and with the total diameter of $1$ meter ($D_{tot}$) can be computed. From there, the empty volume around the thrust chamber can be computed as a difference:
 \begin{equation}
     V_{lost} =  V_{tc} - \frac{\pi}{4} \left(L_{c} + L_{con}\right) D_{tot}
 \end{equation}
-This value must be 20\% of the total cylinder volume, as cited in \autoref{subsec:input}. As the computed value was lower, additional volume had to be removed from the tanks in order to meet the requirement. The height dedicated to the tanks is calculated as follow:
+This value must be $20$\% of the total cylinder volume, as cited in \autoref{subsec:input_data}. As the computed value was lower, additional volume had to be removed from the tanks in order to meet the requirement. The height dedicated to the tanks is calculated as follow:
 \begin{equation}
     H_{tk} =  H - \left[L_{c} + L_{con} + \frac{4}{\pi D_{tot}^2}\left( 0.2 V_{tot} - V_{lost}\right) \right]
 \end{equation}
 The total volume allocated to the tanks is hence fully defined. 
 In order to calculate the masses of pressurizer and propellants, some assumption have to be made:
 \begin{itemize}
-    \item \textbf{Adiabatic expansion of the pressurizing gas}.
-    \item \textbf{Blow-down ratios can be tuned}.
-    \item \textbf{Mean value of the oxidizer to fuel ratio}.
+    \item adiabatic expansion of the pressurizing gas;
+    \item blow-down ratios can be tuned;
+    \item mean value of the oxidizer to fuel ratio.
 \end{itemize}
 
 A system of equations can be set up:
 
 \begin{equation}
     \begin{cases}
-    \renewcommand{\arraystretch}{50}
-    \dfrac{m_{ox}}{m_{fu}} = \overline{O/F}\\
+    \dfrac{m_{ox}}{m_{fu}} = \OFmed\\
      m_{ox} = \rho_{ox}V_{ox}\\
      m_{fu} = \rho_{fu}V_{fu}\\
      V_{ox} = V_{pr, f}^{ox} - V_{pr, i}^{ox}\\
@@ -142,14 +143,18 @@ A system of equations can be set up:
 
 \vspace{0.15cm}
 
-In order to solve \hyperref[eq:sistema_fata_turchina]{System~\ref*{eq:sistema_fata_turchina}}, the pressurizer and the initial temperature of the propellants have to be set. Different pressurizing gas are available, mainly nitrogen or helium are the most common choices. The main differences for the two are the storage temperature, the molar mass and the specific heat ratio. The latter parameter influences the adiabatic discharge, higher values implies faster pressure discharge. The molar mass affects the amount of gas to be embarked at a given pressure. The storage temperature is a matter of compatibility with the propellant. Nitrogen gas was chosen to pressurize RP-1 since no cryogenic conditions were present also it guarantees lower discharge, with the downside of increasing the mass of the system. On the other side, LOX required a cryogenic compatibility that can be ensured by helium. Even though an efficient insulating bladder is employed, the design choice was dictated by a more conservative approach.
-The employment of nitrogen also with LOX was discarded since storage temperature and pressure are not compatible with its properties\cite{nist}. 
+In order to solve \hyperref[eq:sistema_fata_turchina]{System~\ref*{eq:sistema_fata_turchina}}, the pressurizer and the initial temperature of the propellants have to be set. Different pressurizing gas are available, mainly nitrogen or helium are the most common choices.
+The main differences for the two are the storage temperature, the molar mass and the specific heat ratio. The latter parameter influences the adiabatic discharge, higher values implies faster pressure discharge.
+The molar mass affects the amount of gas to be embarked at a given pressure. The storage temperature is a matter of compatibility with the propellant.
+Nitrogen gas was chosen to pressurize RP-1 since no cryogenic conditions were present also it guarantees lower discharge, with the downside of increasing the mass of the system.
+On the other side, LOX required a cryogenic compatibility that can be ensured by helium. Even though an efficient insulating bladder is employed, the design choice was dictated by a more conservative approach.
+The employment of nitrogen also with LOX was discarded since storage temperature and pressure are not compatible with its properties\cite{nist}.
 \begin{table}[H]
     \renewcommand{\arraystretch}{1.2}
     \centering
     \begin{tabular}{|c|c|c|c|}
         \hline
-        $\boldsymbol{T_{pr,fu}} \; [K]$ & $\boldsymbol{T_{pr,ox}} \; [K]$ & $\boldsymbol{\gamma_{N_2}} \; [-]$  & $\boldsymbol{\gamma_{He}} \; [-]$ \\
+        $\boldsymbol{T_{pr,fu} \; [\textbf{K}]}$ & $\boldsymbol{T_{pr,ox} \; [\textbf{K}]}$ & $\boldsymbol{\gamma_{N_2} \; [\textbf{-}]}$  & $\boldsymbol{\gamma_{He} \; [\textbf{-}]}$ \\
         \hline
         \hline
         300 & 90 & 1.40 & 1.67 \\
@@ -164,7 +169,7 @@ The employment of nitrogen also with LOX was discarded since storage temperature
     \centering
     \begin{tabular}{|c|c|c|c|c|}
         \hline
-        $\boldsymbol{\overline{O/F}} \; [-]$ & $\boldsymbol{B_{pr,ox}} \; [-]$ & $\boldsymbol{B_{pr,fu}} \; [-]$  & $\boldsymbol{V_{tot}} \; [m^3]$ \\
+        $\boldsymbol{\OFmed \; [\textbf{-}]}$ & $\boldsymbol{B_{pr,ox} \; [\textbf{-}]}$ & $\boldsymbol{B_{pr,fu} \; [\textbf{-}]}$  & $\boldsymbol{V_{tot} \; [\textbf{m}^3]}$ \\
         \hline
         \hline
         2.42 & 2.5 & 2.5 & 1.27 \\
@@ -176,14 +181,14 @@ The employment of nitrogen also with LOX was discarded since storage temperature
 
 HO INSERITO I DATI, DOBBIAMO COMMENTARLI
 
-The masses and volumes of oxidizer, fuel and pressurizing gases are computed. 
+The masses and volumes of oxidizer, fuel and pressurizing gases are computed.
 
 \begin{table}[H]
     \renewcommand{\arraystretch}{1.5}
     \centering
     \begin{tabular}{|c|c|c|c|c|c|}
         \hline
-        $\boldsymbol{m_{fu}} \; [kg]$ & $\boldsymbol{m_{ox}} \; [kg]$ & $\boldsymbol{V_{pr, i}^{fu}}\; [m^3]$ & $\boldsymbol{V_{fu, i}}\; [m^3]$& $\boldsymbol{V_{pr, i}^{ox}} \; [m^3]$ &  $\boldsymbol{V_{ox, i}}\; [m^3]$\\
+        $\boldsymbol{m_{fu} \; [\textbf{kg}]}$ & $\boldsymbol{m_{ox} \; [\textbf{kg}]}$ & $\boldsymbol{V_{pr, i}^{fu} \; [\textbf{m}^3]}$ & $\boldsymbol{V_{fu, i} \; [\textbf{m}^3]}$ & $\boldsymbol{V_{pr, i}^{ox} \; [\textbf{m}^3]}$ &  $\boldsymbol{V_{ox, i} \; [\textbf{m}^3]}$\\
         \hline
         \hline
         165.34 & 400.13 & 0.2217 & 0.2049 & 0.4789 & 0.3510 \\
@@ -196,19 +201,18 @@ The masses and volumes of oxidizer, fuel and pressurizing gases are computed.
 HO INSERITO I VALORI TROVATI DALLA PRIMA ITERAZIONE
 
 %equazioni feeding --> risultati feeding
-Finally, the feeding lines can be modelled. Considering figure (...), the length of the pipes can be retrieved as a difference:
-
+Finally, the feeding lines can be modelled. Considering figure \mref, the length of the pipes can be retrieved as a difference:
 \begin{gather}
     L_{fd,fu} = H - L_c - H_{tk,fu} \\
     L_{fd,ox} = H - L_c - H_{tk}
 \end{gather}
 
-To completely determine the DRY-1 geometry, the injection plate must be modeled. The pressure drop across the injector $\Delta P_{inj}$ have to be assumed as a percentage of the initial chamber pressure. Acceptable range of this fraction goes from 5\% to 30\%. A value of 20\% is chosen for both oxidizer and fuel lines. The fuel and oxidizer injector area can be computed assuming reasonable values for the discharge coefficient $C_d$. A reasonable assumption has been made according to the superficial roughness quality of AM. 
+To completely determine the DRY-1 geometry, the injection plate must be modelled. The pressure drop across the injector $\Delta p_{inj}$ have to be assumed as a percentage of the initial chamber pressure. Acceptable range of this fraction goes from $5$\% to $30$\%. A value of $20$\% is chosen for both oxidizer and fuel lines. The fuel and oxidizer injector area can be computed assuming reasonable values for the discharge coefficient $C_d$. A reasonable assumption has been made according to the superficial roughness quality of AM.
 
 \begin{gather}
     \dot{m}_{fu} = \frac{1}{1 + O/F}\dot{m}_p \qquad \dot{m}_{ox} = \frac{O/F}{1 + O/F}\dot{m}_p
     \\
-    A_{inj,tot} = \frac{\dot{m}_p}{C_d \sqrt{2\Delta P_{inj} \rho_p}} 
+    A_{inj,tot} = \frac{\dot{m}_p}{C_d \sqrt{2\Delta p_{inj} \rho_p}} 
 \end{gather}
    
 \begin{equation}
@@ -220,3 +224,70 @@ PERDITE DI CARICO GENERALIZZATE
 \subsection{System dynamics}
 \label{subsec:dynamics}
 
+From the nominal sizing of the engine, it is necessary to simulate the real dynamics of the system in order to:
+
+\begin{itemize}
+    \item retrieve the performance of the designed system in time;
+    \item check the compliance of the system with the constraints;
+    \item test other designs through iteration to select the best one based on the simulated data of interest.
+\end{itemize}
+
+For this reasons, a numerical method was implemented. An high level explanation for the functioning of the algorithm can be appreciated in \autoref{fig:flowchart_dynamics}.
+
+\cfig{flowchart_dynamics}{Flowchart of dynamics of the model}{0.5}
+
+The first step of the time cycle is to update the state of the two tanks based on the previous iteration. Assuming a constant propellants flow rate during the time step $\Delta t$, the volume of the remaining liquid is decreased by a quantity $\Delta V ^ {(i+1)}$. Accordingly, the volume of the pressurizer will increase by the same amount.
+\begin{gather}
+    \Delta V ^ {(i+1)} = \frac{\dot{m}_p^{(i)} \Delta t}{\rho_p} \\
+    V_p ^ {(i+1)} = V_p ^ {(i)} - \Delta V ^ {(i+1)} \\
+    V_{pr} ^ {(i+1)} = V_{pr} ^ {(i)} + \Delta V ^ {(i+1)}
+\end{gather}
+
+From the change of volume, the new pressure and temperature of the pressurizer gas are computed assuming an adiabatic expansion in the tank:
+\begin{align}
+    p_{pr} ^ {(i+1)} &= p_{pr} ^ {(i)} \left( \frac{V_{pr} ^ {(i)}}{V_{pr} ^ {(i+1)}} \right) ^ {\gamma_{pr}} \\
+    T_{pr} ^ {(i+1)} &= T_{pr} ^ {(i)} \left( \frac{V_{pr} ^ {(i)}}{V_{pr} ^ {(i+1)}} \right) ^ {\gamma_{pr} - 1}
+\end{align}
+
+A check must be performed on the remaining volume of propellants in the tanks at current iteration: if the volume of fuel is negative it means that the combustion is over so the simulation stops (the same for oxidizer).
+
+If there is some more propellant to use, the iteration goes on with the calculation of the new chamber pressure. This step is complex because it introduces another cycle of iterations inside each time step.
+The mass flow rate of the propellants depends on the pressure cascade in the feeding lines, hence on the chamber pressure. These two variables are bounded and both unknown, but there's only one configuration that can match the boundary condition imposed by the critical condition in the throat, so the problem is well-posed.
+
+From literature, the $c^*$ of the chamber has the following expression:
+\begin{equation}
+    c^* = \frac{p_c \, A_t}{\dot{m}_{fu} + \dot{m}_{ox}}
+    \label{eq:c_star_comp}
+\end{equation}
+
+It correlates the chamber pressure with the propellants flow rate in the throat. Moreover, it only depends on the thermodynamics of the combustion process in the chamber, which changes over time due to the architecture of blow-down system. By imposing the critical conditions in the throat, it can be rewritten as:
+\begin{equation}
+    c^* = \sqrt{\frac{\R}{\M} \frac{T_c}{\gamma} \left( \frac{\gamma + 1}{2} \right)} ^{^{^ {\frac{\gamma + 1}{\gamma - 1}} }}
+    \label{eq:c_star_cea}
+\end{equation}
+
+The system is coherent only if the two expressions give the same result. A system of equations could be created and numerically solved to match both the pressure cascade and $c^*$.
+
+A reasonable initial guess for chamber pressure $p_c ^ {(i+1)(1)}$ is taken as the pressure at previous time step $p_c ^ {(i)}$. The next steps $p_c ^ {(i+1)(j)}$ will converge progressively towards the real current pressure $p_c ^ {(i+1)}$ (for increasing $j$).
+
+From $p_c ^ {(i+1)(j)}$ the $c^{*(i+1)(j)}$ is computed from the pressure cascade as described in \autoref{eq:c_star_comp}:
+\begin{gather}
+    u_{fd,p} ^ {(i+1)(j)} = \sqrt{\frac{2 \left( p_{pr} ^ {(i+1)} - p_c ^ {(i+1)(j)} \right)}{\rho_p K_p}}
+    \\[3pt]
+    m_p ^ {(i+1)(j)} = \rho_p \, A_{fd,p} \, u_{fd,p} ^ {(i+1)(j)}
+    \\[3pt]
+    O/F ^ {(i+1)(j)} = \frac{m_{ox} ^ {(i+1)(j)}}{m_{fu} ^ {(i+1)(j)}}
+    \\[3pt]
+    c^{*(i+1)(j)} = \frac{A_t \, p_c ^ {(i+1)(j)}}{\dot{m}_{fu} ^ {(i+1)(j)} + \dot{m}_{ox} ^ {(i+1)(j)}}
+\end{gather}
+
+\autoref{eq:c_star_cea} is solved directly using CEAM software, which takes as input $p_c ^ {(i+1)(j)}$ and $O/F ^ {(i+1)(j)}$ to return $c_{cea}^{*(j)}$.
+
+The two computed $c^*$ are then compared: if their difference satisfies a certain tolerance, then the cycle stops and returns the new values for the current time step. Else, the inner cycle continues the refinement by guessing a new $p_c ^ {(i+1)(j+1)}$ from $p_c ^ {(i+1)(j)}$.
+
+Finally, a check on the new combustion pressure $p_c ^ {(i+1)}$ is performed in order to stay above the minimum design pressure $p_{c,min}$, as mentioned in \mref. Similarly to the previous check, if the pressure drops below the limit the simulation stops and returns the results, else it continues with the next time step.
+
+\vspace*{3mm}
+
+The same general algorithm is used to refine the initial assumptions of $O/F$ and $B$, which influence the nominal design of the whole engine (as described in \autoref{subsec:nominal_sizing}).
+In this case, the initial $c^*$ value from design is assumed constant to reduce the computational burden, since the algorithm is applied over a wide range of combinations of $O/F$ and $B$. This assumption is reasonable because the $O/F$ (and as consequence the thermodynamics of the combustion) hardly varies during the whole burn, as can be noticed in \mref.

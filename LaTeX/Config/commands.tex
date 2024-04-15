@@ -60,3 +60,34 @@
 \newcommand{\mail}[1]{
 	\href{mailto:#1@mail.polimi.it}{#1@mail.polimi.it}
 }
+
+% T for thrust
+\newcommand{\T}{\varmathbb{T}}
+
+% R for universal gas constant
+\newcommand{\R}{\mathcal{R}}
+
+% M for molar mass
+\newcommand{\M}{\varmathbb{M}}
+
+% Bookmark for missing reference
+\makeatletter
+\newcommand{\mref}{
+	\@latex@warning{Missing reference}
+	\textcolor{red}{\textbf{REFERENCE}}
+}
+\makeatother
+
+% O/F mean normal
+\makeatletter
+\newcommand{\OFmed}{
+	\m@th\overline{\mbox{$O/F$\rule{0pt}{-3mm}}}
+}
+\makeatother
+
+% O/F mean bold
+\makeatletter
+\newcommand{\OFmedbold}{
+	\m@th\overline{\mbox{$\boldsymbol{O/F}$\rule{0pt}{-3mm}}}
+}
+\makeatother
