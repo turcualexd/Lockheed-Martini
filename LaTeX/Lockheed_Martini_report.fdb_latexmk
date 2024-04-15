@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber Lockheed_Martini_report"] 1713117018.43159 "Lockheed_Martini_report.bcf" "Lockheed_Martini_report.bbl" "Lockheed_Martini_report" 1713172974.38167 0
-  "Lockheed_Martini_report.bcf" 1713172974.14018 107176 17a5de0ef97274ff3c15e5bbbd866285 "pdflatex"
+["biber Lockheed_Martini_report"] 1713117018.43159 "Lockheed_Martini_report.bcf" "Lockheed_Martini_report.bbl" "Lockheed_Martini_report" 1713176122.03743 0
+  "Lockheed_Martini_report.bcf" 1713176121.78542 107176 17a5de0ef97274ff3c15e5bbbd866285 "pdflatex"
   "bibliography.bib" 1713129656.48871 2254 d95b187ea4e727bc15246a7a212b8f22 ""
   (generated)
   "Lockheed_Martini_report.bbl"
   "Lockheed_Martini_report.blg"
   (rewritten before read)
-["pdflatex"] 1713172972.84444 "/Users/Chiara/Documents/GitHub/Lockheed-Martini/LaTeX/Lockheed_Martini_report.tex" "Lockheed_Martini_report.pdf" "Lockheed_Martini_report" 1713172974.38204 0
+["pdflatex"] 1713176120.61136 "/Users/Chiara/Documents/GitHub/Lockheed-Martini/LaTeX/Lockheed_Martini_report.tex" "Lockheed_Martini_report.pdf" "Lockheed_Martini_report" 1713176122.03779 0
   "/Library/Application Support/MiKTeX/texmfs/install/fonts/enc/dvips/base/8r.enc" 1710006688.80306 4993 1194fb36dfcb11d9ae9802f2b00b60a3 ""
   "/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/adobe/symbol/psyr.tfm" 1136768654 1408 5937f58aa508ea2cea4901c07d10f5fe ""
   "/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/adobe/times/psyro.tfm" 1136768654 1544 23a042a74981a3e4b6ce2e350e390409 ""
@@ -153,18 +153,18 @@
   "Config/packages.tex" 1713037805.204 568 79cef9397f0d19b743ec4a5508fe002d ""
   "Config/title_page_chapter.tex" 1713037805.20414 1296 61b9cb11ba94191f1d9e2c73a0bf5c1f ""
   "Images/cdcoeff.jpg" 1713129656.47773 170046 d06e628dd3e6a61175715b13d2bca8cc ""
-  "Lockheed_Martini_report.aux" 1713172974.13643 4401 73846dd713fefac2daf767230e50c11d "pdflatex"
+  "Lockheed_Martini_report.aux" 1713176121.78158 4401 73846dd713fefac2daf767230e50c11d "pdflatex"
   "Lockheed_Martini_report.bbl" 1713129656.47894 4746 3374b860ecb2efe99ab79fec1d5f01ee "biber Lockheed_Martini_report"
-  "Lockheed_Martini_report.out" 1713172974.13884 2085 97fd570b39d566621b12547dc443d93c "pdflatex"
-  "Lockheed_Martini_report.run.xml" 1713172974.1414 2440 3de4acfff4da18bf9d6f2186f018f0e2 "pdflatex"
+  "Lockheed_Martini_report.out" 1713176121.78403 2085 97fd570b39d566621b12547dc443d93c "pdflatex"
+  "Lockheed_Martini_report.run.xml" 1713176121.78668 2440 3de4acfff4da18bf9d6f2186f018f0e2 "pdflatex"
   "Lockheed_Martini_report.tex" 1713038044.79364 228 7526e4aac6cadf4ca6f75f081321e958 ""
-  "Lockheed_Martini_report.toc" 1713172974.14158 1092 f72f91aaa536b3fef561916754a179c0 "pdflatex"
+  "Lockheed_Martini_report.toc" 1713176121.78687 1092 f72f91aaa536b3fef561916754a179c0 "pdflatex"
   "Sections/00_notation.tex" 1713129656.48652 587 cbc0eb926bb999910554a2927ae6d023 ""
   "Sections/01_introduction.tex" 1713129656.48707 3786 503a00769bcd6d5aec8910e3b5625915 ""
   "Sections/02_modeling.tex" 1713037805.20831 250 dd377815ce5b4de40d838e37fae60b9d ""
   "Sections/03_results.tex" 1713129656.4876 49 664472539f1cc2e4925a4d87a3d6bdbd ""
   "Sections/04_nozzle_losses.tex" 1713037805.20855 51 e3c5084c9c6a680cd386031aa05cce0c ""
-  "Sections/05_additive.tex" 1713172970.68796 5912 0b9e29b46eca19d74c686e4f9411d1ee ""
+  "Sections/05_additive.tex" 1713176119.91181 6379 8dcd2c94f6ef705c34fbb7c5b3ea9769 ""
   "Sections/06_cooling.tex" 1713037805.2088 48 bf9ddf95664dd06854d05e345484de06 ""
   (generated)
   "Lockheed_Martini_report.aux"

@@ -58,10 +58,10 @@ These modified values then enter the computation explained in \autoref{sec:model
 METTERE I GRAFICI!!!!!!!!\\
 
 
-The mass flow rate, dependent on the injectors' cross sectional area, is slightly affected by the variation of their diameter, very small compared to the nominal one. However, the explained fluctuations can combine generating more observable effects, as seen in ///GRAFICO O/F///, describing the progress of the O/F in time for each simulation. The high deviation from the nominal value is due to its definition as a fraction, greatly affected by the combined variations of its terms. O/F is a crucial parameter in the design of a propulsion system, from which many other variables depend. The temperature of the combustion chamber is one of them, being obtained from the NASA-CEAm software, which, among others, takes as input the O/F ratio and the combustion chamber pressure, related to the tank pressure through the injector's diameters and hence varying due to the analyzed imperfections. Strictly in relation with the mass flow rate and the oxidizer to fuel ratio and connected to many other parameters, also thrust and specific impulse are influenced.
+The mass flow rate, dependent on the injectors' cross sectional area, is slightly affected by the variation of their diameter, very small compared to the nominal one. However, the explained fluctuations can combine generating more observable effects, as seen in ///GRAFICO O/F///, describing the progress of the O/F in time for each simulation. The high deviation from the nominal value is due to its definition as a fraction, greatly affected by the combined variations of its terms. O/F is a crucial parameter in the design of a propulsion system, from which many other variables depend. The temperature of the combustion chamber is one of them, being obtained from the NASA-CEAm software, which, among others, takes as input the O/F ratio and the combustion chamber pressure, related to the tank pressure through the injectors' areas and hence varying due to the analyzed imperfections. Strictly in relation with the mass flow rate and the oxidizer to fuel ratio and connected to many other parameters, also thrust and specific impulse are influenced.
 
-Another characteristic worth to mention is the convergence of all parameters to their mean value. In fact, assuming a constant blow-down ratio, initial values of feed velocities and mass flow rates will vary more as a result of the diameters' variation. Hence the higher pressure jump at the injector head, as shown in \autoref{eq:deltap}.
-
+%Another characteristic worth to mention is the convergence of all parameters to their mean value during each simulation. In fact, assuming a constant blow-down ratio, initial values of feed velocities and mass flow rates will vary more consequently to the diameters' variation. Hence the higher pressure jump at the injector head, as shown in \autoref{eq:deltap}.
+Another characteristic worth to mention is the convergence of all parameters to their mean value during each simulation.  In fact, as shown in \autoref{eq:deltap}, $\Delta p_{inj}$ depends quadratically on mass flow rate, which is high in the first moments of simulation. For this reason, the effect of imperfections is clearly visible in the beginning.
 
 \begin{equation}
     \Delta p_{inj} = \left(\frac{\dot m_{inj,tot,p}}{A_{inj,tot,p} * C_d}\right)^2 * \frac{1}{2*\rho _p}
@@ -70,7 +70,7 @@ Another characteristic worth to mention is the convergence of all parameters to 
 
 
 
-As the pressure in the tanks diminishes, mass flow rates and velocities in the feeding lines decrease, and the pressure jump at injectors as well. This causes a gradual reduction in the variation in the consequent parameters, which in each simulation settles down to converge to the nominal value. 
+As the pressure in the tanks diminishes, mass flow rates and velocities in the feeding lines decrease, and the pressure jump at injectors as well. This causes a gradual reduction of the effect of the injectors' areas imperfections and the variation of consequent parameters, which in each simulation settle down to converge to the nominal value, since the blow-down ratio was kept constant. 
 
 
 
