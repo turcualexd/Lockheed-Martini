@@ -130,9 +130,29 @@
       \field{title}{Modern Engineering for design of Liquid-Propellant Rocket Engines}
       \field{year}{1992}
     \endentry
-    \entry{nist}{online}{}
+    \entry{rao_article}{article}{}
+      \name{author}{1}{}{%
+        {{hash=552b95f742f467819d854345f750dded}{%
+           family={G.V.Rao},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{552b95f742f467819d854345f750dded}
+      \strng{fullhash}{552b95f742f467819d854345f750dded}
+      \strng{bibnamehash}{552b95f742f467819d854345f750dded}
+      \strng{authorbibnamehash}{552b95f742f467819d854345f750dded}
+      \strng{authornamehash}{552b95f742f467819d854345f750dded}
+      \strng{authorfullhash}{552b95f742f467819d854345f750dded}
       \field{sortinit}{7}
       \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Paper}
+      \field{title}{Exhaust Nozzle Contour for Optimum Thrust}
+      \field{year}{1958}
+    \endentry
+    \entry{nist}{online}{}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labeltitlesource}{title}
       \field{addendum}{(accessed: 14.04.2024)}
       \field{title}{NIST Chemistry WebBook}
@@ -157,8 +177,8 @@
       \strng{authorbibnamehash}{343c867bb72a58d305ef7d78a03d3b41}
       \strng{authornamehash}{343c867bb72a58d305ef7d78a03d3b41}
       \strng{authorfullhash}{343c867bb72a58d305ef7d78a03d3b41}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{howpublished}{Paper}
