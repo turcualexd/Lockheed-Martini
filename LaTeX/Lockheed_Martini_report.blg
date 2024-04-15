@@ -1,17 +1,17 @@
 [0] Config.pm:307> INFO - This is Biber 2.19
 [0] Config.pm:310> INFO - Logfile is 'Lockheed_Martini_report.blg'
-[100] biber-darwin:340> INFO - === Sat Apr 13, 2024, 22:39:10
-[123] Biber.pm:419> INFO - Reading 'Lockheed_Martini_report.bcf'
-[250] Biber.pm:979> INFO - Found 7 citekeys in bib section 0
-[267] Biber.pm:4419> INFO - Processing section 0
-[281] Biber.pm:4610> INFO - Looking for bibtex file 'bibliography.bib' for section 0
-[282] bibtex.pm:1713> INFO - LaTeX decoding ...
-[290] bibtex.pm:1519> INFO - Found BibTeX data source 'bibliography.bib'
-[355] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[355] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[356] Biber.pm:4239> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
-[356] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
-[360] bbl.pm:660> INFO - Writing 'Lockheed_Martini_report.bbl' with encoding 'UTF-8'
-[363] bbl.pm:763> INFO - Output to Lockheed_Martini_report.bbl
-[364] Biber.pm:131> WARN - legacy month field 'may' in entry 'tesi_dottorato' is not an integer - this will probably not sort properly.
-[364] Biber.pm:133> INFO - WARNINGS: 1
+[140] biber-MSWIN64:340> INFO - === 
+[181] Biber.pm:419> INFO - Reading 'Lockheed_Martini_report.bcf'
+[305] Biber.pm:979> INFO - Found 9 citekeys in bib section 0
+[322] Biber.pm:4419> INFO - Processing section 0
+[337] Biber.pm:4610> INFO - Looking for bibtex file 'bibliography.bib' for section 0
+[399] bibtex.pm:1713> INFO - LaTeX decoding ...
+[415] bibtex.pm:1519> INFO - Found BibTeX data source 'bibliography.bib'
+[471] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[472] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[472] Biber.pm:4239> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
+[472] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
+[477] bbl.pm:660> INFO - Writing 'Lockheed_Martini_report.bbl' with encoding 'UTF-8'
+[479] bbl.pm:763> INFO - Output to Lockheed_Martini_report.bbl
+[480] Biber.pm:131> WARN - I didn't find a database entry for 'tesi_dottorato' (section 0)
+[480] Biber.pm:133> INFO - WARNINGS: 1

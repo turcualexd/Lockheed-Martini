@@ -101,31 +101,38 @@
       \field{title}{Role of powder particle size on laser powder bed fusion processability of AlSi10mg alloy}
       \field{year}{2021}
     \endentry
-    \entry{tesi_dottorato}{thesis}{}
+    \entry{bj_inconel}{article}{}
       \name{author}{1}{}{%
-        {{hash=08999c826f1e0656ce4264e4a7b7f97e}{%
-           family={Dahmen},
-           familyi={D\bibinitperiod},
-           given={Thomas},
-           giveni={T\bibinitperiod}}}%
+        {{hash=d33acc88ed5832a1f82c1fd504427997}{%
+           family={al},
+           familyi={a\bibinitperiod},
+           given={Amir\bibnamedelima Mostafaei},
+           giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod},
+           prefix={et},
+           prefixi={e\bibinitperiod}}}%
       }
-      \list{institution}{1}{%
-        {DTU}%
-      }
-      \strng{namehash}{08999c826f1e0656ce4264e4a7b7f97e}
-      \strng{fullhash}{08999c826f1e0656ce4264e4a7b7f97e}
-      \strng{bibnamehash}{08999c826f1e0656ce4264e4a7b7f97e}
-      \strng{authorbibnamehash}{08999c826f1e0656ce4264e4a7b7f97e}
-      \strng{authornamehash}{08999c826f1e0656ce4264e4a7b7f97e}
-      \strng{authorfullhash}{08999c826f1e0656ce4264e4a7b7f97e}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \strng{namehash}{d33acc88ed5832a1f82c1fd504427997}
+      \strng{fullhash}{d33acc88ed5832a1f82c1fd504427997}
+      \strng{bibnamehash}{d33acc88ed5832a1f82c1fd504427997}
+      \strng{authorbibnamehash}{d33acc88ed5832a1f82c1fd504427997}
+      \strng{authornamehash}{d33acc88ed5832a1f82c1fd504427997}
+      \strng{authorfullhash}{d33acc88ed5832a1f82c1fd504427997}
+      \field{extraname}{4}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{month}{5}
-      \field{title}{Applications of Machine Learning in Process Monitoring and Controls of L-PBF Additive Manufacturing: A Review}
-      \field{type}{mathesis}
+      \field{howpublished}{Paper}
+      \field{title}{Binder jet 3D printing—Process parameters, materials, properties, modeling, and challenges}
       \field{year}{2021}
+    \endentry
+    \entry{bj_camb}{site}{}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Site: \url{https://markforged.com/resources/blog/inconel-vs-stainless-steel}}
+      \field{title}{What it binder jetting?}
+      \field{year}{2024}
     \endentry
     \entry{Sutton}{article}{}
       \name{author}{1}{}{%
@@ -139,8 +146,8 @@
       \strng{authorbibnamehash}{1ef6106126c3c9123b46da100c94fb5d}
       \strng{authornamehash}{1ef6106126c3c9123b46da100c94fb5d}
       \strng{authorfullhash}{1ef6106126c3c9123b46da100c94fb5d}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{howpublished}{Book}
@@ -161,8 +168,8 @@
       \strng{authorbibnamehash}{32cb1161fc23ba47413d59d551fa81d3}
       \strng{authornamehash}{32cb1161fc23ba47413d59d551fa81d3}
       \strng{authorfullhash}{32cb1161fc23ba47413d59d551fa81d3}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{howpublished}{Slides}
@@ -170,6 +177,7 @@
       \field{year}{2024}
     \endentry
   \enddatalist
+  \missing{tesi_dottorato}
 \endrefsection
 \endinput
 
