@@ -19,27 +19,49 @@
 
 \refsection{0}
   \datalist[entry]{none/global//global/global}
-    \entry{2006_overview}{misc}{}
+    \entry{Sutton}{article}{}
       \name{author}{1}{}{%
-        {{hash=6b4abdd86ffba2654cb9815f5e0be02a}{%
-           family={Grammier},
-           familyi={G\bibinitperiod},
-           given={Richard},
-           giveni={R\bibinitperiod}}}%
+        {{hash=1ef6106126c3c9123b46da100c94fb5d}{%
+           family={G.P.Sutton},
+           familyi={G\bibinitperiod}}}%
       }
-      \strng{namehash}{6b4abdd86ffba2654cb9815f5e0be02a}
-      \strng{fullhash}{6b4abdd86ffba2654cb9815f5e0be02a}
-      \strng{bibnamehash}{6b4abdd86ffba2654cb9815f5e0be02a}
-      \strng{authorbibnamehash}{6b4abdd86ffba2654cb9815f5e0be02a}
-      \strng{authornamehash}{6b4abdd86ffba2654cb9815f5e0be02a}
-      \strng{authorfullhash}{6b4abdd86ffba2654cb9815f5e0be02a}
+      \strng{namehash}{1ef6106126c3c9123b46da100c94fb5d}
+      \strng{fullhash}{1ef6106126c3c9123b46da100c94fb5d}
+      \strng{bibnamehash}{1ef6106126c3c9123b46da100c94fb5d}
+      \strng{authorbibnamehash}{1ef6106126c3c9123b46da100c94fb5d}
+      \strng{authornamehash}{1ef6106126c3c9123b46da100c94fb5d}
+      \strng{authorfullhash}{1ef6106126c3c9123b46da100c94fb5d}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Book}
+      \field{title}{Rocket Propulsion Element}
+      \field{year}{2017}
+    \endentry
+    \entry{tesi_malesia}{article}{}
+      \name{author}{1}{}{%
+        {{hash=ae7ba502efdd4f9f4889a7b402340b1f}{%
+           family={al},
+           familyi={a\bibinitperiod},
+           given={Mohd\bibnamedelimb Aizat\bibnamedelimb Iz’aan\bibnamedelimb Mohd\bibnamedelima Ali},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod\bibinitdelim I\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim A\bibinitperiod},
+           prefix={et},
+           prefixi={e\bibinitperiod}}}%
+      }
+      \strng{namehash}{ae7ba502efdd4f9f4889a7b402340b1f}
+      \strng{fullhash}{ae7ba502efdd4f9f4889a7b402340b1f}
+      \strng{bibnamehash}{ae7ba502efdd4f9f4889a7b402340b1f}
+      \strng{authorbibnamehash}{ae7ba502efdd4f9f4889a7b402340b1f}
+      \strng{authornamehash}{ae7ba502efdd4f9f4889a7b402340b1f}
+      \strng{authorfullhash}{ae7ba502efdd4f9f4889a7b402340b1f}
       \field{sortinit}{3}
       \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{howpublished}{Site: \url{https://www.jpl.nasa.gov/missions/juno}}
-      \field{title}{Overview of the Juno Mission to Jupiter}
-      \field{year}{2006}
+      \field{howpublished}{Paper}
+      \field{title}{INVESTIGATION ON NOZZLE THROAT EROSION IN HYBRID ROCKET MOTOR DUE TO NOZZLE EXPANSION RATIO}
+      \field{year}{2023}
     \endentry
   \enddatalist
 \endrefsection
