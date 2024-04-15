@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.5.16)  15 APR 2024 02:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.5.16)  16 APR 2024 01:27
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1006,11 +1006,7 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
  [1] (Config/Body.tex (Sections/00_notation.tex
 LaTeX Font Info:    Font shape `T1/txr/b/n' in size <12> not available
 (Font)              Font shape `T1/txr/bx/n' tried instead on input line 9.
- [2]) [3] (Sections/01_introduction.tex
-
-LaTeX Warning: Missing reference on input line 15.
-
-) (Sections/02_modeling.tex
+ [2]) [3] (Sections/01_introduction.tex) (Sections/02_modeling.tex
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
@@ -1027,43 +1023,96 @@ Package pdftex.def Info: Images/flowchart.pdf  used on input line 12.
 (pdftex.def)             Requested size: 483.69687pt x 386.96368pt.
  [2 <./Images/flowchart.pdf>] [3] [4]
 
-LaTeX Warning: Missing reference on input line 204.
+LaTeX Warning: Missing reference on input line 215.
 
 <Images/flowchart_dynamics.pdf, id=401, 286.06876pt x 572.1375pt>
 File: Images/flowchart_dynamics.pdf Graphic file (type pdf)
 <use Images/flowchart_dynamics.pdf>
-Package pdftex.def Info: Images/flowchart_dynamics.pdf  used on input line 237.
+Package pdftex.def Info: Images/flowchart_dynamics.pdf  used on input line 249.
 (pdftex.def)             Requested size: 241.84843pt x 483.70013pt.
-[5] [6 <./Images/flowchart_dynamics.pdf>]
+[5] [6 <./Images/flowchart_dynamics.pdf>]) (Sections/03_results.tex [7]
+<Images/FR_T.pdf, id=1179, 421.575pt x 316.18124pt>
+File: Images/FR_T.pdf Graphic file (type pdf)
+<use Images/FR_T.pdf>
+Package pdftex.def Info: Images/FR_T.pdf  used on input line 107.
+(pdftex.def)             Requested size: 232.17242pt x 174.13179pt.
+<Images/FR_OF.pdf, id=1180, 421.575pt x 316.18124pt>
+File: Images/FR_OF.pdf Graphic file (type pdf)
+<use Images/FR_OF.pdf>
+Package pdftex.def Info: Images/FR_OF.pdf  used on input line 107.
+(pdftex.def)             Requested size: 232.17242pt x 174.13179pt.
+<Images/FR_cstar.pdf, id=1181, 421.575pt x 316.18124pt>
+File: Images/FR_cstar.pdf Graphic file (type pdf)
+<use Images/FR_cstar.pdf>
+Package pdftex.def Info: Images/FR_cstar.pdf  used on input line 108.
+(pdftex.def)             Requested size: 232.17242pt x 174.13179pt.
+<Images/FR_ct.pdf, id=1182, 421.575pt x 316.18124pt>
+File: Images/FR_ct.pdf Graphic file (type pdf)
+<use Images/FR_ct.pdf>
+Package pdftex.def Info: Images/FR_ct.pdf  used on input line 108.
+(pdftex.def)             Requested size: 232.17242pt x 174.13179pt.
+<Images/FR_pc.pdf, id=1183, 421.575pt x 316.18124pt>
+File: Images/FR_pc.pdf Graphic file (type pdf)
+<use Images/FR_pc.pdf>
+Package pdftex.def Info: Images/FR_pc.pdf  used on input line 109.
+(pdftex.def)             Requested size: 232.17242pt x 174.13179pt.
+<Images/FR_Tc.pdf, id=1184, 421.575pt x 316.18124pt>
+File: Images/FR_Tc.pdf Graphic file (type pdf)
+<use Images/FR_Tc.pdf>
+Package pdftex.def Info: Images/FR_Tc.pdf  used on input line 109.
+(pdftex.def)             Requested size: 232.17242pt x 174.13179pt.
+ [8 <./Images/FR_T.pdf> <./Images/FR_OF.pdf
 
-LaTeX Warning: Missing reference on input line 288.
+pdfTeX warning: pdflatex (file ./Images/FR_OF.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>]
+<Images/FR_Isp.pdf, id=1198, 421.575pt x 316.18124pt>
+File: Images/FR_Isp.pdf Graphic file (type pdf)
+<use Images/FR_Isp.pdf>
+Package pdftex.def Info: Images/FR_Isp.pdf  used on input line 110.
+(pdftex.def)             Requested size: 232.17242pt x 174.13179pt.
+<Images/FR_m.pdf, id=1199, 421.575pt x 316.18124pt>
+File: Images/FR_m.pdf Graphic file (type pdf)
+<use Images/FR_m.pdf>
+Package pdftex.def Info: Images/FR_m.pdf  used on input line 110.
+(pdftex.def)             Requested size: 232.17242pt x 174.13179pt.
+ [9 <./Images/FR_cstar.pdf> <./Images/FR_ct.pdf
 
+pdfTeX warning: pdflatex (file ./Images/FR_ct.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./Images/FR_pc.pdf
 
-LaTeX Warning: Missing reference on input line 293.
+pdfTeX warning: pdflatex (file ./Images/FR_pc.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./Images/FR_Tc.pdf
 
-) (Sections/03_results.tex [7]) (Sections/04_nozzle_losses.tex) (Sections/05_additive.tex) (Sections/06_cooling.tex)) [8]
+pdfTeX warning: pdflatex (file ./Images/FR_Tc.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./Images/FR_Isp.pdf
+
+pdfTeX warning: pdflatex (file ./Images/FR_Isp.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./Images/FR_m.pdf
+
+pdfTeX warning: pdflatex (file ./Images/FR_m.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>]) (Sections/04_nozzle_losses.tex) (Sections/05_additive.tex) (Sections/06_cooling.tex)) [10]
 LaTeX Font Info:    Trying to load font information for T1+txtt on input line 18.
  (C:\Users\turcu\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\t1txtt.fd
 File: t1txtt.fd 2000/12/15 v3.1
-) [9] (Lockheed_Martini_report.aux)
+) [11] (Lockheed_Martini_report.aux)
 Package rerunfilecheck Info: File `Lockheed_Martini_report.out' has not changed.
-(rerunfilecheck)             Checksum: 7863C382B7CD3F47A4680A887380B665;2560.
+(rerunfilecheck)             Checksum: 12C7E19B714673346A1876C9EE89F7D1;2560.
 Package logreq Info: Writing requests to 'Lockheed_Martini_report.run.xml'.
 \openout1 = `Lockheed_Martini_report.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 23860 strings out of 476361
- 416085 string characters out of 5788046
+ 23965 strings out of 476361
+ 418272 string characters out of 5788046
  1900993 words of memory out of 5000000
- 43783 multiletter control sequences out of 15000+600000
+ 43869 multiletter control sequences out of 15000+600000
  605411 words of font info for 189 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  87i,18n,98p,1527b,1887s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/rtcxr.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/rtxb.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/rtxbmi.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/rtxmi.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/rtxr.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/rtxsc.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/t1xtt.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/txbmia.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/txbsy.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/txex.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/txmia.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/txsy.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Lockheed_Martini_report.pdf (13 pages, 692344 bytes).
+Output written on Lockheed_Martini_report.pdf (15 pages, 1067634 bytes).
 PDF statistics:
- 1270 PDF objects out of 1440 (max. 8388607)
- 70 named destinations out of 1000 (max. 500000)
- 160 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1318 PDF objects out of 1440 (max. 8388607)
+ 81 named destinations out of 1000 (max. 500000)
+ 200 words of extra memory for PDF output out of 10000 (max. 10000000)
 

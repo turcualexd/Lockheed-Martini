@@ -1,3 +1,118 @@
 \section{Results analysis}
 \label{sec:results}
 
+DRY-1 final design, as mentioned in \autoref{subsec:nominal_sizing}, maximizes the total specific impulse deliverable while respecting all the constraints and the assumptions of the model discussed in \autoref{subsec:input_data}.
+It is obtained through the iteration of the code presented in \autoref{subsec:dynamics}, varying all the nominal design parameters (geometry included) as function of the selected DOFs: $B$ and $O/F$.
+In this part all the losses in the nozzle were neglected. They will be discussed off-design in \autoref{sec:nozzle_losses} to evaluate the behavior of the engine in more realistic conditions.
+Also the possible non-nominalities in the realization of the injection plate and the possible strategies to cool down the system are separately treated, respectively in \autoref{sec:additive} and \autoref{sec:cooling}.
+
+In the present section the obtained design will be presented and analyzed through the most relevant parameters, plotted vs time of burn to see the evolution of the system.
+
+\vspace*{5mm}
+
+\begin{minipage}{0.5\linewidth}
+    \centering
+    \captionsetup{type=table}
+    \renewcommand{\arraystretch}{1.4}
+    \begin{tabular}{|c|c|c|}
+        \hline
+        $\OFmedbold \; \boldsymbol{[\textbf{-}]}$   &
+        $\boldsymbol{B_{pr,ox} \; [\textbf{-}]}$    &
+        $\boldsymbol{B_{pr,fu} \; [\textbf{-}]}$    \\
+        \hline
+        \hline
+        2.35 & 2.78 & 2.78 \\
+        \hline
+    \end{tabular}
+    \caption{DRY-1 optimal design values}
+    \label{table:OF_B_final}
+\end{minipage}\hfill
+\begin{minipage}{0.5\linewidth}
+    \centering
+    \captionsetup{type=table}
+    \renewcommand{\arraystretch}{1.4}
+    \begin{tabular}{|c|c|c|c|c|c|}
+        \hline
+        $\boldsymbol{c^* \; [\textbf{m/s}]}$        &
+        $\boldsymbol{c_T \; [\textbf{-}]}$          &
+        $\boldsymbol{T_c \; [\textbf{K}]}$          &
+        $\boldsymbol{I_{sp} \; [\textbf{s}]}$       &
+        $\boldsymbol{I_{tot} \; [\textbf{Ns}]}$     \\
+        \hline
+        \hline
+        1856.3 & 1.932 & 3692 & 355.79 & $2.173 \cdot 10^6$ \\
+        \hline
+    \end{tabular}
+    \caption{Performance parameters for DRY-1}
+    \label{table:performance_values}
+\end{minipage} 
+
+\vspace*{5mm}
+
+\begin{minipage}{0.5\linewidth}
+    \centering
+    \captionsetup{type=table}
+    \renewcommand{\arraystretch}{1.4}
+    \begin{tabular}{|c|c|}
+        \hline
+        $\boldsymbol{\dot{m}_{fu} \; [\textbf{kg/s}]}$  &
+        $\boldsymbol{\dot{m}_{ox} \; [\textbf{kg/s}]}$  \\
+        \hline
+        \hline
+        $8.322 \cdot 10^{-2}$ & $1.956 \cdot 10^{-1}$   \\
+        \hline
+    \end{tabular}
+    \caption{Mass flow rates for DRY-1}
+    \label{table:flow_rates_final}
+\end{minipage}\hfill
+\begin{minipage}{0.5\linewidth}
+    \centering
+    \captionsetup{type=table}
+    \renewcommand{\arraystretch}{1.4}
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+        $\boldsymbol{D_t \; [\textbf{cm}]}$     &
+        $\boldsymbol{D_e \; [\textbf{cm}]}$     &
+        $\boldsymbol{D_c \; [\textbf{cm}]}$     &
+        $\boldsymbol{L_c \; [\textbf{cm}]}$     \\
+        \hline
+        \hline
+        1.15 & 19.88 & 3.63 & 11.43 \\
+        \hline
+    \end{tabular}
+    \caption{Geometry for DRY-1}
+    \label{table:geometry_final}
+\end{minipage} 
+
+\begin{table}[H]
+    \renewcommand{\arraystretch}{1.5}
+    \centering
+    \begin{tabular}{|c|c|c|c|c|c|}
+        \hline
+        $\boldsymbol{m_{fu} \; [\textbf{kg}]}$              &
+        $\boldsymbol{m_{ox} \; [\textbf{kg}]}$              &
+        $\boldsymbol{V_{pr, i}^{fu} \; [\textbf{m}^3]}$     &
+        $\boldsymbol{V_{pr, i}^{ox} \; [\textbf{m}^3]}$     &
+        $\boldsymbol{V_{fu, i} \; [\textbf{m}^3]}$          &
+        $\boldsymbol{V_{ox, i} \; [\textbf{m}^3]}$          \\
+        \hline
+        \hline
+        182.45 & 428.67 & 0.2102 & 0.4441 & 0.2261 & 0.3761 \\
+        \hline
+    \end{tabular}
+    \caption{Tanks sizing for DRY-1}
+    \label{table:tanks_final}
+\end{table}
+
+\twofig{FR_T}{Thrust}{FR_OF}{$O/F$ ratio}{1}
+\twofig{FR_cstar}{Characteristic velocity}{FR_ct}{Thrust coefficient}{1}
+\twofig{FR_pc}{Combustion chamber pressure}{FR_Tc}{Combustion chamber temperature}{1}
+\twofig{FR_Isp}{Specific impulse}{FR_m}{Propellant flow rates}{1}
+
+Some general consideration from the graphs can be made.
+\begin{itemize}
+    \item The pressure and the temperature in the combustion chamber decreases in time as a consequence of the discharge of the tanks. Thrust and specific impulse diminish as well since they depend on these values.
+    \item Since the combustion is less effective, the characteristic velocity, which depends uniquely on the thermodynamics of the chamber, lower its initial value. Despite this, the global variation is negligible, so it can be assumed constant to reduce the calculation burden on the dynamics (as already mentioned in \autoref{subsec:dynamics}).
+    \item $O/F$ ratio barely changes during the time of burn. It has a peculiar evolution with respect to the other monotonic developments: it firstly increases and then decreases. This is mainly imputable to the difference in pressurizers chosen for the two tanks, which have different performances: helium discharges the oxidizer more rapidly with respect to nitrogen, which has a less steep and more constant discharge in time (\autoref{fig:FR_m}).
+    \item A similar development can be found in the thrust coefficient: this is due to the fact that in vacuum its value depends only by the geometry of the nozzle (which is fixed) and by the specific heat ratio of the exhaust gases. The latter depends on the chemistry of the mixture, but it does not strictly follow the $O/F$ ratio.
+\end{itemize}

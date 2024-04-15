@@ -53,12 +53,12 @@ After defining the main input data, the workflow is carried out as shown in \aut
 \begin{table}[H]
     \renewcommand{\arraystretch}{1.2}
     \centering
-    \begin{tabular}{|c|c|c|c|}
+    \begin{tabular}{|c|c|c|c|c|}
         \hline
-        $\boldsymbol{c^* \; [\textbf{m/s}]}$ & $\boldsymbol{c_T \; [\textbf{-}]}$ & $\boldsymbol{T_c \; [\textbf{K}]}$ & $\boldsymbol{\gamma_c \; [\textbf{-}]}$ \\
+        $\boldsymbol{c^* \; [\textbf{m/s}]}$ & $\boldsymbol{c_T \; [\textbf{-}]}$ & $\boldsymbol{T_c \; [\textbf{K}]}$ & $\boldsymbol{\gamma_c \; [\textbf{-}]}$ & $\boldsymbol{I_{sp} \; [\textbf{s}]}$ \\
         \hline
         \hline
-        1851 & 1.935 & 3708 & 1.1405 \\
+        1851.0 & 1.935 & 3709 & 1.1405 & 365.22 \\
         \hline
     \end{tabular}
     \caption{First run on CEAM}
@@ -130,18 +130,24 @@ A system of equations can be set up:
 
 \begin{equation}
     \begin{cases}
-    \dfrac{m_{ox}}{m_{fu}} = \OFmed\\
-     m_{ox} = \rho_{ox}V_{ox}\\
-     m_{fu} = \rho_{fu}V_{fu}\\
-     V_{ox} = V_{pr, f}^{ox} - V_{pr, i}^{ox}\\
-     V_{fu} = V_{pr, f}^{fu} - V_{pr, i}^{fu}\\
-     V_{pr,f}^{ox} = B_{ox}^{\frac{1}{\gamma_{pr,ox}}}V_{pr, i}^{ox}\\
-     V_{pr,f}^{fu} = B_{fu}^{\frac{1}{\gamma_{pr,fu}}}V_{pr, i}^{fu}\\
-     \end{cases}\
-     \label{eq:sistema_fata_turchina}
+    \dfrac{m_{ox}}{m_{fu}} = \OFmed
+    \\[5pt]
+    m_{ox} = \rho_{ox}V_{ox}
+    \\[5pt]
+    m_{fu} = \rho_{fu}V_{fu}
+    \\[5pt]
+    V_{ox} = V_{pr, f}^{ox} - V_{pr, i}^{ox}
+    \\[5pt]
+    V_{fu} = V_{pr, f}^{fu} - V_{pr, i}^{fu}
+    \\[5pt]
+    V_{pr,f}^{ox} = B_{ox}^{\frac{1}{\gamma_{pr,ox}}}V_{pr, i}^{ox}
+    \\[5pt]
+    V_{pr,f}^{fu} = B_{fu}^{\frac{1}{\gamma_{pr,fu}}}V_{pr, i}^{fu}
+    \end{cases}\
+    \label{eq:sistema_fata_turchina}
 \end{equation}
 
-\vspace{0.15cm}
+\vspace{3mm}
 
 In order to solve \hyperref[eq:sistema_fata_turchina]{System~\ref*{eq:sistema_fata_turchina}}, the pressurizer and the initial temperature of the propellants have to be set. Different pressurizing gas are available, mainly nitrogen or helium are the most common choices.
 The main differences for the two are the storage temperature, the molar mass and the specific heat ratio. The latter parameter influences the adiabatic discharge, higher values implies faster pressure discharge.
@@ -169,7 +175,7 @@ The employment of nitrogen also with LOX was discarded since storage temperature
     \centering
     \begin{tabular}{|c|c|c|c|c|}
         \hline
-        $\boldsymbol{\OFmed \; [\textbf{-}]}$ & $\boldsymbol{B_{pr,ox} \; [\textbf{-}]}$ & $\boldsymbol{B_{pr,fu} \; [\textbf{-}]}$  & $\boldsymbol{V_{tot} \; [\textbf{m}^3]}$ \\
+        $\OFmedbold \; \boldsymbol{[\textbf{-}]}$ & $\boldsymbol{B_{pr,ox} \; [\textbf{-}]}$ & $\boldsymbol{B_{pr,fu} \; [\textbf{-}]}$  & $\boldsymbol{V_{tot} \; [\textbf{m}^3]}$ \\
         \hline
         \hline
         2.42 & 2.5 & 2.5 & 1.27 \\
@@ -188,10 +194,15 @@ The masses and volumes of oxidizer, fuel and pressurizing gases are computed.
     \centering
     \begin{tabular}{|c|c|c|c|c|c|}
         \hline
-        $\boldsymbol{m_{fu} \; [\textbf{kg}]}$ & $\boldsymbol{m_{ox} \; [\textbf{kg}]}$ & $\boldsymbol{V_{pr, i}^{fu} \; [\textbf{m}^3]}$ & $\boldsymbol{V_{fu, i} \; [\textbf{m}^3]}$ & $\boldsymbol{V_{pr, i}^{ox} \; [\textbf{m}^3]}$ &  $\boldsymbol{V_{ox, i} \; [\textbf{m}^3]}$\\
+        $\boldsymbol{m_{fu} \; [\textbf{kg}]}$              &
+        $\boldsymbol{m_{ox} \; [\textbf{kg}]}$              &
+        $\boldsymbol{V_{pr, i}^{fu} \; [\textbf{m}^3]}$     &
+        $\boldsymbol{V_{pr, i}^{ox} \; [\textbf{m}^3]}$     &
+        $\boldsymbol{V_{fu, i} \; [\textbf{m}^3]}$          &
+        $\boldsymbol{V_{ox, i} \; [\textbf{m}^3]}$          \\
         \hline
         \hline
-        165.34 & 400.13 & 0.2217 & 0.2049 & 0.4789 & 0.3510 \\
+        165.34 & 400.13 & 0.2217 & 0.4789 & 0.2049 & 0.3510 \\
         \hline
     \end{tabular}
     \caption{Propellant and pressurizer quantities as first iteration}
@@ -207,16 +218,17 @@ Finally, the feeding lines can be modelled. Considering figure \mref, the length
     L_{fd,ox} = H - L_c - H_{tk}
 \end{gather}
 
-To completely determine the DRY-1 geometry, the injection plate must be modelled. The pressure drop across the injector $\Delta p_{inj}$ have to be assumed as a percentage of the initial chamber pressure. Acceptable range of this fraction goes from $5$\% to $30$\%. A value of $20$\% is chosen for both oxidizer and fuel lines. The fuel and oxidizer injector area can be computed assuming reasonable values for the discharge coefficient $C_d$. A reasonable assumption has been made according to the superficial roughness quality of AM.
+To completely determine the DRY-1 geometry, the injection plate must be modelled. The pressure drop across the injector $\Delta p_{inj}$ have to be assumed as a percentage of the initial chamber pressure. Acceptable range of this fraction goes from $5$\% to $30$\%. A value of $20$\% is chosen for both oxidizer and fuel lines. The fuel and oxidizer injector area can be computed assuming reasonable values for the discharge coefficient $C_{d,inj}$. A reasonable assumption has been made according to the superficial roughness quality of AM.
 
 \begin{gather}
     \dot{m}_{fu} = \frac{1}{1 + O/F}\dot{m}_p \qquad \dot{m}_{ox} = \frac{O/F}{1 + O/F}\dot{m}_p
     \\
-    A_{inj,tot} = \frac{\dot{m}_p}{C_d \sqrt{2\Delta p_{inj} \rho_p}} 
+    A_{inj,tot} = \frac{\dot{m}_p}{C_{d,inj} \sqrt{2\Delta p_{inj} \rho_p}} 
 \end{gather}
    
 \begin{equation}
-    K_{p} = 1 + f \frac{L_{p,fd}}{D_{p,fd}} \left(\frac{A_{p, fd}}{A_{p,inj, tot}C_d}\right)^2
+    K_{p} = 1 + f \frac{L_{p,fd}}{D_{p,fd}} \left(\frac{A_{p, fd}}{A_{p,inj, tot}C_{d,inj}}\right)^2
+    \label{eq:K}
 \end{equation}
 
 PERDITE DI CARICO GENERALIZZATE
@@ -285,9 +297,9 @@ From $p_c ^ {(i+1)(j)}$ the $c^{*(i+1)(j)}$ is computed from the pressure cascad
 
 The two computed $c^*$ are then compared: if their difference satisfies a certain tolerance, then the cycle stops and returns the new values for the current time step. Else, the inner cycle continues the refinement by guessing a new $p_c ^ {(i+1)(j+1)}$ from $p_c ^ {(i+1)(j)}$.
 
-Finally, a check on the new combustion pressure $p_c ^ {(i+1)}$ is performed in order to stay above the minimum design pressure $p_{c,min}$, as mentioned in \mref. Similarly to the previous check, if the pressure drops below the limit the simulation stops and returns the results, else it continues with the next time step.
+Finally, a check on the new combustion pressure $p_c ^ {(i+1)}$ is performed in order to stay above the minimum design pressure $p_{c,min}$, as mentioned in \autoref{subsec:input_data}. Similarly to the previous check, if the pressure drops below the limit the simulation stops and returns the results, else it continues with the next time step.
 
 \vspace*{3mm}
 
 The same general algorithm is used to refine the initial assumptions of $O/F$ and $B$, which influence the nominal design of the whole engine (as described in \autoref{subsec:nominal_sizing}).
-In this case, the initial $c^*$ value from design is assumed constant to reduce the computational burden, since the algorithm is applied over a wide range of combinations of $O/F$ and $B$. This assumption is reasonable because the $O/F$ (and as consequence the thermodynamics of the combustion) hardly varies during the whole burn, as can be noticed in \mref.
+In this case, the initial $c^*$ value from design is assumed constant to reduce the computational burden, since the algorithm is applied over a wide range of combinations of $O/F$ and $B$. This assumption is reasonable because the $O/F$ (and as consequence the thermodynamics of the combustion) hardly varies during the whole burn, as can be noticed in \autoref{fig:FR_cstar}.

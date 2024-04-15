@@ -787,12 +787,12 @@ legend("Real throat area", "Apparent throat area", "Nominal throat area", "Inter
 ylim([1e-4 1.1e-4])
 
 figure
-plot(p_c, LineWidth=lw)
+plot(p_c/1e5, LineWidth=lw)
 hold on 
 grid minor
-plot(p_c_id, LineWidth=lw)
+plot(p_c_id/1e5, LineWidth=lw)
 title("Chamber pressure comparison", "Interpreter", "latex", "FontSize", fs_t)
-ylabel("$p_c\; [Pa]$", "Interpreter", "latex", "FontSize", fs_ax)
+ylabel("$p_c\; [bar]$", "Interpreter", "latex", "FontSize", fs_ax)
 xlabel("time $[s]$", "Interpreter", "latex", "FontSize", fs_ax)
 legend("Real chamber pressure", "Ideal chamber pressure","Interpreter", "latex", "FontSize", fs_leg)
 
