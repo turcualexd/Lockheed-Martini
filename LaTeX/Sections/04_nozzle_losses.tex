@@ -1,7 +1,7 @@
 \section{Nozzle losses}
 \label{sec:nozzle_losses}
 
-In order to calculate and evaluate the nozzle losses, further modifications and calculations were added to the model previously presented in \mref.
+In order to calculate and evaluate the nozzle losses, further modifications and calculations were added to the model previously presented in \autoref{sec:modelling}.
 In particular 2D, throat erosion and boundary layer losses were considered.
 
 \subsection{Losses calculations}  
@@ -14,13 +14,13 @@ Each loss term has been calculated as follows:
         \label{eq:2D_loss}
     \end{equation}
     where $\delta$ is the cone angle of an fictitious conical nozzle with the same divergent length and area ratio \cite{Sutton}.
-    \item \textbf{Throat erosion losses:} this effect is due to the increasing throat area over time whose behavior can be obtained by considering a constant erosion rate for simplicity. Since this loss is time dependent it needs to be considered inside the dynamic model of the system (\mref).
+    \item \textbf{Throat erosion losses:} this effect is due to the increasing throat area over time whose behavior can be obtained by considering a constant erosion rate for simplicity. Since this loss is time dependent it needs to be considered inside the dynamic model of the system (\autoref{subsec:dynamics}).
     \begin{equation}
         D_t^{(i+1)} = D_t^{(i)} + 2 E_t \Delta t
     \end{equation}
 
-    Usually the erosion rate is calculated through experimental measurements of the propulsion system, in this case a suitable erosion rate has been searched for in literature. Due to the smallness of the system, no acceptable rates were found, therefore, an increase of 2\% of the initial throat radius over the entire burn was assumed\cite{Sutton}\cite{tesi_malesia}. This gives an erosion rate of about \mref.
-    \item \textbf{Boundary layer losses:} to determine this contribution the effect of the boundary layer in the throat of the nozzle must be estimated. To achieve this the thermophysical properties of the exhaust gasses at the throat must be recovered from the CEAM outputs of the nominal design (\mref). From them the throat Reynolds number can be obtained.
+    Usually the erosion rate is calculated through experimental measurements of the propulsion system, in this case a suitable erosion rate has been searched for in literature. Due to the smallness of the system, no acceptable rates were found, therefore, an increase of 2\% of the initial throat radius over the entire burn was assumed.\cite{Sutton}\cite{tesi_malesia}
+    \item \textbf{Boundary layer losses:} to determine this contribution the effect of the boundary layer in the throat of the nozzle must be estimated. To achieve this the thermophysical properties of the exhaust gasses at the throat must be recovered from the CEAM outputs of the nominal design (\autoref{subsec:nominal_sizing}). From them the throat Reynolds number can be obtained.
     \begin{equation}
         Re_t = \frac{\rho_t \, D_t \, u_t}{\mu_t}
     \end{equation}
@@ -42,9 +42,30 @@ Introducing the curvature of the throat, recovered from the Rao nozzle geometry,
 
 \subsection{Effects on the nominal design}  
 
-Including all the losses in the dynamic model has a significant effect on the evolution of the throat area as can be seen in \mref.
+Including all the losses in the dynamic model has a minor effect on the evolution of the throat area and discharge coefficient as can be seen both in \autoref{fig:LS_At} and \autoref{fig:LS_Cd}. This is mainly due to the fact that the erosion rate was recovered by imposing a rather small variation of the throat area over time. 
 
+\twofig{LS_At}{Throat area evolution}{LS_Cd}{Throat discharge coefficient evolution}{1}
 
-Also, in this case the real case is not performing well as the ideal one. The result is a combination of both the erosion losses and boundary layer losses. It is possible to note that boundary layer losses are more prevalent in the beginning of the simulation, instead at the end the erosion one becomes visible. This is due to the fact that the nozzle erosion effects are more relevant when the throat has increased a lot. For this case the total impulse is 2173.157 KNs for the ideal case and 2139.825 KNs for the non-ideal one. By using the same justifications done in the previous section the difference in burning time can be justified. As in the only throat erosion case, also in this case there is a small difference in the burning times, with a 3716 s for the ideal one and 3679 s for the non-ideal, the same justification can be done. 
+Where the real throat area describes its physical evolution due to erosion while the apparent one is the effective area as seen by the gas flow due also to the presence of the boundary layer. The throat area variation has repercussions over the entire system as the chamber pressure evolution is influenced, so are the pressure cascade, the propellants mass flow rate and all consequent physical quantities as can be seen in the following figures.  
 
-[immagini grafici]       
+\twofig{LS_T}{Thrust comparison}{LS_Isp}{Specific impulse compsrison}{1}
+\twofig{LS_m}{Propellants mass flow rate comparison}{LS_pc}{Combustion chamber pressure compsrison}{1}
+
+Again it is possible to appreciate the fairly small repercussions of these losses as all quantities exhibit basically the same behavior except the specific impulse, which tends to deviate more and more over time. This still holds true for the total impulse and the burn time as reported in \autoref{table:I_tot_t_b_comp}.
+
+\begin{table}[H]
+    \renewcommand{\arraystretch}{1.25}
+    \centering
+    \begin{tabular}{|c|c|c|}
+        \hline
+        & $\boldsymbol{I_{tot} \; [\textbf{N} \, \textbf{s}]}$ & $\boldsymbol{t_b \; [\textbf{s}]}$ \\
+        \hline
+        \hline
+        \textbf{Ideal} & $2.173 \cdot 10^6$ & 3716 \\
+        \hline
+        \textbf{Real} & $2.140 \cdot 10^6$ & 3679 \\
+        \hline
+    \end{tabular}
+    \caption{Total impulse and burn time comparison}
+    \label{table:I_tot_t_b_comp}
+\end{table}
