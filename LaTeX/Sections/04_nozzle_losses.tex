@@ -1,22 +1,51 @@
 \section{Nozzle losses}
 \label{sec:nozzle_losses}
 
-In order to calculate and evaluate the nozzle losses, modifications and further calculations were made to the model presented earlier. In particular, the boundary layer required further calculation. First of all, the CEAM program was used to find some initial parameters of the propellant flow, such as the density, the dynamic viscosity, the temperature and the adiabatic dilatation coefficient, all taken at the nozzle throat. After this step, the calculation can begin, starting from the calculation of the velocity of the propellant flow (the velocity can be found by using the speed of sound) and the Reynolds number in the throat.
+\subsection{Nozzle losses calculation}  
 
+In order to calculate and evaluate the nozzle losses, modifications and further calculations were made to the model presented earlier. In particular, for the boundary layer required further calculation were needed. First of all, the CEAM program was used to find some initial parameters of the propellant flow, such as the density, the dynamic viscosity, the temperature and the adiabatic dilatation coefficient, all taken at the nozzle throat. After this step, the calculation can begin, starting by obtaining the velocity of the propellant flow (the velocity can be found by using the speed of sound) and the Reynolds number in the throat.   
 
 [aggiungere equazione della volocita del suono e reynold].    
 
-
 Finally, the modified Reynolds number can be calculated using the throat radius and curvature. The datas were taken from the nozzle modeling part.  
-
 
 [aggiungere formula raynold modificato].  
 
+With all these data it is possible to calculate the discharge coefficient [qui si può aggiungere reference alle slide di maggi], so that the real mass flow at the throat can be calculated, also taking into account the ideal mass flow found in the previous section of the report. Afterword, the new mass flow rate for the fuel and oxidizer considering the real mass flowrate passing through the throat.  
 
-With all these data it is possible to calculate the discharge coefficient [qui si può aggiungere reference alle slide di maggi], so that the real mass flow at the throat can be calculated, also taking into account the ideal mass flow found in the previous section of the report.   
+[aggiungere formula Cd e mre, mox mfu].    
 
+This procedure is also repeated in the various iterations of the modelling code. Furthermore, from the first iteration of the code, an erosion rate will be considered to evaluate the losses caused by the nozzle erosion. An analysis of the literature has been done to find a suitable erosion rate. Due to the small dimension of the propulsion system and the lack of experiments in this field carried out on similar engines have led to these rates being considered unacceptable. Therefore, an approximation was made that allowed to have an approximately increase of 2\% of the initial throat radius in our computation time[citazioni sutton una tesi]. It is important to note that this is a very large approximation because no consideration about the propellant properties and throat material were made [qua si può aggiungere la citazione alle slide the maggi]. Normally the erosion rate is calculated by performing experimental measurements of the propulsion system and so every possible factor can be considered.   
 
-[aggiungere formula Cd e mre].   
+\subsection{Nozzle losses result discussion}  
 
+To analyze better the Nozzle losses three different type of computation were made and compared to the ideal one, the first only consider the losses caused by the boundary layer, the second one consider only the throat erosion losses and the last one consider both. In all these cases the mass flow rate, the total impulse and the specific impulse have been calculated and compared.  
 
-This procedure is also repeated in the various iterations of the modelling code. Furthermore, from the first iteration of the code, an erosion rate will be considered to evaluate the losses caused by the nozzle erosion. An analysis of the literature has been done to find a suitable erosion rate. Due to the small dimension of the propulsion system and the lack of experiments in this field carried out on similar engines have led to these rates being considered unacceptable. Therefore, an approximation was made that allowed to have an approximately increase of 2\% of the initial throat radius in our computation time. It is important to note that this is a very large approximation because no consideration about the propellant properties and throat material were made [qua si può aggiungere la citazione alle slide the maggi]. Normally the erosion rate is calculated by performing experimental measurements of the propulsion system and so every possible factor can be considered. 
+ 
+
+\subsubsection{Only boundary layer losses}  
+
+%\twofig{cdcoeff}{Impulso specifico}{cdcoeff}{pressione c}{1}
+[Immagini Is, T, mre] 
+
+In this case only the boundary layer losses were considered. As expected, the real case is slightly less performing than the ideal case, as can be seen from the three figures comparing thrust, mass flow rate and the specific impulse. The total specific impulse was also calculated with a value of 2173.157 KNs for the ideal case and 2147.295 KNs for the real one. It should also be noted that the discharge coefficient is not stationary during the simulation, mainly because Dry-1 is a blowdown propulsion system where the mass flow in the nozzle is not constant during the burning time. This effect also affects the size of the effective throat area through which the flow passes. Lastly, is possible to observe that in the non-ideal case the burning time is slightly higher than in the ideal one, this happen because the real mass flow rate is decrease from the ideal condition an so the total mass of propellant is consumed slowly. The burning time for the ideal case is 3716 s and for the non-ideal one is 3760 s.             
+
+[immagini Cd e Ateffective]  
+     
+\subsubsection{Nozzle losses only throat erosion} 
+
+[Immagini Is, T, mre]      
+
+The same parameters used in the previous case were analyzed in the throat erosion analysis. As expected, the specific and total impulses are lower for the non-ideal case compared to the ideal one. The total impulse is 2173.157 KNs for the ideal case and 2159.229 KNs for the losses case. However, for thrust and mass flow rate, the non-ideal case has a better performance than the ideal one. This is acceptable because the throat radius increases during the propulsion phase and more propellant can pass through, thus increasing the thrust and mass flow rate. Furthermore, it can be seen that the total combustion time for the non-ideal case is lower compared to the ideal one, with a total time of 3621 s for the first and 3716 s for the second. This is easily explained by the fact that an increasing throat allows more fuel to be expelled in less time and the pressure chamber to be reduced at a faster rate. Graphs of the changes in throat area and pressure chamber in both the ideal and non-ideal cases have been added for a better understanding of the phenomenon. 
+
+Scrivere valore ts!!!!! 
+
+[immagini At e Pc]
+
+\subsubsection{Complete nozzle losses}  
+
+[immagini Is, T, mre]   
+
+Also, in this case the real case is not performing well as the ideal one. The result is a combination of both the erosion losses and boundary layer losses. It is possible to note that boundary layer losses are more prevalent in the beginning of the simulation, instead at the end the erosion one becomes visible. This is due to the fact that the nozzle erosion effects are more relevant when the throat has increased a lot. For this case the total impulse is 2173.157 KNs for the ideal case and 2139.825 KNs for the non-ideal one. By using the same justifications done in the previous section the difference in burning time can be justified. As in the only throat erosion case, also in this case there is a small difference in the burning times, with a 3716 s for the ideal one and 3679 s for the non-ideal, the same justification can be done. 
+
+[immagini grafici]       
