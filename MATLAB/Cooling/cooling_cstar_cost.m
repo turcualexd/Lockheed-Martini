@@ -37,7 +37,9 @@ alpha_con = 30;     % deg
 T_i = T_i_n/lambda;
 V_tot = pi*d^2*h/4;
 
-output = cea(CEA('problem','rkt','nfz',2,'o/f',OF_i,'sup',eps,'case','Porco Dio','p,bar',p_c_i/1e5,'reactants','fuel','RP-1(L)','C',1,'H',1.9423,'wt%',100,'oxid','O2(L)','O',2,'wt%',100,'output','massf','transport','trace',1e-10,'end'));
+output = cea(CEA('problem','rkt','nfz',2,'o/f',OF_i,'sup',eps,'case','Porco Dio','p,bar', ...
+    p_c_i/1e5,'reactants','fuel','RP-1(L)','C',1,'H',1.9423,'wt%',100,'oxid','O2(L)','O',2,'wt%',100, ...
+    'output','massf','transport','trace',1e-10,'end'));
 
 c_star = output.froz.cstar(end);
 c_t_i = output.froz.cf_vac(end);
@@ -45,6 +47,8 @@ T_c_i = output.froz.temperature(1);
 gamma_i = output.froz.gamma(1);
 I_sp_i = output.froz.isp(end);
 m_p_i = T_i/(c_t_i*c_star);
+m_f_i = m_p_i/(1 + OF_i);
+m_ox_i = m_p_i*OF_i/(1 + OF_i);
 
 A_t = m_p_i/(output.froz.sonvel(2)*output.froz.density(2));
 A_e = eps*A_t;
@@ -63,11 +67,13 @@ axial_distance = linspace(x3(1),x3(end),n)';
 radius_vec = interp1(x3,y3,axial_distance);
 c_RP1 = 1880;
 L_con = (d_c - d_t)/(2*tand(alpha_con));
-
-
 L_c = L_star/eps_c;
-V_loss = 0.25*pi*((L_c + L_con)*d^2 - L_c*d_c^2 - L_con*(d_c^2 + d_c*d_t + d_t^2)/3);
 
+c = 1880;
+[dT, q_dot] = dT_cooling(OF_i, p_c_i, d_t, x3, y3, L_con, c_star, m_f_i,c);
+
+V_loss = 0.25*pi*((L_c + L_con)*d^2 - L_c*d_c^2 - L_con*(d_c^2 + d_c*d_t + d_t^2)/3);
+%%
 if V_loss/V_tot > 0.2
     h_t = h - L_c - L_con;
 else
@@ -91,9 +97,6 @@ L_feed_ox = h - L_c - h_t;
 
 V_p_f_i = M_f/(rho_f*(B^(1/k_f) - 1));
 V_p_ox_i = M_ox/(rho_ox*(B^(1/k_ox) - 1));
-
-m_f_i = m_p_i/(1 + OF_i);
-m_ox_i = m_p_i*OF_i/(1 + OF_i);
 
 dp_inj = alpha*p_c_i;
 

@@ -11,7 +11,7 @@ xx = linspace(x3(1),x3(end),n)';
 yy = interp1(x3,y3,xx);
 eps_c = 10;
 eps_vec = (yy.^2 ./ (0.25*D_t^2));
-OF = 2.24;
+OF = 2.33;
 p_c = 50e5;
 
 %f = @(x) (1./x).*( (1 + x.^2 .*(gamma-1)/2)./ (1 + (gamma-1)./2) ).^((gamma+1)./(2*(gamma-1))) - eps_vec;
@@ -87,5 +87,11 @@ dT = dT_cooling(OF, p_c, D_t, xx, yy, l_con, c_star, m_dot_fuel,c);
 %notare  che questa condizione è all'equilibrio considerando però le
 %condizioni iniziali. ricordarsi che il coefficiente h cala con la
 %pressione in camera, quindi il flusso di calore diminuisce con il tempo
+%%
+
+ output_c = cea(CEA('problem','rkt','eql','o/f',2.24,'fac','acat',2 ,'case', 'DRY1', ...
+        'p,bar',50,'reactants','fuel','RP-1(L)','C',1,'H',1.9423, 'wt%',100, ...
+        'oxid','O2(L)','O',2,'wt%',100,'output','massf','transport','trace',1e-10,'end'));
+
 
 

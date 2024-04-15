@@ -143,6 +143,72 @@
       \verb https://webbook.nist.gov/cgi/fluid.cgi?T=85&PLow=4&PHigh=5.5&PInc=0.1&Digits=5&ID=C7727379&Action=Load&Type=IsoTherm&TUnit=K&PUnit=bar&DUnit=mol%2Fl&HUnit=kJ%2Fkg&WUnit=m%2Fs&VisUnit=Pa*s&STUnit=N%2Fm&RefState=DEF
       \endverb
     \endentry
+    \entry{cambridge}{article}{}
+      \name{author}{1}{}{%
+        {{hash=921d9c760c99403f30852b871e89f4ff}{%
+           family={Heister},
+           familyi={H\bibinitperiod},
+           given={Stephen\bibnamedelima D.},
+           giveni={S\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \strng{namehash}{921d9c760c99403f30852b871e89f4ff}
+      \strng{fullhash}{921d9c760c99403f30852b871e89f4ff}
+      \strng{bibnamehash}{921d9c760c99403f30852b871e89f4ff}
+      \strng{authorbibnamehash}{921d9c760c99403f30852b871e89f4ff}
+      \strng{authornamehash}{921d9c760c99403f30852b871e89f4ff}
+      \strng{authorfullhash}{921d9c760c99403f30852b871e89f4ff}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Book}
+      \field{title}{Rocket Propulsion}
+      \field{year}{2019}
+    \endentry
+    \entry{nimonic}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=07d7147a6599574a19199a423fec0afb}{%
+           family={Metals},
+           familyi={M\bibinitperiod},
+           given={Special},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{07d7147a6599574a19199a423fec0afb}
+      \strng{fullhash}{07d7147a6599574a19199a423fec0afb}
+      \strng{bibnamehash}{07d7147a6599574a19199a423fec0afb}
+      \strng{authorbibnamehash}{07d7147a6599574a19199a423fec0afb}
+      \strng{authornamehash}{07d7147a6599574a19199a423fec0afb}
+      \strng{authorfullhash}{07d7147a6599574a19199a423fec0afb}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Site: \url{https://shorturl.at/ctzV7}}
+      \field{title}{Nimonic Alloy 75}
+      \field{year}{2004}
+    \endentry
+    \entry{rp_1_temp}{article}{}
+      \name{author}{1}{}{%
+        {{hash=96c8b6b18bbf40e22f219976a6412716}{%
+           family={Edwards},
+           familyi={E\bibinitperiod},
+           given={Tim},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{96c8b6b18bbf40e22f219976a6412716}
+      \strng{fullhash}{96c8b6b18bbf40e22f219976a6412716}
+      \strng{bibnamehash}{96c8b6b18bbf40e22f219976a6412716}
+      \strng{authorbibnamehash}{96c8b6b18bbf40e22f219976a6412716}
+      \strng{authornamehash}{96c8b6b18bbf40e22f219976a6412716}
+      \strng{authorfullhash}{96c8b6b18bbf40e22f219976a6412716}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Article}
+      \field{title}{Liquid Fuels and Propellants for Aerospace Propulsion}
+      \field{year}{2003}
+    \endentry
   \enddatalist
 \endrefsection
 \endinput
