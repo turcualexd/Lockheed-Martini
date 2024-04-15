@@ -17,7 +17,7 @@ mu_f = 0.75e-3;     % Pas
 mu_ox = 0.196e-3;   % Pas
 
 % Dati assunti
-OF_i = 2.33;        % -
+OF_i = 2.42;        % -
 eps = 300;          % -
 eps_c = 10;         % -
 C_d = 0.82;         % -
@@ -30,14 +30,14 @@ k_ox = 5/3;         % -
 k_f = 7/5;          % -
 T_f_i = 300;        % K
 T_ox_i = 90;        % K
-B = 2.78;           % -
+B = 2.5;           % -
 alpha_con = 30;     % deg
 
 % Dimensionamento a ritroso
 T_i = T_i_n/lambda;
 V_tot = pi*d^2*h/4;
 
-output = cea(CEA('problem','rkt','nfz',2,'o/f',OF_i,'sup',eps,'case','Porco Dio','p,bar',p_c_i/1e5,'reactants','fuel','RP-1(L)','C',1,'H',1.9423,'wt%',100,'oxid','O2(L)','O',2,'wt%',100,'output','massf','transport','trace',1e-10,'end'));
+output = cea(CEA('problem','rkt','nfz',2,'o/f',OF_i,'sup',eps,'case','DRY1','p,bar',p_c_i/1e5,'reactants','fuel','RP-1(L)','C',1,'H',1.9423,'wt%',100,'oxid','O2(L)','O',2,'wt%',100,'output','massf','transport','trace',1e-10,'end'));
 
 c_star = output.froz.cstar(end);
 c_t_i = output.froz.cf_vac(end);
@@ -90,6 +90,18 @@ dp_inj = alpha*p_c_i;
 
 A_inj_f_tot = m_f_i/(C_d*sqrt(2*dp_inj*rho_f));
 A_inj_ox_tot = m_ox_i/(C_d*sqrt(2*dp_inj*rho_ox));
+d_inj_f = 1e-3;
+A_inj_f = pi*d_inj_f^2/4;
+N_inj_f = A_inj_f_tot/A_inj_f;
+N_inj_f = floor(N_inj_f);
+
+N_inj_ox = 2*N_inj_f;
+
+A_inj_f = A_inj_f_tot/N_inj_f;
+A_inj_ox = A_inj_ox_tot/N_inj_ox;
+
+d_inj_f = 2*sqrt(A_inj_f/pi);
+d_inj_ox = 2*sqrt(A_inj_ox/pi);
 
 A_feed_f = pi*d_feed_f^2/4;
 A_feed_ox = pi*d_feed_ox^2/4;
@@ -173,7 +185,7 @@ while true
     m_ox_new = rho_ox*A_feed_ox*u_feed_ox_new;
     OF_new = m_ox_new/m_f_new;
     
-    output = cea(CEA('problem','rkt','nfz',2,'o/f',OF_new,'sup',eps,'case','Porco Dio','p,bar',p_c_new/1e5,'reactants','fuel','RP-1(L)','C',1,'H',1.9423,'wt%',100,'oxid','O2(L)','O',2,'wt%',100,'output','massf','transport','trace',1e-10,'end'));
+    output = cea(CEA('problem','rkt','nfz',2,'o/f',OF_new,'sup',eps,'case','DRY1','p,bar',p_c_new/1e5,'reactants','fuel','RP-1(L)','C',1,'H',1.9423,'wt%',100,'oxid','O2(L)','O',2,'wt%',100,'output','massf','transport','trace',1e-10,'end'));
     
     c_t_new = output.froz.cf_vac(end);
     T_c_new = output.froz.temperature(1);

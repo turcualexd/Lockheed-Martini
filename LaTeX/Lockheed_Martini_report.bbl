@@ -143,6 +143,28 @@
       \verb https://webbook.nist.gov/cgi/fluid.cgi?T=85&PLow=4&PHigh=5.5&PInc=0.1&Digits=5&ID=C7727379&Action=Load&Type=IsoTherm&TUnit=K&PUnit=bar&DUnit=mol%2Fl&HUnit=kJ%2Fkg&WUnit=m%2Fs&VisUnit=Pa*s&STUnit=N%2Fm&RefState=DEF
       \endverb
     \endentry
+    \entry{colebrook}{article}{}
+      \name{author}{1}{}{%
+        {{hash=343c867bb72a58d305ef7d78a03d3b41}{%
+           family={More},
+           familyi={M\bibinitperiod},
+           given={Ajinkya\bibnamedelima A.},
+           giveni={A\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{343c867bb72a58d305ef7d78a03d3b41}
+      \strng{fullhash}{343c867bb72a58d305ef7d78a03d3b41}
+      \strng{bibnamehash}{343c867bb72a58d305ef7d78a03d3b41}
+      \strng{authorbibnamehash}{343c867bb72a58d305ef7d78a03d3b41}
+      \strng{authornamehash}{343c867bb72a58d305ef7d78a03d3b41}
+      \strng{authorfullhash}{343c867bb72a58d305ef7d78a03d3b41}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Paper}
+      \field{title}{Analytical solutions for the Colebrook and White equation and for pressure drop in ideal gas flow in pipes}
+      \field{year}{2005}
+    \endentry
   \enddatalist
 \endrefsection
 \endinput

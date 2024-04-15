@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.3.9)  15 APR 2024 09:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.3.9)  15 APR 2024 12:32
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1006,11 +1006,7 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
  [1] (Config/Body.tex (Sections/00_notation.tex
 LaTeX Font Info:    Font shape `T1/txr/b/n' in size <12> not available
 (Font)              Font shape `T1/txr/bx/n' tried instead on input line 9.
- [2]) [3] (Sections/01_introduction.tex
-
-LaTeX Warning: Missing reference on input line 15.
-
-) (Sections/02_modeling.tex
+ [2]) [3] (Sections/01_introduction.tex) (Sections/02_modeling.tex
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
@@ -1020,54 +1016,54 @@ LaTeX Font Info:    Trying to load font information for TS1+txr on input line 7.
  (C:\Users\paolo\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\ts1txr.fd
 File: ts1txr.fd 2000/12/15 v3.1
 )
-<Images/flowchart.pdf, id=140, 489.32813pt x 391.4625pt>
+<Images/flowchart.pdf, id=141, 489.32813pt x 391.4625pt>
 File: Images/flowchart.pdf Graphic file (type pdf)
 <use Images/flowchart.pdf>
 Package pdftex.def Info: Images/flowchart.pdf  used on input line 12.
 (pdftex.def)             Requested size: 483.69687pt x 386.96368pt.
- [2 <./Images/flowchart.pdf>] [3] [4]
-
-LaTeX Warning: Missing reference on input line 204.
-
-<Images/flowchart_dynamics.pdf, id=401, 286.06876pt x 572.1375pt>
+ [2 <./Images/flowchart.pdf>]
+<Images/DRY-1.pdf, id=371, 338.76563pt x 526.96875pt>
+File: Images/DRY-1.pdf Graphic file (type pdf)
+<use Images/DRY-1.pdf>
+Package pdftex.def Info: Images/DRY-1.pdf  used on input line 100.
+(pdftex.def)             Requested size: 169.29684pt x 263.35507pt.
+ [3] [4 <./Images/DRY-1.pdf>] [5] [6]
+<Images/flowchart_dynamics.pdf, id=1244, 286.06876pt x 572.1375pt>
 File: Images/flowchart_dynamics.pdf Graphic file (type pdf)
 <use Images/flowchart_dynamics.pdf>
-Package pdftex.def Info: Images/flowchart_dynamics.pdf  used on input line 237.
+Package pdftex.def Info: Images/flowchart_dynamics.pdf  used on input line 319.
 (pdftex.def)             Requested size: 241.84843pt x 483.70013pt.
-[5] [6 <./Images/flowchart_dynamics.pdf>]
+ [7] [8 <./Images/flowchart_dynamics.pdf>]
 
-LaTeX Warning: Missing reference on input line 288.
+LaTeX Warning: Missing reference on input line 375.
 
-
-LaTeX Warning: Missing reference on input line 293.
-
-) (Sections/03_results.tex [7]) (Sections/04_nozzle_losses.tex) (Sections/05_additive.tex) (Sections/06_cooling.tex)) [8]
+) (Sections/03_results.tex [9]) (Sections/04_nozzle_losses.tex) (Sections/05_additive.tex) (Sections/06_cooling.tex)) [10]
 LaTeX Font Info:    Trying to load font information for T1+txtt on input line 18.
  (C:\Users\paolo\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\t1txtt.fd
 File: t1txtt.fd 2000/12/15 v3.1
-) [9] (Lockheed_Martini_report.aux)
+) [11] (Lockheed_Martini_report.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
 Package rerunfilecheck Info: File `Lockheed_Martini_report.out' has not changed.
-(rerunfilecheck)             Checksum: 7863C382B7CD3F47A4680A887380B665;2560.
+(rerunfilecheck)             Checksum: 49E7E5DF7C4F655ED7FA25EBE02AF536;2560.
 Package logreq Info: Writing requests to 'Lockheed_Martini_report.run.xml'.
 \openout1 = `Lockheed_Martini_report.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 23696 strings out of 474436
- 409688 string characters out of 5741955
+ 23731 strings out of 474436
+ 410360 string characters out of 5741955
  1975190 words of memory out of 5000000
- 45553 multiletter control sequences out of 15000+600000
+ 45575 multiletter control sequences out of 15000+600000
  651193 words of font info for 193 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  87i,18n,102p,1527b,1889s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/paolo/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/rtcxr.pfb><C:/Users/paolo/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/rtxb.pfb><C:/Users/paolo/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/rtxbmi.pfb><C:/Users/paolo/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/rtxmi.pfb><C:/Users/paolo/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/rtxr.pfb><C:/Users/paolo/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/rtxsc.pfb><C:/Users/paolo/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/t1xtt.pfb><C:/Users/paolo/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/txbmia.pfb><C:/Users/paolo/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/txbsy.pfb><C:/Users/paolo/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/txex.pfb><C:/Users/paolo/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/txmia.pfb><C:/Users/paolo/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/txsy.pfb><C:/Users/paolo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/paolo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/paolo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/paolo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Lockheed_Martini_report.pdf (13 pages, 692356 bytes).
+Output written on Lockheed_Martini_report.pdf (15 pages, 940474 bytes).
 PDF statistics:
- 1270 PDF objects out of 1440 (max. 8388607)
- 70 named destinations out of 1000 (max. 500000)
- 160 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2111 PDF objects out of 2487 (max. 8388607)
+ 82 named destinations out of 1000 (max. 500000)
+ 165 words of extra memory for PDF output out of 10000 (max. 10000000)
 
