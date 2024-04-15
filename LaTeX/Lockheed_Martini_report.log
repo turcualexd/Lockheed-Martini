@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2024.3.9)  15 APR 2024 02:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2024.3.9)  15 APR 2024 11:18
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -747,7 +747,14 @@ Package csquotes Info: Redefining alias 'default' -> 'english'.
 LaTeX Font Info:    Trying to load font information for T1+ptm on input line 6.
  (/Users/Chiara/Library/Application Support/MiKTeX/texmfs/install/tex/latex/psnfss/t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
-) (Lockheed_Martini_report.aux)
+) (Lockheed_Martini_report.aux
+
+LaTeX Warning: Label `fig:cdcoeff' multiply defined.
+
+
+LaTeX Warning: Label `fig:cdcoeff' multiply defined.
+
+)
 \openout1 = `Lockheed_Martini_report.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 6.
@@ -906,29 +913,42 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has b
 <to be read again> 
                    \relax 
 l.9 A
-     dditive manufacturing allows to create complex shapes at a lower cost, ... [1] [2 <./Images/cdcoeff.jpg>]) (Sections/06_cooling.tex)) [3] [4] (Lockheed_Martini_report.aux)
+     dditive manufacturing allows to create complex shapes at a lower cost, ... [1]
+File: Images/cdcoeff.jpg Graphic file (type jpg)
+<use Images/cdcoeff.jpg>
+Package pdftex.def Info: Images/cdcoeff.jpg  used on input line 56.
+(pdftex.def)             Requested size: 232.17242pt x 223.12904pt.
+File: Images/cdcoeff.jpg Graphic file (type jpg)
+<use Images/cdcoeff.jpg>
+Package pdftex.def Info: Images/cdcoeff.jpg  used on input line 56.
+(pdftex.def)             Requested size: 232.17242pt x 223.12904pt.
+ [2 <./Images/cdcoeff.jpg>]) (Sections/06_cooling.tex)) [3] [4] (Lockheed_Martini_report.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
+
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package rerunfilecheck Info: File `Lockheed_Martini_report.out' has not changed.
-(rerunfilecheck)             Checksum: 97FD570B39D566621B12547DC443D93C;2085.
+(rerunfilecheck)             Checksum: FAB1BE512472AAA55DC475E5C4E5648D;2085.
 Package logreq Info: Writing requests to 'Lockheed_Martini_report.run.xml'.
 \openout1 = `Lockheed_Martini_report.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 22297 strings out of 474436
- 395880 string characters out of 5739103
+ 22302 strings out of 474436
+ 395979 string characters out of 5739103
  1939187 words of memory out of 5000000
- 44249 multiletter control sequences out of 15000+600000
+ 44252 multiletter control sequences out of 15000+600000
  612985 words of font info for 112 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  87i,10n,102p,2484b,1879s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/Library/Application Support/MiKTeX/texmfs/install/fonts/enc/dvips/base/8r.enc}</Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmex10.pfb></Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi10.pfb></Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmr10.pfb></Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy10.pfb></Library/Application Support/MiKTeX/texmfs/install/fonts/type1/urw/symbol/usyr.pfb></Library/Application Support/MiKTeX/texmfs/install/fonts/type1/urw/symbol/usyr.pfb></Library/Application Support/MiKTeX/texmfs/install/fonts/type1/urw/times/utmb8a.pfb></Library/Application Support/MiKTeX/texmfs/install/fonts/type1/urw/times/utmr8a.pfb></Library/Application Support/MiKTeX/texmfs/install/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Lockheed_Martini_report.pdf (7 pages, 325884 bytes).
+Output written on Lockheed_Martini_report.pdf (7 pages, 327442 bytes).
 PDF statistics:
- 188 PDF objects out of 1000 (max. 8388607)
- 30 named destinations out of 1000 (max. 500000)
+ 192 PDF objects out of 1000 (max. 8388607)
+ 32 named destinations out of 1000 (max. 500000)
  123 words of extra memory for PDF output out of 10000 (max. 10000000)
 
