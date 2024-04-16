@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.5.16)  16 APR 2024 13:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.5.16)  16 APR 2024 14:27
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1142,41 +1142,93 @@ Package pdftex.def Info: Images/cdcoeff.jpg  used on input line 4.
  [15 <./Images/LS_m.pdf> <./Images/LS_pc.pdf
 
 pdfTeX warning: pdflatex (file ./Images/LS_pc.pdf): PDF inclusion: multiple pdfs with page group included in a single page
-> <./Images/cdcoeff.jpg>]) (Sections/06_cooling.tex [16] [17]
-<Images/CL_Twg.pdf, id=1801, 421.575pt x 316.18124pt>
+> <./Images/cdcoeff.jpg>]
+<Images/AM_OF.pdf, id=1779, 421.575pt x 316.18124pt>
+File: Images/AM_OF.pdf Graphic file (type pdf)
+<use Images/AM_OF.pdf>
+Package pdftex.def Info: Images/AM_OF.pdf  used on input line 48.
+(pdftex.def)             Requested size: 232.17242pt x 174.13179pt.
+<Images/AM_pc.pdf, id=1780, 421.575pt x 316.18124pt>
+File: Images/AM_pc.pdf Graphic file (type pdf)
+<use Images/AM_pc.pdf>
+Package pdftex.def Info: Images/AM_pc.pdf  used on input line 48.
+(pdftex.def)             Requested size: 232.17242pt x 174.13179pt.
+<Images/AM_mfu.pdf, id=1781, 421.575pt x 316.18124pt>
+File: Images/AM_mfu.pdf Graphic file (type pdf)
+<use Images/AM_mfu.pdf>
+Package pdftex.def Info: Images/AM_mfu.pdf  used on input line 50.
+(pdftex.def)             Requested size: 232.17242pt x 174.13179pt.
+<Images/AM_mox.pdf, id=1782, 421.575pt x 316.18124pt>
+File: Images/AM_mox.pdf Graphic file (type pdf)
+<use Images/AM_mox.pdf>
+Package pdftex.def Info: Images/AM_mox.pdf  used on input line 50.
+(pdftex.def)             Requested size: 232.17242pt x 174.13179pt.
+<Images/AM_T.pdf, id=1783, 421.575pt x 316.18124pt>
+File: Images/AM_T.pdf Graphic file (type pdf)
+<use Images/AM_T.pdf>
+Package pdftex.def Info: Images/AM_T.pdf  used on input line 52.
+(pdftex.def)             Requested size: 232.17242pt x 174.13179pt.
+<Images/AM_Isp.pdf, id=1784, 421.575pt x 316.18124pt>
+File: Images/AM_Isp.pdf Graphic file (type pdf)
+<use Images/AM_Isp.pdf>
+Package pdftex.def Info: Images/AM_Isp.pdf  used on input line 52.
+(pdftex.def)             Requested size: 232.17242pt x 174.13179pt.
+ [16 <./Images/AM_OF.pdf> <./Images/AM_pc.pdf
+
+pdfTeX warning: pdflatex (file ./Images/AM_pc.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./Images/AM_mfu.pdf
+
+pdfTeX warning: pdflatex (file ./Images/AM_mfu.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./Images/AM_mox.pdf
+
+pdfTeX warning: pdflatex (file ./Images/AM_mox.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>]
+<Images/AM_deltapfd.pdf, id=1798, 562.1pt x 421.575pt>
+File: Images/AM_deltapfd.pdf Graphic file (type pdf)
+<use Images/AM_deltapfd.pdf>
+Package pdftex.def Info: Images/AM_deltapfd.pdf  used on input line 59.
+(pdftex.def)             Requested size: 290.22107pt x 217.66354pt.
+) (Sections/06_cooling.tex [17 <./Images/AM_T.pdf> <./Images/AM_Isp.pdf
+
+pdfTeX warning: pdflatex (file ./Images/AM_Isp.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./Images/AM_deltapfd.pdf
+
+pdfTeX warning: pdflatex (file ./Images/AM_deltapfd.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>] [18]
+<Images/CL_Twg.pdf, id=1825, 421.575pt x 316.18124pt>
 File: Images/CL_Twg.pdf Graphic file (type pdf)
 <use Images/CL_Twg.pdf>
 Package pdftex.def Info: Images/CL_Twg.pdf  used on input line 47.
 (pdftex.def)             Requested size: 266.03474pt x 199.52812pt.
- [18 <./Images/CL_Twg.pdf>]
-<Images/CL_q.pdf, id=1814, 421.575pt x 316.18124pt>
+ [19 <./Images/CL_Twg.pdf>]
+<Images/CL_q.pdf, id=1838, 421.575pt x 316.18124pt>
 File: Images/CL_q.pdf Graphic file (type pdf)
 <use Images/CL_q.pdf>
 Package pdftex.def Info: Images/CL_q.pdf  used on input line 80.
 (pdftex.def)             Requested size: 266.03474pt x 199.52812pt.
-)) [19 <./Images/CL_q.pdf>]
+)) [20 <./Images/CL_q.pdf>]
 LaTeX Font Info:    Trying to load font information for T1+txtt on input line 18.
  (C:\Users\turcu\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\t1txtt.fd
 File: t1txtt.fd 2000/12/15 v3.1
-) [20] (Lockheed_Martini_report.aux)
+) [21] (Lockheed_Martini_report.aux)
 Package rerunfilecheck Info: File `Lockheed_Martini_report.out' has not changed.
-(rerunfilecheck)             Checksum: 760323AEE1F02F8BDD4942BBA07C1645;3227.
+(rerunfilecheck)             Checksum: B711652B7C027FE782A5AF8FF4C538E2;3227.
 Package logreq Info: Writing requests to 'Lockheed_Martini_report.run.xml'.
 \openout1 = `Lockheed_Martini_report.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 24213 strings out of 476361
- 424029 string characters out of 5788046
+ 24295 strings out of 476361
+ 425844 string characters out of 5788046
  1905993 words of memory out of 5000000
- 44042 multiletter control sequences out of 15000+600000
+ 44112 multiletter control sequences out of 15000+600000
  605411 words of font info for 189 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  87i,18n,98p,1527b,1887s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/rtcxr.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/rtxb.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/rtxbmi.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/rtxmi.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/rtxr.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/rtxsc.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/t1xtt.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/txbmia.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/txbsy.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/txex.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/txmia.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/txsy.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Lockheed_Martini_report.pdf (24 pages, 2014176 bytes).
+Output written on Lockheed_Martini_report.pdf (25 pages, 2917394 bytes).
 PDF statistics:
- 1940 PDF objects out of 2073 (max. 8388607)
- 144 named destinations out of 1000 (max. 500000)
- 274 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1967 PDF objects out of 2073 (max. 8388607)
+ 149 named destinations out of 1000 (max. 500000)
+ 309 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -44,19 +44,19 @@ Following the diameters' analysis, the total area of both the propellants' injec
 \end{equation}
 
 These modified values then enter the computation explained in \autoref{sec:modelling}, making the uncertainty to propagate and to affect the engine's performance. The whole process is repeated 50 times in order to have a more accurate statistical analysis, allowing to study each simulation and the average of them, as shown in the following graphs.
-\\
-\\
-\\
-\\
-\\
 
+\twofig{AM_OF}{$O/F$ ratio evolution}{AM_pc}{Combustion chamber pressure evolution}{1}
 
-METTERE I GRAFICI!!!!!!!!\\ XD LOL XDXDXD 
+\twofig{AM_mfu}{Fuel mass flow rate evolution}{AM_mox}{Oxidizer mass flow rate evolution}{1}
 
+\twofig{AM_T}{Thrust evolution}{AM_Isp}{Specific impulse evolution}{1}
 
-PARLARE PC !!!!!
+The mass flow rate, dependent on the injectors' cross sectional area, is slightly affected by the variation of their diameter, very small compared to the nominal one. However, the explained fluctuations can combine generating more observable effects, as seen in ///GRAFICO O/F///, describing the progress of the $O/F$ in time for each simulation.
+The high deviation from the nominal value is due to its definition as a fraction, greatly affected by the combined variations of its terms.
+$O/F$ is a crucial parameter in the design of a propulsion system, from which many other variables depend. $T_c$ is one of them, being obtained from the NASA-CEAM software, which, among others, takes as input the $O/F$ ratio and the combustion chamber pressure, $p_c$, that is related to the tank pressure through the injectors' areas and hence varying due to the analyzed imperfections.
+Thrust and specific impulse are also strictly related to the variation of mass flow rate and, as a consequence, the oxidizer to fuel ratio.
 
-The mass flow rate, dependent on the injectors' cross sectional area, is slightly affected by the variation of their diameter, very small compared to the nominal one. However, the explained fluctuations can combine generating more observable effects, as seen in ///GRAFICO O/F///, describing the progress of the $O/F$ in time for each simulation. The high deviation from the nominal value is due to its definition as a fraction, greatly affected by the combined variations of its terms. $O/F$ is a crucial parameter in the design of a propulsion system, from which many other variables depend. $T_c$ is one of them, being obtained from the NASA-CEAM software, which, among others, takes as input the $O/F$ ratio and the combustion chamber pressure, $P_c$, that is related to the tank pressure through the injectors' areas and hence varying due to the analyzed imperfections. Thrust and specific impulse are also strictly related to the variation of mass flow rate and, as a consequence, the oxidizer to fuel ratio.
+\rfig{AM_deltapfd}{$\Delta p_{fd}$ difference}{0.6}{17}{-5mm}{-8mm}
 
 Another characteristic worth to mention is the convergence of all parameters to their mean value during each simulation.
 In fact, as shown in \autoref{eq:dp_tot} the difference in pressure depends quadratically on the varying flow velocity, which is the highest in the first instants of simulation.
