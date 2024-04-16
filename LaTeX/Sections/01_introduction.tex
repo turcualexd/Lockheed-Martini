@@ -1,0 +1,60 @@
+\section{Introduction and literature overview}
+\label{sec:introduction}
+
+In this work a preliminary design of a 1 kN semi-cryogenic LRE (LOX/RP-1) equipped with a blow-down feeding system is discussed. In particular, a first literature analysis was done in order to review previous studies regarding this particular architecture. Recent developments in additive manufacture (AM) techniques were analyzed to obtain some knowledge regarding processes and precision of this new frontier. Moreover, due the reduced size of this system, some criticalities regarding boundary layer and erosion losses were researched.
+The second part of the paper aim at designing the engine with some imposed initial conditions and some assumptions. The whole dimensioning of the system, including the tanks and feeding lines, is carried on including the dynamics of the system. The final sizing will accomplish the maximization of the total impulse, with the initial and final constraints. 
+An off-design analysis is then performed to quantify the performances with nozzle losses and AM uncertainties. Finally, a feasibility analysis of  nozzle fuel cooling is discussed. 
+
+\subsection{Blow-down heritage}
+\label{subsec:blowdown_intro}
+
+The blow-down architecture is the simplest feeding technique for LRE since it does not require additional pressurizing gas tanks with failure-prone pressure regulator valves nor complex turbomachinery. The scheme includes only two liquid propellant tanks filled with helium or nitrogen, eventually separated by a membrane.
+The major downsides of this simplicity is relative to the non-stationarity of the tank pressures that induce chamber pressure drop, decrease of propellant mass flow rate  and as a consequence O/F ratio variation. This chain of events degrades performances overtime and must be carefully evaluated since combustion efficiency relies upon viable domains of injection pressure and correct mass flow ratio.
+The interest on blow-down is although justified with respect to well-known pressure regulated feed system since this last can also manifest some criticalities in terms of long-term reliability. In particular, propulsion systems play crucial roles for mission success, such as long interplanetary trips, and they must ensure failure-free lifetime.
+This is a major concern when focusing on pressure regulated feeding lines in which a pressure regulator valve is present. This kind of elements can be quite complex and hence add a weakness for the whole system \cite{valve_criticalities}.
+Considering these facts, a blow-down type architecture could be of interest since it decrease system complexity. Moreover, different feasibility analysis for blow-down units are present in the literature in which also an external re-pressurization tank is considered \cite{repressurization}.
+This is an upgrade that allows to recover performance of the feeding pressure and hence combustion properties. Although the valve complexity is removed since a pyro valve can be used to discharge the gas with a single shot application, the eventual re-pressurization can be a crucial point as the sudden change in pressure could induce unwanted instabilities.
+Other configurations could foresee the use of a Venturi valve to maintain constant mass flow rate by cavitating the liquid and choking the flow on the feeding line. However, neither extra tank nor Venturi valves will be considered in this work in order to meet the requirements presented in \autoref{subsec:input_data}.
+
+The whole evaluation of the dynamics of the examined propulsion system was not based upon previous works, instead a self-made model was developed.
+
+\subsection{Additive manufacturing state of art}
+\label{subsec:additive_intro}
+
+%traditional manifacturing problems->additive advantage (tyempi, costi, peso, geometrie complesse->ottimizzate)
+Additive manufacturing technologies in aerospace industry is rapidly spreading thanks to the offered advantages with respect to traditional production techniques. Among the benefits provided by AM there are weight and time savings, cost reductions and  the possibility to optimize components creating more complex geometries\cite{materials_and_desing}.
+Various technologies for AM have been developed for different fields, in particular, the most used in this sector is Laser Powder Bed Fusion (LPBF), which utilizes a laser beam to melt successive layers of metal powder. Binder Jetting (BJ) is also a feasible technology although still under development, as it requires post-processing procedures to obtain better finished components than LPBF, making it less attractive for the general industry. A focus on this technology will be carried on in the following pages. Different types of alloys can be processed through both technologies, among which there are nickel-based superalloys, such as Inconel-718. This materials offers excellent mechanical properties under extreme temperature conditions and, for this precise reason, suits perfectly the role of injectors, manifolds and turbomachinery elements in general. Inconel-718 is also characterized by a considerable corrosion resistance, that allows it to be used in concomitance with an oxidizer such as liquid oxygen\cite{Inconel_vs_steel}. 
+
+The finishing of a component created with AM depends on several parameters: 
+
+\begin{itemize}
+    \item \textbf{Temperature}: the laser's power and thus the powder's melting temperature selection is crucial in order to avoid performance losses due to stress induced by heating and cooling cycles. The calculation of this parameter is important to prevent overflowing from the meltpool, convective transport of the liquid and nonmetal particles to be blown away from vapors. Cracks and curling, caused by uneven shrinkage during production can also damage surface quality\cite{lpbf_accuracy}. 
+    \item  \textbf{Powder dimension and morphology}: the mechanical properties of the component are significantly influenced by the dimensions and shape of the powder. Coarse and irregular particles result in inefficient packing and higher porosity of the powder bed. This, in turn, makes it challenging for the molten material to fill all the interstices, especially due to the rapid solidification in the LPBF process. The mechanical properties of the component decrease due to its porosity\cite{dimension_powder}.
+    \item  \textbf{Deposition method}: powder deposition direction directly affects the superficial finishing of the material as dross or deposits from the process can be present: the angle of deposition directly influences the roughness and the accuracy of the produced parts. Staircase effects is related to the discretization of the different layers: the bigger the layers the less smooth the surface will be. In general, it can be observed that the more the build direction $\alpha$ of a generic piece shifts from perpendicular ($\alpha$ = 0°), to parallel, ($\alpha$ = 90°), the roughness increases and accuracy lowers\cite{tesi_dottorato}.
+\end{itemize}
+
+% BJ e come funziona + come funziona lpbf per introdurre il confronto 
+
+BJ is a technology firstly developed during the nineties and consists in a deposition of a polymeric liquid binder onto successive layers of powder. The whole process takes place at ambient temperature and pressure. No controlled atmosphere is required as phase changes are not involved in this process. The binder bonds the different layers together without needing of supports, resulting in a box of powder with a 3D component built inside. Post processing treatments, such as sintering and infiltration, are performed to improve its properties\cite{bj_inconel}. On the contrary, LPBF technology uses an high power laser beam to melt the different layers of powder together. A more controlled ambient and atmosphere are required as thermal stresses play a major role during the production of different items\cite{materials_and_desing}.
+
+% bj vantaggi - svantaggi -> tipici valori di lavorazione 
+BJ technology technology brings advantages and disadvantages with respect to LPBF:
+\begin{itemize}
+  \item \textbf{Material compatibility}: BJ is potentially compatible with any material, metallic and non metallic, allowing to build complex components, unfeasible with LPBF process capabilities.
+  \item \textbf{Roughness}: BJ technologies require a significant amount of post processing treatments to improve both superficial finishing and mechanical properties, reaching lower values of roughness with respect to LPBF. In general, fewer superficial treatments are required by LPBF as the layer stratification could lead to more accurate roughness. Refinement is instead necessary with BJ-made components to obtain lowest possible values of roughness, even better than the ones LPBF could reach. BJ components show average roughness of $\approx$ 6 $\mu m$, lower than the one obtained with LPBF printing, spacing between 70 and 10 $\mu m$ \cite{tesi_dottorato}.
+  It's important to note that the roughness of BJ-made components is less dependant on the build direction $\alpha$. 
+  \item  \textbf{Density drawback}: BJ-made component show lower relative densities leading to possible distortions of the printed elements. Again, post-processing is required with sintering at temperatures of $\approx$ 1300°. 
+  \item \textbf{Mass production}: Production of components via BJ is more cost and time effective in case of batches of multiple parts. 
+  \item \textbf{Shrinkage}: metal parts produced with BJ can shrink by up to 2 \% for smaller items and by more than 3\% for larger items as a result of infiltration. Sintering can cause average shrinkage of 20\% and also lead to warping caused by friction between the furnace plate and the bottom surface of the part. The heat used in sintering can also soften the part and cause unsupported areas to deform under their own weight. While these problems can be compensated for in the build, non-uniform shrinkage can be more difficult to account for\cite{bj_camb}.
+\end{itemize}
+
+Even if BJ is a promising technology, more sustainable as it produces less wastes and requires less energy in the production of different pieces, it lacks a solid mathematical modelling\cite{bj_inconel} as the research dedicated to this technology is still in its infancy. LPBF is thus the technology of choice to build the systems of DRY-1.
+
+\subsection{Analysis of losses}
+\label{subsec:losses_intro}
+
+The model of the system was based on some ideal assumption of the propulsion process, but in the nozzle some irreversible processes and losses are present. Therefore some of them were analyzed and compared with the ideal case to achieve a better understanding of what really happens in the nozzle.
+The losses considered are specifically the ones caused by 2D flow, throat erosion and boundary layer. Considering 2D flow means that the propellants exit velocity is slightly misaligned from the nozzle axis, especially near its edges.
+Therefore only part of the flow will contribute to the thrust of the engine. The throat erosion is mostly caused by the exhaust gasses passing through it with high velocity and temperature, thus causing the material of the nozzle to erode and fail more easily.
+This effect causes an unwanted expansion of the throat area during the mission consequently increasing the rate at which the combustion chamber pressure decreases over time. The boundary layer loss is caused by the presence of a boundary layer between the nozzle wall and the flowing gasses.
+It is present along the whole nozzle but its effects are particularly evident in the throat, as it is the smallest part of the nozzle. This effect is accentuated even more by general dimensions of the considered system.
