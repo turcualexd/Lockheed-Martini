@@ -17,10 +17,13 @@
 	\setbox\ltmcbox\vbox{
 	\makeatletter\col@number\@ne
 	\begin{xltabular}{\linewidth}{c>{\raggedright\arraybackslash}X}
-		\textbf{LRE} & Liquid Rocket Engine \\
+		\textbf{AM} & Additive Manufacturing \\
+		\textbf{BJ} & Binder Jetting \\
 		\textbf{LOX} & Liquid Oxygen \\
-		\textbf{RP-1} & RP-1 fuel\\
-		\textbf{AM} & Additive Manufacturing
+		\textbf{LPBF} & Laser Powder Bed Fusion \\
+		\textbf{LRE} & Liquid Rocket Engine \\
+		\textbf{RP-1} & RP-1 fuel \\
+		\textbf{TBC} & Thermal Barrier Coating
 	\end{xltabular}
 	\unskip
 	\unpenalty
@@ -43,6 +46,7 @@
 		$\boldsymbol{a}$ & [$\textrm{m} / \textrm{s}$] & Speed of sound \\
 		$\boldsymbol{A}$ & [$\textrm{m}^2$] & Area \\
 		$\boldsymbol{B}$ & [-] & Blow-down ratio \\
+		$\boldsymbol{c}$ & [$\textrm{J} / \textrm{kg} \, \textrm{K}$] & Specific heat \\
 		$\boldsymbol{c_P}$ & [$\textrm{J} / \textrm{kg} \, \textrm{K}$] & Specific heat at constant pressure \\
 		$\boldsymbol{c_T}$ & [-] & Thrust coefficient \\
 		$\boldsymbol{c^*}$ & [$\textrm{m} / \textrm{s}$] & Characteristic velocity \\
@@ -50,13 +54,13 @@
 		$\boldsymbol{D}$ & [m] & Diameter \\
 		$\boldsymbol{E}$ & [$\textrm{m} / \textrm{s}$] & Erosion rate \\
 		$\boldsymbol{f}$ & [-] & Darcy friction factor \\
-		$\boldsymbol{h}$ & [$\textrm{W} / \textrm{m}^2 \, \textrm{K}$] & Convective heat transfer coefficient \\
+		$\boldsymbol{h_g}$ & [$\textrm{W} / \textrm{m}^2 \, \textrm{K}$] & Gas-side convective heat transfer coefficient \\
 		$\boldsymbol{H}$ & [m] & Height \\
 		$\boldsymbol{i}$ & [-] & First iteration index \\
 		$\boldsymbol{I_{sp}}$ & [s] & Specific impulse \\
 		$\boldsymbol{I_{tot}}$ & [$\textrm{N} \, \textrm{s}$] & Total impulse \\
 		$\boldsymbol{j}$ & [-] & Second iteration index \\
-		$\boldsymbol{k}$ & [$\textrm{m}^{-1}$] & Curvature \\
+		$\boldsymbol{k}$ & [m] & Radius of curvature \\
 		$\boldsymbol{K}$ & [-] & Pressure loss coefficient \\
 		$\boldsymbol{L}$ & [m] & Length \\
 		$\boldsymbol{L^*}$ & [m] & Characteristic length \\
@@ -80,6 +84,7 @@
 		$\boldsymbol{t}$ & [s] & Time \\
 		$\boldsymbol{\Delta t}$ & [s] & Time step \\
 		$\boldsymbol{T}$ & [K] & Temperature \\
+		$\boldsymbol{\Delta T}$ & [K] & Variation of temperature \\
 		$\boldsymbol{\T}$ & [N] & Thrust \\
 		$\boldsymbol{u}$ & [$\textrm{m} / \textrm{s}$] & Velocity \\
 		$\boldsymbol{V}$ & [$\textrm{m}^3$] & Volume \\
@@ -88,7 +93,9 @@
 		$\boldsymbol{\alpha_{con}}$ & [deg] & Convergent semi-aperture angle \\
 		$\boldsymbol{\beta}$ & [$\%$] & Injector pressure drop as percentage of initial combustion chamber pressure \\ 
 		$\boldsymbol{\gamma}$ & [-] & Heat capacity ratio \\
+		$\boldsymbol{\delta}$ & [deg] & Cone angle of fictitious conical divergent \\
 		$\boldsymbol{\varepsilon}$ & [-] & Area ratio \\
+		$\boldsymbol{\theta}$ & [deg] & Angle of Rao parabolic divergent \\
 		$\boldsymbol{\lambda}$ & [-] & Nozzle losses coefficient \\
 		$\boldsymbol{\mu}$ & [$\textrm{Pa} \, \textrm{s}$] & Dynamic viscosity \\
 		$\boldsymbol{\rho}$ & [$\textrm{kg} / \textrm{m}^3$] & Density \\
@@ -115,9 +122,12 @@
 	\makeatletter\col@number\@ne
 	\begin{xltabular}{\linewidth}{c>{\raggedright\arraybackslash}X}
 		\textbf{aw} & Adiabatic wall \\
+		\textbf{b} & Burn \\
 		\textbf{c} & Combustion chamber \\
 		\textbf{cea} & From CEAM software \\
+		\textbf{co} & Coolant \\
 		\textbf{con} & Convergent \\
+		\textbf{div} & Divergent \\
 		\textbf{e} & Nozzle exit \\
 		\textbf{eff} & Effective \\
 		\textbf{f} & Final \\

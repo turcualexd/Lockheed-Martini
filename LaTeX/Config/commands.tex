@@ -9,13 +9,14 @@
 }
 
 % Figure on right side
-\newcommand{\rfig}[3]{
-\begin{wrapfigure}{r}{#3\linewidth}
+\newcommand{\rfig}[6]{
+\begin{wrapfigure}[#4]{r}{#3\linewidth}
+	\vspace*{#5}
 	\centering
 	\includegraphics[width=\linewidth]{Images/#1}
+	\vspace*{#6}
 	\caption{#2}
 	\label{fig:#1}
-	\vspace*{-13pt}
 \end{wrapfigure}
 }
 

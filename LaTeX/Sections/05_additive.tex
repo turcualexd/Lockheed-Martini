@@ -1,3 +1,84 @@
 \section{Additive manufacturing influences}
 \label{sec:additive}
 
+\rfig{cdcoeff}{Discharge coefficients}{0.4}{15}{-5mm}{-9mm}
+
+Additive manufacturing allows to create complex shapes at a lower cost, but it doesn't always allow to obtain low roughness values, causing performance losses in the system. Thus, following the additive manufacturing technology choice explained in \autoref{subsec:additive_intro}, a value for the discharge coefficient $C_d$ can be estimated from the chart in \autoref{fig:cdcoeff} \cite{valori_cd}, selecting a diameter value of around 1 mm as calculated in \autoref{sec:modelling} and a short-tube with conical entrance shape.
+
+A further analysis has been developed to take into account possible variations in the injectors' diameters due to imperfections in processing. Inspecting data for laser power bed fusion manufacturing, the standard deviation from a nominal diameter of 1.903 mm is 0.0485 mm \cite{lpbf_accuracy}. Linearly scaling the value found in literature, it can be adapted for the case analyzed as shown in \autoref{table:deviazioni}.
+
+\vspace*{5mm}
+
+\begin{table}[H]
+    \renewcommand{\arraystretch}{1.5}
+    \centering
+    \begin{tabular}{|c|c|c|}
+        \hline
+         & \textbf{Oxidizer injectors} & \textbf{Fuel injectors}\\
+        \hline
+        \hline
+        Nominal diameter [mm] & 1.0295 & 1.0354 \\ 
+        \hline
+        Standard deviation [mm] & 0.0262 & 0.0264 \\
+        \hline
+        Number of injectors [-] & 6 & 3 \\
+        \hline
+    \end{tabular}
+    \caption{Nominal values and standard deviations for injectors}
+    \label{table:deviazioni}
+\end{table}
+
+Considering the injectors' diameters as random variables with normal distribution characterized by a mean value and a standard deviation corresponding respectively to the coefficients shown in \autoref{table:deviazioni}, a statistical analysis has been developed to examine the effects of manufacturing imperfections. This random phenomenon causes the variation of multiple propulsion parameters with respect to their nominal value, as will be discussed.
+
+Following the diameters' analysis, the total area of both the propellants' injectors has been calculated, to then find the actual mass flow rate entering the combustion chamber and the $O/F$ ratio, all affected by the random variations discussed above. 
+
+
+\begin{equation}
+	A_{inj,tot,p} = \sum_{n=1}^{N_{inj,p}} \left(\frac{\pi(d_{inj,p,n})^2}{4} \right)
+    \label{eq:totalarea}
+\end{equation}
+
+\begin{equation}
+    \dot m_{inj,tot,p} = C_{d}A_{inj,tot,p}\sqrt{2\Delta p_{inj}\rho_p}
+    \label{eq:massflow}
+\end{equation}
+
+These modified values then enter the computation explained in \autoref{sec:modelling}, making the uncertainty to propagate and to affect the engine's performance. The whole process is repeated 50 times in order to have a more accurate statistical analysis, allowing to study each simulation and the average of them, as shown in the following graphs.
+\\
+\\
+\\
+\\
+\\
+
+
+METTERE I GRAFICI!!!!!!!!\\ XD LOL XDXDXD 
+
+
+PARLARE PC !!!!!
+
+The mass flow rate, dependent on the injectors' cross sectional area, is slightly affected by the variation of their diameter, very small compared to the nominal one. However, the explained fluctuations can combine generating more observable effects, as seen in ///GRAFICO O/F///, describing the progress of the $O/F$ in time for each simulation. The high deviation from the nominal value is due to its definition as a fraction, greatly affected by the combined variations of its terms. $O/F$ is a crucial parameter in the design of a propulsion system, from which many other variables depend. $T_c$ is one of them, being obtained from the NASA-CEAM software, which, among others, takes as input the $O/F$ ratio and the combustion chamber pressure, $P_c$, that is related to the tank pressure through the injectors' areas and hence varying due to the analyzed imperfections. Thrust and specific impulse are also strictly related to the variation of mass flow rate and, as a consequence, the oxidizer to fuel ratio.
+
+Another characteristic worth to mention is the convergence of all parameters to their mean value during each simulation.
+In fact, as shown in \autoref{eq:dp_tot} the difference in pressure depends quadratically on the varying flow velocity, which is the highest in the first instants of simulation.
+For this reason, the effect of imperfections is clearly distinguishable from ( grafico salti di pressione ), where, as $u_{fd}$ and thus the mass flow rate diminish, the difference between the $\Delta p_{fd}$ of each simulation and their average lowers, as the effect of the imprecision in diameter due to the manufacturing process gets less relevant. The shown graph is derived from oxidizer feed lines values as no conceptual difference was found from the fuel's one. 
+
+Given the hypothesis made in \autoref{subsec:blowdown_intro}, the whole system is regulated by the the choice of pressurizer, the blow-down and the $\OFmed$ ratios: the natural evolution of the dynamics leads to a common and defined state among all simulations.
+
+The analyzed parameters' trend is dictated by chemistry and by the blow-down ratio, as they regulate the discharge process of the propellants, while their boundaries are only determined by the $\OFmed$ value. All the simulations behave coherently  with these assumptions. 
+
+% 2 motivi trovati: blowdown e sistema imposto 
+
+
+
+%i valori di tutti i grafici convergono allo stesso valore perchè dipenono da qunatita di pressurizzante blow down ratio rimane costante in ogni simulazione e questo fa si che 
+
+
+%blowdown è costante e impone pressioni di press e propellenti. all'inizio alte pressioni e portate nelle feeding lines e il deltap a cavallo degli iniettori, che dipende dalla portata, sarà maggiore.  man mano che la pressione diminuisce, le portate nelle feeding lines diminuiscono e il deltap inj, proporzionale alla portata come in eq2 è minore, rendendo meno importante l'effetto dato dalle imprecisioni nel piatto. d'altra parte in tutte le simulazioni il blow down ratio è stato mantenuto lo stesso (2.78). 
+
+
+% OK variazione portate minuscola perche differenza minima, sarà l'OF che essendo un rapporto varia tanto a influenzare il resto
+
+% OK Of varia perche le portate sono direttamente influenzate dall'area 
+
+% OK The combustion chamber temperature is strictly related to the O/F ratio  (input ) e dalla pc che deriva dalla pressione dei tank
+

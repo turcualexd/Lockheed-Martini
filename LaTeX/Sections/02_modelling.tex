@@ -1,4 +1,3 @@
-\pagebreak
 \section{Modelling of propulsion system: DRY-1}
 \label{sec:modelling}
 
@@ -32,12 +31,12 @@ Various hypothesis were necessary to develop the system, this values are reporte
 \begin{table}[H]
     \renewcommand{\arraystretch}{1.2}
     \centering
-    \begin{tabular}{|c|c|c|c|}
+    \begin{tabular}{|c|c|c|c|c|}
         \hline
-        $\boldsymbol{O/F \; [\textbf{-}]}$ & $\boldsymbol{\varepsilon \; [\textbf{-}]}$ & $\boldsymbol{\varepsilon_{con} \; [\textbf{-}]}$ & $\boldsymbol{L^* \; [\textbf{m}]}$ \\
+        $\boldsymbol{O/F \; [\textbf{-}]}$ & $\boldsymbol{\varepsilon \; [\textbf{-}]}$ & $\boldsymbol{\varepsilon_{con} \; [\textbf{-}]}$ & $\boldsymbol{L^* \; [\textbf{m}]}$ & $\boldsymbol{D_{inj}^{fu} \; [\textbf{mm}]}$ \\
         \hline
         \hline
-        2.42 & 300 & 10 & 1.143 \\
+        2.42 & 300 & 10 & 1.143 & 1 \\
         \hline
     \end{tabular}
     \caption{Hypothesis from literature and previous design}
@@ -49,7 +48,7 @@ The choices of $L^*$  and $O/F$ were only dictated by the propellant couple \cit
 \subsection{Nominal sizing}
 \label{subsec:nominal_sizing}
 
-After defining the main input data, the workflow is carried out as shown in \autoref{fig:flowchart}. All the combustion simulations were performed with Nasa-CEA software, implemented in Matlab (CEAM). In particular the "rocket problem" was considered, imposing frozen equilibrium, infinite combustion chamber ($M_c = 0$), initial injecting temperatures of the propellant equal to the storage temperatures. The chamber pressure was set as $p_c = 50$ bar and the mixture ratio as $O/F = 2.42$. Latter refinement of this last value will be performed. The output values used from the simulation are represented (vacuum value is considered for the $c_T$):
+After defining the main input data, the workflow is carried out as shown in \autoref{fig:flowchart}. All the combustion simulations were performed with Nasa-CEA software, implemented in Matlab (CEAM). In particular the "rocket problem" was considered, Bray model was applied for the expansion (frozen point at the throat), infinite combustion chamber ($M_c = 0$), initial injecting temperatures of the propellant equal to the storage temperatures. The chamber pressure was set as $p_c = 50$ bar and the mixture ratio as $O/F = 2.42$. Latter refinement of this last value will be performed. The output values used from the simulation are represented in table \autoref{table:out_CEA_1} (vacuum value is considered for the $c_T$):
 \begin{table}[H]
     \renewcommand{\arraystretch}{1.2}
     \centering
@@ -79,7 +78,6 @@ From the geometry assumption of \autoref{table:hp}, the nozzle exit area and the
     \\
     A_c = \varepsilon_{con} A_t \qquad L_c = \frac{L^*}{\varepsilon_{con}}
 \end{gather}
-Nozzle geometry model will be delved in \autoref{sec:nozzle_losses}. The results for the previous calculation are the following:
 
 \begin{table}[H]
     \renewcommand{\arraystretch}{1.2}
@@ -95,6 +93,32 @@ Nozzle geometry model will be delved in \autoref{sec:nozzle_losses}. The results
     \caption{Preliminary DRY-1 geometry}
     \label{table:preliminary_dry}
 \end{table}
+
+The nozzle geometry was modelled with a conical convergent and a Rao parabolic divergent\cite{rao_article}. For the convergent a realistic cone angle of $\alpha_{con} = 30$\textdegree $\,$ was chosen from which its length can be computed.
+\begin{equation}
+    L_{con} = \frac{D_c - D_t}{2 \tan(\alpha_{con})}
+\end{equation} 
+
+Since no constraint was imposed on the divergent length a 100\% bell percentage was selected in order to minimize 2D losses as described in \autoref{sec:nozzle_losses}. From it, together with the area ratio, the parabolic nozzle can be defined. The nozzle's main characteristics are reported in \autoref{table:convergent_values}
+\begin{table}[H]
+    \renewcommand{\arraystretch}{1.2}
+    \centering
+    \begin{tabular}{|c|c|c|}
+        \hline
+        $\boldsymbol{L_{con} \; [\textbf{cm}]}$ & $\boldsymbol{L_{div} \; [\textbf{cm}]}$ & $\boldsymbol{\theta_e \; [\textbf{deg}]}$ \\
+        \hline
+        \hline
+        2.15 & 34.91 & 4.329 \\
+        \hline
+    \end{tabular}
+    \caption{Nozzle main characteristics}
+    \label{table:convergent_values}
+\end{table}
+
+A simplified geometrical model of the whole system is shown in \autoref{fig:DRY-1}:
+
+\cfig{DRY-1}{System configuration}{0.35}
+
 
 %SE RIUSCIAMO REFERENCE SU MACH NUMBER IN CAMERA + EVENTUALE COMMENTO SU VALORE BASSO
 A check on the compliance of the chamber Mach number is done ($M_c < 0.3$):
@@ -156,11 +180,11 @@ Nitrogen gas was chosen to pressurize RP-1 since no cryogenic conditions were pr
 On the other side, LOX required a cryogenic compatibility that can be ensured by helium. Even though an efficient insulating bladder is employed, the design choice was dictated by a more conservative approach.
 The employment of nitrogen also with LOX was discarded since storage temperature and pressure are not compatible with its properties\cite{nist}.
 \begin{table}[H]
-    \renewcommand{\arraystretch}{1.2}
+    \renewcommand{\arraystretch}{1.4}
     \centering
     \begin{tabular}{|c|c|c|c|}
         \hline
-        $\boldsymbol{T_{pr,fu} \; [\textbf{K}]}$ & $\boldsymbol{T_{pr,ox} \; [\textbf{K}]}$ & $\boldsymbol{\gamma_{N_2} \; [\textbf{-}]}$  & $\boldsymbol{\gamma_{He} \; [\textbf{-}]}$ \\
+        $\boldsymbol{T_{pr}^{fu}} \; [\textbf{K}]$ & $\boldsymbol{T_{pr}^{ox} \; [\textbf{K}]}$ & $\boldsymbol{\gamma_{N_2} \; [\textbf{-}]}$  & $\boldsymbol{\gamma_{He} \; [\textbf{-}]}$ \\
         \hline
         \hline
         300 & 90 & 1.40 & 1.67 \\
@@ -185,12 +209,11 @@ The employment of nitrogen also with LOX was discarded since storage temperature
     \label{table:fata_turchina_valori_assunti}
 \end{table}
 
-HO INSERITO I DATI, DOBBIAMO COMMENTARLI
-
-The masses and volumes of oxidizer, fuel and pressurizing gases are computed.
+The blow-down ratios $B_{pr}$ are initially chosen assuming negligible losses and according to the boundaries imposed by the combustion chamber, as stated in \autoref{subsec:input_data}. This particular element deeply influences the whole dynamics and there were no reasons to set two different $B_{pr}$. % This last value is the main contributing factor to this value, so it is set equal between the two tanks.
+The masses and volumes of oxidizer, fuel and pressurizing gases are then computed.
 
 \begin{table}[H]
-    \renewcommand{\arraystretch}{1.5}
+    \renewcommand{\arraystretch}{1.4}
     \centering
     \begin{tabular}{|c|c|c|c|c|c|}
         \hline
@@ -209,29 +232,109 @@ The masses and volumes of oxidizer, fuel and pressurizing gases are computed.
     \label{table:soluzioni_fata_turchina}
 \end{table}
 
-HO INSERITO I VALORI TROVATI DALLA PRIMA ITERAZIONE
 
 %equazioni feeding --> risultati feeding
-Finally, the feeding lines can be modelled. Considering figure \mref, the length of the pipes can be retrieved as a difference:
+Finally, the feeding lines and the injectors plate of DRY-1 can be modelled.
+Considering \autoref{fig:DRY-1}, the length of the pipes can be retrieved as a difference:
 \begin{gather}
-    L_{fd,fu} = H - L_c - H_{tk,fu} \\
-    L_{fd,ox} = H - L_c - H_{tk}
+    L_{fd}^{fu} = H - L_c - H_{tk,fu} \\
+    L_{fd}^{ox} = H - L_c - H_{tk}
 \end{gather}
 
-To completely determine the DRY-1 geometry, the injection plate must be modelled. The pressure drop across the injector $\Delta p_{inj}$ have to be assumed as a percentage of the initial chamber pressure. Acceptable range of this fraction goes from $5$\% to $30$\%. A value of $20$\% is chosen for both oxidizer and fuel lines. The fuel and oxidizer injector area can be computed assuming reasonable values for the discharge coefficient $C_{d,inj}$. A reasonable assumption has been made according to the superficial roughness quality of AM.
+The initial pressure drop across the injector $\Delta p_{inj}$ has to be assumed as a percentage of the initial chamber pressure. An acceptable range of this fraction goes from $5$\% to $30$\%. A value of $20$\% is chosen for both oxidizer and fuel lines. The fuel and oxidizer injectors' area can be computed assuming reasonable values for the discharge coefficient $C_{d,inj}$. A fair assumption has been made according to the superficial roughness quality of AM as explained in \autoref{sec:additive}.
 
 \begin{gather}
     \dot{m}_{fu} = \frac{1}{1 + O/F}\dot{m}_p \qquad \dot{m}_{ox} = \frac{O/F}{1 + O/F}\dot{m}_p
     \\
-    A_{inj,tot} = \frac{\dot{m}_p}{C_{d,inj} \sqrt{2\Delta p_{inj} \rho_p}} 
+    A_{inj}^p = \frac{\dot{m}_p}{C_{d,inj} \sqrt{2\Delta p_{inj} \rho_p}} 
 \end{gather}
-   
-\begin{equation}
-    K_{p} = 1 + f \frac{L_{p,fd}}{D_{p,fd}} \left(\frac{A_{p, fd}}{A_{p,inj, tot}C_{d,inj}}\right)^2
-    \label{eq:K}
-\end{equation}
 
-PERDITE DI CARICO GENERALIZZATE
+Note that $A_{inj}^p$ is referred or to fuel's injectors area or to oxidizer's injectors area calculated by the imposed conditions.
+
+By assuming a diameter for the fuel injector (\autoref{table:hp}), the number of injectors can be computed: 
+\vspace{-0.5cm}
+\begin{gather}
+    A_{inj, single}^{fu} = \dfrac{\pi {D_{inj}^{fu}}^2}{4}
+    \label{eq:aree_inj}
+    \\
+    N_{inj}^{fu} = \left\lfloor \frac{A_{inj,fu}}{A_{inj,single\;fu}}\right\rfloor
+    \label{eq:number_fu_inj}
+\end{gather}
+
+For the injection plate, short tubes with conical entrance are assumed (see discussion in \autoref{sec:additive}) in a triplet configuration, matching as much as possible the predicted $\OFmed$.
+
+\begin{equation}
+    N_{inj}^{ox} = 2 \cdot N_{inj}^{fu}
+    \label{eq:number_ox_inj}
+\end{equation} 
+
+The real $A_{inj}$ will influence the diameters of the injectors, making them different from the supposed one. New values for the injectors diameters shall be calculated to respect the imposed $A_{inj}$. Final results are reported in \autoref{table:soluzioni_inj_plate}.
+
+\begin{table}[H]
+    \renewcommand{\arraystretch}{1.4}
+    \centering
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+        $\boldsymbol{N_{inj}^{fu}\; [-]}$ & $\boldsymbol{N_{inj}^{ox}\; [-]}$ & $\boldsymbol{D_{inj}^{fu} \; [\textbf{mm}]}$ & $\boldsymbol{D_{inj}^{fu} \; [\textbf{mm}]}$ \\
+        \hline
+        \hline
+        3 & 6 & 1.12 & 1.13 \\
+        \hline
+    \end{tabular}
+    \caption{Propellant and pressurizer quantities as first iteration}
+    \label{table:soluzioni_inj_plate}
+\end{table}
+
+
+Once the the geometry of the injection plate is established, feeding line losses were modelled. As shown in \autoref{eq:feeding_losses}, the dimension of the lines and the Darcy friction factor $f$ are needed. This last coefficient depends on the $Re$ and on the roughness and it is retrieved from Moody chart\cite{colebrook}. 
+
+The speed of the fluid inside the lines is found from the mass flow rate and thus the losses along the whole system are computed via \autoref{eq:speed}, \autoref{eq:feeding_losses}, \autoref{eq:dp_tot}. The diameter of the two feeding lines is assumed to be different to counter balance the effect of the different densities of the fluids.
+
+\begin{table}[H]
+    \renewcommand{\arraystretch}{1.4}
+    \centering
+    \begin{tabular}{|c|c|}
+        \hline
+        $\boldsymbol{D_{fd}^{fu} \; [\textbf{mm}]}$ & $\boldsymbol{D_{fd}^{ ox} \; [\textbf{mm}]}$ \\
+        \hline
+        \hline
+        5 & 7 \\
+        \hline
+    \end{tabular}
+    \caption{Diameter assumed for feeding lines}
+    \label{table:diameter_fd}
+\end{table}
+\vspace{-1cm}
+\begin{gather}
+         u_{p,fd} = \frac{\dot{m}_p}{A_{p, fd}\rho_p}
+        \label{eq:speed}
+        \\
+        K_{p, tot} = 1 + f \frac{L_{p,fd}}{D_{p,fd}} + \left(\frac{A_{p, fd}}{A_{p,inj, tot}C_{d,inj}}\right)^2
+       \label{eq:feeding_losses}
+       \\
+       \Delta p_{p} = \frac{1}{2}\rho_p k_{p, tot} u_{p,fd}^2 
+       \label{eq:dp_tot}
+\end{gather}
+
+Finally, the pressure inside the tanks can be computed. This value will influence the whole dynamics of the system and will be refined to maximize the total impulse.
+
+\begin{table}[H]
+    \renewcommand{\arraystretch}{1.4}
+    \centering
+    \begin{tabular}{|c|c|}
+        \hline
+        $\boldsymbol{p_{fu,i}} \; [\textbf{bar}]$ & $\boldsymbol{p_{ox,i}\; [\textbf{bar}]}$ \\
+        \hline
+        \hline
+        60.79 & 60.19 \\
+        \hline
+    \end{tabular}
+    \caption{Initial tank pressure}
+    \label{table:tk_press}
+\end{table}
+As can be seen, values are similar between the two tanks despite the difference in fluid density, pipe length and pipe diameter, as the pressure cascade in a such compact system is mainly driven by the imposed pressure drop across the injectors, imposed to be equal.
+
+Results of the nominal design will be presented in \autoref{sec:results}.
  
 \subsection{System dynamics}
 \label{subsec:dynamics}
