@@ -1,19 +1,19 @@
-[0] Config.pm:308> INFO - This is Biber 2.20
-[0] Config.pm:311> INFO - Logfile is 'Lockheed_Martini_report.blg'
-[73] biber-MSWIN64:340> INFO - === 
-[106] Biber.pm:420> INFO - Reading 'Lockheed_Martini_report.bcf'
-[182] Biber.pm:994> INFO - Found 10 citekeys in bib section 0
-[192] Biber.pm:4463> INFO - Processing section 0
-[208] Biber.pm:4654> INFO - Looking for bibtex file 'bibliography.bib' for section 0
-[255] bibtex.pm:1713> INFO - LaTeX decoding ...
-[272] bibtex.pm:1519> INFO - Found BibTeX data source 'bibliography.bib'
-[349] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[349] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[349] Biber.pm:4283> INFO - Sorting list 'none/global//global/global/global' of type 'entry' with template 'none' and locale 'en-US'
-[349] Biber.pm:4289> INFO - No sort tailoring available for locale 'en-US'
-[375] bbl.pm:676> INFO - Writing 'Lockheed_Martini_report.bbl' with encoding 'UTF-8'
-[379] bbl.pm:779> INFO - Output to Lockheed_Martini_report.bbl
-[379] Biber.pm:131> WARN - Possible typo (case mismatch) between citation and datasource keys: 'Sutton' and 'sutton' in file 'bibliography.bib'
-[379] Biber.pm:131> WARN - I didn't find a database entry for 'Sutton' (section 0)
-[379] Biber.pm:131> WARN - I didn't find a database entry for 'tesi_malesia' (section 0)
-[379] Biber.pm:133> INFO - WARNINGS: 3
+[0] Config.pm:307> INFO - This is Biber 2.19
+[0] Config.pm:310> INFO - Logfile is 'Lockheed_Martini_report.blg'
+[162] biber-MSWIN64:340> INFO - === 
+[214] Biber.pm:419> INFO - Reading 'Lockheed_Martini_report.bcf'
+[379] Biber.pm:979> INFO - Found 10 citekeys in bib section 0
+[407] Biber.pm:4419> INFO - Processing section 0
+[423] Biber.pm:4610> INFO - Looking for bibtex file 'bibliography.bib' for section 0
+[481] bibtex.pm:1713> INFO - LaTeX decoding ...
+[497] bibtex.pm:1519> INFO - Found BibTeX data source 'bibliography.bib'
+[580] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[580] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[581] Biber.pm:4239> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
+[581] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
+[595] bbl.pm:660> INFO - Writing 'Lockheed_Martini_report.bbl' with encoding 'UTF-8'
+[620] bbl.pm:763> INFO - Output to Lockheed_Martini_report.bbl
+[621] Biber.pm:131> WARN - Possible typo (case mismatch) between citation and datasource keys: 'Sutton' and 'sutton' in file 'bibliography.bib'
+[621] Biber.pm:131> WARN - I didn't find a database entry for 'Sutton' (section 0)
+[621] Biber.pm:131> WARN - I didn't find a database entry for 'tesi_malesia' (section 0)
+[621] Biber.pm:133> INFO - WARNINGS: 3

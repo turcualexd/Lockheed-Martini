@@ -202,8 +202,8 @@ On the other side, LOX required a cryogenic compatibility that can be ensured by
     \label{table:fata_turchina_valori_assunti}
 \end{table}
 
-The blowdown ratios $B_{pr}$ are initially chosen assuming negligible losses and coherent with the boundaries imposed by the combustion chamber, as stated in \autoref{subsec:input_data}. The last condition is the main contributing factor to this value, so it is set equal between the two tanks.
-The masses and volumes of oxidizer, fuel and pressurizing gases are computed.
+The blowdown ratios $B_{pr}$ are initially chosen assuming negligible losses and according to the boundaries imposed by the combustion chamber, as stated in \autoref{subsec:input_data}. This particular element deeply influences the whole dynamics and there were no reasons to set two different $B_{pr}$. % This last value is the main contributing factor to this value, so it is set equal between the two tanks.
+The masses and volumes of oxidizer, fuel and pressurizing gases are than  computed.
 
 \begin{table}[H]
     \renewcommand{\arraystretch}{1.5}
@@ -222,13 +222,14 @@ The masses and volumes of oxidizer, fuel and pressurizing gases are computed.
 
 
 %equazioni feeding --> risultati feeding
-Finally, the feeding lines can be modelled. Considering figure \autoref{fig:DRY-1}, the length of the pipes can be retrieved as a difference:
+Finally, the feeding lines and the injectors plate of DRY-1 can be modelled.
+Considering \autoref{fig:DRY-1}, the length of the pipes can be retrieved as a difference:
 \begin{gather}
     L_{fd}^{fu} = H - L_c - H_{tk,fu} \\
     L_{fd}^{ox} = H - L_c - H_{tk}
 \end{gather}
 
-To completely determine the DRY-1 geometry, the injection plate must be modelled. The pressure drop across the injector $\Delta p_{inj}$ have to be assumed as a percentage of the initial chamber pressure. Acceptable range of this fraction goes from $5$\% to $30$\%. A value of $20$\% is chosen for both oxidizer and fuel lines. The fuel and oxidizer injector area can be computed assuming reasonable values for the discharge coefficient $C_d$. A reasonable assumption has been made according to the superficial roughness quality of AM.
+The initial pressure drop across the injector $\Delta p_{inj}$ has to be assumed as a percentage of the initial chamber pressure. An acceptable range of this fraction goes from $5$\% to $30$\%. A value of $20$\% is chosen for both oxidizer and fuel lines. The fuel and oxidizer injectors' area can be computed assuming reasonable values for the discharge coefficient $C_d$. A fair assumption has been made according to the superficial roughness quality of AM as explained in \autoref{sec:additive}.
 
 \begin{gather}
     \dot{m}_{fu} = \frac{1}{1 + O/F}\dot{m}_p \qquad \dot{m}_{ox} = \frac{O/F}{1 + O/F}\dot{m}_p
@@ -236,9 +237,9 @@ To completely determine the DRY-1 geometry, the injection plate must be modelled
     A_{inj}^p = \frac{\dot{m}_p}{C_d \sqrt{2\Delta p_{inj} \rho_p}} 
 \end{gather}
 
-Note that $ A_{inj}^p$ is referred or to fuel's injectors area or to oxidizer's injectors area calculated by the said condition.
+Note that $A_{inj}^p$ is referred or to fuel's injectors area or to oxidizer's injectors area calculated by the imposed conditions.
 
-By assuming an dimension for the diameter of the fuel injector ( \autoref{table:hp}), the number of injector can be computed: 
+By assuming a diameter for the fuel injector (\autoref{table:hp}), the number of injectors can be computed: 
 \vspace{-0.5cm}
 \begin{gather}
     A_{inj, single}^{fu} = \dfrac{\pi {D_{inj}^{fu}}^2}{4}
@@ -255,7 +256,7 @@ For the injection plate, short tubes with conical entrance are assumed ( see dis
     \label{eq:number_ox_inj}
 \end{equation} 
 
-The real $ A_{inj}$ will influence the diameters of the injectors, making them different from the supposed one. Final results are reported in \autoref{table:soluzioni_inj_plate}.
+The real $A_{inj}$ will influence the diameters of the injectors, making them different from the supposed one. New values for the injectors diameters shall be calculated to respect the imposed $A_{inj}$. Final results are reported in \autoref{table:soluzioni_inj_plate}.
 
 \begin{table}[H]
     \renewcommand{\arraystretch}{1.5}
@@ -275,7 +276,7 @@ The real $ A_{inj}$ will influence the diameters of the injectors, making them d
 
 Once the the geometry of the injection plate is established, feeding line losses were modelled. As shown in \autoref{eq:feeding_losses}, the dimension of the lines and the Darcy friction factor $f$ are needed. This last coefficient depends on the $Re$ and on the roughness and it is retrieved from Moody chart\cite{colebrook}. 
 
-The speed of the fluid inside the lines is retrieved by the mass flow rate and thus the losses along the whole system are computed. The diameter of the two lines is assumed to be different to counter balance the effect of the different densities of the fluids.
+The speed of the fluid inside the lines is found from the mass flow rate and thus the losses along the whole system are computed via \autoref{eq:speed}, \autoref{eq:feeding_losses}, \autoref{eq:dp_tot}. The diameter of the two feeding lines is assumed to be different to counter balance the effect of the different densities of the fluids.
 
 \begin{table}[H]
     \renewcommand{\arraystretch}{1.5}
@@ -303,7 +304,7 @@ The speed of the fluid inside the lines is retrieved by the mass flow rate and t
        \label{eq:dp_tot}
 \end{gather}
 
-Finally, the pressure inside the tanks can be computed. This value will influence the whole dynamic of the system and will be refined to maximize the total impulse.
+Finally, the pressure inside the tanks can be computed. This value will influence the whole dynamics of the system and will be refined to maximize the total impulse.
 
 \begin{table}[H]
     \renewcommand{\arraystretch}{1.5}
