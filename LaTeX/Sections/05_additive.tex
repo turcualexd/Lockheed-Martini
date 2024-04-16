@@ -1,3 +1,4 @@
+\pagebreak
 \section{Additive manufacturing influences}
 \label{sec:additive}
 
@@ -56,15 +57,13 @@ The high deviation from the nominal value is due to its definition as a fraction
 $O/F$ is a crucial parameter in the design of a propulsion system, from which many other variables depend. $T_c$ is one of them, being obtained from the NASA-CEAM software, which, among others, takes as input the $O/F$ ratio and the combustion chamber pressure, $p_c$, that is related to the tank pressure through the injectors' areas and hence varying due to the analyzed imperfections as seen in \autoref{fig:AM_pc}.
 Thrust and specific impulse are also strictly related to the variation of mass flow rate and chamber pressure as represented in \autoref{fig:AM_T} and \autoref{fig:AM_Isp}.
 
-\rfig{AM_deltapfd}{$\Delta p_{fd}$ difference}{0.6}{17}{-5mm}{-8mm}
+\rfig{AM_deltapfd}{$\Delta p_{fd}$ difference}{0.6}{18}{-5mm}{-8mm}
 
 Another characteristic worth to mention is the convergence of all parameters to their mean value during each simulation.
 In fact, as shown in \autoref{eq:dp_tot} the difference in pressure depends quadratically on the varying flow velocity, which is the highest in the first instants of simulation.
 For this reason, the effect of imperfections is clearly distinguishable from \autoref{fig:AM_deltapfd}, where, as $u_{fd}$ and thus the mass flow rate diminish, the difference between the $\Delta p_{fd}$ of each simulation and their average lowers. The shown graph is derived from oxidizer feed lines values as no conceptual difference was found from the fuel's one. The convergence of all the analyzed parameters is dependent on the pressure losses, so as the difference between simulations and average converges, all quantities converge to their average value as well.
 
-Given the hypotheses made in \autoref{subsec:blowdown_intro}, the whole system is regulated by the the choice of pressurizer, the blow-down and the $\OFmed$ ratio: the natural evolution of the dynamics leads to a common and defined state among all simulations.
-
-The analyzed parameters' trend is dictated by chemistry and by the blow-down ratio, as they regulate the discharge process of the propellants, while their boundaries are only determined by the $\OFmed$ value. All the simulations behave coherently  with these assumptions. 
+Given the hypotheses made in \autoref{subsec:blowdown_intro}, the whole system is regulated by the choice of pressurizer, the blow-down and the $\OFmed$ ratio: the natural evolution of the dynamics leads to a common and defined state among all simulations. All the simulations behave coherently  with these assumptions.
 
 % 2 motivi trovati: blowdown e sistema imposto 
 

@@ -64,6 +64,7 @@ After defining the main input data, the workflow is carried out as shown in \aut
     \label{table:out_CEA_1}
 \end{table}
 
+\pagebreak
 %equazioni per mass flow rate e aree motore + risultati solo motore
 From this results, the propellant mass flow rate and the throat area can be calculated:
 \begin{equation}
@@ -128,7 +129,7 @@ A check on the compliance of the chamber Mach number is done ($M_c < 0.3$):
 \end{equation}
 
 %equazioni tank --> risultati per tank 
-From the geometry of the engine and the allocated space constraints, the total height of the tanks can be calculated. The volume around the thrust chamber (combustion chamber + convergent) can be assessed:
+From the geometry of the engine and the allocated space constraints, the total height of the tanks can be calculated. The volume of the thrust chamber (combustion chamber + convergent) can be assessed:
 \begin{equation}
     V_{tc} = \frac{\pi}{4} \left[L_c D_c^2  + \frac{L_{con}}{3} \left(D_c^2 + D_t^2 + D_c D_t\right)\right]
     \label{eq:v_tc}
@@ -174,9 +175,9 @@ A system of equations can be set up:
 \vspace{3mm}
 
 In order to solve \hyperref[eq:sistema_fata_turchina]{System~\ref*{eq:sistema_fata_turchina}}, the pressurizer and the initial temperature of the propellants have to be set. Different pressurizing gases are available, mainly nitrogen or helium are the most common choices.
-The main differences for the two are the storage temperature, the molar mass and the specific heat ratio. The latter parameter influences the adiabatic discharge, higher values implies faster pressure discharge.
+The main differences between the two are the storage temperature, the molar mass and the specific heat ratio. The latter parameter influences the adiabatic discharge, higher values imply faster pressure discharge.
 The molar mass affects the amount of gas to be embarked at a given pressure. The storage temperature is a matter of compatibility with the propellant.
-Nitrogen gas was chosen to pressurize RP-1 since no cryogenic conditions were present also it guarantees lower discharge, with the downside of increasing the mass of the system.
+Nitrogen gas was chosen to pressurize RP-1 since no cryogenic conditions were present, also it guarantees lower discharge, with the downside of increasing the mass of the system.
 On the other side, LOX required a cryogenic compatibility that can be ensured by helium. Even though an efficient insulating bladder is employed, the design choice was dictated by a more conservative approach.
 The employment of nitrogen also with LOX was discarded since storage temperature and pressure are not compatible with its properties\cite{nist}.
 \begin{table}[H]
@@ -237,7 +238,7 @@ The masses and volumes of oxidizer, fuel and pressurizing gases are then compute
 It can be noticed that the particular architecture of DRY-1 requires each propellant tank to be filled more than 50\% in volume by pressurizer. Finally, the feeding lines and the injectors plate of DRY-1 can be modelled.
 Considering \autoref{fig:DRY-1}, the length of the pipes can be retrieved as a difference:
 \begin{gather}
-    L_{fd}^{fu} = H_{tot} - L_c - H_{tk,fu} \\
+    L_{fd}^{fu} = H_{tot} - L_c - H_{tk}^{fu} \\
     L_{fd}^{ox} = H_{tot} - L_c - H_{tk}
 \end{gather}
 
@@ -260,6 +261,7 @@ By assuming a diameter for the fuel injector (\autoref{table:hp}), the number of
     \label{eq:number_fu_inj}
 \end{gather}
 
+\pagebreak
 For the injection plate, short tubes with conical entrance are assumed (see discussion in \autoref{sec:additive}) in a triplet configuration, matching as much as possible the predicted $\OFmed$.
 
 \begin{equation}
@@ -305,13 +307,13 @@ The speed of the fluid inside the lines is found from the mass flow rate and thu
 \end{table}
 \vspace{-1cm}
 \begin{gather}
-         u_{p,fd} = \frac{\dot{m}_p}{A_{p, fd}\rho_p}
+         u_{fd,p} = \frac{\dot{m}_p}{A_{fd,p}\rho_p}
         \label{eq:speed}
         \\
-        K_{p, tot} = 1 + f \frac{L_{p,fd}}{D_{p,fd}} + \left(\frac{A_{p, fd}}{A_{p,inj, tot}C_{d,inj}}\right)^2
+        K_{p,tot} = 1 + f \frac{L_{fd}^p}{D_{fd}^p} + \left(\frac{A_{fd,p}}{A_{inj,p,tot}C_{d,inj}}\right)^2
        \label{eq:feeding_losses}
        \\
-       \Delta p_{p} = \frac{1}{2}\rho_p k_{p, tot} u_{p,fd}^2 
+       \Delta p_{p} = \frac{1}{2}\rho_p K_{p,tot} u_{fd,p}^2 
        \label{eq:dp_tot}
 \end{gather}
 
@@ -339,6 +341,7 @@ As can be seen, values are similar between the two tanks despite the difference 
 
 Results of the final design will be presented in \autoref{sec:results}.
 
+
 \subsection{System dynamics}
 \label{subsec:dynamics}
 
@@ -352,7 +355,7 @@ From the initial sizing of the engine, it is necessary to simulate the real dyna
 
 For this reasons, a numerical method was implemented. A high level explanation for the functioning of the algorithm can be appreciated in \autoref{fig:flowchart_dynamics}.
 
-\cfig{flowchart_dynamics}{Flowchart of dynamics of the model}{0.5}
+\cfig{flowchart_dynamics}{Flowchart of dynamics of the model}{0.45}
 
 The first step of the time cycle is to update the state of the two tanks based on the previous iteration. Assuming a constant propellants flow rate during the time step $\Delta t$, the volume of the remaining liquid is decreased by a quantity $\Delta V ^ {(i+1)}$. Accordingly, the volume of the pressurizer will increase by the same amount.
 \begin{gather}
