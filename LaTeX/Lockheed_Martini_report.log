@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.5.16)  16 APR 2024 14:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.5.16)  16 APR 2024 18:45
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -955,34 +955,34 @@ Package pdftex.def Info: Config//Poli_logo.pdf  used on input line 6.
 LaTeX Font Info:    Font shape `T1/txr/b/n' in size <24.88> not available
 (Font)              Font shape `T1/txr/bx/n' tried instead on input line 13.
 LaTeX Font Info:    Font shape `T1/txr/b/n' in size <20.74> not available
-(Font)              Font shape `T1/txr/bx/n' tried instead on input line 27.
-LaTeX Font Info:    Trying to load font information for OT1+txr on input line 34.
+(Font)              Font shape `T1/txr/bx/n' tried instead on input line 17.
+LaTeX Font Info:    Trying to load font information for OT1+txr on input line 36.
  (C:\Users\turcu\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\ot1txr.fd
 File: ot1txr.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 34.
+LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 36.
  (C:\Users\turcu\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 34.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 36.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 34.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 36.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 34.
-LaTeX Font Info:    Trying to load font information for U+txmia on input line 34.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 36.
+LaTeX Font Info:    Trying to load font information for U+txmia on input line 36.
  (C:\Users\turcu\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\utxmia.fd
 File: utxmia.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Trying to load font information for U+txsya on input line 34.
+LaTeX Font Info:    Trying to load font information for U+txsya on input line 36.
  (C:\Users\turcu\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\utxsya.fd
 File: utxsya.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Trying to load font information for U+txsyb on input line 34.
+LaTeX Font Info:    Trying to load font information for U+txsyb on input line 36.
  (C:\Users\turcu\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\utxsyb.fd
 File: utxsyb.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Trying to load font information for U+txsyc on input line 34.
+LaTeX Font Info:    Trying to load font information for U+txsyc on input line 36.
  (C:\Users\turcu\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\utxsyc.fd
 File: utxsyc.fd 2000/12/15 v3.1
 ) [1
@@ -1007,76 +1007,94 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
 LaTeX Font Info:    Font shape `T1/txr/b/n' in size <12> not available
 (Font)              Font shape `T1/txr/bx/n' tried instead on input line 9.
  [2]) [3] (Sections/01_introduction.tex
-LaTeX Font Info:    Trying to load font information for TS1+txr on input line 31.
- (C:\Users\turcu\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\ts1txr.fd
-File: ts1txr.fd 2000/12/15 v3.1
-)
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.32     \item  \textbf
-                       {Powder dimension and morphology}: the mechanical pro... [1]) (Sections/02_modelling.tex [2]
-<Images/flowchart.pdf, id=177, 489.32813pt x 391.4625pt>
+l.29 
+      [1]
+LaTeX Font Info:    Trying to load font information for TS1+txr on input line 33.
+ (C:\Users\turcu\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\ts1txr.fd
+File: ts1txr.fd 2000/12/15 v3.1
+)) (Sections/02_modelling.tex [2]
+
+pdfTeX warning: pdflatex (file ./Images/flowchart.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Images/flowchart.pdf, id=177, 483.72719pt x 386.4036pt>
 File: Images/flowchart.pdf Graphic file (type pdf)
 <use Images/flowchart.pdf>
 Package pdftex.def Info: Images/flowchart.pdf  used on input line 11.
-(pdftex.def)             Requested size: 483.69687pt x 386.96368pt.
- [3 <./Images/flowchart.pdf>] [4]
-<Images/DRY-1.pdf, id=424, 338.76563pt x 526.96875pt>
+(pdftex.def)             Requested size: 483.69687pt x 386.38495pt.
+[3 <./Images/flowchart.pdf>] [4]
+
+pdfTeX warning: pdflatex (file ./Images/DRY-1.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Images/DRY-1.pdf, id=221, 352.43669pt x 523.9575pt>
 File: Images/DRY-1.pdf Graphic file (type pdf)
 <use Images/DRY-1.pdf>
 Package pdftex.def Info: Images/DRY-1.pdf  used on input line 120.
-(pdftex.def)             Requested size: 169.29684pt x 263.35507pt.
- [5 <./Images/DRY-1.pdf>] [6] [7]
-<Images/flowchart_dynamics.pdf, id=903, 286.06876pt x 572.1375pt>
+(pdftex.def)             Requested size: 169.29684pt x 251.69661pt.
+[5 <./Images/DRY-1.pdf>] [6] [7]
+<Images/pressure_cascade.pdf, id=303, 579.66562pt x 271.0125pt>
+File: Images/pressure_cascade.pdf Graphic file (type pdf)
+<use Images/pressure_cascade.pdf>
+Package pdftex.def Info: Images/pressure_cascade.pdf  used on input line 320.
+(pdftex.def)             Requested size: 386.95897pt x 180.91577pt.
+ [8 <./Images/pressure_cascade.pdf>]
+
+pdfTeX warning: pdflatex (file ./Images/flowchart_dynamics.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Images/flowchart_dynamics.pdf, id=752, 282.0939pt x 566.115pt>
 File: Images/flowchart_dynamics.pdf Graphic file (type pdf)
 <use Images/flowchart_dynamics.pdf>
-Package pdftex.def Info: Images/flowchart_dynamics.pdf  used on input line 352.
-(pdftex.def)             Requested size: 241.84843pt x 483.70013pt.
- [8] [9 <./Images/flowchart_dynamics.pdf>]) (Sections/03_results.tex [10]
-<Images/FR_T.pdf, id=1679, 421.575pt x 316.18124pt>
+Package pdftex.def Info: Images/flowchart_dynamics.pdf  used on input line 355.
+(pdftex.def)             Requested size: 241.84843pt x 485.37228pt.
+[9 <./Images/flowchart_dynamics.pdf>]) (Sections/03_results.tex [10]
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 18.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 18.
+LaTeX Font Info:    Font shape `T1/txr/b/n' in size <10> not available
+(Font)              Font shape `T1/txr/bx/n' tried instead on input line 20.
+<Images/FR_T.pdf, id=823, 421.575pt x 316.18124pt>
 File: Images/FR_T.pdf Graphic file (type pdf)
 <use Images/FR_T.pdf>
-Package pdftex.def Info: Images/FR_T.pdf  used on input line 107.
+Package pdftex.def Info: Images/FR_T.pdf  used on input line 116.
 (pdftex.def)             Requested size: 232.17242pt x 174.13179pt.
-<Images/FR_OF.pdf, id=1680, 421.575pt x 316.18124pt>
+<Images/FR_OF.pdf, id=824, 421.575pt x 316.18124pt>
 File: Images/FR_OF.pdf Graphic file (type pdf)
 <use Images/FR_OF.pdf>
-Package pdftex.def Info: Images/FR_OF.pdf  used on input line 107.
+Package pdftex.def Info: Images/FR_OF.pdf  used on input line 116.
 (pdftex.def)             Requested size: 232.17242pt x 174.13179pt.
-<Images/FR_cstar.pdf, id=1681, 421.575pt x 316.18124pt>
+<Images/FR_cstar.pdf, id=825, 421.575pt x 316.18124pt>
 File: Images/FR_cstar.pdf Graphic file (type pdf)
 <use Images/FR_cstar.pdf>
-Package pdftex.def Info: Images/FR_cstar.pdf  used on input line 108.
+Package pdftex.def Info: Images/FR_cstar.pdf  used on input line 117.
 (pdftex.def)             Requested size: 232.17242pt x 174.13179pt.
-<Images/FR_ct.pdf, id=1682, 421.575pt x 316.18124pt>
+<Images/FR_ct.pdf, id=826, 421.575pt x 316.18124pt>
 File: Images/FR_ct.pdf Graphic file (type pdf)
 <use Images/FR_ct.pdf>
-Package pdftex.def Info: Images/FR_ct.pdf  used on input line 108.
+Package pdftex.def Info: Images/FR_ct.pdf  used on input line 117.
 (pdftex.def)             Requested size: 232.17242pt x 174.13179pt.
-<Images/FR_pc.pdf, id=1683, 421.575pt x 316.18124pt>
+<Images/FR_pc.pdf, id=827, 421.575pt x 316.18124pt>
 File: Images/FR_pc.pdf Graphic file (type pdf)
 <use Images/FR_pc.pdf>
-Package pdftex.def Info: Images/FR_pc.pdf  used on input line 109.
+Package pdftex.def Info: Images/FR_pc.pdf  used on input line 118.
 (pdftex.def)             Requested size: 232.17242pt x 174.13179pt.
-<Images/FR_Tc.pdf, id=1684, 421.575pt x 316.18124pt>
+<Images/FR_Tc.pdf, id=828, 421.575pt x 316.18124pt>
 File: Images/FR_Tc.pdf Graphic file (type pdf)
 <use Images/FR_Tc.pdf>
-Package pdftex.def Info: Images/FR_Tc.pdf  used on input line 109.
+Package pdftex.def Info: Images/FR_Tc.pdf  used on input line 118.
 (pdftex.def)             Requested size: 232.17242pt x 174.13179pt.
  [11 <./Images/FR_T.pdf> <./Images/FR_OF.pdf
 
 pdfTeX warning: pdflatex (file ./Images/FR_OF.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<Images/FR_Isp.pdf, id=1698, 421.575pt x 316.18124pt>
+<Images/FR_Isp.pdf, id=842, 421.575pt x 316.18124pt>
 File: Images/FR_Isp.pdf Graphic file (type pdf)
 <use Images/FR_Isp.pdf>
-Package pdftex.def Info: Images/FR_Isp.pdf  used on input line 110.
+Package pdftex.def Info: Images/FR_Isp.pdf  used on input line 119.
 (pdftex.def)             Requested size: 232.17242pt x 174.13179pt.
-<Images/FR_m.pdf, id=1699, 421.575pt x 316.18124pt>
+<Images/FR_m.pdf, id=843, 421.575pt x 316.18124pt>
 File: Images/FR_m.pdf Graphic file (type pdf)
 <use Images/FR_m.pdf>
-Package pdftex.def Info: Images/FR_m.pdf  used on input line 110.
+Package pdftex.def Info: Images/FR_m.pdf  used on input line 119.
 (pdftex.def)             Requested size: 232.17242pt x 174.13179pt.
  [12 <./Images/FR_cstar.pdf> <./Images/FR_ct.pdf
 
@@ -1094,35 +1112,35 @@ pdfTeX warning: pdflatex (file ./Images/FR_Isp.pdf): PDF inclusion: multiple pdf
 
 pdfTeX warning: pdflatex (file ./Images/FR_m.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]) (Sections/04_nozzle_losses.tex [13]
-<Images/LS_At.pdf, id=1734, 421.575pt x 316.18124pt>
+<Images/LS_At.pdf, id=878, 421.575pt x 316.18124pt>
 File: Images/LS_At.pdf Graphic file (type pdf)
 <use Images/LS_At.pdf>
-Package pdftex.def Info: Images/LS_At.pdf  used on input line 48.
+Package pdftex.def Info: Images/LS_At.pdf  used on input line 49.
 (pdftex.def)             Requested size: 232.17242pt x 174.13179pt.
-<Images/LS_Cd.pdf, id=1735, 421.575pt x 316.18124pt>
+<Images/LS_Cd.pdf, id=879, 421.575pt x 316.18124pt>
 File: Images/LS_Cd.pdf Graphic file (type pdf)
 <use Images/LS_Cd.pdf>
-Package pdftex.def Info: Images/LS_Cd.pdf  used on input line 48.
+Package pdftex.def Info: Images/LS_Cd.pdf  used on input line 49.
 (pdftex.def)             Requested size: 232.17242pt x 174.13179pt.
-<Images/LS_T.pdf, id=1737, 421.575pt x 316.18124pt>
+<Images/LS_T.pdf, id=881, 421.575pt x 316.18124pt>
 File: Images/LS_T.pdf Graphic file (type pdf)
 <use Images/LS_T.pdf>
-Package pdftex.def Info: Images/LS_T.pdf  used on input line 52.
+Package pdftex.def Info: Images/LS_T.pdf  used on input line 56.
 (pdftex.def)             Requested size: 232.17242pt x 174.13179pt.
-<Images/LS_Isp.pdf, id=1738, 421.575pt x 316.18124pt>
+<Images/LS_Isp.pdf, id=882, 421.575pt x 316.18124pt>
 File: Images/LS_Isp.pdf Graphic file (type pdf)
 <use Images/LS_Isp.pdf>
-Package pdftex.def Info: Images/LS_Isp.pdf  used on input line 52.
+Package pdftex.def Info: Images/LS_Isp.pdf  used on input line 56.
 (pdftex.def)             Requested size: 232.17242pt x 174.13179pt.
-<Images/LS_m.pdf, id=1739, 421.575pt x 316.18124pt>
+<Images/LS_m.pdf, id=883, 421.575pt x 316.18124pt>
 File: Images/LS_m.pdf Graphic file (type pdf)
 <use Images/LS_m.pdf>
-Package pdftex.def Info: Images/LS_m.pdf  used on input line 53.
+Package pdftex.def Info: Images/LS_m.pdf  used on input line 57.
 (pdftex.def)             Requested size: 232.17242pt x 174.13179pt.
-<Images/LS_pc.pdf, id=1740, 421.575pt x 316.18124pt>
+<Images/LS_pc.pdf, id=884, 421.575pt x 316.18124pt>
 File: Images/LS_pc.pdf Graphic file (type pdf)
 <use Images/LS_pc.pdf>
-Package pdftex.def Info: Images/LS_pc.pdf  used on input line 53.
+Package pdftex.def Info: Images/LS_pc.pdf  used on input line 57.
 (pdftex.def)             Requested size: 232.17242pt x 174.13179pt.
  [14 <./Images/LS_At.pdf> <./Images/LS_Cd.pdf
 
@@ -1134,7 +1152,7 @@ pdfTeX warning: pdflatex (file ./Images/LS_T.pdf): PDF inclusion: multiple pdfs 
 
 pdfTeX warning: pdflatex (file ./Images/LS_Isp.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]) (Sections/05_additive.tex
-<Images/cdcoeff.jpg, id=1757, 752.8125pt x 752.8125pt>
+<Images/cdcoeff.jpg, id=901, 752.8125pt x 752.8125pt>
 File: Images/cdcoeff.jpg Graphic file (type jpg)
 <use Images/cdcoeff.jpg>
 Package pdftex.def Info: Images/cdcoeff.jpg  used on input line 4.
@@ -1143,92 +1161,92 @@ Package pdftex.def Info: Images/cdcoeff.jpg  used on input line 4.
 
 pdfTeX warning: pdflatex (file ./Images/LS_pc.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 > <./Images/cdcoeff.jpg>]
-<Images/AM_OF.pdf, id=1779, 421.575pt x 316.18124pt>
+<Images/AM_OF.pdf, id=922, 421.575pt x 316.18124pt>
 File: Images/AM_OF.pdf Graphic file (type pdf)
 <use Images/AM_OF.pdf>
 Package pdftex.def Info: Images/AM_OF.pdf  used on input line 48.
 (pdftex.def)             Requested size: 232.17242pt x 174.13179pt.
-<Images/AM_pc.pdf, id=1780, 421.575pt x 316.18124pt>
+<Images/AM_pc.pdf, id=923, 421.575pt x 316.18124pt>
 File: Images/AM_pc.pdf Graphic file (type pdf)
 <use Images/AM_pc.pdf>
 Package pdftex.def Info: Images/AM_pc.pdf  used on input line 48.
 (pdftex.def)             Requested size: 232.17242pt x 174.13179pt.
-<Images/AM_mfu.pdf, id=1781, 421.575pt x 316.18124pt>
+<Images/AM_mfu.pdf, id=924, 421.575pt x 316.18124pt>
 File: Images/AM_mfu.pdf Graphic file (type pdf)
 <use Images/AM_mfu.pdf>
 Package pdftex.def Info: Images/AM_mfu.pdf  used on input line 50.
 (pdftex.def)             Requested size: 232.17242pt x 174.13179pt.
-<Images/AM_mox.pdf, id=1782, 421.575pt x 316.18124pt>
+<Images/AM_mox.pdf, id=925, 421.575pt x 316.18124pt>
 File: Images/AM_mox.pdf Graphic file (type pdf)
 <use Images/AM_mox.pdf>
 Package pdftex.def Info: Images/AM_mox.pdf  used on input line 50.
 (pdftex.def)             Requested size: 232.17242pt x 174.13179pt.
-<Images/AM_T.pdf, id=1783, 421.575pt x 316.18124pt>
+ [16 <./Images/AM_OF.pdf> <./Images/AM_pc.pdf
+
+pdfTeX warning: pdflatex (file ./Images/AM_pc.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>]
+<Images/AM_T.pdf, id=937, 421.575pt x 316.18124pt>
 File: Images/AM_T.pdf Graphic file (type pdf)
 <use Images/AM_T.pdf>
 Package pdftex.def Info: Images/AM_T.pdf  used on input line 52.
 (pdftex.def)             Requested size: 232.17242pt x 174.13179pt.
-<Images/AM_Isp.pdf, id=1784, 421.575pt x 316.18124pt>
+<Images/AM_Isp.pdf, id=938, 421.575pt x 316.18124pt>
 File: Images/AM_Isp.pdf Graphic file (type pdf)
 <use Images/AM_Isp.pdf>
 Package pdftex.def Info: Images/AM_Isp.pdf  used on input line 52.
 (pdftex.def)             Requested size: 232.17242pt x 174.13179pt.
- [16 <./Images/AM_OF.pdf> <./Images/AM_pc.pdf
-
-pdfTeX warning: pdflatex (file ./Images/AM_pc.pdf): PDF inclusion: multiple pdfs with page group included in a single page
-> <./Images/AM_mfu.pdf
-
-pdfTeX warning: pdflatex (file ./Images/AM_mfu.pdf): PDF inclusion: multiple pdfs with page group included in a single page
-> <./Images/AM_mox.pdf
-
-pdfTeX warning: pdflatex (file ./Images/AM_mox.pdf): PDF inclusion: multiple pdfs with page group included in a single page
->]
-<Images/AM_deltapfd.pdf, id=1798, 562.1pt x 421.575pt>
+<Images/AM_deltapfd.pdf, id=945, 562.1pt x 421.575pt>
 File: Images/AM_deltapfd.pdf Graphic file (type pdf)
 <use Images/AM_deltapfd.pdf>
 Package pdftex.def Info: Images/AM_deltapfd.pdf  used on input line 59.
 (pdftex.def)             Requested size: 290.22107pt x 217.66354pt.
-) (Sections/06_cooling.tex [17 <./Images/AM_T.pdf> <./Images/AM_Isp.pdf
+ [17 <./Images/AM_mfu.pdf> <./Images/AM_mox.pdf
+
+pdfTeX warning: pdflatex (file ./Images/AM_mox.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./Images/AM_T.pdf
+
+pdfTeX warning: pdflatex (file ./Images/AM_T.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./Images/AM_Isp.pdf
 
 pdfTeX warning: pdflatex (file ./Images/AM_Isp.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 > <./Images/AM_deltapfd.pdf
 
 pdfTeX warning: pdflatex (file ./Images/AM_deltapfd.pdf): PDF inclusion: multiple pdfs with page group included in a single page
->] [18]
-<Images/CL_Twg.pdf, id=1825, 421.575pt x 316.18124pt>
+>]) (Sections/06_cooling.tex [18]
+<Images/CL_Twg.pdf, id=974, 421.575pt x 316.18124pt>
 File: Images/CL_Twg.pdf Graphic file (type pdf)
 <use Images/CL_Twg.pdf>
-Package pdftex.def Info: Images/CL_Twg.pdf  used on input line 47.
+Package pdftex.def Info: Images/CL_Twg.pdf  used on input line 49.
 (pdftex.def)             Requested size: 266.03474pt x 199.52812pt.
  [19 <./Images/CL_Twg.pdf>]
-<Images/CL_q.pdf, id=1838, 421.575pt x 316.18124pt>
+<Images/CL_q.pdf, id=989, 421.575pt x 316.18124pt>
 File: Images/CL_q.pdf Graphic file (type pdf)
 <use Images/CL_q.pdf>
-Package pdftex.def Info: Images/CL_q.pdf  used on input line 80.
+Package pdftex.def Info: Images/CL_q.pdf  used on input line 84.
 (pdftex.def)             Requested size: 266.03474pt x 199.52812pt.
-)) [20 <./Images/CL_q.pdf>]
+ [20 <./Images/CL_q.pdf>])) [21]
 LaTeX Font Info:    Trying to load font information for T1+txtt on input line 18.
  (C:\Users\turcu\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\t1txtt.fd
 File: t1txtt.fd 2000/12/15 v3.1
-) [21] (Lockheed_Martini_report.aux)
+) [22] (Sections/07_authorship.tex) [23] (Lockheed_Martini_report.aux)
 Package rerunfilecheck Info: File `Lockheed_Martini_report.out' has not changed.
-(rerunfilecheck)             Checksum: B711652B7C027FE782A5AF8FF4C538E2;3227.
+(rerunfilecheck)             Checksum: 30A8CE1AD375D17F3EA4EBAC246131E9;3217.
 Package logreq Info: Writing requests to 'Lockheed_Martini_report.run.xml'.
 \openout1 = `Lockheed_Martini_report.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 24295 strings out of 476361
- 425844 string characters out of 5788046
+ 24383 strings out of 476361
+ 427420 string characters out of 5788046
  1905993 words of memory out of 5000000
- 44112 multiletter control sequences out of 15000+600000
- 605411 words of font info for 189 fonts, out of 8000000 for 9000
+ 44179 multiletter control sequences out of 15000+600000
+ 635843 words of font info for 249 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  87i,18n,98p,1527b,1887s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/rtcxr.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/rtxb.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/rtxbmi.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/rtxmi.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/rtxr.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/rtxsc.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/t1xtt.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/txbmia.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/txbsy.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/txex.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/txmia.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/txsy.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/turcu/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Lockheed_Martini_report.pdf (25 pages, 2917394 bytes).
+Output written on Lockheed_Martini_report.pdf (27 pages, 2676050 bytes).
 PDF statistics:
- 1967 PDF objects out of 2073 (max. 8388607)
- 149 named destinations out of 1000 (max. 500000)
- 309 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1129 PDF objects out of 1200 (max. 8388607)
+ 152 named destinations out of 1000 (max. 500000)
+ 314 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -97,54 +97,29 @@
       \field{howpublished}{Site: \url{https://markforged.com/resources/blog/inconel-vs-stainless-steel}}
       \field{title}{Inconel vs Stainless Steel}
     \endentry
-    \entry{lpbf_accuracy}{article}{}
+    \entry{bj_inconel}{article}{}
       \name{author}{1}{}{%
-        {{hash=699750dfefb3ac3422608d57595280b9}{%
+        {{hash=d33acc88ed5832a1f82c1fd504427997}{%
            family={al},
            familyi={a\bibinitperiod},
-           given={Dalia\bibnamedelima Mahmoud},
-           giveni={D\bibinitperiod\bibinitdelim M\bibinitperiod},
+           given={Amir\bibnamedelima Mostafaei},
+           giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod},
            prefix={et},
            prefixi={e\bibinitperiod}}}%
       }
-      \strng{namehash}{699750dfefb3ac3422608d57595280b9}
-      \strng{fullhash}{699750dfefb3ac3422608d57595280b9}
-      \strng{bibnamehash}{699750dfefb3ac3422608d57595280b9}
-      \strng{authorbibnamehash}{699750dfefb3ac3422608d57595280b9}
-      \strng{authornamehash}{699750dfefb3ac3422608d57595280b9}
-      \strng{authorfullhash}{699750dfefb3ac3422608d57595280b9}
+      \strng{namehash}{d33acc88ed5832a1f82c1fd504427997}
+      \strng{fullhash}{d33acc88ed5832a1f82c1fd504427997}
+      \strng{bibnamehash}{d33acc88ed5832a1f82c1fd504427997}
+      \strng{authorbibnamehash}{d33acc88ed5832a1f82c1fd504427997}
+      \strng{authornamehash}{d33acc88ed5832a1f82c1fd504427997}
+      \strng{authorfullhash}{d33acc88ed5832a1f82c1fd504427997}
       \field{extraname}{2}
       \field{sortinit}{5}
       \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{howpublished}{Paper}
-      \field{title}{Applications of Machine Learning in Process Monitoring and Controls of L-PBF Additive Manufacturing: A Review}
-      \field{year}{2021}
-    \endentry
-    \entry{dimension_powder}{article}{}
-      \name{author}{1}{}{%
-        {{hash=2aaf876b633da38115609832d6fdfc57}{%
-           family={al},
-           familyi={a\bibinitperiod},
-           given={M.\bibnamedelimi A.\bibnamedelimi Balbaa},
-           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod\bibinitdelim B\bibinitperiod},
-           prefix={et},
-           prefixi={e\bibinitperiod}}}%
-      }
-      \strng{namehash}{2aaf876b633da38115609832d6fdfc57}
-      \strng{fullhash}{2aaf876b633da38115609832d6fdfc57}
-      \strng{bibnamehash}{2aaf876b633da38115609832d6fdfc57}
-      \strng{authorbibnamehash}{2aaf876b633da38115609832d6fdfc57}
-      \strng{authornamehash}{2aaf876b633da38115609832d6fdfc57}
-      \strng{authorfullhash}{2aaf876b633da38115609832d6fdfc57}
-      \field{extraname}{3}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{Paper}
-      \field{title}{Role of powder particle size on laser powder bed fusion processability of AlSi10mg alloy}
+      \field{title}{Binder jet 3D printing—Process parameters, materials, properties, modeling, and challenges}
       \field{year}{2021}
     \endentry
     \entry{tesi_dottorato}{thesis}{}
@@ -173,38 +148,63 @@
       \field{type}{mathesis}
       \field{year}{2021}
     \endentry
-    \entry{bj_inconel}{article}{}
-      \name{author}{1}{}{%
-        {{hash=d33acc88ed5832a1f82c1fd504427997}{%
-           family={al},
-           familyi={a\bibinitperiod},
-           given={Amir\bibnamedelima Mostafaei},
-           giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod},
-           prefix={et},
-           prefixi={e\bibinitperiod}}}%
-      }
-      \strng{namehash}{d33acc88ed5832a1f82c1fd504427997}
-      \strng{fullhash}{d33acc88ed5832a1f82c1fd504427997}
-      \strng{bibnamehash}{d33acc88ed5832a1f82c1fd504427997}
-      \strng{authorbibnamehash}{d33acc88ed5832a1f82c1fd504427997}
-      \strng{authornamehash}{d33acc88ed5832a1f82c1fd504427997}
-      \strng{authorfullhash}{d33acc88ed5832a1f82c1fd504427997}
-      \field{extraname}{4}
+    \entry{bj_camb}{misc}{}
       \field{sortinit}{8}
       \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{Paper}
-      \field{title}{Binder jet 3D printing—Process parameters, materials, properties, modeling, and challenges}
-      \field{year}{2021}
-    \endentry
-    \entry{bj_camb}{misc}{}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labeltitlesource}{title}
       \field{howpublished}{Site: \url{https://markforged.com/resources/blog/inconel-vs-stainless-steel}}
       \field{title}{What it binder jetting?}
       \field{year}{2024}
+    \endentry
+    \entry{lpbf_accuracy}{article}{}
+      \name{author}{1}{}{%
+        {{hash=699750dfefb3ac3422608d57595280b9}{%
+           family={al},
+           familyi={a\bibinitperiod},
+           given={Dalia\bibnamedelima Mahmoud},
+           giveni={D\bibinitperiod\bibinitdelim M\bibinitperiod},
+           prefix={et},
+           prefixi={e\bibinitperiod}}}%
+      }
+      \strng{namehash}{699750dfefb3ac3422608d57595280b9}
+      \strng{fullhash}{699750dfefb3ac3422608d57595280b9}
+      \strng{bibnamehash}{699750dfefb3ac3422608d57595280b9}
+      \strng{authorbibnamehash}{699750dfefb3ac3422608d57595280b9}
+      \strng{authornamehash}{699750dfefb3ac3422608d57595280b9}
+      \strng{authorfullhash}{699750dfefb3ac3422608d57595280b9}
+      \field{extraname}{3}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Paper}
+      \field{title}{Applications of Machine Learning in Process Monitoring and Controls of L-PBF Additive Manufacturing: A Review}
+      \field{year}{2021}
+    \endentry
+    \entry{dimension_powder}{article}{}
+      \name{author}{1}{}{%
+        {{hash=2aaf876b633da38115609832d6fdfc57}{%
+           family={al},
+           familyi={a\bibinitperiod},
+           given={M.\bibnamedelimi A.\bibnamedelimi Balbaa},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod\bibinitdelim B\bibinitperiod},
+           prefix={et},
+           prefixi={e\bibinitperiod}}}%
+      }
+      \strng{namehash}{2aaf876b633da38115609832d6fdfc57}
+      \strng{fullhash}{2aaf876b633da38115609832d6fdfc57}
+      \strng{bibnamehash}{2aaf876b633da38115609832d6fdfc57}
+      \strng{authorbibnamehash}{2aaf876b633da38115609832d6fdfc57}
+      \strng{authornamehash}{2aaf876b633da38115609832d6fdfc57}
+      \strng{authorfullhash}{2aaf876b633da38115609832d6fdfc57}
+      \field{extraname}{4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Paper}
+      \field{title}{Role of powder particle size on laser powder bed fusion processability of AlSi10mg alloy}
+      \field{year}{2021}
     \endentry
     \entry{sutton}{article}{}
       \name{author}{1}{}{%
