@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.12.16)  16 APR 2024 01:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.12.16)  16 APR 2024 10:52
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1084,7 +1084,7 @@ File: Images/heat_flux-eps-converted-to.pdf Graphic file (type pdf)
 <use Images/heat_flux-eps-converted-to.pdf>
 Package pdftex.def Info: Images/heat_flux-eps-converted-to.pdf  used on input line 80.
 (pdftex.def)             Requested size: 266.03474pt x 199.52812pt.
-)) [10 <./Images/heat_flux-eps-converted-to.pdf>] [11]
+[10 <./Images/heat_flux-eps-converted-to.pdf>])) [11]
 LaTeX Font Info:    Trying to load font information for T1+txtt on input line 18.
  (C:\Miktex\tex/latex/txfonts\t1txtt.fd
 File: t1txtt.fd 2000/12/15 v3.1
@@ -1104,7 +1104,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  84i,18n,97p,1527b,1881s stack positions out of 10000i,1000n,20000p,200000b,80000s
 {C:/Miktex/fonts/enc/dvips/base/8r.enc}<C:/Miktex/fonts/type1/public/txfonts/rtcxr.pfb><C:/Miktex/fonts/type1/public/txfonts/rtxb.pfb><C:/Miktex/fonts/type1/public/txfonts/rtxbmi.pfb><C:/Miktex/fonts/type1/public/txfonts/rtxmi.pfb><C:/Miktex/fonts/type1/public/txfonts/rtxr.pfb><C:/Miktex/fonts/type1/public/txfonts/rtxsc.pfb><C:/Miktex/fonts/type1/public/txfonts/t1xtt.pfb><C:/Miktex/fonts/type1/public/txfonts/txbmia.pfb><C:/Miktex/fonts/type1/public/txfonts/txbsy.pfb><C:/Miktex/fonts/type1/public/txfonts/txex.pfb><C:/Miktex/fonts/type1/public/txfonts/txmia.pfb><C:/Miktex/fonts/type1/public/txfonts/txsy.pfb><C:/Miktex/fonts/type1/urw/times/utmb8a.pfb><C:/Miktex/fonts/type1/urw/times/utmbi8a.pfb><C:/Miktex/fonts/type1/urw/times/utmr8a.pfb><C:/Miktex/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Lockheed_Martini_report.pdf (16 pages, 814540 bytes).
+Output written on Lockheed_Martini_report.pdf (16 pages, 815628 bytes).
 PDF statistics:
  1325 PDF objects out of 1440 (max. 8388607)
  86 named destinations out of 1000 (max. 500000)
