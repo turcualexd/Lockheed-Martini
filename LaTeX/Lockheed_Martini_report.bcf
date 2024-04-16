@@ -2379,6 +2379,9 @@
     <bcf:citekey order="5" intorder="1">huzel_huang</bcf:citekey>
     <bcf:citekey order="6" intorder="1">ariane_datasheet</bcf:citekey>
     <bcf:citekey order="7" intorder="1">nist</bcf:citekey>
+    <bcf:citekey order="8" intorder="1">Sutton</bcf:citekey>
+    <bcf:citekey order="9" intorder="1">Sutton</bcf:citekey>
+    <bcf:citekey order="10" intorder="1">tesi_malesia</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

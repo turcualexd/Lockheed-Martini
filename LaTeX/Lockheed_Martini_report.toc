@@ -13,6 +13,8 @@
 \contentsline {subsection}{\numberline {2.3}System dynamics}{5}{subsection.2.3}%
 \contentsline {section}{\numberline {3}Results analysis}{8}{section.3}%
 \contentsline {section}{\numberline {4}Nozzle losses}{8}{section.4}%
-\contentsline {section}{\numberline {5}Additive manufacturing influences}{8}{section.5}%
-\contentsline {section}{\numberline {6}Cooling analysis}{8}{section.6}%
-\contentsline {section}{Bibliography}{9}{section*.15}%
+\contentsline {subsection}{\numberline {4.1}Losses calculations}{8}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Effects on the nominal design}{8}{subsection.4.2}%
+\contentsline {section}{\numberline {5}Additive manufacturing influences}{10}{section.5}%
+\contentsline {section}{\numberline {6}Cooling analysis}{10}{section.6}%
+\contentsline {section}{Bibliography}{11}{section*.19}%
