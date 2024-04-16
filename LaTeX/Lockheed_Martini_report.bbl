@@ -65,27 +65,96 @@
       \field{title}{Design and Development of a Large Bipropellant Slowdown Propulsion System}
       \field{year}{1995}
     \endentry
-    \entry{valori_cd}{article}{}
+    \entry{materials_and_desing}{article}{}
       \name{author}{1}{}{%
-        {{hash=5691b549a8f049b8fbefde6603f10304}{%
-           family={Waters},
-           familyi={W\bibinitperiod},
-           given={Michael\bibnamedelima C.},
-           giveni={M\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=fe80204ccfd4192da5a4998f9d27cef6}{%
+           family={al},
+           familyi={a\bibinitperiod},
+           given={Filippo\bibnamedelima Berto},
+           giveni={F\bibinitperiod\bibinitdelim B\bibinitperiod},
+           prefix={et},
+           prefixi={e\bibinitperiod}}}%
       }
-      \strng{namehash}{5691b549a8f049b8fbefde6603f10304}
-      \strng{fullhash}{5691b549a8f049b8fbefde6603f10304}
-      \strng{bibnamehash}{5691b549a8f049b8fbefde6603f10304}
-      \strng{authorbibnamehash}{5691b549a8f049b8fbefde6603f10304}
-      \strng{authornamehash}{5691b549a8f049b8fbefde6603f10304}
-      \strng{authorfullhash}{5691b549a8f049b8fbefde6603f10304}
+      \strng{namehash}{fe80204ccfd4192da5a4998f9d27cef6}
+      \strng{fullhash}{fe80204ccfd4192da5a4998f9d27cef6}
+      \strng{bibnamehash}{fe80204ccfd4192da5a4998f9d27cef6}
+      \strng{authorbibnamehash}{fe80204ccfd4192da5a4998f9d27cef6}
+      \strng{authornamehash}{fe80204ccfd4192da5a4998f9d27cef6}
+      \strng{authorfullhash}{fe80204ccfd4192da5a4998f9d27cef6}
+      \field{extraname}{1}
       \field{sortinit}{3}
       \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{howpublished}{Thesis}
-      \field{title}{ANALYSIS OF ADDITIVELY MANUFACTURED INJECTORS FOR ROTATING DETONATION ENGINES}
-      \field{year}{2018}
+      \field{howpublished}{Paper}
+      \field{title}{Metal additive manufacturing in aerospace: a review}
+      \field{year}{2021}
+    \endentry
+    \entry{Inconel_vs_steel}{misc}{}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Site: \url{https://markforged.com/resources/blog/inconel-vs-stainless-steel}}
+      \field{title}{Inconel vs Stainless Steel}
+    \endentry
+    \entry{bj_inconel}{article}{}
+      \name{author}{1}{}{%
+        {{hash=d33acc88ed5832a1f82c1fd504427997}{%
+           family={al},
+           familyi={a\bibinitperiod},
+           given={Amir\bibnamedelima Mostafaei},
+           giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod},
+           prefix={et},
+           prefixi={e\bibinitperiod}}}%
+      }
+      \strng{namehash}{d33acc88ed5832a1f82c1fd504427997}
+      \strng{fullhash}{d33acc88ed5832a1f82c1fd504427997}
+      \strng{bibnamehash}{d33acc88ed5832a1f82c1fd504427997}
+      \strng{authorbibnamehash}{d33acc88ed5832a1f82c1fd504427997}
+      \strng{authornamehash}{d33acc88ed5832a1f82c1fd504427997}
+      \strng{authorfullhash}{d33acc88ed5832a1f82c1fd504427997}
+      \field{extraname}{2}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Paper}
+      \field{title}{Binder jet 3D printing—Process parameters, materials, properties, modeling, and challenges}
+      \field{year}{2021}
+    \endentry
+    \entry{tesi_dottorato}{thesis}{}
+      \name{author}{1}{}{%
+        {{hash=08999c826f1e0656ce4264e4a7b7f97e}{%
+           family={Dahmen},
+           familyi={D\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {DTU}%
+      }
+      \strng{namehash}{08999c826f1e0656ce4264e4a7b7f97e}
+      \strng{fullhash}{08999c826f1e0656ce4264e4a7b7f97e}
+      \strng{bibnamehash}{08999c826f1e0656ce4264e4a7b7f97e}
+      \strng{authorbibnamehash}{08999c826f1e0656ce4264e4a7b7f97e}
+      \strng{authornamehash}{08999c826f1e0656ce4264e4a7b7f97e}
+      \strng{authorfullhash}{08999c826f1e0656ce4264e4a7b7f97e}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{5}
+      \field{title}{Additive Manufacturing For Fuel Injectors: Design, Processes and Materials}
+      \field{type}{mathesis}
+      \field{year}{2021}
+    \endentry
+    \entry{bj_camb}{misc}{}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Site: \url{https://markforged.com/resources/blog/inconel-vs-stainless-steel}}
+      \field{title}{What it binder jetting?}
+      \field{year}{2024}
     \endentry
     \entry{lpbf_accuracy}{article}{}
       \name{author}{1}{}{%
@@ -103,13 +172,298 @@
       \strng{authorbibnamehash}{699750dfefb3ac3422608d57595280b9}
       \strng{authornamehash}{699750dfefb3ac3422608d57595280b9}
       \strng{authorfullhash}{699750dfefb3ac3422608d57595280b9}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{extraname}{3}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{howpublished}{Paper}
       \field{title}{Applications of Machine Learning in Process Monitoring and Controls of L-PBF Additive Manufacturing: A Review}
       \field{year}{2021}
+    \endentry
+    \entry{dimension_powder}{article}{}
+      \name{author}{1}{}{%
+        {{hash=2aaf876b633da38115609832d6fdfc57}{%
+           family={al},
+           familyi={a\bibinitperiod},
+           given={M.\bibnamedelimi A.\bibnamedelimi Balbaa},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod\bibinitdelim B\bibinitperiod},
+           prefix={et},
+           prefixi={e\bibinitperiod}}}%
+      }
+      \strng{namehash}{2aaf876b633da38115609832d6fdfc57}
+      \strng{fullhash}{2aaf876b633da38115609832d6fdfc57}
+      \strng{bibnamehash}{2aaf876b633da38115609832d6fdfc57}
+      \strng{authorbibnamehash}{2aaf876b633da38115609832d6fdfc57}
+      \strng{authornamehash}{2aaf876b633da38115609832d6fdfc57}
+      \strng{authorfullhash}{2aaf876b633da38115609832d6fdfc57}
+      \field{extraname}{4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Paper}
+      \field{title}{Role of powder particle size on laser powder bed fusion processability of AlSi10mg alloy}
+      \field{year}{2021}
+    \endentry
+    \entry{sutton}{article}{}
+      \name{author}{1}{}{%
+        {{hash=25be60d311931797dfde1da7c12492c6}{%
+           family={Sutton},
+           familyi={S\bibinitperiod},
+           given={G.\bibnamedelimi P.},
+           giveni={G\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+      }
+      \strng{namehash}{25be60d311931797dfde1da7c12492c6}
+      \strng{fullhash}{25be60d311931797dfde1da7c12492c6}
+      \strng{bibnamehash}{25be60d311931797dfde1da7c12492c6}
+      \strng{authorbibnamehash}{25be60d311931797dfde1da7c12492c6}
+      \strng{authornamehash}{25be60d311931797dfde1da7c12492c6}
+      \strng{authorfullhash}{25be60d311931797dfde1da7c12492c6}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Book}
+      \field{title}{Rocket Propulsion Elements}
+      \field{year}{2017}
+    \endentry
+    \entry{ariane_datasheet}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=44b347b68d10b88a89b392a68fe0b12b}{%
+           family={Group},
+           familyi={G\bibinitperiod},
+           given={Ariane},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{44b347b68d10b88a89b392a68fe0b12b}
+      \strng{fullhash}{44b347b68d10b88a89b392a68fe0b12b}
+      \strng{bibnamehash}{44b347b68d10b88a89b392a68fe0b12b}
+      \strng{authorbibnamehash}{44b347b68d10b88a89b392a68fe0b12b}
+      \strng{authornamehash}{44b347b68d10b88a89b392a68fe0b12b}
+      \strng{authorfullhash}{44b347b68d10b88a89b392a68fe0b12b}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Site: \url{https://www.space-propulsion.com/}}
+      \field{title}{Chemical bipropellant thruster family}
+      \field{year}{2021}
+    \endentry
+    \entry{huzel_huang}{article}{}
+      \name{author}{2}{}{%
+        {{hash=c6a9bacfe5622034d6a7e996466086d9}{%
+           family={Huzel},
+           familyi={H\bibinitperiod}}}%
+        {{hash=eee36400f167169ba3d89eec278e632e}{%
+           family={Huang},
+           familyi={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{3d005528c93bd3e5e7389e86816a1c72}
+      \strng{fullhash}{3d005528c93bd3e5e7389e86816a1c72}
+      \strng{bibnamehash}{3d005528c93bd3e5e7389e86816a1c72}
+      \strng{authorbibnamehash}{3d005528c93bd3e5e7389e86816a1c72}
+      \strng{authornamehash}{3d005528c93bd3e5e7389e86816a1c72}
+      \strng{authorfullhash}{3d005528c93bd3e5e7389e86816a1c72}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Book}
+      \field{title}{Modern Engineering for design of Liquid-Propellant Rocket Engines}
+      \field{year}{1992}
+    \endentry
+    \entry{rao_article}{article}{}
+      \name{author}{1}{}{%
+        {{hash=b99084eec718cc79f1743c78994341e6}{%
+           family={Rao},
+           familyi={R\bibinitperiod},
+           given={G.\bibnamedelimi V.},
+           giveni={G\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+      }
+      \strng{namehash}{b99084eec718cc79f1743c78994341e6}
+      \strng{fullhash}{b99084eec718cc79f1743c78994341e6}
+      \strng{bibnamehash}{b99084eec718cc79f1743c78994341e6}
+      \strng{authorbibnamehash}{b99084eec718cc79f1743c78994341e6}
+      \strng{authornamehash}{b99084eec718cc79f1743c78994341e6}
+      \strng{authorfullhash}{b99084eec718cc79f1743c78994341e6}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Paper}
+      \field{title}{Exhaust Nozzle Contour for Optimum Thrust}
+      \field{year}{1958}
+    \endentry
+    \entry{nist}{online}{}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labeltitlesource}{title}
+      \field{addendum}{(accessed: 14.04.2024)}
+      \field{title}{NIST Chemistry WebBook}
+      \verb{urlraw}
+      \verb https://webbook.nist.gov/cgi/fluid.cgi?T=85&PLow=4&PHigh=5.5&PInc=0.1&Digits=5&ID=C7727379&Action=Load&Type=IsoTherm&TUnit=K&PUnit=bar&DUnit=mol%2Fl&HUnit=kJ%2Fkg&WUnit=m%2Fs&VisUnit=Pa*s&STUnit=N%2Fm&RefState=DEF
+      \endverb
+      \verb{url}
+      \verb https://webbook.nist.gov/cgi/fluid.cgi?T=85&PLow=4&PHigh=5.5&PInc=0.1&Digits=5&ID=C7727379&Action=Load&Type=IsoTherm&TUnit=K&PUnit=bar&DUnit=mol%2Fl&HUnit=kJ%2Fkg&WUnit=m%2Fs&VisUnit=Pa*s&STUnit=N%2Fm&RefState=DEF
+      \endverb
+    \endentry
+    \entry{colebrook}{article}{}
+      \name{author}{1}{}{%
+        {{hash=343c867bb72a58d305ef7d78a03d3b41}{%
+           family={More},
+           familyi={M\bibinitperiod},
+           given={Ajinkya\bibnamedelima A.},
+           giveni={A\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{343c867bb72a58d305ef7d78a03d3b41}
+      \strng{fullhash}{343c867bb72a58d305ef7d78a03d3b41}
+      \strng{bibnamehash}{343c867bb72a58d305ef7d78a03d3b41}
+      \strng{authorbibnamehash}{343c867bb72a58d305ef7d78a03d3b41}
+      \strng{authornamehash}{343c867bb72a58d305ef7d78a03d3b41}
+      \strng{authorfullhash}{343c867bb72a58d305ef7d78a03d3b41}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Paper}
+      \field{title}{Analytical solutions for the Colebrook and White equation and for pressure drop in ideal gas flow in pipes}
+      \field{year}{2005}
+    \endentry
+    \entry{tesi_malesia}{article}{}
+      \name{author}{1}{}{%
+        {{hash=ae7ba502efdd4f9f4889a7b402340b1f}{%
+           family={al},
+           familyi={a\bibinitperiod},
+           given={Mohd\bibnamedelimb Aizat\bibnamedelimb Iz’aan\bibnamedelimb Mohd\bibnamedelima Ali},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod\bibinitdelim I\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim A\bibinitperiod},
+           prefix={et},
+           prefixi={e\bibinitperiod}}}%
+      }
+      \strng{namehash}{ae7ba502efdd4f9f4889a7b402340b1f}
+      \strng{fullhash}{ae7ba502efdd4f9f4889a7b402340b1f}
+      \strng{bibnamehash}{ae7ba502efdd4f9f4889a7b402340b1f}
+      \strng{authorbibnamehash}{ae7ba502efdd4f9f4889a7b402340b1f}
+      \strng{authornamehash}{ae7ba502efdd4f9f4889a7b402340b1f}
+      \strng{authorfullhash}{ae7ba502efdd4f9f4889a7b402340b1f}
+      \field{extraname}{5}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Paper}
+      \field{title}{Investigation on Nozzle Throat Erosion in Hybrid Rocket Motor due to Nozzle Expansion Ratio}
+      \field{year}{2023}
+    \endentry
+    \entry{slides_maggi}{article}{}
+      \name{author}{1}{}{%
+        {{hash=32cb1161fc23ba47413d59d551fa81d3}{%
+           family={Maggi},
+           familyi={M\bibinitperiod},
+           given={Filippo},
+           giveni={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{32cb1161fc23ba47413d59d551fa81d3}
+      \strng{fullhash}{32cb1161fc23ba47413d59d551fa81d3}
+      \strng{bibnamehash}{32cb1161fc23ba47413d59d551fa81d3}
+      \strng{authorbibnamehash}{32cb1161fc23ba47413d59d551fa81d3}
+      \strng{authornamehash}{32cb1161fc23ba47413d59d551fa81d3}
+      \strng{authorfullhash}{32cb1161fc23ba47413d59d551fa81d3}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Slides}
+      \field{title}{Space Propulsion course slides}
+      \field{year}{2024}
+    \endentry
+    \entry{valori_cd}{article}{}
+      \name{author}{1}{}{%
+        {{hash=5691b549a8f049b8fbefde6603f10304}{%
+           family={Waters},
+           familyi={W\bibinitperiod},
+           given={Michael\bibnamedelima C.},
+           giveni={M\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \strng{namehash}{5691b549a8f049b8fbefde6603f10304}
+      \strng{fullhash}{5691b549a8f049b8fbefde6603f10304}
+      \strng{bibnamehash}{5691b549a8f049b8fbefde6603f10304}
+      \strng{authorbibnamehash}{5691b549a8f049b8fbefde6603f10304}
+      \strng{authornamehash}{5691b549a8f049b8fbefde6603f10304}
+      \strng{authorfullhash}{5691b549a8f049b8fbefde6603f10304}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Thesis}
+      \field{title}{Analysis of Additively Manufactured Injectors for Rotating Detonation Engines}
+      \field{year}{2018}
+    \endentry
+    \entry{cambridge}{article}{}
+      \name{author}{1}{}{%
+        {{hash=921d9c760c99403f30852b871e89f4ff}{%
+           family={Heister},
+           familyi={H\bibinitperiod},
+           given={Stephen\bibnamedelima D.},
+           giveni={S\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \strng{namehash}{921d9c760c99403f30852b871e89f4ff}
+      \strng{fullhash}{921d9c760c99403f30852b871e89f4ff}
+      \strng{bibnamehash}{921d9c760c99403f30852b871e89f4ff}
+      \strng{authorbibnamehash}{921d9c760c99403f30852b871e89f4ff}
+      \strng{authornamehash}{921d9c760c99403f30852b871e89f4ff}
+      \strng{authorfullhash}{921d9c760c99403f30852b871e89f4ff}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Book}
+      \field{title}{Rocket Propulsion}
+      \field{year}{2019}
+    \endentry
+    \entry{nimonic}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=07d7147a6599574a19199a423fec0afb}{%
+           family={Metals},
+           familyi={M\bibinitperiod},
+           given={Special},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{07d7147a6599574a19199a423fec0afb}
+      \strng{fullhash}{07d7147a6599574a19199a423fec0afb}
+      \strng{bibnamehash}{07d7147a6599574a19199a423fec0afb}
+      \strng{authorbibnamehash}{07d7147a6599574a19199a423fec0afb}
+      \strng{authornamehash}{07d7147a6599574a19199a423fec0afb}
+      \strng{authorfullhash}{07d7147a6599574a19199a423fec0afb}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Site: \url{https://shorturl.at/ctzV7}}
+      \field{title}{Nimonic Alloy 75}
+      \field{year}{2004}
+    \endentry
+    \entry{rp_1_temp}{article}{}
+      \name{author}{1}{}{%
+        {{hash=96c8b6b18bbf40e22f219976a6412716}{%
+           family={Edwards},
+           familyi={E\bibinitperiod},
+           given={Tim},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{96c8b6b18bbf40e22f219976a6412716}
+      \strng{fullhash}{96c8b6b18bbf40e22f219976a6412716}
+      \strng{bibnamehash}{96c8b6b18bbf40e22f219976a6412716}
+      \strng{authorbibnamehash}{96c8b6b18bbf40e22f219976a6412716}
+      \strng{authornamehash}{96c8b6b18bbf40e22f219976a6412716}
+      \strng{authorfullhash}{96c8b6b18bbf40e22f219976a6412716}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Article}
+      \field{title}{Liquid Fuels and Propellants for Aerospace Propulsion}
+      \field{year}{2003}
     \endentry
   \enddatalist
 \endrefsection
